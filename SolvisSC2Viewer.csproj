@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ADABC73-6630-45E6-9B82-96E3755A3D43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SolvisSC2Viewer</RootNamespace>
+    <AssemblyName>SolvisSC2Viewer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>files\Lupe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\..\Signature\Harbor.keys</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\actions\Action.cs" />
+    <Compile Include="app\actions\ActionData.cs" />
+    <Compile Include="app\actions\ActionLock.cs" />
+    <Compile Include="app\actions\ActionManager.cs" />
+    <Compile Include="app\actions\extras\ConfigEditorAction.cs" />
+    <Compile Include="app\actions\extras\HeatCurveAction.cs" />
+    <Compile Include="app\actions\extras\SensorsCheckAction.cs" />
+    <Compile Include="app\actions\file\ExitAction.cs" />
+    <Compile Include="app\actions\file\OpenFileAction.cs" />
+    <Compile Include="app\actions\file\PrintAction.cs" />
+    <Compile Include="app\actions\file\PrintPreviewAction.cs" />
+    <Compile Include="app\actions\help\AboutAction.cs" />
+    <Compile Include="app\actions\help\DocAction.cs" />
+    <Compile Include="app\actions\system\DisposeAction.cs" />
+    <Compile Include="app\controls\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\controls\ChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\controls\ChartControl.Designer.cs">
+      <DependentUpon>ChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\controls\SensorsActors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\controls\SensorsActors.Designer.cs">
+      <DependentUpon>SensorsActors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\dialogs\BurnerPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\dialogs\BurnerPower.Designer.cs">
+      <DependentUpon>BurnerPower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\dialogs\ConfigEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\dialogs\ConfigEditor.Designer.cs">
+      <DependentUpon>ConfigEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\dialogs\EarthPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\dialogs\EarthPosition.Designer.cs">
+      <DependentUpon>EarthPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\dialogs\HeatCurve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\dialogs\HeatCurve.Designer.cs">
+      <DependentUpon>HeatCurve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\dialogs\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\dialogs\SplashScreen.designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\dialogs\VLParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\dialogs\VLParameters.Designer.cs">
+      <DependentUpon>VLParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\help\AboutContentReader.cs" />
+    <Compile Include="app\help\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\help\AboutDialog.designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\help\HelpManager.cs" />
+    <Compile Include="app\items\IItemBase.cs" />
+    <Compile Include="app\items\ItemManager.cs" />
+    <Compile Include="app\items\menu\ExtrasMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app\items\menu\ExtrasMenuItem.designer.cs">
+      <DependentUpon>ExtrasMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\items\menu\FileMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app\items\menu\FileMenuItem.designer.cs">
+      <DependentUpon>FileMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\items\menu\HelpMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app\items\menu\HelpMenuItem.designer.cs">
+      <DependentUpon>HelpMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\items\menu\MainMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app\items\menu\MainMenu.designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\items\tool\MainToolItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app\items\tool\MainToolItems.designer.cs">
+      <DependentUpon>MainToolItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\items\tool\ToolStripDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="app\printer\PrintManager.cs" />
+    <Compile Include="app\system\config\ConfigData.cs" />
+    <Compile Include="app\system\config\ConfigManager.cs" />
+    <Compile Include="app\system\config\xml\ConfigReader.cs" />
+    <Compile Include="app\system\config\xml\ConfigWriter.cs" />
+    <Compile Include="app\system\config\xml\ConfigXml.cs" />
+    <Compile Include="app\system\DataManager.cs" />
+    <Compile Include="app\system\AppManager.cs" />
+    <Compile Include="app\system\icons\IconManager.cs" />
+    <Compile Include="app\system\solvis\RowValues.cs" />
+    <Compile Include="app\util\AppExtension.cs" />
+    <Compile Include="app\util\CheckBoxTag.cs" />
+    <Compile Include="app\util\CodeBuilder.cs" />
+    <Compile Include="app\util\DateEventArgs.cs" />
+    <Compile Include="app\util\MeanTemperature.cs" />
+    <Compile Include="app\util\SunPosition.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="app\controls\ChartControl.resx">
+      <DependentUpon>ChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\controls\SensorsActors.de-DE.resx">
+      <DependentUpon>SensorsActors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\controls\SensorsActors.resx">
+      <DependentUpon>SensorsActors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\BurnerPower.de-DE.resx">
+      <DependentUpon>BurnerPower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\BurnerPower.resx">
+      <DependentUpon>BurnerPower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\ConfigEditor.de-DE.resx">
+      <DependentUpon>ConfigEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\ConfigEditor.resx">
+      <DependentUpon>ConfigEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\EarthPosition.de-DE.resx">
+      <DependentUpon>EarthPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\EarthPosition.resx">
+      <DependentUpon>EarthPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\HeatCurve.de-DE.resx">
+      <DependentUpon>HeatCurve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\HeatCurve.resx">
+      <DependentUpon>HeatCurve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\VLParameters.de-DE.resx">
+      <DependentUpon>VLParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\VLParameters.resx">
+      <DependentUpon>VLParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\help\AboutDialog.de-DE.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\help\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\menu\ExtrasMenuItem.de-DE.resx">
+      <DependentUpon>ExtrasMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\menu\ExtrasMenuItem.resx">
+      <DependentUpon>ExtrasMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\menu\FileMenuItem.de-DE.resx">
+      <DependentUpon>FileMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\menu\FileMenuItem.resx">
+      <DependentUpon>FileMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\menu\HelpMenuItem.de-DE.resx">
+      <DependentUpon>HelpMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\menu\HelpMenuItem.resx">
+      <DependentUpon>HelpMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\menu\MainMenu.de-DE.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\menu\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\tool\MainToolItems.de-DE.resx">
+      <DependentUpon>MainToolItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\items\tool\MainToolItems.resx">
+      <DependentUpon>MainToolItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="files\about_authors.dist" />
+    <EmbeddedResource Include="files\about_description.dist" />
+    <EmbeddedResource Include="files\about_license.dist" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="files\about_authors.png" />
+    <EmbeddedResource Include="files\about_license.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="files\openHS.png" />
+    <EmbeddedResource Include="files\PrintHS.png" />
+    <EmbeddedResource Include="files\PrintPreviewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="files\TheSun.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="files\Lupe.ico" />
+    <EmbeddedResource Include="files\Solvis_splash1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="files\DataContainer_MoveFirst.bmp" />
+    <EmbeddedResource Include="files\DataContainer_MoveLast.bmp" />
+    <EmbeddedResource Include="files\DataContainer_MoveNext.bmp" />
+    <EmbeddedResource Include="files\DataContainer_MovePrevious.bmp" />
+    <EmbeddedResource Include="files\DoubleLeftArrow.bmp" />
+    <EmbeddedResource Include="files\DoubleRightArrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="files\GoToNext.bmp" />
+    <EmbeddedResource Include="files\GoToPrevious.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="files\ToolStripDateTimePicker.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="files\ToolStripNumericUpDown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

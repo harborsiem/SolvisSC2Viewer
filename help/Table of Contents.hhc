@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Auto Generated" value="Yes">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="About">
+		<param name="Local" value="about.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Beschreibung">
+			<param name="Local" value="about.html#Description">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Funktionen">
+			<param name="Local" value="about.html#Functions">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Webseite">
+			<param name="Local" value="about.html#Website">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Source repository">
+			<param name="Local" value="about.html#Source_repository">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Unterstützung">
+			<param name="Local" value="about.html#Contribution">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Autoren">
+			<param name="Local" value="about.html#Authors">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GNU General Public License">
+		<param name="Local" value="license.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Was ist neu ?">
+		<param name="Local" value="whatsnew.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Version 1.1.0.0">
+			<param name="Local" value="whatsnew.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Beschreibung">
+		<param name="Local" value="description.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Installation">
+			<param name="Local" value="description.html#Installation">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Konfiguration">
+			<param name="Local" value="description.html#Configuration">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Heizkurve">
+			<param name="Local" value="description.html#HeatCurve">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Optimale Heizkurve (Vorlauftemp.) einstellen">
+			<param name="Local" value="description.html#Optimize">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Logdateien anzeigen">
+			<param name="Local" value="description.html#LogFiles">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Sensoren prüfen">
+			<param name="Local" value="description.html#SensorsCheck">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Solvis Logdaten Format">
+			<param name="Local" value="description.html#LogFormat">
+			</OBJECT>
+
+	</UL>
+</UL>
+</BODY></HTML>

@@ -1,0 +1,11 @@
+Installation
+Voraussetzung für die Installation des Programms auf einem Windows-System
+ist das .NET Framework 4.0. Falls es noch nicht auf dem Rechner installiert ist,
+kann das .NET Framework 4.0 von der Microsoft-Seite kostenfrei heruntergeladen
+werden.
+http://www.microsoft.com/netframework
+Das .NET Framework ist zuerst zu installieren.
+Danach erfolgt die Installation des Programms mit der Datei SolvisSC2.msi
+(Doppelklick im Explorer). Das Programm ist jetzt im Programmverzeichnis
+Solvis\SolvisSC2 installiert. Über das Startmenu Programme\SolvisSC2 kann
+das Programm aufgerufen werden.

@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Windows)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20120601;10140375">
+	<STYLE TYPE="text/css">
+	<!--
+		H2.cjk { font-family: "SimSun" }
+		H2.ctl { font-family: "Mangal" }
+		H3.western { font-family: "Albany", sans-serif }
+		H3.cjk { font-family: "HG Mincho Light J" }
+		H3.ctl { font-family: "Arial Unicode MS" }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1>Solvis SC2 Viewer</H1>
+<H2 CLASS="western"><A NAME="Installation"></A>Installation</H2>
+<P>Voraussetzung für die Installation des Programms auf einem
+Windows-System ist das .NET Framework 4.0. Falls es noch nicht auf
+dem Rechner installiert ist, kann das .NET Framework 4.0 von der
+Microsoft-Seite kostenfrei heruntergeladen
+werden.<BR><A HREF="http://www.microsoft.com/netframework/">http://www.microsoft.com/netframework/</A><BR>Das
+.NET Framework ist zuerst zu installieren. Danach erfolgt die
+Installation des Programms mit der Datei SolvisSC2.msi (Doppelklick
+im Explorer). Das Programm ist jetzt im Programmverzeichnis
+Solvis\SolvisSC2 installiert. Über das Startmenu Programme\SolvisSC2
+kann das Programm aufgerufen werden.</P>
+<H2 CLASS="western"><A NAME="Configuration"></A>Konfiguration</H2>
+<P>Über den Menupunkt „Extras-&gt;Konfiguration“ kann das
+Programm für den Benutzer eingestellt werden. Für die
+Logdaten-Anzeige können die Texte, Tooltip, Farbe und Sichtbarkeit
+der Sensoren, Aktoren und Optionen angepasst werden. Hierzu wählt
+man zuerst den passenden Tabulator an (Sensoren, Aktoren, Optionen).
+Auf der linken Seite muß dann der zu ändernde Sensor, Aktor oder
+Option angewählt werden. Dann können für dieses angewählte
+Element die Werte verändert werden. Allerdings ist es bei den
+Optionen nicht empfehlenswert die Texte zu verändern, da bei den
+Optionen eine im Programm festgelegte Funktion dahintersteht. Bei
+einigen Optionen können die relevanten Parameter eingestellt werden.
+Diese Parameter werden in dem zusätzlichen Dialogfenster nach dem
+Betätigen von „OK“ direkt übernommen.<BR>Unter dem Tabulator
+„Heizkurve“ können die Grundwerte für das Fenster eingestellt
+werden, welches über Extras-&gt;Heizkurve aufgerufen wird.<BR>Mit
+dem „Defaults“-Schalter werden die im Programm festgelegten
+Grundwerte aktiviert.<BR><BR>Nach Änderung der Konfiguration ist es
+sinnvoll das Programm neu zu starten.<BR><BR>Nach dem Beenden des
+Programms wird eine Konfigurationsdatei (User.config) angelegt. Der
+Pfad für die User.config ist unterschiedlich bei verschiedenen
+Betriebssystemen. <BR>Unter Windows XP lautet der Pfad „Dokumente
+und Einstellungen\&lt;<I>UserName</I>&gt;\Anwendungsdaten\Solvis\SolvisViewer“.
+<BR>Unter Windows Vista lautet der Pfad
+„Benutzer\&lt;<I>UserName</I>&gt;\AppData\Roaming\Solvis\SolvisViewer“.<BR><BR>Die
+User.config ist eine Xml-Datei. Alternativ kann auch diese Datei mit
+einem Xml-Editor oder einem normalen (UTF8 fähigen) Texteditor
+bearbeitet werden.Über die Xml-Datei können Text, ToolTip,
+Aktivierzustand (Checked), Sichtbarkeit (Visible), Farbe (ColorRGB)
+der Sensoren S01 bis S24, der Aktoren A01 bis A20 und den Optionen
+P01 bis P05 angepasst werden.<BR>Checked und Visible können auf die
+Werte „True“ oder „False“ gesetzt werden. Bei ColorRGB wird
+ein RGB-Wert (Rot, Grün, Blau-Anteil) eingestellt. Jeder der drei
+durch Komma getrennten Werte kann im Bereich 0 bis 255 liegen. Der
+Wert 0,0,0 entspricht Schwarz, 255,255,255 entspricht Weiß.</P>
+<P>Im Xml-Tag „OpenDir“ ist der Pfad für das Öffnen der
+Solvis-Datei hinterlegt.<BR>Im Xml-Tag „Version“ ist die aktuelle
+Programmversion hinterlegt.<BR>In BurnerMinPower (Brenner minimale
+Leistung) und BurnerMaxPower (Brenner maximale Leistung) können die
+Werte für den Brenner eingestellt werden.</P>
+<P>In Latitude und Longitude können die eigenen geografischen
+Koordinaten eingestellt werden für die Darstellung des Sonnenstands.</P>
+<P>In Temperature, Niveau und Gradient werden die Startwerte für die
+Heizkurve eingestellt.<BR>Temperature darf nur ganzzahlig im Bereich
+15 bis 25,<BR>Niveau darf nur ganzzahlig im Bereich -5 bis
++5,<BR>Gradient darf nur in 0.05 Schritten im Bereich 0.50 bis
+2.00<BR>vorgegeben werden.</P>
+<P>In TemperatureVL, NiveauVL und GradientVL werden die Werte der
+Heizungs-Anlage eingestellt. Diese Werte dienen der Bestimmung der
+Abweichung der Vorlauftemp. des ersten Heizkreises.</P>
+<P><B>Achtung: </B><SPAN STYLE="font-weight: normal">Die Werte mit
+Nachkommastellen müssen in der User.config Datei mit einem Punkt
+eingegeben werden (z.B. 7.5).<BR>Bei Falscheingabe wird eine Datei
+StackTrace.txt im oben genannten Verzeichnis erzeugt.</SPAN></P>
+<P>Beim jedem neuen Programmstart werden die aktuellen Werte aus der
+User.config Datei verwendet.</P>
+<P><B>Xml-Editor:</B> z.B. Xml Notepad 2007 von Microsoft</P>
+<P><A HREF="http://www.microsoft.com/download/en/details.aspx?id=7973">http://www.microsoft.com/download/en/details.aspx?id=7973</A></P>
+<P><BR><BR>
+</P>
+<H2 CLASS="western"><A NAME="HeatCurve"></A>Heizkurve</H2>
+<P>Durch Anwählen des Menupunkts Extras/Heizkurve wird ein neues
+Fenster geöffnet für die Darstellung von drei parametrierbaren
+Heizkurven. Hierbei zeigen die ersten beiden Kurven (Curve1 und
+Curve2) den echten von Solvis realisierten Verlauf der Heizkurve. Der
+Verlauf ist geprägt durch eine Rundung auf ganze Grad für die
+Vorlauf-Temperatur. Man sieht aber auch deutlich den Versatz bei
+negativen Außentemperaturen. Die dritte Kurve zeigt einen
+idealisierten Verlauf der Kurve (Ideal), wie sie in der Solvis
+Beschreibung L30 dargestellt ist. Für alle Kurven kann die
+Raum-Solltemperatur (Temperature) (Display Heizkreismenu, Seite 3),
+Steilheit (Gradient) (Heizkreismenu, Seite 2) und Niveau
+(Thermometersymbol im Heizungsmenu) vorgegeben werden.</P>
+<P><B>Anmerkung des Verfassers:</B> &lt;Den Parameter „Niveau“
+hätte ich auch im Heizkreismenu erwartet, da es doch bis zu drei
+getrennte Heizkreise gibt. Das Thermometersymbol wäre nur zur
+(additiven) Feinregulierung des „Niveaus“ notwendig.&gt;</P>
+<P>Durch Variation der im unteren Teil des Fensters verfügbaren
+Parameter wird der Einfluss in der Heizkurve grafisch sichtbar
+gemacht. Somit kann man relativ leicht beurteilen, wie sich die
+Änderungen von Parametern auswirken. Über den Menupunkt „Drucken“
+kann eine Druckvorschau (PrintPreview) oder ein Druck (Print)
+ausgelöst werden.</P>
+<P>Mit dem Menupunkt „Konfiguration“ können die
+Berechnungsverfahren der Kurven verändert werden. Der obere Teil in
+dem aufgeklappten Menu ist für die Kurve1 (Curve1), während der
+untere Teil für die Kurve2 zuständig ist. Ohne Anwahl einer der
+Menupunkte wird der Originalverlauf der Solvis Control 2
+dargestellt.<BR>Mit dem Aktivieren von „floor“, „round“ oder
+„nicht gerundet“ für Curve1 bzw. Curve2 wird die bei Solvis
+verwendete Formel mit unterschiedlichen Rundungsverfahren
+dargestellt. Der Verfasser ist der Meinung, dass die alternativen
+Berechnungs-Modelle besser geeignet wären für die Bestimmung der
+Heizkurve und der Idealkurve am nächsten kämen, wenn man die
+Mischersteuerung mit ganzen Grad-Zahlen durchführen muss. Nach
+eigenen Beobachtungen kämen die „round“ oder „nicht gerundet“
+Formel der Realität am nächsten. Zusätzlich müsste nach Ansicht
+des Verfassers aber auch eine Betrachtung über VL Ist und VL Soll
+über einen angemessenen Zeitraum in der „Solvis Control 2“
+stattfinden. Die aufgetretenen Abweichungen in dem zugrunde liegenden
+Zeitraum könnte die „Solvis Control 2“ durch zusätzlichen
+Eingriff in die Mischersteuerung korrigieren.</P>
+<P>Die zugrunde liegende Basis-Formel lautet:<BR>VL = k1 * G * (RT –
+AT)**k2 + RT + N<BR>Hierbei sind<BR>VL = Vorlauftemperatur<BR>k1, k2
+= Konstanten<BR>G = Gradient oder Steilheit<BR>RT = Raumtemperatur<BR>AT
+= Aussentemperatur<BR>N = Niveau<BR>k1 wurde mit dem Wert 1.8207 und
+k2 mit 0.8 angenommen. Die tatsächlichen Werte, die Solvis verwendet
+hat, können geringfügig abweichen.</P>
+<H3 CLASS="western">Formeln in der Programmiersprache C dargestellt:</H3>
+<P>Floor-Formel: VL = (int)(k1 * G * pow(RT – floor(AT), k2) + RT +
+N);</P>
+<P>Round-Formel: VL = round(k1 * G * pow(RT – round(AT * 2) / 2,
+k2) + RT + N);<BR>Hinweis: Die Round-Formel rundet auf halbe Grad für
+die Aussentemperatur.</P>
+<P>nicht gerundet-Formel: VL = round(k1 * G * pow(RT – AT, k2) + RT
++ N);</P>
+<P>wahrscheinliche Solvis-Formel: VL = (int)(k1 * G * pow(RT –
+(int)(AT), k2) + RT + N);<BR><BR>Da round keine Standardfunktion in
+der C-Bibliothek ist, muss sie folgendermassen definiert werden:<BR>int
+round(double value) {<BR>if (value &gt;= 0.0)<BR>return (int)(value +
+0.5);<BR>else<BR>return (int)(value - 0.5);<BR>}</P>
+<P>Im Internet findet man diverse Vorgehensweisen für die Bestimmung
+von optimalen Heizkurven. z.B.</P>
+<P><A HREF="http://www.shk-mayer.de/Page/Waermeerzeuger/Heizkurve.html">http://www.shk-mayer.de/Page/Waermeerzeuger/Heizkurve.html</A></P>
+<P><A HREF="http://www.moria.de/~michael/haus/energie/heizkurve.html">http://www.moria.de/~michael/haus/energie/heizkurve.html</A></P>
+<H2 CLASS="western"><A NAME="Optimize"></A>Optimale Heizkurve
+(Vorlauftemp.) einstellen</H2>
+<P STYLE="margin-bottom: 0cm">Um die optimale Heizkurve für den
+niedrigsten Energieverbrauch einstellen zu können, ist eine
+komplette Heizperiode erforderlich. Erforderlich für die Bestimmung
+der Heizkurve sind unterschiedliche Aussentemperaturen. Zu beachten
+ist auch die Empfehlung von Solvis für die Montage des
+Aussentemperatur-Fühlers.</P>
+<P STYLE="margin-bottom: 0cm">Bei der Solvis-Control 2 hat man für
+die Einstellung der Heizkurve drei Parameter zur Verfügung.</P>
+<OL STYLE="margin-left: 0.64cm">
+	<LI><P STYLE="margin-bottom: 0cm">Raum-Soll-Temperatur
+	(Heizkreismenu, Seite 3)</P>
+	<LI><P STYLE="margin-bottom: 0cm">Niveau: Im Menu Heizung ist dies
+	der Schaltwippen-Wert des Thermometersymbols.</P>
+	<LI><P STYLE="margin-bottom: 0cm">Steilheit der Heizkurve:
+	(Heizkreismenu, Seite 2)</P>
+</OL>
+<P STYLE="margin-bottom: 0cm"><BR>Bei der Einstellung der Parameter
+für die Vorlauftemperatur sollte man folgendermassen vorgehen (ohne
+Raumfühler):</P>
+<UL STYLE="margin-left: 0.64cm">
+	<LI><P STYLE="margin-bottom: 0cm">Heizkörperventile voll aufdrehen
+	(Heizkörper sollten hydraulisch abgeglichen sein).</P>
+</UL>
+<UL STYLE="margin-left: 0.64cm">
+	<LI><P STYLE="margin-bottom: 0cm">gewünschte Temperatur (z.B. 21
+	Grad) im Heizkreismenu, Seite 3 als Raum-Solltemperatur einstellen.</P>
+	<LI><P STYLE="margin-bottom: 0cm">Einen Grundwert für die Steilheit
+	einstellen (z.B. 1,2 ) im Heizkreismenu, Seite 2. Es sollte die
+	Empfehlung aus der Solvis-Beschreibung bzw. des Heizungsbetriebs
+	berücksichtigt werden für die Festlegung des Grundwertes.</P>
+	<LI><P STYLE="margin-bottom: 0cm">Dann den Niveau Parameter so
+	eingestellen, das sich eine Temperatur von ungefähr 21 Grad in den
+	Räumen ergibt. Ein bis zwei Tage Wartezeit sind erforderlich nach
+	jeder Änderung.</P>
+	<LI><P STYLE="margin-bottom: 0cm">Bei einigermassen gleichmässigen
+	Aussentemperaturen ist die zugehörige Soll Vorlauf-Temperatur
+	tabellarisch zu notieren. Der Aussentemperatur Mittelwert und die
+	Soll Vorlauf-Temperatur können im Heizkreismenu, Seite 4 und 5 für
+	die Tabelle abgelesen werden. Unter Umständen sind jetzt Niveau
+	bzw. Steilheit in kleinen Schritten anzupassen, so dass die
+	Temperatur in den Räumen stimmt.</P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>Wenn man das gesamte
+Aussentemperatur-Band von +20 bis -20 Grad (wenn möglich) mal mit
+den zugehörigen Vorlauftemp. protokolliert hat, dann kann die
+optimale Einstellung fixiert werden.</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B>Tip:</B><SPAN STYLE="font-weight: normal">Im
+Prinzip reicht es aber aus, wenn man eine VL-Temp. bei Aussentemp.
+von ca. +15 Grad und eine weitere VL-Temp. bei einer der niedrigsten
+Aussentemperaturen bestimmt. Damit kann man dann mit dem Programm
+(Menupunkt Extras-&gt;Heizkurve) die passenden Heizkurven Parameter
+bestimmen.</SPAN></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B>Achtung:</B> <SPAN STYLE="font-weight: normal">Bei
+niedrigen Aussentemperaturen ist die aktuelle Vorlauf-Temperatur (VL
+Ist) ungefähr eine Stunde nach der Umschaltung vom Absenk- zum
+Tag-Betrieb zu prüfen. Die „VL Ist“ sollte sich in der Nähe der
+Soll Vorlauf-Temp. befinden. Falls das nicht der Fall ist und auch
+der Mischer nicht mehr mit „Mischer auf“ Kommandos angesteuert
+wird (Mischer ist am Anschlag ! ), dann ist im Installateur-Bereich
+für den Heizkreis der Offset-Parameter zu vergrössern.</SPAN></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal">Für einen
+optimalen Verbrauch sind gegebenfalls weitere Parameter im
+Installateur-Bereich anzupassen.</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal">z.B.
+Gebläsedrehzahl Stufe 2 bei einer Gasheizung oder auch die
+Anforderungstemperaturen für Warmwasser.</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal">Der Verfasser hat
+einen SolvisMax Gas (5 – 20kW) ohne Solar.<BR>Es wurden im
+Installateur-Bereich folgende Parameter angepasst:</P>
+<UL STYLE="margin-left: 0.64cm">
+	<LI><P STYLE="margin-bottom: 0cm; font-weight: normal">Heizkreis
+	Offset: 6 Grad</P>
+	<LI><P STYLE="margin-bottom: 0cm; font-weight: normal">Heizung
+	Gebläsedrehzahl Max: 18kW</P>
+	<LI><P STYLE="margin-bottom: 0cm; font-weight: normal">Wassernachheizung:
+	85%</P>
+	<LI><P STYLE="margin-bottom: 0cm; font-weight: normal">Wasser Anf.
+	Start: 7</P>
+	<LI><P STYLE="margin-bottom: 0cm; font-weight: normal">Wasser Anf.
+	Stop: 10</P>
+</UL>
+<H2 CLASS="western"><A NAME="LogFiles"></A>Logdateien anzeigen</H2>
+<P>Im Hauptfenster des Programms SolvisSC2Viewer können die
+Logdateien, die auf der Speicherkarte der „Solvis Control 2“
+abgelegt sind, sichtbar gemacht werden und auch ausgedruckt werden.</P>
+<P>Nach der Auswahl einer Solvis-Datei über das Datei-Menu (bzw.
+Öffnen-Icon in der Toolbar) wird durch Aktivieren von einem oder
+mehreren Auswahl-Elementen auf der linken Seite des Hauptfensters der
+Kurvenverlauf dieser Elemente (Sensoren, Aktoren oder Optionen) in
+dem Chart auf der rechten Seite dargestellt. Die Y-Achse zeigt für
+die Sensoren im Regelfall die Temperatur an, während die X-Achse
+generell die Zeitachse ist. Bei den Aktoren ist die Y-Achse im
+Regelfall ein Prozentwert. <BR>Durch Auswählen eines Zeitbereichs
+mit der Maus im Chart wird der Bereich feiner aufgelöst dargestellt
+(Ziehen mit gedrückter linker Maustaste im Chart). Mit dem unten
+sichtbaren Scrollbalken kann man durch den gesamten Zeitbereich
+scrollen. Zur Rückschaltung in den weniger aufgelösten Chart ist
+der Knopf auf der linken Seite des Scrollbalken mit der linken
+Maustaste zu drücken.<BR>Der Zeitbereich der Solvis-Datei wird in
+den oben angeordneten Kalender-Elementen dargestellt. Über die
+Kalender-Elemente kann der Zeitbereich verändert werden. Mit den
+rechts von den Kalender-Elementen liegenden Buttons kann einfach
+durch die Kalenderzeiten navigiert werden.<BR>Die Aktoren werden
+generell im oberen Teil des Chart dargestellt, die Sensoren und
+Optionen werden im unteren Teil dargestellt.</P>
+<P>Für die Optionen gibt es im Regelfall Parameter in der
+User.config Datei. Diese Parameter sind bei Bedarf im
+Konfigurationsmenu anzupassen.<BR><BR><BR>
+</P>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<THEAD>
+		<TR VALIGN=TOP>
+			<TH WIDTH=50% STYLE="border: none; padding: 0cm">
+				<P STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+				Optionsname</P>
+			</TH>
+			<TH WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border: 1px solid #000000; padding: 0.1cm">Parameter</P>
+			</TH>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+				P01, Brenner kW</P>
+			</TD>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+				BurnerMinPower, BurnerMaxPower</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+				P02, Solar kW</P>
+			</TD>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+				-</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+				P03, Sonnenstand</P>
+			</TD>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+				Latitude, Longitude</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+				P04, VL (Ist - Soll)_1</P>
+			</TD>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+				TemperatureVL, NiveauVL, GradientVL</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+				P05, VL (Ist - Soll)_2</P>
+			</TD>
+			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+				-</P>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P><BR><BR>
+</P>
+<P>Bei den Optionen P04 und P05 wird eine Vorlauf-Temperatur
+Differenz für den Heizkreis 1 berechnet und angezeigt (Sensor S12 –
+berechneter Vorlauf-Sollwert). Wichtig für eine korrekte Anzeige
+sind die Einstellungen der zugehörigen Parameter. Die Werte müssen
+denen in der Heizungs-Anlage entsprechen. Die in P04 eingestellten
+Parameter werden auch für die Option P05 verwendet.<BR>In der Option
+P04 wird der Vorlauf-Sollwert gemäß der stetig verlaufenden
+Solvis-Formel berechnet.<BR>In der Option P05 wird der
+Vorlauf-Sollwert nach der treppenförmig verlaufenden Formel
+berechnet. Bei P05 findet eine Mittelwertbildung über 30 Minuten für
+die Aussentemperatur statt. Bei Abweichungen der Differenz von
+kleiner als minus 5 Grad wird die Darstellung auf minus 5 Grad
+begrenzt.</P>
+<H2 CLASS="western"><A NAME="SensorsCheck"></A>Sensoren prüfen</H2>
+<P>Im Hauptfenster kann unter dem Menupunkt „Extras“ bei
+geladener Solvis-Datei der Menupunkt „Sensoren prüfen“ betätigt
+werden. Hierbei wird überprüft, ob die Temperaturfühler S01
+(Speicher oben) und S04 (Heizungspuffer oben) korrekt angeschlossen
+sind. Falls ein Meldungsfenster erscheint mit dem Meldungstext
+„Temperatur Sensoren S01 und S04 vertauscht“, dann ist der
+Heizungsbetrieb zu rufen. Dieser muss die Anlage in Ordnung bringen.</P>
+<H2 CLASS="western"><A NAME="LogFormat"></A>Solvis Logdaten Format</H2>
+<P>Solvis speichert jede Minute einen Datensatz von Sensoren und
+Aktoren mit Zeitstempel in einer Datei als Textzeile ab.<BR>Im
+SolvisSC2Viewer wird beim Öffnen der Datei jeder Datensatz
+interpretiert und in seine Bestandteile zerlegt.<BR>Der Zeitstempel
+wird unter dem Namen DateAndTime im Datenformat DateTime
+abgespeichert.<BR>Die Sensoren werden unter dem Namen S01 bis S24 im
+Datenformat double abgespeichert. Die Werte für die Sensoren S01 bis
+S16 und S18 bis S21 werden jeweils durch 10 dividiert. Die Sensoren
+S22 bis S24 werden ohne Umrechnung abgespeichert. Der Sensor S17 ist
+ein Sonderfall. Für die Chart-Darstellung wird eine empirisch
+gewonnene Formel verwendet. Abgespeichert ist der Sensor S17
+allerdings ohne Umrechnung des Datensatz-Wertes.<BR>Die Aktoren
+werden unter dem Namen A01 bis A20 im Datenformat double
+abgespeichert. Bei den Aktoren findet keine Umrechnung statt.</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>
