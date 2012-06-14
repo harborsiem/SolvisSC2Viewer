@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="EB4CCC7C-961E-419C-8A64-D96DEFA5A71B" Name="SolvisSC2Viewer" Language="1033" Version="1.1.0.0" Manufacturer="Home" UpgradeCode="085A4473-815E-4282-BBD6-9D71425340EC">
+        <Package Description="SolvisSC2Viewer" Comments="SolvisSC2Viewer Installation" InstallerVersion="301" Compressed="yes" Platform="x86" InstallScope="perMachine" />
+        <Media Id="1" Cabinet="product.cab" EmbedCab="yes" />
+        <MajorUpgrade DowngradeErrorMessage="A later version of [ProductName] is already installed." Schedule="afterInstallValidate" />
+        <Upgrade Id="085A4473-815E-4282-BBD6-9D71425340EC">
+            <UpgradeVersion OnlyDetect="yes" Property="SELFFOUND" Minimum="1.1.0" IncludeMinimum="yes" Maximum="1.1.0" IncludeMaximum="yes" />
+            <UpgradeVersion OnlyDetect="yes" Property="NEWERFOUND" Minimum="1.1.0" IncludeMinimum="no" />
+        </Upgrade>
+        <CustomAction Id="AlreadyUpdated" Error="[ProductName] is already installed." />
+        <CustomAction Id="NoDowngrade" Error="A later version of [ProductName] is already installed." />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles">
+                <Directory Id="SOLVIS" Name="Solvis">
+                    <Directory Id="APPLICATIONROOTDIRECTORY" Name="SolvisSC2">
+                        <Directory Id="DE_DE" Name="de-DE">
+                        </Directory>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ApplicationProgramsFolder" Name="SolvisSC2">
+                </Directory>
+            </Directory>
+        </Directory>
+        <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+            <Component Id="BIN_FILES" Guid="9409E2CF-0923-4A4B-A82D-093EC651C304">
+                <File Id="SOLVISSC2VIEWER.EXE" Name="SolvisSC2Viewer.exe" Source="bin\Release\SolvisSC2Viewer.exe" KeyPath="yes" Checksum="yes" />
+                <File Id="SOLVISVIEWER.CHM" Name="SolvisViewer.chm" Source="bin\Release\SolvisViewer.chm" />
+            </Component>
+        </DirectoryRef>
+        <DirectoryRef Id="DE_DE">
+            <Component Id="LANG_DE_DE_FILES" Guid="7FCD704E-134F-40CB-A202-F2D2FBCC9FE7">
+                <CreateFolder />
+                <File Id="SOLVISSC2VIEWER.resources.DLL" Name="SolvisSC2Viewer.resources.dll" Source="bin\Release\de-DE\SolvisSC2Viewer.resources.dll" KeyPath="yes" />
+            </Component>
+        </DirectoryRef>
+        <DirectoryRef Id="ApplicationProgramsFolder">
+            <Component Id="ApplicationShortcut" Guid="5B01A7E4-7E35-4477-B735-85FACA772240">
+                <Shortcut Id="ApplicationStartMenuShortcut" Name="SolvisSC2Viewer" Target="[APPLICATIONROOTDIRECTORY]SolvisSC2Viewer.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY" Icon="SolvisIcon.exe" IconIndex="0" />
+                <Shortcut Id="UninstallProduct" Name="Uninstall SolvisSC2Viewer" Description="Uninstalls the application" Arguments="/x [ProductCode]" Target="[SystemFolder]msiexec.exe" />
+                <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall" />
+                <RegistryValue Id="regBDF80E493A637CB6E0F986D6EA625207" Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
+            </Component>
+        </DirectoryRef>
+        <Feature Id="DefaultFeature" AllowAdvertise="no" Title="Main Feature" Level="1">
+            <ComponentRef Id="BIN_FILES" />
+            <ComponentRef Id="LANG_DE_DE_FILES" />
+            <ComponentRef Id="ApplicationShortcut" />
+        </Feature>
+        <PropertyRef Id="NETFRAMEWORK40FULL" />
+        <Condition Message="This application requires .NET Framework 4.0.">Installed OR NETFRAMEWORK40FULL</Condition>
+        <UIRef Id="WixUI_ErrorProgressText" />
+        <InstallExecuteSequence>
+            <Custom Action="AlreadyUpdated" After="FindRelatedProducts">SELFFOUND</Custom>
+            <Custom Action="NoDowngrade" After="FindRelatedProducts">NEWERFOUND</Custom>
+        </InstallExecuteSequence>
+        <Icon Id="SolvisIcon.exe" SourceFile="files\Lupe.ico" />
+        <UI />
+    </Product>
+</Wix>

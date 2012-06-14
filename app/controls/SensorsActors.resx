@@ -1,0 +1,2037 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="controlLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="controlLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="controlLayout.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="controlLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="sensorsGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="sensorsGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sensorsGroup.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="sensorsGroupLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="sensorsGroupLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sensorsGroupLayout.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="sensorsGroupLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="s1Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="s1Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="s1Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s1Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 17</value>
+  </data>
+  <data name="s1Check.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="s1Check.Text" xml:space="preserve">
+    <value>Speicher oben</value>
+  </data>
+  <data name="&gt;&gt;s1Check.Name" xml:space="preserve">
+    <value>s1Check</value>
+  </data>
+  <data name="&gt;&gt;s1Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s1Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s1Check.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="s2Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s2Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="s2Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s2Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="s2Check.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="s2Check.Text" xml:space="preserve">
+    <value>Warmwasser</value>
+  </data>
+  <data name="&gt;&gt;s2Check.Name" xml:space="preserve">
+    <value>s2Check</value>
+  </data>
+  <data name="&gt;&gt;s2Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s2Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s2Check.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="s3Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s3Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 34</value>
+  </data>
+  <data name="s3Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s3Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 17</value>
+  </data>
+  <data name="s3Check.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="s3Check.Text" xml:space="preserve">
+    <value>Speicher Ref</value>
+  </data>
+  <data name="&gt;&gt;s3Check.Name" xml:space="preserve">
+    <value>s3Check</value>
+  </data>
+  <data name="&gt;&gt;s3Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s3Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s3Check.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="s4Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s4Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 51</value>
+  </data>
+  <data name="s4Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s4Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 17</value>
+  </data>
+  <data name="s4Check.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="s4Check.Text" xml:space="preserve">
+    <value>H.Puffer oben</value>
+  </data>
+  <data name="&gt;&gt;s4Check.Name" xml:space="preserve">
+    <value>s4Check</value>
+  </data>
+  <data name="&gt;&gt;s4Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s4Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s4Check.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="s5Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s5Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 68</value>
+  </data>
+  <data name="s5Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s5Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 17</value>
+  </data>
+  <data name="s5Check.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="s5Check.Text" xml:space="preserve">
+    <value>Solar VL2</value>
+  </data>
+  <data name="&gt;&gt;s5Check.Name" xml:space="preserve">
+    <value>s5Check</value>
+  </data>
+  <data name="&gt;&gt;s5Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s5Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s5Check.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="s6Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s6Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 85</value>
+  </data>
+  <data name="s6Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s6Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="s6Check.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="s6Check.Text" xml:space="preserve">
+    <value>Solar RL2</value>
+  </data>
+  <data name="&gt;&gt;s6Check.Name" xml:space="preserve">
+    <value>s6Check</value>
+  </data>
+  <data name="&gt;&gt;s6Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s6Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s6Check.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="s7Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s7Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 102</value>
+  </data>
+  <data name="s7Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s7Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="s7Check.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="s7Check.Text" xml:space="preserve">
+    <value>Solar Druck</value>
+  </data>
+  <data name="&gt;&gt;s7Check.Name" xml:space="preserve">
+    <value>s7Check</value>
+  </data>
+  <data name="&gt;&gt;s7Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s7Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s7Check.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="s8Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s8Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 119</value>
+  </data>
+  <data name="s8Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s8Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 17</value>
+  </data>
+  <data name="s8Check.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="s8Check.Text" xml:space="preserve">
+    <value>Kollektor Temp</value>
+  </data>
+  <data name="&gt;&gt;s8Check.Name" xml:space="preserve">
+    <value>s8Check</value>
+  </data>
+  <data name="&gt;&gt;s8Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s8Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s8Check.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="s9Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s9Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 136</value>
+  </data>
+  <data name="s9Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s9Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 17</value>
+  </data>
+  <data name="s9Check.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="s9Check.Text" xml:space="preserve">
+    <value>H.Puffer unten</value>
+  </data>
+  <data name="&gt;&gt;s9Check.Name" xml:space="preserve">
+    <value>s9Check</value>
+  </data>
+  <data name="&gt;&gt;s9Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s9Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s9Check.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="s10Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s10Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 153</value>
+  </data>
+  <data name="s10Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s10Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="s10Check.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="s10Check.Text" xml:space="preserve">
+    <value>Außen Temp</value>
+  </data>
+  <data name="&gt;&gt;s10Check.Name" xml:space="preserve">
+    <value>s10Check</value>
+  </data>
+  <data name="&gt;&gt;s10Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s10Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s10Check.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="s11Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s11Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 170</value>
+  </data>
+  <data name="s11Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s11Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="s11Check.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="s11Check.Text" xml:space="preserve">
+    <value>Zirk. Temp</value>
+  </data>
+  <data name="&gt;&gt;s11Check.Name" xml:space="preserve">
+    <value>s11Check</value>
+  </data>
+  <data name="&gt;&gt;s11Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s11Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s11Check.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="s12Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s12Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 187</value>
+  </data>
+  <data name="s12Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s12Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="s12Check.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="s12Check.Text" xml:space="preserve">
+    <value>Vorlauf HK1</value>
+  </data>
+  <data name="&gt;&gt;s12Check.Name" xml:space="preserve">
+    <value>s12Check</value>
+  </data>
+  <data name="&gt;&gt;s12Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s12Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s12Check.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="s13Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s13Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 204</value>
+  </data>
+  <data name="s13Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s13Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="s13Check.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="s13Check.Text" xml:space="preserve">
+    <value>Vorlauf HK2</value>
+  </data>
+  <data name="s13Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;s13Check.Name" xml:space="preserve">
+    <value>s13Check</value>
+  </data>
+  <data name="&gt;&gt;s13Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s13Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s13Check.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="s14Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s14Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 221</value>
+  </data>
+  <data name="s14Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s14Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="s14Check.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="s14Check.Text" xml:space="preserve">
+    <value>Vorlauf HK3</value>
+  </data>
+  <data name="s14Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;s14Check.Name" xml:space="preserve">
+    <value>s14Check</value>
+  </data>
+  <data name="&gt;&gt;s14Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s14Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s14Check.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="s15Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s15Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 238</value>
+  </data>
+  <data name="s15Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s15Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 17</value>
+  </data>
+  <data name="s15Check.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="s15Check.Text" xml:space="preserve">
+    <value>Solar VL1</value>
+  </data>
+  <data name="s15Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;s15Check.Name" xml:space="preserve">
+    <value>s15Check</value>
+  </data>
+  <data name="&gt;&gt;s15Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s15Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s15Check.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="s16Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s16Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 255</value>
+  </data>
+  <data name="s16Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s16Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="s16Check.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="s16Check.Text" xml:space="preserve">
+    <value>Kollektor 2</value>
+  </data>
+  <data name="s16Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;s16Check.Name" xml:space="preserve">
+    <value>s16Check</value>
+  </data>
+  <data name="&gt;&gt;s16Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s16Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s16Check.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="s17Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s17Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 272</value>
+  </data>
+  <data name="s17Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s17Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
+  </data>
+  <data name="s17Check.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="s17Check.Text" xml:space="preserve">
+    <value>VSG Solar</value>
+  </data>
+  <data name="&gt;&gt;s17Check.Name" xml:space="preserve">
+    <value>s17Check</value>
+  </data>
+  <data name="&gt;&gt;s17Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s17Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s17Check.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="s18Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s18Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 289</value>
+  </data>
+  <data name="s18Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s18Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 17</value>
+  </data>
+  <data name="s18Check.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="s18Check.Text" xml:space="preserve">
+    <value>VSG Warmwasser</value>
+  </data>
+  <data name="&gt;&gt;s18Check.Name" xml:space="preserve">
+    <value>s18Check</value>
+  </data>
+  <data name="&gt;&gt;s18Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s18Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s18Check.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="s19Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s19Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 306</value>
+  </data>
+  <data name="s19Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s19Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 17</value>
+  </data>
+  <data name="s19Check.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="s19Check.Text" xml:space="preserve">
+    <value>Raumfühler1</value>
+  </data>
+  <data name="&gt;&gt;s19Check.Name" xml:space="preserve">
+    <value>s19Check</value>
+  </data>
+  <data name="&gt;&gt;s19Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s19Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s19Check.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="s20Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s20Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 323</value>
+  </data>
+  <data name="s20Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s20Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="s20Check.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="s20Check.Text" xml:space="preserve">
+    <value>S20</value>
+  </data>
+  <data name="s20Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;s20Check.Name" xml:space="preserve">
+    <value>s20Check</value>
+  </data>
+  <data name="&gt;&gt;s20Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s20Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s20Check.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="s21Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s21Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 340</value>
+  </data>
+  <data name="s21Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s21Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="s21Check.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="s21Check.Text" xml:space="preserve">
+    <value>S21</value>
+  </data>
+  <data name="s21Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;s21Check.Name" xml:space="preserve">
+    <value>s21Check</value>
+  </data>
+  <data name="&gt;&gt;s21Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s21Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s21Check.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="s22Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s22Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 357</value>
+  </data>
+  <data name="s22Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s22Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="s22Check.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="s22Check.Text" xml:space="preserve">
+    <value>S22</value>
+  </data>
+  <data name="&gt;&gt;s22Check.Name" xml:space="preserve">
+    <value>s22Check</value>
+  </data>
+  <data name="&gt;&gt;s22Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s22Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s22Check.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="s23Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s23Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 374</value>
+  </data>
+  <data name="s23Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s23Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="s23Check.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="s23Check.Text" xml:space="preserve">
+    <value>S23</value>
+  </data>
+  <data name="&gt;&gt;s23Check.Name" xml:space="preserve">
+    <value>s23Check</value>
+  </data>
+  <data name="&gt;&gt;s23Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s23Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s23Check.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="s24Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="s24Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 391</value>
+  </data>
+  <data name="s24Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="s24Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="s24Check.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="s24Check.Text" xml:space="preserve">
+    <value>S24</value>
+  </data>
+  <data name="s24Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;s24Check.Name" xml:space="preserve">
+    <value>s24Check</value>
+  </data>
+  <data name="&gt;&gt;s24Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s24Check.Parent" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;s24Check.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="sensorsGroupLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="sensorsGroupLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 0</value>
+  </data>
+  <data name="sensorsGroupLayout.RowCount" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="sensorsGroupLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 408</value>
+  </data>
+  <data name="sensorsGroupLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;sensorsGroupLayout.Name" xml:space="preserve">
+    <value>sensorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;sensorsGroupLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sensorsGroupLayout.Parent" xml:space="preserve">
+    <value>sensorsGroup</value>
+  </data>
+  <data name="&gt;&gt;sensorsGroupLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="sensorsGroupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="s1Check" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s2Check" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s3Check" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s4Check" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s5Check" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s6Check" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s7Check" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s8Check" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s9Check" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s10Check" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s11Check" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s12Check" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s13Check" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s14Check" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s15Check" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s16Check" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s17Check" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s18Check" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s19Check" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s20Check" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s21Check" Row="20" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s22Check" Row="21" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s23Check" Row="22" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="s24Check" Row="23" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="sensorsGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="sensorsGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 443</value>
+  </data>
+  <data name="sensorsGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="sensorsGroup.Text" xml:space="preserve">
+    <value>Sensors</value>
+  </data>
+  <data name="&gt;&gt;sensorsGroup.Name" xml:space="preserve">
+    <value>sensorsGroup</value>
+  </data>
+  <data name="&gt;&gt;sensorsGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sensorsGroup.Parent" xml:space="preserve">
+    <value>controlLayout</value>
+  </data>
+  <data name="&gt;&gt;sensorsGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="actorsGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="actorsGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="actorsGroup.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="actorsGroupLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="actorsGroupLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="actorsGroupLayout.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="actorsGroupLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="a1Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a1Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="a1Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a1Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 17</value>
+  </data>
+  <data name="a1Check.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="a1Check.Text" xml:space="preserve">
+    <value>Solarpumpe %</value>
+  </data>
+  <data name="&gt;&gt;a1Check.Name" xml:space="preserve">
+    <value>a1Check</value>
+  </data>
+  <data name="&gt;&gt;a1Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a1Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a1Check.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="a2Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a2Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="a2Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a2Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 17</value>
+  </data>
+  <data name="a2Check.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="a2Check.Text" xml:space="preserve">
+    <value>Pumpe WW l/h</value>
+  </data>
+  <data name="&gt;&gt;a2Check.Name" xml:space="preserve">
+    <value>a2Check</value>
+  </data>
+  <data name="&gt;&gt;a2Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a2Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a2Check.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="a3Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a3Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 34</value>
+  </data>
+  <data name="a3Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a3Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 17</value>
+  </data>
+  <data name="a3Check.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="a3Check.Text" xml:space="preserve">
+    <value>Pumpe HK1 %</value>
+  </data>
+  <data name="&gt;&gt;a3Check.Name" xml:space="preserve">
+    <value>a3Check</value>
+  </data>
+  <data name="&gt;&gt;a3Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a3Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a3Check.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="a4Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a4Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 51</value>
+  </data>
+  <data name="a4Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a4Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="a4Check.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="a4Check.Text" xml:space="preserve">
+    <value>Pumpe HK2</value>
+  </data>
+  <data name="a4Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a4Check.Name" xml:space="preserve">
+    <value>a4Check</value>
+  </data>
+  <data name="&gt;&gt;a4Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a4Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a4Check.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="a5Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a5Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 68</value>
+  </data>
+  <data name="a5Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a5Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 17</value>
+  </data>
+  <data name="a5Check.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="a5Check.Text" xml:space="preserve">
+    <value>Pumpe Zirk</value>
+  </data>
+  <data name="&gt;&gt;a5Check.Name" xml:space="preserve">
+    <value>a5Check</value>
+  </data>
+  <data name="&gt;&gt;a5Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a5Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a5Check.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="a6Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a6Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 85</value>
+  </data>
+  <data name="a6Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a6Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="a6Check.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="a6Check.Text" xml:space="preserve">
+    <value>Pumpe HK3</value>
+  </data>
+  <data name="a6Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a6Check.Name" xml:space="preserve">
+    <value>a6Check</value>
+  </data>
+  <data name="&gt;&gt;a6Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a6Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a6Check.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="a7Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a7Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 102</value>
+  </data>
+  <data name="a7Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a7Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a7Check.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="a7Check.Text" xml:space="preserve">
+    <value>A07</value>
+  </data>
+  <data name="&gt;&gt;a7Check.Name" xml:space="preserve">
+    <value>a7Check</value>
+  </data>
+  <data name="&gt;&gt;a7Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a7Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a7Check.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="a8Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a8Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 119</value>
+  </data>
+  <data name="a8Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a8Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 17</value>
+  </data>
+  <data name="a8Check.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="a8Check.Text" xml:space="preserve">
+    <value>HK1 Mischer auf</value>
+  </data>
+  <data name="&gt;&gt;a8Check.Name" xml:space="preserve">
+    <value>a8Check</value>
+  </data>
+  <data name="&gt;&gt;a8Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a8Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a8Check.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="a9Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a9Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 136</value>
+  </data>
+  <data name="a9Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a9Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 17</value>
+  </data>
+  <data name="a9Check.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="a9Check.Text" xml:space="preserve">
+    <value>HK1 Mischer zu</value>
+  </data>
+  <data name="&gt;&gt;a9Check.Name" xml:space="preserve">
+    <value>a9Check</value>
+  </data>
+  <data name="&gt;&gt;a9Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a9Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a9Check.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="a10Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a10Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 153</value>
+  </data>
+  <data name="a10Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a10Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 17</value>
+  </data>
+  <data name="a10Check.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="a10Check.Text" xml:space="preserve">
+    <value>HK2 Mischer auf</value>
+  </data>
+  <data name="a10Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a10Check.Name" xml:space="preserve">
+    <value>a10Check</value>
+  </data>
+  <data name="&gt;&gt;a10Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a10Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a10Check.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="a11Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a11Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 170</value>
+  </data>
+  <data name="a11Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a11Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 17</value>
+  </data>
+  <data name="a11Check.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="a11Check.Text" xml:space="preserve">
+    <value>HK2 Mischer zu</value>
+  </data>
+  <data name="a11Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a11Check.Name" xml:space="preserve">
+    <value>a11Check</value>
+  </data>
+  <data name="&gt;&gt;a11Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a11Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a11Check.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="a12Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a12Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 187</value>
+  </data>
+  <data name="a12Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a12Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="a12Check.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="a12Check.Text" xml:space="preserve">
+    <value>Brenner Anf</value>
+  </data>
+  <data name="&gt;&gt;a12Check.Name" xml:space="preserve">
+    <value>a12Check</value>
+  </data>
+  <data name="&gt;&gt;a12Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a12Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a12Check.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="a13Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a13Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 204</value>
+  </data>
+  <data name="a13Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a13Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 17</value>
+  </data>
+  <data name="a13Check.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="a13Check.Text" xml:space="preserve">
+    <value>Brenner Stufe2</value>
+  </data>
+  <data name="a13Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a13Check.Name" xml:space="preserve">
+    <value>a13Check</value>
+  </data>
+  <data name="&gt;&gt;a13Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a13Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a13Check.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="a14Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a14Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 221</value>
+  </data>
+  <data name="a14Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a14Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a14Check.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="a14Check.Text" xml:space="preserve">
+    <value>A14</value>
+  </data>
+  <data name="a14Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a14Check.Name" xml:space="preserve">
+    <value>a14Check</value>
+  </data>
+  <data name="&gt;&gt;a14Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a14Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a14Check.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="a15Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a15Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 238</value>
+  </data>
+  <data name="a15Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a15Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a15Check.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="a15Check.Text" xml:space="preserve">
+    <value>A15</value>
+  </data>
+  <data name="a15Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a15Check.Name" xml:space="preserve">
+    <value>a15Check</value>
+  </data>
+  <data name="&gt;&gt;a15Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a15Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a15Check.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="a16Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a16Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 255</value>
+  </data>
+  <data name="a16Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a16Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="a16Check.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="a16Check.Text" xml:space="preserve">
+    <value>Brenner P%</value>
+  </data>
+  <data name="&gt;&gt;a16Check.Name" xml:space="preserve">
+    <value>a16Check</value>
+  </data>
+  <data name="&gt;&gt;a16Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a16Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a16Check.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="a17Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a17Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 272</value>
+  </data>
+  <data name="a17Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a17Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a17Check.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="a17Check.Text" xml:space="preserve">
+    <value>A17</value>
+  </data>
+  <data name="a17Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a17Check.Name" xml:space="preserve">
+    <value>a17Check</value>
+  </data>
+  <data name="&gt;&gt;a17Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a17Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a17Check.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="a18Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a18Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 289</value>
+  </data>
+  <data name="a18Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a18Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a18Check.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="a18Check.Text" xml:space="preserve">
+    <value>A18</value>
+  </data>
+  <data name="a18Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;a18Check.Name" xml:space="preserve">
+    <value>a18Check</value>
+  </data>
+  <data name="&gt;&gt;a18Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a18Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a18Check.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="a19Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a19Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 306</value>
+  </data>
+  <data name="a19Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a19Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a19Check.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="a19Check.Text" xml:space="preserve">
+    <value>A19</value>
+  </data>
+  <data name="&gt;&gt;a19Check.Name" xml:space="preserve">
+    <value>a19Check</value>
+  </data>
+  <data name="&gt;&gt;a19Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a19Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a19Check.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="a20Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a20Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 323</value>
+  </data>
+  <data name="a20Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a20Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a20Check.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="a20Check.Text" xml:space="preserve">
+    <value>A20</value>
+  </data>
+  <data name="&gt;&gt;a20Check.Name" xml:space="preserve">
+    <value>a20Check</value>
+  </data>
+  <data name="&gt;&gt;a20Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a20Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a20Check.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="actorsGroupLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="actorsGroupLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 0</value>
+  </data>
+  <data name="actorsGroupLayout.RowCount" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="actorsGroupLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 340</value>
+  </data>
+  <data name="actorsGroupLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;actorsGroupLayout.Name" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;actorsGroupLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;actorsGroupLayout.Parent" xml:space="preserve">
+    <value>actorsGroup</value>
+  </data>
+  <data name="&gt;&gt;actorsGroupLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="actorsGroupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="a1Check" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a2Check" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a3Check" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a4Check" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a5Check" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a6Check" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a7Check" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a8Check" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a9Check" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a10Check" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a11Check" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a12Check" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a13Check" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a14Check" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a15Check" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a16Check" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a17Check" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a18Check" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a19Check" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a20Check" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="actorsGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 452</value>
+  </data>
+  <data name="actorsGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 375</value>
+  </data>
+  <data name="actorsGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="actorsGroup.Text" xml:space="preserve">
+    <value>Actors</value>
+  </data>
+  <data name="&gt;&gt;actorsGroup.Name" xml:space="preserve">
+    <value>actorsGroup</value>
+  </data>
+  <data name="&gt;&gt;actorsGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;actorsGroup.Parent" xml:space="preserve">
+    <value>controlLayout</value>
+  </data>
+  <data name="&gt;&gt;actorsGroup.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="optionsGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="optionsGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="optionsGroup.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="optionsGroupLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="optionsGroupLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="optionsGroupLayout.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="optionsGroupLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="p01Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p01Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="p01Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="p01Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="p01Check.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="p01Check.Text" xml:space="preserve">
+    <value>Brenner kW</value>
+  </data>
+  <data name="&gt;&gt;p01Check.Name" xml:space="preserve">
+    <value>p01Check</value>
+  </data>
+  <data name="&gt;&gt;p01Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;p01Check.Parent" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;p01Check.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="p02Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p02Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="p02Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="p02Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 17</value>
+  </data>
+  <data name="p02Check.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="p02Check.Text" xml:space="preserve">
+    <value>Solar kW</value>
+  </data>
+  <data name="&gt;&gt;p02Check.Name" xml:space="preserve">
+    <value>p02Check</value>
+  </data>
+  <data name="&gt;&gt;p02Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;p02Check.Parent" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;p02Check.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="p03Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p03Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 34</value>
+  </data>
+  <data name="p03Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="p03Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 17</value>
+  </data>
+  <data name="p03Check.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="p03Check.Text" xml:space="preserve">
+    <value>Sonnenstand</value>
+  </data>
+  <data name="&gt;&gt;p03Check.Name" xml:space="preserve">
+    <value>p03Check</value>
+  </data>
+  <data name="&gt;&gt;p03Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;p03Check.Parent" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;p03Check.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="p04Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p04Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 51</value>
+  </data>
+  <data name="p04Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="p04Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 17</value>
+  </data>
+  <data name="p04Check.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="p04Check.Text" xml:space="preserve">
+    <value>VL (Ist - Soll)_1</value>
+  </data>
+  <data name="p04Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;p04Check.Name" xml:space="preserve">
+    <value>p04Check</value>
+  </data>
+  <data name="&gt;&gt;p04Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;p04Check.Parent" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;p04Check.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="p05Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p05Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 68</value>
+  </data>
+  <data name="p05Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="p05Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 17</value>
+  </data>
+  <data name="p05Check.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="p05Check.Text" xml:space="preserve">
+    <value>VL (Ist - Soll)_2</value>
+  </data>
+  <data name="p05Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;p05Check.Name" xml:space="preserve">
+    <value>p05Check</value>
+  </data>
+  <data name="&gt;&gt;p05Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;p05Check.Parent" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;p05Check.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="p06Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p06Check.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="p06Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 85</value>
+  </data>
+  <data name="p06Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="p06Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="p06Check.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="p06Check.Text" xml:space="preserve">
+    <value>Formel 1</value>
+  </data>
+  <data name="p06Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;p06Check.Name" xml:space="preserve">
+    <value>p06Check</value>
+  </data>
+  <data name="&gt;&gt;p06Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;p06Check.Parent" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;p06Check.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="p07Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p07Check.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="p07Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 102</value>
+  </data>
+  <data name="p07Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="p07Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="p07Check.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="p07Check.Text" xml:space="preserve">
+    <value>Formel 2</value>
+  </data>
+  <data name="p07Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;p07Check.Name" xml:space="preserve">
+    <value>p07Check</value>
+  </data>
+  <data name="&gt;&gt;p07Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;p07Check.Parent" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;p07Check.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="p08Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p08Check.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="p08Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 119</value>
+  </data>
+  <data name="p08Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="p08Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="p08Check.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="p08Check.Text" xml:space="preserve">
+    <value>Formel 3</value>
+  </data>
+  <data name="p08Check.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;p08Check.Name" xml:space="preserve">
+    <value>p08Check</value>
+  </data>
+  <data name="&gt;&gt;p08Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;p08Check.Parent" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;p08Check.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="optionsGroupLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="optionsGroupLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 0</value>
+  </data>
+  <data name="optionsGroupLayout.RowCount" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="optionsGroupLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 136</value>
+  </data>
+  <data name="optionsGroupLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;optionsGroupLayout.Name" xml:space="preserve">
+    <value>optionsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;optionsGroupLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsGroupLayout.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;optionsGroupLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="optionsGroupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="p01Check" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="p02Check" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="p03Check" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="p04Check" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="p05Check" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="p06Check" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="p07Check" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="p08Check" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="optionsGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 833</value>
+  </data>
+  <data name="optionsGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 171</value>
+  </data>
+  <data name="optionsGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="optionsGroup.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="&gt;&gt;optionsGroup.Name" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;optionsGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsGroup.Parent" xml:space="preserve">
+    <value>controlLayout</value>
+  </data>
+  <data name="&gt;&gt;optionsGroup.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="controlLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="controlLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="controlLayout.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="controlLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 1007</value>
+  </data>
+  <data name="controlLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;controlLayout.Name" xml:space="preserve">
+    <value>controlLayout</value>
+  </data>
+  <data name="&gt;&gt;controlLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;controlLayout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;controlLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="controlLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="sensorsGroup" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="actorsGroup" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="optionsGroup" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 1007</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SensorsActors</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
