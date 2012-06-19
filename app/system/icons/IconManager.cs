@@ -24,6 +24,7 @@ namespace SolvisSC2Viewer {
         public Image PreviousDay { get; private set; }
         public Image NextWeek { get; private set; }
         public Image PreviousWeek { get; private set; }
+        public Image CrossHair { get; private set; }
 
         public IconManager() {
             exeAssembly = Assembly.GetExecutingAssembly();
@@ -48,6 +49,7 @@ namespace SolvisSC2Viewer {
             PreviousDay = LoadImage("DataContainer_MovePrevious.bmp");
             NextWeek = LoadImage("GoToNext.bmp");
             PreviousWeek = LoadImage("GoToPrevious.bmp");
+            CrossHair = LoadImage("crosshair.bmp");
         }
 
         private static Icon LoadIcon(string name) {

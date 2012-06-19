@@ -37,6 +37,7 @@ namespace SolvisSC2Viewer {
             this.nextWeek = new System.Windows.Forms.ToolStripButton();
             this.lastDay = new System.Windows.Forms.ToolStripButton();
             this.separator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.crosshair = new System.Windows.Forms.ToolStripButton();
             this.SuspendLayout();
             // 
             // open
@@ -112,6 +113,13 @@ namespace SolvisSC2Viewer {
             resources.ApplyResources(this.separator3, "separator3");
             this.separator3.Name = "separator3";
             // 
+            // crosshair
+            // 
+            resources.ApplyResources(this.crosshair, "crosshair");
+            this.crosshair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.crosshair.Margin = new System.Windows.Forms.Padding(16, 1, 0, 2);
+            this.crosshair.Name = "crosshair";
+            // 
             // MainToolItems
             // 
             resources.ApplyResources(this, "$this");
@@ -128,8 +136,8 @@ namespace SolvisSC2Viewer {
             this.nextDay,
             this.nextWeek,
             this.lastDay,
-            this.separator3});
-            this.TabStop = false;
+            this.separator3,
+            this.crosshair});
             this.ResumeLayout(false);
 
         }
@@ -149,5 +157,6 @@ namespace SolvisSC2Viewer {
         private System.Windows.Forms.ToolStripButton nextWeek;
         private System.Windows.Forms.ToolStripButton lastDay;
         private System.Windows.Forms.ToolStripSeparator separator3;
+        private System.Windows.Forms.ToolStripButton crosshair;
     }
 }

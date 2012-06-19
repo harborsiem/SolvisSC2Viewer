@@ -25,7 +25,7 @@ namespace SolvisSC2Viewer {
 
         private void MainForm_Load(object sender, EventArgs e) {
             this.Icon = AppManager.IconManager.AppIcon;
-            //ChartMain.Size = new System.Drawing.Size(10000, ChartMain.Height);
+            //chartMain.Size = new System.Drawing.Size(10000, chartMain.Height);
             AppManager.ConfigManager.Init();
             AppManager.DataManager.InitSensorsSeries(SensorsCheckBoxes);
             AppManager.DataManager.InitActorsSeries(ActorsCheckBoxes);
@@ -65,8 +65,8 @@ namespace SolvisSC2Viewer {
             sensorsActors.MakeTips();
         }
 
-        public Chart ChartMain {
-            get { return chartControl.ChartMain; }
+        public ChartControl ChartControl {
+            get { return chartControl; }
         }
     }
 }

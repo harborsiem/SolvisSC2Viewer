@@ -48,7 +48,7 @@
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Version 1.1.0.0">
+			<param name="Name" value="Version 1.2.0.0">
 			<param name="Local" value="whatsnew.html">
 			</OBJECT>
 	</UL>
@@ -78,12 +78,16 @@
 			<param name="Local" value="description.html#LogFiles">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Sensoren prüfen">
-			<param name="Local" value="description.html#SensorsCheck">
-			</OBJECT>
-		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Solvis Logdaten Format">
 			<param name="Local" value="description.html#LogFormat">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Freie Formeln für Chartanzeige">
+			<param name="Local" value="description.html#Formulas">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Sensoren prüfen">
+			<param name="Local" value="description.html#SensorsCheck">
 			</OBJECT>
 
 	</UL>

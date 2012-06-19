@@ -23,7 +23,7 @@ namespace SolvisSC2Viewer {
         private IList<CheckBox> SensorsCheckBoxes { get; set; }
         private IList<CheckBox> ActorsCheckBoxes { get; set; }
         private IList<CheckBox> OptionsCheckBoxes { get; set; }
-        public Chart ChartMain { get; private set; }
+        private Chart chartMain;
         private DateTime fromDateTime;
         private DateTime toDateTime;
         private string serializeFileName;
@@ -40,45 +40,19 @@ namespace SolvisSC2Viewer {
         }
 
         public void Init() {
-            ChartMain = AppManager.MainForm.ChartMain;
+            chartMain = AppManager.MainForm.ChartControl.ChartMain;
             SensorsCheckBoxes = AppManager.MainForm.SensorsCheckBoxes;
             ActorsCheckBoxes = AppManager.MainForm.ActorsCheckBoxes;
             OptionsCheckBoxes = AppManager.MainForm.OptionsCheckBoxes;
             serializeFileName = ConfigManager.ConfigDir + Path.DirectorySeparatorChar + "solvis.bin";
             AppManager.ItemManager.ToolMenu.DateEvent += DateEvent;
-            ChartMain.AxisViewChanged += new EventHandler<ViewEventArgs>(ChartMain_AxisViewChanged);
-        }
-
-        void ChartMain_AxisViewChanged(object sender, ViewEventArgs e) {
-            if (e.Axis.AxisName == AxisName.X) {
-                if (e.Axis.ScrollBar.IsVisible) {
-                    ChartMain.ChartAreas["ChartArea2"].AxisX.MinorGrid.Enabled = true;
-                    e.Axis.MinorGrid.Enabled = true;
-                    e.Axis.LabelStyle.Angle = -90;
-                    e.Axis.LabelStyle.Interval = 1;
-                } else {
-                    ResetZoom(e.Axis);
-                }
-            }
-        }
-
-        private void ResetZoom(Axis axisX) {
-            ChartMain.ChartAreas["ChartArea2"].AxisX.MinorGrid.Enabled = false;
-            axisX.MinorGrid.Enabled = false;
-            axisX.LabelStyle.Angle = -90;
-            axisX.LabelStyle.Interval = 6;
         }
 
         public void UpdateSeries() {
             if (SensorsSeriesList.Count > 0 && ActorsSeriesList.Count > 0 && OptionsSeriesList.Count > 0) {
                 FillAllCheckedSeriesWithNewData(fromDateTime, toDateTime);
             }
-            Axis axisX = ChartMain.ChartAreas["ChartArea1"].AxisX;
-            axisX.LabelStyle.Angle = -90;
-            if (axisX.ScaleView.IsZoomed) {
-                ResetZoom(axisX);
-                axisX.ScaleView.ZoomReset(100);
-            }
+            AppManager.MainForm.ChartControl.ResetZoom();
         }
 
         private void DateEvent(object sender, DateEventArgs e) {
@@ -97,12 +71,12 @@ namespace SolvisSC2Viewer {
                         if (checkBox.Checked) {
                             FillSeriesWithNewData(tag, fromDateTime, toDateTime);
                         } else {
-                            ChartMain.BeginInit();
+                            chartMain.BeginInit();
                             tag.Series.Points.Clear();
-                            if (ChartMain.Series.Contains(tag.Series)) {
-                                ChartMain.Series.Remove(tag.Series);
+                            if (chartMain.Series.Contains(tag.Series)) {
+                                chartMain.Series.Remove(tag.Series);
                             }
-                            ChartMain.EndInit();
+                            chartMain.EndInit();
                         }
                     }
                 }
@@ -161,7 +135,7 @@ namespace SolvisSC2Viewer {
             if (tag != null) {
                 int fromIndex = GetSolvisListIndex(from);
                 int toIndex = GetSolvisListIndex(to);
-                ChartMain.BeginInit();
+                chartMain.BeginInit();
                 DataPointCollection points = tag.Series.Points;
                 points.Clear();
                 if (fromIndex < 0 || fromIndex >= toIndex) {
@@ -178,21 +152,27 @@ namespace SolvisSC2Viewer {
                         array = values.GetActors();
                         points.AddXY(values.DateAndTime, array[tag.Index]);
                     } else { //GroupIdent.Option
-                        SetOptionsPoints(tag.Index, values, points);
+                        SeriesState state = SeriesState.Inner;
+                        if (i == fromIndex) {
+                            state = SeriesState.First;
+                        } else if (i == toIndex) {
+                            state = SeriesState.Last;
+                        }
+                        SetOptionsPoints(tag.Index, values, points, state);
                     }
                 }
                 points.ResumeUpdates();
-                if (!ChartMain.Series.Contains(tag.Series)) {
-                    ChartMain.Series.Add(tag.Series);
+                if (!chartMain.Series.Contains(tag.Series)) {
+                    chartMain.Series.Add(tag.Series);
                 }
-                ChartMain.EndInit();
+                chartMain.EndInit();
             }
         }
 
         private void FillAllCheckedSeriesWithNewData(DateTime from, DateTime to) {
             int fromIndex = GetSolvisListIndex(from);
             int toIndex = GetSolvisListIndex(to);
-            ChartMain.BeginInit();
+            chartMain.BeginInit();
             for (int seriesIndex = 0; seriesIndex < SensorsSeriesList.Count; seriesIndex++) {
                 CheckBox checkBox = SensorsCheckBoxes[seriesIndex];
                 if (checkBox.Checked) {
@@ -208,8 +188,8 @@ namespace SolvisSC2Viewer {
                         points.AddXY(values.DateAndTime, values.GetSensors()[seriesIndex]);
                     }
                     points.ResumeUpdates();
-                    if (!ChartMain.Series.Contains(series)) {
-                        ChartMain.Series.Add(series);
+                    if (!chartMain.Series.Contains(series)) {
+                        chartMain.Series.Add(series);
                     }
                 }
             }
@@ -228,8 +208,8 @@ namespace SolvisSC2Viewer {
                         points.AddXY(values.DateAndTime, values.GetActors()[seriesIndex]);
                     }
                     points.ResumeUpdates();
-                    if (!ChartMain.Series.Contains(series)) {
-                        ChartMain.Series.Add(series);
+                    if (!chartMain.Series.Contains(series)) {
+                        chartMain.Series.Add(series);
                     }
                 }
             }
@@ -245,15 +225,21 @@ namespace SolvisSC2Viewer {
                     points.SuspendUpdates();
                     for (int i = fromIndex; i <= toIndex; i++) {
                         RowValues values = SolvisList[i];
-                        SetOptionsPoints(seriesIndex, values, points);
+                        SeriesState state = SeriesState.Inner;
+                        if (i == fromIndex) {
+                            state = SeriesState.First;
+                        } else if (i == toIndex) {
+                            state = SeriesState.Last;
+                        }
+                        SetOptionsPoints(seriesIndex, values, points, state);
                     }
                     points.ResumeUpdates();
-                    if (!ChartMain.Series.Contains(series)) {
-                        ChartMain.Series.Add(series);
+                    if (!chartMain.Series.Contains(series)) {
+                        chartMain.Series.Add(series);
                     }
                 }
             }
-            ChartMain.EndInit();
+            chartMain.EndInit();
         }
 
         private int GetSolvisListIndex(DateTime value) {
@@ -268,7 +254,8 @@ namespace SolvisSC2Viewer {
             return SolvisList.Count - 1;
         }
 
-        private static void SetOptionsPoints(int index, RowValues values, DataPointCollection points) {
+        private static void SetOptionsPoints(int index, RowValues values, DataPointCollection points, SeriesState state) {
+            values.State = state;
             switch (index) {
                 case 0:
                     points.AddXY(values.DateAndTime, values.FormulaBurner);

@@ -158,6 +158,9 @@ namespace SolvisSC2Viewer {
                     case "P01":
                     case "P03":
                     case "P04":
+                    case "P06":
+                    case "P07":
+                    case "P08":
                         parameterButton.Enabled = true;
                         break;
                     default:
@@ -255,6 +258,13 @@ namespace SolvisSC2Viewer {
                         break;
                     case "P04":
                         dialog = new VLParameters();
+                        dialog.ShowDialog(this);
+                        break;
+                    case "P06":
+                    case "P07":
+                    case "P08":
+                        dialog = new FormulaEditor();
+                        dialog.Tag = key;
                         dialog.ShowDialog(this);
                         break;
                     default:

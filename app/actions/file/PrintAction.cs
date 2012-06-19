@@ -16,7 +16,7 @@ namespace SolvisSC2Viewer {
 
         protected override int Execute(ActionData data) {
             try {
-                PrintingManager manager = AppManager.MainForm.ChartMain.Printing;
+                PrintingManager manager = AppManager.MainForm.ChartControl.ChartMain.Printing;
                 manager.PrintDocument.DefaultPageSettings.Landscape = true;
                 manager.PrintDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(39, 39, 39, 39);
                 manager.Print(true);

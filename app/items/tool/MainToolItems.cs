@@ -126,6 +126,15 @@ namespace SolvisSC2Viewer {
             TimeSpan delta = new TimeSpan(7, 0, 0, 0);
         }
 
+        private void crosshair_Click(object sender, EventArgs e) {
+            crosshair.Checked = crosshair.Checked ? false : true;
+            if (crosshair.Checked) {
+                AppManager.MainForm.ChartControl.SetCursorCrossHairState();
+            } else {
+                AppManager.MainForm.ChartControl.SetCursorSelectionState();
+            }
+        }
+
         public void Init() {
             this.open.Click += AppManager.GetAction(OpenFileAction.Name).ProcessEvent;
             this.print.Click += AppManager.GetAction(PrintAction.Name).ProcessEvent;
@@ -135,6 +144,7 @@ namespace SolvisSC2Viewer {
             this.nextDay.Click += NextDay_Click;
             this.previousWeek.Click += PreviousWeek_Click;
             this.nextWeek.Click += NextWeek_Click;
+            this.crosshair.Click += crosshair_Click;
 
             //
             //LoadProperties();
@@ -158,6 +168,7 @@ namespace SolvisSC2Viewer {
             this.nextDay.Image = iconManager.NextDay;
             this.nextWeek.Image = iconManager.NextWeek;
             this.lastDay.Image = iconManager.LastDay;
+            this.crosshair.Image = iconManager.CrossHair;
         }
 
         public void SetMinMaxDate(DateTime min, DateTime max) {
