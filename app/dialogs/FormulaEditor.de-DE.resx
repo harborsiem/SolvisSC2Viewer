@@ -117,38 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="open.ToolTipText" xml:space="preserve">
-    <value>Öffnen</value>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Abbrechen</value>
   </data>
-  <data name="print.ToolTipText" xml:space="preserve">
-    <value>Drucken</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="fromLabelDateTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 15</value>
-  </data>
-  <data name="fromLabelDateTime.Text" xml:space="preserve">
-    <value>von Datum</value>
-  </data>
-  <data name="toLabelDateTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 15</value>
-  </data>
-  <data name="toLabelDateTime.Text" xml:space="preserve">
-    <value>bis Datum</value>
-  </data>
-  <data name="firstDay.ToolTipText" xml:space="preserve">
-    <value>Erster Tag</value>
-  </data>
-  <data name="previousDay.ToolTipText" xml:space="preserve">
-    <value>Vorheriger Tag</value>
-  </data>
-  <data name="nextDay.ToolTipText" xml:space="preserve">
-    <value>Nächster Tag</value>
-  </data>
-  <data name="lastDay.ToolTipText" xml:space="preserve">
-    <value>Letzter Tag</value>
-  </data>
-  <data name="crosshair.ToolTipText" xml:space="preserve">
-    <value>Umschalter Fadenkreuz, Zoom Auswahl</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Formel Editor</value>
   </data>
 </root>

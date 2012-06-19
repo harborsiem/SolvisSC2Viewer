@@ -97,7 +97,10 @@ namespace SolvisSC2Viewer {
         private void ParameterUpdateForNewVersion() {
             string lastVersion = Version;
             string destFileName = Path.GetDirectoryName(userConfigFile) + Path.DirectorySeparatorChar + "User" + lastVersion + ".Config";
-            File.Move(userConfigFile, destFileName);
+            if (!File.Exists(destFileName)) {
+                //File.Delete(destFileName);
+                File.Move(userConfigFile, destFileName);
+            }
             if (lastVersion == "1.0.0.0") {
                 IDictionary<String, ConfigData> data = ActorConfigValues;
                 ActorConfigValues = GetDefault(ActorConfigDefault);

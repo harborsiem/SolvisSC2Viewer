@@ -13,11 +13,40 @@ using System.Windows.Forms;
 
 namespace SolvisSC2Viewer {
     class CodeBuilder {
+        private static object calculator;
+        private static MethodInfo calculate1;
+        private static MethodInfo calculate2;
+        private static MethodInfo calculate3;
+
         string txtCompile;
         //string txtCalculate = "double i; i = 5.0 +7.0; double answer = i + rowValues.S10; return answer;";
         //string txtResult;
 
         StringBuilder _source = new StringBuilder();
+
+        internal static double Calculate1(RowValues rowValues, SeriesState state) {
+            if (calculator != null) {
+                object result = calculate1.Invoke(calculator, new object[] { rowValues, state });
+                return (double)result;
+            }
+            return 0.0;
+        }
+
+        internal static double Calculate2(RowValues rowValues, SeriesState state) {
+            if (calculator != null) {
+                object result = calculate2.Invoke(calculator, new object[] { rowValues, state });
+                return (double)result;
+            }
+            return 0.0;
+        }
+
+        internal static double Calculate3(RowValues rowValues, SeriesState state) {
+            if (calculator != null) {
+                object result = calculate3.Invoke(calculator, new object[] { rowValues, state });
+                return (double)result;
+            }
+            return 0.0;
+        }
 
         private CodeDomProvider CreateCompiler() {
             //Create an instance of the C# provider   
@@ -125,7 +154,7 @@ namespace SolvisSC2Viewer {
                 // run the evaluation function
                 RunCode(results);
             } else {
-                RowValues.calculator = null;
+                calculator = null;
             }
         }
 
@@ -139,7 +168,7 @@ namespace SolvisSC2Viewer {
                 //cant call the entry method if the assembly is null
                 if (executingAssembly != null) {
                     object assemblyInstance = executingAssembly.CreateInstance("SolvisSC2Viewer.Calculator");
-                    RowValues.calculator = assemblyInstance;
+                    calculator = assemblyInstance;
                     //Use reflection to call the static Main function
 
                     Module[] modules = executingAssembly.GetModules(false);
@@ -150,13 +179,13 @@ namespace SolvisSC2Viewer {
                         MethodInfo[] mis = type.GetMethods();
                         foreach (MethodInfo mi in mis) {
                             if (mi.Name == "Calculate1") {
-                                RowValues.calculate1 = mi;
+                                calculate1 = mi;
                                 //object result = mi.Invoke(assemblyInstance, null);
                                 //txtResult = result.ToString();
                             } else if (mi.Name == "Calculate2") {
-                                RowValues.calculate2 = mi;
+                                calculate2 = mi;
                             } else if (mi.Name == "Calculate3") {
-                                RowValues.calculate3 = mi;
+                                calculate3 = mi;
                             }
                         }
                     }
@@ -230,7 +259,19 @@ namespace SolvisSC2Viewer {
             classDeclaration.IsClass = true;
             classDeclaration.Name = "Calculator";
             classDeclaration.Attributes = MemberAttributes.Public;
-
+            classDeclaration.Members.Add(FieldVariable("bVal1", typeof(bool), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("bVal2", typeof(bool), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("bVal3", typeof(bool), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("dVal1", typeof(double), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("dVal2", typeof(double), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("dVal3", typeof(double), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("dVal4", typeof(double), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("dVal5", typeof(double), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("dVal6", typeof(double), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("iVal1", typeof(int), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("iVal2", typeof(int), MemberAttributes.Private));
+            classDeclaration.Members.Add(FieldVariable("iVal3", typeof(int), MemberAttributes.Private));
+            
             //default constructor
             CodeConstructor defaultConstructor = new CodeConstructor();
             defaultConstructor.Attributes = MemberAttributes.Public;
@@ -245,9 +286,10 @@ namespace SolvisSC2Viewer {
             myMethod1.Name = "Calculate1";
             myMethod1.ReturnType = new CodeTypeReference(typeof(double));
             myMethod1.Parameters.Add(new CodeParameterDeclarationExpression(typeof(RowValues), "rowValues"));
+            myMethod1.Parameters.Add(new CodeParameterDeclarationExpression(typeof(SeriesState), "state"));
             myMethod1.Comments.Add(new CodeCommentStatement("Calculate an formula1", true));
             myMethod1.Attributes = MemberAttributes.Public | MemberAttributes.Final;
-            if (string.IsNullOrEmpty(formula1)) {
+            if (string.IsNullOrWhiteSpace(formula1)) {
                 formula1 = "return 0.0";
             }
             myMethod1.Statements.Add(new CodeExpressionStatement(new CodeSnippetExpression(formula1)));
@@ -256,9 +298,10 @@ namespace SolvisSC2Viewer {
             myMethod2.Name = "Calculate2";
             myMethod2.ReturnType = new CodeTypeReference(typeof(double));
             myMethod2.Parameters.Add(new CodeParameterDeclarationExpression(typeof(RowValues), "rowValues"));
+            myMethod2.Parameters.Add(new CodeParameterDeclarationExpression(typeof(SeriesState), "state"));
             myMethod2.Comments.Add(new CodeCommentStatement("Calculate an formula2", true));
             myMethod2.Attributes = MemberAttributes.Public | MemberAttributes.Final;
-            if (string.IsNullOrEmpty(formula2)) {
+            if (string.IsNullOrWhiteSpace(formula2)) {
                 formula2 = "return 0.0";
             }
             myMethod2.Statements.Add(new CodeExpressionStatement(new CodeSnippetExpression(formula2)));
@@ -267,9 +310,10 @@ namespace SolvisSC2Viewer {
             myMethod3.Name = "Calculate3";
             myMethod3.ReturnType = new CodeTypeReference(typeof(double));
             myMethod3.Parameters.Add(new CodeParameterDeclarationExpression(typeof(RowValues), "rowValues"));
+            myMethod3.Parameters.Add(new CodeParameterDeclarationExpression(typeof(SeriesState), "state"));
             myMethod3.Comments.Add(new CodeCommentStatement("Calculate an formula3", true));
             myMethod3.Attributes = MemberAttributes.Public | MemberAttributes.Final;
-            if (string.IsNullOrEmpty(formula3)) {
+            if (string.IsNullOrWhiteSpace(formula3)) {
                 formula3 = "return 0.0";
             }
             myMethod3.Statements.Add(new CodeExpressionStatement(new CodeSnippetExpression(formula3)));

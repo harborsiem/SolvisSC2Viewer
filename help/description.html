@@ -5,7 +5,7 @@
 	<TITLE></TITLE>
 	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Windows)">
 	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGED" CONTENT="20120601;10140375">
+	<META NAME="CHANGED" CONTENT="20120617;12223793">
 	<STYLE TYPE="text/css">
 	<!--
 		H2.cjk { font-family: "SimSun" }
@@ -13,6 +13,9 @@
 		H3.western { font-family: "Albany", sans-serif }
 		H3.cjk { font-family: "HG Mincho Light J" }
 		H3.ctl { font-family: "Arial Unicode MS" }
+		H4.western { font-family: "Albany", sans-serif; font-size: 11pt; font-style: italic }
+		H4.cjk { font-family: "HG Mincho Light J"; font-size: 11pt; font-style: italic }
+		H4.ctl { font-family: "Arial Unicode MS"; font-size: 11pt; font-style: italic }
 	-->
 	</STYLE>
 </HEAD>
@@ -39,19 +42,20 @@ Auf der linken Seite muß dann der zu ändernde Sensor, Aktor oder
 Option angewählt werden. Dann können für dieses angewählte
 Element die Werte verändert werden. Allerdings ist es bei den
 Optionen nicht empfehlenswert die Texte zu verändern, da bei den
-Optionen eine im Programm festgelegte Funktion dahintersteht. Bei
-einigen Optionen können die relevanten Parameter eingestellt werden.
-Diese Parameter werden in dem zusätzlichen Dialogfenster nach dem
-Betätigen von „OK“ direkt übernommen.<BR>Unter dem Tabulator
-„Heizkurve“ können die Grundwerte für das Fenster eingestellt
-werden, welches über Extras-&gt;Heizkurve aufgerufen wird.<BR>Mit
-dem „Defaults“-Schalter werden die im Programm festgelegten
-Grundwerte aktiviert.<BR><BR>Nach Änderung der Konfiguration ist es
-sinnvoll das Programm neu zu starten.<BR><BR>Nach dem Beenden des
-Programms wird eine Konfigurationsdatei (User.config) angelegt. Der
-Pfad für die User.config ist unterschiedlich bei verschiedenen
-Betriebssystemen. <BR>Unter Windows XP lautet der Pfad „Dokumente
-und Einstellungen\&lt;<I>UserName</I>&gt;\Anwendungsdaten\Solvis\SolvisViewer“.
+Optionen eine im Programm festgelegte Funktion dahintersteht
+(Ausnahme: Freie Formeln). Bei einigen Optionen können die
+relevanten Parameter eingestellt werden. Diese Parameter werden in
+dem zusätzlichen Dialogfenster nach dem Betätigen von „OK“
+direkt übernommen.<BR>Unter dem Tabulator „Heizkurve“ können
+die Grundwerte für das Fenster eingestellt werden, welches über
+Extras-&gt;Heizkurve aufgerufen wird.<BR>Mit dem „Defaults“-Schalter
+werden die im Programm festgelegten Grundwerte aktiviert.<BR><BR>Nach
+Änderung der Konfiguration ist es sinnvoll das Programm neu zu
+starten.<BR><BR>Nach dem Beenden des Programms wird eine
+Konfigurationsdatei (User.config) angelegt. Der Pfad für die
+User.config ist unterschiedlich bei verschiedenen Betriebssystemen.
+<BR>Unter Windows XP lautet der Pfad „Dokumente und
+Einstellungen\&lt;<I>UserName</I>&gt;\Anwendungsdaten\Solvis\SolvisViewer“.
 <BR>Unter Windows Vista lautet der Pfad
 „Benutzer\&lt;<I>UserName</I>&gt;\AppData\Roaming\Solvis\SolvisViewer“.<BR><BR>Die
 User.config ist eine Xml-Datei. Alternativ kann auch diese Datei mit
@@ -59,7 +63,7 @@ einem Xml-Editor oder einem normalen (UTF8 fähigen) Texteditor
 bearbeitet werden.Über die Xml-Datei können Text, ToolTip,
 Aktivierzustand (Checked), Sichtbarkeit (Visible), Farbe (ColorRGB)
 der Sensoren S01 bis S24, der Aktoren A01 bis A20 und den Optionen
-P01 bis P05 angepasst werden.<BR>Checked und Visible können auf die
+P01 bis P08 angepasst werden.<BR>Checked und Visible können auf die
 Werte „True“ oder „False“ gesetzt werden. Bei ColorRGB wird
 ein RGB-Wert (Rot, Grün, Blau-Anteil) eingestellt. Jeder der drei
 durch Komma getrennten Werte kann im Bereich 0 bis 255 liegen. Der
@@ -78,7 +82,7 @@ Heizkurve eingestellt.<BR>Temperature darf nur ganzzahlig im Bereich
 2.00<BR>vorgegeben werden.</P>
 <P>In TemperatureVL, NiveauVL und GradientVL werden die Werte der
 Heizungs-Anlage eingestellt. Diese Werte dienen der Bestimmung der
-Abweichung der Vorlauftemp. des ersten Heizkreises.</P>
+Abweichung der Vorlauftemperatur des ersten Heizkreises.</P>
 <P><B>Achtung: </B><SPAN STYLE="font-weight: normal">Die Werte mit
 Nachkommastellen müssen in der User.config Datei mit einem Punkt
 eingegeben werden (z.B. 7.5).<BR>Bei Falscheingabe wird eine Datei
@@ -200,8 +204,8 @@ Raumfühler):</P>
 </UL>
 <P STYLE="margin-bottom: 0cm"><BR>Wenn man das gesamte
 Aussentemperatur-Band von +20 bis -20 Grad (wenn möglich) mal mit
-den zugehörigen Vorlauftemp. protokolliert hat, dann kann die
-optimale Einstellung fixiert werden.</P>
+den zugehörigen Vorlauftemperatur (<SPAN STYLE="font-weight: normal">VL-Temp.</SPAN>)
+protokolliert hat, dann kann die optimale Einstellung fixiert werden.</P>
 <P STYLE="margin-bottom: 0cm"><BR>
 </P>
 <P STYLE="margin-bottom: 0cm"><B>Tip:</B><SPAN STYLE="font-weight: normal">Im
@@ -227,8 +231,8 @@ Installateur-Bereich anzupassen.</P>
 Gebläsedrehzahl Stufe 2 bei einer Gasheizung oder auch die
 Anforderungstemperaturen für Warmwasser.</P>
 <P STYLE="margin-bottom: 0cm; font-weight: normal">Der Verfasser hat
-einen SolvisMax Gas (5 – 20kW) ohne Solar.<BR>Es wurden im
-Installateur-Bereich folgende Parameter angepasst:</P>
+einen SolvisMax Gas Pur (5 – 20kW) ohne Solar, ein Heizkreis.<BR>Es
+wurden im Installateur-Bereich folgende Parameter angepasst:</P>
 <UL STYLE="margin-left: 0.64cm">
 	<LI><P STYLE="margin-bottom: 0cm; font-weight: normal">Heizkreis
 	Offset: 6 Grad</P>
@@ -254,17 +258,27 @@ die Sensoren im Regelfall die Temperatur an, während die X-Achse
 generell die Zeitachse ist. Bei den Aktoren ist die Y-Achse im
 Regelfall ein Prozentwert. <BR>Durch Auswählen eines Zeitbereichs
 mit der Maus im Chart wird der Bereich feiner aufgelöst dargestellt
-(Ziehen mit gedrückter linker Maustaste im Chart). Mit dem unten
+(Ziehen mit gedrückter linker Maustaste im Chart). Der auswählbare
+Zeitbereich liegt immer innerhalb von ganzen Stunden. Mit dem unten
 sichtbaren Scrollbalken kann man durch den gesamten Zeitbereich
 scrollen. Zur Rückschaltung in den weniger aufgelösten Chart ist
 der Knopf auf der linken Seite des Scrollbalken mit der linken
-Maustaste zu drücken.<BR>Der Zeitbereich der Solvis-Datei wird in
+Maustaste zu drücken.<BR>Alternativ zu der eben beschriebenen Zoom
+Funktion kann im Chart auch ein Fadenkreuz gesetzt werden. Zur
+Umschaltung dient der ganz rechts liegende Toolbar Schalter
+„Umschaltung Fadenkreuz, Zoom-Funktion“. Mit Hilfe der Fadenkreuz
+Funktion kann durch Drücken der linken Maustaste im Raster von einer
+Minute ein Strich im Chart eingeblendet werden. In der unteren
+vertikalen Y-Achse wird ein Strich im Raster von einer Einheit und in
+der oberen Y-Achse wird ein Strich im Raster von 10 Einheiten
+dargestellt.<BR>Der ausgewählte Zeitbereich der Solvis-Datei wird in
 den oben angeordneten Kalender-Elementen dargestellt. Über die
 Kalender-Elemente kann der Zeitbereich verändert werden. Mit den
 rechts von den Kalender-Elementen liegenden Buttons kann einfach
-durch die Kalenderzeiten navigiert werden.<BR>Die Aktoren werden
-generell im oberen Teil des Chart dargestellt, die Sensoren und
-Optionen werden im unteren Teil dargestellt.</P>
+durch die Kalenderzeiten navigiert werden, wenn der Zeitbereich
+vorher verkleinert wurde.<BR>Die Aktoren werden generell im oberen
+Teil des Chart dargestellt, die Sensoren und Optionen werden im
+unteren Teil dargestellt.</P>
 <P>Für die Optionen gibt es im Regelfall Parameter in der
 User.config Datei. Diese Parameter sind bei Bedarf im
 Konfigurationsmenu anzupassen.<BR><BR><BR>
@@ -278,58 +292,58 @@ Konfigurationsmenu anzupassen.<BR><BR><BR>
 				<P STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
 				Optionsname</P>
 			</TH>
-			<TH WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TH WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border: 1px solid #000000; padding: 0.1cm">Parameter</P>
 			</TH>
 		</TR>
 	</THEAD>
 	<TBODY>
 		<TR VALIGN=TOP>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
 				P01, Brenner kW</P>
 			</TD>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
 				BurnerMinPower, BurnerMaxPower</P>
 			</TD>
 		</TR>
 		<TR VALIGN=TOP>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
 				P02, Solar kW</P>
 			</TD>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
 				-</P>
 			</TD>
 		</TR>
 		<TR VALIGN=TOP>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
 				P03, Sonnenstand</P>
 			</TD>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
 				Latitude, Longitude</P>
 			</TD>
 		</TR>
 		<TR VALIGN=TOP>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
 				P04, VL (Ist - Soll)_1</P>
 			</TD>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
 				TemperatureVL, NiveauVL, GradientVL</P>
 			</TD>
 		</TR>
 		<TR VALIGN=TOP>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
 				P05, VL (Ist - Soll)_2</P>
 			</TD>
-			<TD WIDTH=50% STYLE="; border: none; padding: 0cm">
+			<TD WIDTH=50% STYLE="border: none; padding: 0cm">
 				<P STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
 				-</P>
 			</TD>
@@ -351,6 +365,150 @@ berechnet. Bei P05 findet eine Mittelwertbildung über 30 Minuten für
 die Aussentemperatur statt. Bei Abweichungen der Differenz von
 kleiner als minus 5 Grad wird die Darstellung auf minus 5 Grad
 begrenzt.</P>
+<H2 CLASS="western"><A NAME="LogFormat"></A>Solvis Logdaten Format</H2>
+<P>Solvis speichert jede Minute einen Datensatz von Sensoren und
+Aktoren mit Zeitstempel in einer Datei als Textzeile ab.<BR>Im
+SolvisSC2Viewer wird beim Öffnen der Datei jeder Datensatz
+interpretiert und in seine Bestandteile zerlegt. Für jeden Datensatz
+wird im Programm eine Instanz der Klasse RowValues erzeugt.<BR>Der
+Zeitstempel wird unter dem Namen DateAndTime im Datenformat DateTime
+abgespeichert.<BR>Die Sensoren werden unter dem Namen S01 bis S24 im
+Datenformat double (Gleitkomma Format) abgespeichert. Die Werte für
+die Sensoren S01 bis S16 und S18 bis S21 werden jeweils durch 10
+dividiert. Die Sensoren S22 bis S24 werden ohne Umrechnung
+abgespeichert. Der Sensor S17 ist ein Sonderfall. Für die
+Chart-Darstellung wird eine empirisch gewonnene Formel verwendet.
+Abgespeichert ist der Sensor S17 allerdings ohne Umrechnung des
+Datensatz-Wertes.<BR>Der Mittelwert des Sensors S10 steht unter dem
+Namen S10MeanValue.<BR>Die Aktoren werden unter dem Namen A01 bis A20
+im Datenformat double abgespeichert. Bei den Aktoren findet keine
+Umrechnung statt.</P>
+<P>Die Bedeutung einiger Sensoren, Aktoren sind dem Verfasser nicht
+bekannt.</P>
+<H2 CLASS="western"><A NAME="Formulas"></A>Freie Formeln für
+Chartanzeige</H2>
+<P>Bei der Logdaten Anzeige stehen unter den Optionen P06, P07 und
+P08 drei freie Formelinterpreter für die Chartanzeige zur Verfügung.
+Die Formeln sind vom Benutzer zu programmieren in der
+Programmiersprache C#. Kenntnisse in einer der Programmiersprachen
+C#, C, C++, Java, ... sind von Vorteil, aber keine
+Grundvoraussetzung. Mit einfachen bis komplexeren Beispielen wird die
+Programmierung erläutert.<BR>Falls die Formel fehlerhaft geschrieben
+wurde, erscheint beim Starten des SolvisSC2Viewer eine Meldungsbox,
+in der die Programm-Fehler dargestellt werden.</P>
+<H4 CLASS="western">Prinzip des Aufrufs der freien Formeln:</H4>
+<P>Bei angewähltem Schalter für die Option wird für jeden
+Zeitpunkt des ausgewählten Zeitintervalls die Funktion der Formel
+durchlaufen. Bei jeder Änderung des Zeitintervalls, also auch beim
+Öffnen einer neuen Datei, wiederholt sich der Vorgang. Man spricht
+bei den Aufrufen im ausgewählten Zeitintervall auch von einer
+Serie.<BR>An die Funktion werden durch den SolvisSC2Viewer zwei
+Parameter übergeben, bevor der von der Funktion zurückgegebene Wert
+im Chart gezeichnet wird. Der erste Parameter ist die Klasse
+RowValues mit dem Bezeichner rowValues. Der zweite Parameter ist ein
+Aufzählungstyp (enum) SeriesState mit dem Bezeichner state. Die
+Formel muß einen Rückgabeparameter vom Typ double enthalten. Dies
+wird erreicht durch eine zum Schluß programmierte Anweisung „return
+xx;“, wobei hier xx eine Variable vom Typ double darstellt.<BR>Über
+den Bezeichner rowValues kann lesend auf die Elemente der Klasse
+zugegriffen werden. Die Elemente der Klasse sind unter der
+Überschrift „Solvis Logdaten Format“ genannt. Eine beispielhafte
+Programmieranweisung auf ein Element lautet: return rowValues.S17;.
+In diesem Fall wird der Wert von S17 für jeden Zeitpunkt im Chart
+gezeichnet.<BR>Im Bezeichner state ist eine Information enthalten, ob
+es sich um den ersten, letzten oder einem beliebigen anderen Aufruf
+einer Serie handelt.<BR>Die möglichen Werte des enum
+lauten:<BR>SeriesState.First<BR>SeriesState.Last<BR>SeriesState.Inner</P>
+<H4 CLASS="western">Für erfahrene Programmierer:</H4>
+<P>Die freien Formeln sind in eine zur Laufzeit des SolvisSC2Viewer
+erzeugte Klasse als Funktionen eingebettet. Die Klasse wird nur
+einmal instanziert. In der Klasse stehen auch ein paar freie
+Variablen mit unterschiedlichen Datentypen zur Nutzung in den freien
+Formeln zur Verfügung. Nachfolgend ist die Programmierung der Klasse
+aufgeführt in der C#-Syntax. Die Funktionen Calculate1, Calculate2
+und Calculate3 werden mit dem Programmcode des Anwenders gefüllt.</P>
+<P STYLE="margin-bottom: 0cm">namespace SolvisSC2Viewer {</P>
+<P STYLE="margin-bottom: 0cm">using System;</P>
+<P STYLE="margin-bottom: 0cm">using System.Windows.Forms;</P>
+<P STYLE="margin-bottom: 0cm">public class Calculator {</P>
+<P STYLE="margin-bottom: 0cm">private bool bVal1;</P>
+<P STYLE="margin-bottom: 0cm">private bool bVal2;</P>
+<P STYLE="margin-bottom: 0cm">private bool bVal3;</P>
+<P STYLE="margin-bottom: 0cm">private double dVal1;</P>
+<P STYLE="margin-bottom: 0cm">private double dVal2;</P>
+<P STYLE="margin-bottom: 0cm">private double dVal3;</P>
+<P STYLE="margin-bottom: 0cm">private double dVal4;</P>
+<P STYLE="margin-bottom: 0cm">private double dVal5;</P>
+<P STYLE="margin-bottom: 0cm">private double dVal6;</P>
+<P STYLE="margin-bottom: 0cm">private int iVal1;</P>
+<P STYLE="margin-bottom: 0cm">private int iVal2;</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">private int iVal3;</P>
+<P STYLE="margin-bottom: 0cm">/// Default Constructor for class</P>
+<P STYLE="margin-bottom: 0cm">public Calculator() {</P>
+<P STYLE="margin-bottom: 0cm">}</P>
+<P STYLE="margin-bottom: 0cm">/// Calculate an formula1</P>
+<P STYLE="margin-bottom: 0cm">public double Calculate1(RowValues
+rowValues, SeriesState state) {</P>
+<P STYLE="margin-bottom: 0cm">return 0.0; //wird ersetzt durch Formel</P>
+<P STYLE="margin-bottom: 0cm">}</P>
+<P STYLE="margin-bottom: 0cm">/// Calculate an formula2</P>
+<P STYLE="margin-bottom: 0cm">public double Calculate2(RowValues
+rowValues, SeriesState state) {</P>
+<P STYLE="margin-bottom: 0cm">return 0.0; //wird ersetzt durch Formel</P>
+<P STYLE="margin-bottom: 0cm">}</P>
+<P STYLE="margin-bottom: 0cm">/// Calculate an formula3</P>
+<P STYLE="margin-bottom: 0cm">public double Calculate3(RowValues
+rowValues, SeriesState state) {</P>
+<P STYLE="margin-bottom: 0cm">return 0.0; //wird ersetzt durch Formel</P>
+<P STYLE="margin-bottom: 0cm">}</P>
+<P STYLE="margin-bottom: 0cm">}</P>
+<P STYLE="margin-bottom: 0cm">}</P>
+<H4 CLASS="western">Programmier Beispiele:</H4>
+<OL STYLE="margin-left: 0.74cm">
+	<LI><P><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#0000ff">return</FONT><FONT COLOR="#000000">
+	rowValues.S17;</FONT></FONT></FONT></P>
+	<LI><P><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#0000ff">return</FONT><FONT COLOR="#000000">
+	rowValues.S04 - rowValues.S12;</FONT></FONT></FONT></P>
+	<LI><P><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#0000ff">return</FONT><FONT COLOR="#000000">
+	(rowValues.S17 == 0) ? 0.0 : (1.0 / ( rowValues.S17 - 7.6365)) *
+	80148.4 + 4.53375;</FONT></FONT></FONT></P>
+	<LI><P><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#000000">if
+	(state == SeriesState.First) { iVal1 = 0; dVal1 = 0.0; } iVal1++;
+	dVal1 += rowValues.S10; if (state == SeriesState.Last) {
+	MessageBox.Show((dVal1 / iVal1).ToString()); } </FONT><FONT COLOR="#0000ff">return</FONT><FONT COLOR="#000000">
+	0.0;</FONT></FONT></FONT></P>
+</OL>
+<P>Information zu den Beispielen:<BR>Im Beispiel 1 wird der Sensor
+S17 im Chart gezeichnet.</P>
+<P>Im Beispiel 2 wird die Differenz von „Heizungspuffer oben“ und
+„Vorlauf Heizkreis 1“ dargestellt.</P>
+<P>Im Beispiel 3 wird eine komplexe Formel für den
+Solar-Volumenstrom gezeichnet. Zuerst wird der S17 auf 0 geprüft.
+Bei Gleichheit wird der Wert zwischen ? und : als return-Wert
+zurückgegeben, also 0.0. Ansonsten wird die dahinterstehende Formel
+als return-Wert zurückgegeben.<BR>Alternativ kann die Formel auch
+folgendermassen geschrieben werden:<BR><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">if
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">(rowValues.S17
+== 0) </FONT></FONT></FONT><FONT COLOR="#0000ff"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">return</FONT></FONT></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">0.0;
+else </FONT></FONT></FONT><FONT COLOR="#0000ff"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">return</FONT></FONT></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">(1.0
+/ ( rowValues.S17 - 7.6365)) * 80148.4 + 4.53375;</FONT></FONT></FONT><FONT COLOR="#000000">
+</FONT>
+</P>
+<P>Beispiel 4 wendet sich an erfahrene Programmierer.<BR>Hier werden
+die freien Variablen verwendet. Wie das Beispiel zeigt, sollten am
+Beginn einer Serie die verwendeten Variablen initialisiert werden.
+Der Sensor S10 wird zum Schluss als Mittelwert des gesamten
+Zeitintervalls in einer Messagebox angezeigt.<BR>Es ist weiterhin
+möglich Funktionen von Klassen zu verwenden, die in System definiert
+sind (z.B. Klasse Math mit den Funktionen Abs, Round, Floor, Ceiling,
+usw.).</P>
+<P>Weiterführene Dokumentation zu C# z.B. unter:</P>
+<P><A HREF="http://msdn.microsoft.com/de-de/library/system.math.aspx">http://msdn.microsoft.com/de-de/library/system.math.aspx</A></P>
+<P><A HREF="http://openbook.galileocomputing.de/visual_csharp_2010/">http://openbook.galileocomputing.de/visual_csharp_2010/</A></P>
 <H2 CLASS="western"><A NAME="SensorsCheck"></A>Sensoren prüfen</H2>
 <P>Im Hauptfenster kann unter dem Menupunkt „Extras“ bei
 geladener Solvis-Datei der Menupunkt „Sensoren prüfen“ betätigt
@@ -359,21 +517,10 @@ werden. Hierbei wird überprüft, ob die Temperaturfühler S01
 sind. Falls ein Meldungsfenster erscheint mit dem Meldungstext
 „Temperatur Sensoren S01 und S04 vertauscht“, dann ist der
 Heizungsbetrieb zu rufen. Dieser muss die Anlage in Ordnung bringen.</P>
-<H2 CLASS="western"><A NAME="LogFormat"></A>Solvis Logdaten Format</H2>
-<P>Solvis speichert jede Minute einen Datensatz von Sensoren und
-Aktoren mit Zeitstempel in einer Datei als Textzeile ab.<BR>Im
-SolvisSC2Viewer wird beim Öffnen der Datei jeder Datensatz
-interpretiert und in seine Bestandteile zerlegt.<BR>Der Zeitstempel
-wird unter dem Namen DateAndTime im Datenformat DateTime
-abgespeichert.<BR>Die Sensoren werden unter dem Namen S01 bis S24 im
-Datenformat double abgespeichert. Die Werte für die Sensoren S01 bis
-S16 und S18 bis S21 werden jeweils durch 10 dividiert. Die Sensoren
-S22 bis S24 werden ohne Umrechnung abgespeichert. Der Sensor S17 ist
-ein Sonderfall. Für die Chart-Darstellung wird eine empirisch
-gewonnene Formel verwendet. Abgespeichert ist der Sensor S17
-allerdings ohne Umrechnung des Datensatz-Wertes.<BR>Die Aktoren
-werden unter dem Namen A01 bis A20 im Datenformat double
-abgespeichert. Bei den Aktoren findet keine Umrechnung statt.</P>
+<H2 CLASS="western"><BR><BR>
+</H2>
+<P><BR><BR>
+</P>
 <P><BR><BR>
 </P>
 </BODY>

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Reflection;
 using System.Runtime.Serialization;
 
 namespace SolvisSC2Viewer {
@@ -19,11 +18,6 @@ namespace SolvisSC2Viewer {
         public DateTime UtcPlus1DateTime { get { return DateAndTime.ToUniversalTime().AddHours(1); } }
         private double[] sensors;
         private double[] actors;
-
-        public static object calculator;
-        public static MethodInfo calculate1;
-        public static MethodInfo calculate2;
-        public static MethodInfo calculate3;
 
         public double S01 { get { return sensors[0]; } } //Speicher oben
         public double S02 { get { return sensors[1]; } } //Warmwasser
@@ -77,7 +71,8 @@ namespace SolvisSC2Viewer {
         public static double Niveau { get; set; }
         public static double Gradient { get; set; }
         internal static MeanTemperature mean = new MeanTemperature(30);
-        public double MeanValue { get; private set; }
+        internal SeriesState State { get; set; } //just for the Calculate
+        public double S10MeanValue { get; private set; }
         private int s17Raw; //VSG Solar
 
         public RowValues() {
@@ -128,7 +123,7 @@ namespace SolvisSC2Viewer {
                 for (k = i, j = 0; k < values.Length; k++, j++) {
                     actors[j] = (double)Convert.ToInt32(values[k]);
                 }
-                MeanValue = mean.GetMeanTemperature();
+                S10MeanValue = mean.GetMeanTemperature();
             }
             catch (FormatException e) {
                 throw new ArgumentException("Wrong value", "row", e);
@@ -190,7 +185,7 @@ namespace SolvisSC2Viewer {
         public double FormulaIst_Soll2 {
             get {
                 if (S10 <= 19) {
-                    double result = S12 - (int)HeatCurve.SolvisCurve(Temperature, Niveau, Gradient, (int)(MeanValue)); //MW(S10)
+                    double result = S12 - (int)HeatCurve.SolvisCurve(Temperature, Niveau, Gradient, (int)(S10MeanValue));
                     if (result > -5D) {
                         return result;
                     } else {
@@ -207,31 +202,19 @@ namespace SolvisSC2Viewer {
 
         public double Calculator1 {
             get {
-                if (calculator != null) {
-                    object result = calculate1.Invoke(calculator, new object[] { this });
-                    return (double)result;
-                }
-                return 0.0;
+                return CodeBuilder.Calculate1(this, State);
             }
         }
 
         public double Calculator2 {
             get {
-                if (calculator != null) {
-                    object result = calculate2.Invoke(calculator, new object[] { this });
-                    return (double)result;
-                }
-                return 0.0;
+                return CodeBuilder.Calculate2(this, State);
             }
         }
 
         public double Calculator3 {
             get {
-                if (calculator != null) {
-                    object result = calculate3.Invoke(calculator, new object[] { this });
-                    return (double)result;
-                }
-                return 0.0;
+                return CodeBuilder.Calculate3(this, State);
             }
         }
     }

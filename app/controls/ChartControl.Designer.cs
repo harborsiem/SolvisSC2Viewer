@@ -78,6 +78,7 @@
             chartArea1.CursorX.IsUserEnabled = true;
             chartArea1.CursorX.IsUserSelectionEnabled = true;
             chartArea1.CursorX.SelectionColor = System.Drawing.Color.LightBlue;
+            chartArea1.CursorY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.Name = "ChartArea1";
             chartArea1.Position.Auto = false;
             chartArea1.Position.Height = 78.5F;
@@ -112,6 +113,8 @@
             chartArea2.CursorX.IsUserEnabled = true;
             chartArea2.CursorX.IsUserSelectionEnabled = true;
             chartArea2.CursorX.SelectionColor = System.Drawing.Color.LightBlue;
+            chartArea2.CursorY.Interval = 10D;
+            chartArea2.CursorY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea2.Name = "ChartArea2";
             chartArea2.Position.Auto = false;
             chartArea2.Position.Height = 18F;

@@ -136,6 +136,9 @@
   <data name="&gt;&gt;previousWeek.Name" xml:space="preserve">
     <value>previousWeek</value>
   </data>
+  <data name="&gt;&gt;nextDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;separator1.Name" xml:space="preserve">
     <value>separator1</value>
   </data>
@@ -160,8 +163,14 @@
   <data name="&gt;&gt;fromLabelDateTime.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="crosshair.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
   <data name="separator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 6</value>
+  </data>
+  <data name="&gt;&gt;crosshair.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="previousWeek.Visible" type="System.Boolean, mscorlib">
@@ -221,6 +230,9 @@
   <data name="&gt;&gt;nextWeek.Name" xml:space="preserve">
     <value>nextWeek</value>
   </data>
+  <data name="&gt;&gt;crosshair.Name" xml:space="preserve">
+    <value>crosshair</value>
+  </data>
   <data name="fromLabelDateTime.Text" xml:space="preserve">
     <value>from Date</value>
   </data>
@@ -236,8 +248,8 @@
   <data name="&gt;&gt;previousDay.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;nextDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="crosshair.ToolTipText" xml:space="preserve">
+    <value>Crosshair</value>
   </data>
   <data name="&gt;&gt;open.Name" xml:space="preserve">
     <value>open</value>
@@ -263,8 +275,8 @@
   <data name="open.ToolTipText" xml:space="preserve">
     <value>Open</value>
   </data>
-  <data name="&gt;&gt;separator3.Name" xml:space="preserve">
-    <value>separator3</value>
+  <data name="crosshair.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
   </data>
   <data name="&gt;&gt;firstDay.Name" xml:space="preserve">
     <value>firstDay</value>
@@ -280,6 +292,9 @@
   </data>
   <data name="nextWeek.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="&gt;&gt;separator3.Name" xml:space="preserve">
+    <value>separator3</value>
   </data>
   <data name="nextDay.ToolTipText" xml:space="preserve">
     <value>Next day</value>
