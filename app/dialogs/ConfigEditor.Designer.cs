@@ -70,6 +70,15 @@
             this.niveauUpDown = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel = new System.Windows.Forms.Label();
             this.gradientUpDown = new System.Windows.Forms.NumericUpDown();
+            this.SdCardTabPage = new System.Windows.Forms.TabPage();
+            this.sdCardLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.directoryButton = new System.Windows.Forms.Button();
+            this.timePlanGroup = new System.Windows.Forms.GroupBox();
+            this.timePlanGroupLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.hk2CheckBox = new System.Windows.Forms.CheckBox();
+            this.hk3CheckBox = new System.Windows.Forms.CheckBox();
+            this.dLadCheckBox = new System.Windows.Forms.CheckBox();
+            this.savePictureCheckBox = new System.Windows.Forms.CheckBox();
             this.buttons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDefault = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
@@ -88,6 +97,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown)).BeginInit();
+            this.SdCardTabPage.SuspendLayout();
+            this.sdCardLayout.SuspendLayout();
+            this.timePlanGroup.SuspendLayout();
+            this.timePlanGroupLayout.SuspendLayout();
             this.buttons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +118,7 @@
             this.tabControl.Controls.Add(this.actorsTabPage);
             this.tabControl.Controls.Add(this.optionsTabPage);
             this.tabControl.Controls.Add(this.heatCurveTabPage);
+            this.tabControl.Controls.Add(this.SdCardTabPage);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             // 
@@ -484,6 +498,67 @@
             this.gradientUpDown.DecimalPlaces = 2;
             this.gradientUpDown.Name = "gradientUpDown";
             // 
+            // SdCardTabPage
+            // 
+            this.SdCardTabPage.Controls.Add(this.sdCardLayout);
+            resources.ApplyResources(this.SdCardTabPage, "SdCardTabPage");
+            this.SdCardTabPage.Name = "SdCardTabPage";
+            this.SdCardTabPage.UseVisualStyleBackColor = true;
+            // 
+            // sdCardLayout
+            // 
+            resources.ApplyResources(this.sdCardLayout, "sdCardLayout");
+            this.sdCardLayout.Controls.Add(this.directoryButton, 0, 0);
+            this.sdCardLayout.Controls.Add(this.timePlanGroup, 0, 1);
+            this.sdCardLayout.Name = "sdCardLayout";
+            // 
+            // directoryButton
+            // 
+            resources.ApplyResources(this.directoryButton, "directoryButton");
+            this.directoryButton.Name = "directoryButton";
+            this.directoryButton.UseVisualStyleBackColor = true;
+            this.directoryButton.Click += new System.EventHandler(this.directoryButton_Click);
+            // 
+            // timePlanGroup
+            // 
+            resources.ApplyResources(this.timePlanGroup, "timePlanGroup");
+            this.timePlanGroup.Controls.Add(this.timePlanGroupLayout);
+            this.timePlanGroup.Name = "timePlanGroup";
+            this.timePlanGroup.TabStop = false;
+            // 
+            // timePlanGroupLayout
+            // 
+            resources.ApplyResources(this.timePlanGroupLayout, "timePlanGroupLayout");
+            this.timePlanGroupLayout.Controls.Add(this.hk2CheckBox, 0, 0);
+            this.timePlanGroupLayout.Controls.Add(this.hk3CheckBox, 0, 1);
+            this.timePlanGroupLayout.Controls.Add(this.dLadCheckBox, 0, 2);
+            this.timePlanGroupLayout.Controls.Add(this.savePictureCheckBox, 0, 3);
+            this.timePlanGroupLayout.Name = "timePlanGroupLayout";
+            // 
+            // hk2CheckBox
+            // 
+            resources.ApplyResources(this.hk2CheckBox, "hk2CheckBox");
+            this.hk2CheckBox.Name = "hk2CheckBox";
+            this.hk2CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // hk3CheckBox
+            // 
+            resources.ApplyResources(this.hk3CheckBox, "hk3CheckBox");
+            this.hk3CheckBox.Name = "hk3CheckBox";
+            this.hk3CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // dLadCheckBox
+            // 
+            resources.ApplyResources(this.dLadCheckBox, "dLadCheckBox");
+            this.dLadCheckBox.Name = "dLadCheckBox";
+            this.dLadCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // savePictureCheckBox
+            // 
+            resources.ApplyResources(this.savePictureCheckBox, "savePictureCheckBox");
+            this.savePictureCheckBox.Name = "savePictureCheckBox";
+            this.savePictureCheckBox.UseVisualStyleBackColor = true;
+            // 
             // buttons
             // 
             resources.ApplyResources(this.buttons, "buttons");
@@ -552,6 +627,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown)).EndInit();
+            this.SdCardTabPage.ResumeLayout(false);
+            this.SdCardTabPage.PerformLayout();
+            this.sdCardLayout.ResumeLayout(false);
+            this.sdCardLayout.PerformLayout();
+            this.timePlanGroup.ResumeLayout(false);
+            this.timePlanGroup.PerformLayout();
+            this.timePlanGroupLayout.ResumeLayout(false);
+            this.timePlanGroupLayout.PerformLayout();
             this.buttons.ResumeLayout(false);
             this.buttons.PerformLayout();
             this.ResumeLayout(false);
@@ -610,5 +693,14 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label parameterLabel;
         private System.Windows.Forms.Button parameterButton;
+        private System.Windows.Forms.TabPage SdCardTabPage;
+        private System.Windows.Forms.TableLayoutPanel sdCardLayout;
+        private System.Windows.Forms.Button directoryButton;
+        private System.Windows.Forms.GroupBox timePlanGroup;
+        private System.Windows.Forms.TableLayoutPanel timePlanGroupLayout;
+        private System.Windows.Forms.CheckBox savePictureCheckBox;
+        private System.Windows.Forms.CheckBox dLadCheckBox;
+        private System.Windows.Forms.CheckBox hk2CheckBox;
+        private System.Windows.Forms.CheckBox hk3CheckBox;
     }
 }

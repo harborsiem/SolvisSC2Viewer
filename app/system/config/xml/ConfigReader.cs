@@ -85,6 +85,15 @@ namespace SolvisSC2Viewer {
                             case ConfigXml.Formula3Tag:
                                 manager.Formula3 = node1.InnerText;
                                 break;
+                            case ConfigXml.SdCardDirTag:
+                                manager.SdCardDir = ParseSimpleTag(node1);
+                                break;
+                            case ConfigXml.TimePlanSuppressMaskTag:
+                                manager.TimePlanSuppressMask = GetInt32(node1);
+                                break;
+                            case ConfigXml.TimePlanBitmapTag:
+                                manager.TimePlanBitmap = GetBoolean(node1);
+                                break;
                             default:
                                 break;
                         }
@@ -107,6 +116,18 @@ namespace SolvisSC2Viewer {
 
         private static string ParseSimpleTag(XmlNode child) {
             return child.InnerText;
+        }
+
+        private static bool GetBoolean(XmlNode child) {
+            bool result = false;
+            try {
+                string value = ParseSimpleTag(child);
+                result = bool.Parse(value);
+            }
+            catch (FormatException e) {
+                AppExtension.PrintStackTrace(e);
+            }
+            return result;
         }
 
         private static int GetInt32(XmlNode child) {

@@ -28,6 +28,9 @@ namespace SolvisSC2Viewer {
         public const string Formula1Tag = "Formula1";
         public const string Formula2Tag = "Formula2";
         public const string Formula3Tag = "Formula3";
+        public const string SdCardDirTag = "SdCardDir";
+        public const string TimePlanSuppressMaskTag = "TimePlanSuppressMask";
+        public const string TimePlanBitmapTag = "TimePlanBitmap";
         public const string AttributeText = "Text";
         public const string AttributeToolTipText = "ToolTipText";
         public const string AttributeKey = "Key";

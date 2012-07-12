@@ -12,7 +12,7 @@ namespace SolvisSC2Viewer {
     public partial class MainForm : BaseForm {
         public const string ApplicationName = "SolvisSC2Viewer";
         public const string ApplicationText = "Solvis Control II Viewer";
-        public static string ConfigPath = "Solvis" + Path.DirectorySeparatorChar + "SolvisViewer";
+        public static readonly string ConfigPath = "Solvis" + Path.DirectorySeparatorChar + "SolvisViewer";
 
         public MainForm() {
             InitializeComponent();

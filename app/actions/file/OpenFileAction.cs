@@ -38,7 +38,7 @@ namespace SolvisSC2Viewer {
                         DateTime min = (list[0].DateAndTime);
                         DateTime max = (list[list.Count - 1].DateAndTime);
                         AppManager.ItemManager.ToolMenu.SetMinMaxDate(min, max);
-                        //AppManager.MainForm.Text = MainForm.ApplicationText + "; Datei: " + Path.GetFileNameWithoutExtension(dialog.FileName);
+                        AppManager.MainForm.Text = MainForm.ApplicationText + " --- Datei: " + Path.GetFileNameWithoutExtension(dialog.FileName);
                     }
                     finally {
                         if (reader != null) {
@@ -52,6 +52,7 @@ namespace SolvisSC2Viewer {
                 }
             }
             catch (ArgumentException ex) {
+                AppManager.MainForm.Text = MainForm.ApplicationText;
                 AppManager.DataManager.SolvisList.Clear();
                 DateTime now = DateTime.Now;
                 AppManager.ItemManager.ToolMenu.SetMinMaxDate(now, now);
