@@ -18,11 +18,18 @@ namespace SolvisSC2Viewer {
             this.heatCurve.Click += AppManager.GetAction(HeatCurveAction.Name).ProcessEvent;
             this.sensorsCheck.Click += AppManager.GetAction(SensorsCheckAction.Name).ProcessEvent;
             this.configEditor.Click += AppManager.GetAction(ConfigEditorAction.Name).ProcessEvent;
+            this.timePlan.Click += AppManager.GetAction(TimePlanAction.Name).ProcessEvent;
+            this.countingList.Click += AppManager.GetAction(CountingListAction.Name).ProcessEvent;
+            this.parameterList.Click += AppManager.GetAction(ParameterListAction.Name).ProcessEvent;
             //LoadProperties();
             LoadIcons();
         }
 
         public void UpdateItems() {
+            if (AppManager.ConfigManager.SuperUser) {
+                countingList.Visible = true;
+                parameterList.Visible = true;
+            }
             this.sensorsCheck.Enabled = AppManager.DataManager.SolvisList.Count > 0;
         }
 

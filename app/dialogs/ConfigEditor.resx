@@ -1542,6 +1542,282 @@
   <data name="&gt;&gt;heatCurveTabPage.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="sdCardLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="sdCardLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sdCardLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="directoryButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="directoryButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="directoryButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="directoryButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 23</value>
+  </data>
+  <data name="directoryButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="directoryButton.Text" xml:space="preserve">
+    <value>Choose Directory</value>
+  </data>
+  <data name="&gt;&gt;directoryButton.Name" xml:space="preserve">
+    <value>directoryButton</value>
+  </data>
+  <data name="&gt;&gt;directoryButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;directoryButton.Parent" xml:space="preserve">
+    <value>sdCardLayout</value>
+  </data>
+  <data name="&gt;&gt;directoryButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="timePlanGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="timePlanGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="timePlanGroupLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="timePlanGroupLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="hk2CheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hk2CheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="hk2CheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="hk2CheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 17</value>
+  </data>
+  <data name="hk2CheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="hk2CheckBox.Text" xml:space="preserve">
+    <value>Show HK2</value>
+  </data>
+  <data name="&gt;&gt;hk2CheckBox.Name" xml:space="preserve">
+    <value>hk2CheckBox</value>
+  </data>
+  <data name="&gt;&gt;hk2CheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hk2CheckBox.Parent" xml:space="preserve">
+    <value>timePlanGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;hk2CheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="hk3CheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hk3CheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 26</value>
+  </data>
+  <data name="hk3CheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 17</value>
+  </data>
+  <data name="hk3CheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="hk3CheckBox.Text" xml:space="preserve">
+    <value>Show HK3</value>
+  </data>
+  <data name="&gt;&gt;hk3CheckBox.Name" xml:space="preserve">
+    <value>hk3CheckBox</value>
+  </data>
+  <data name="&gt;&gt;hk3CheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hk3CheckBox.Parent" xml:space="preserve">
+    <value>timePlanGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;hk3CheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dLadCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dLadCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="dLadCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="dLadCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 17</value>
+  </data>
+  <data name="dLadCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="dLadCheckBox.Text" xml:space="preserve">
+    <value>Show SpeicherDurchladung</value>
+  </data>
+  <data name="&gt;&gt;dLadCheckBox.Name" xml:space="preserve">
+    <value>dLadCheckBox</value>
+  </data>
+  <data name="&gt;&gt;dLadCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dLadCheckBox.Parent" xml:space="preserve">
+    <value>timePlanGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;dLadCheckBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="savePictureCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="savePictureCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="savePictureCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 72</value>
+  </data>
+  <data name="savePictureCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
+  </data>
+  <data name="savePictureCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="savePictureCheckBox.Text" xml:space="preserve">
+    <value>Save as picture</value>
+  </data>
+  <data name="&gt;&gt;savePictureCheckBox.Name" xml:space="preserve">
+    <value>savePictureCheckBox</value>
+  </data>
+  <data name="&gt;&gt;savePictureCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;savePictureCheckBox.Parent" xml:space="preserve">
+    <value>timePlanGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;savePictureCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="timePlanGroupLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="timePlanGroupLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 0</value>
+  </data>
+  <data name="timePlanGroupLayout.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="timePlanGroupLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 92</value>
+  </data>
+  <data name="timePlanGroupLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;timePlanGroupLayout.Name" xml:space="preserve">
+    <value>timePlanGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;timePlanGroupLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timePlanGroupLayout.Parent" xml:space="preserve">
+    <value>timePlanGroup</value>
+  </data>
+  <data name="&gt;&gt;timePlanGroupLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="timePlanGroupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="hk2CheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="hk3CheckBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dLadCheckBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="savePictureCheckBox" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="timePlanGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="timePlanGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 127</value>
+  </data>
+  <data name="timePlanGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="timePlanGroup.Text" xml:space="preserve">
+    <value>Timeplan settings</value>
+  </data>
+  <data name="&gt;&gt;timePlanGroup.Name" xml:space="preserve">
+    <value>timePlanGroup</value>
+  </data>
+  <data name="&gt;&gt;timePlanGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timePlanGroup.Parent" xml:space="preserve">
+    <value>sdCardLayout</value>
+  </data>
+  <data name="&gt;&gt;timePlanGroup.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="sdCardLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="sdCardLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="sdCardLayout.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="sdCardLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 258</value>
+  </data>
+  <data name="sdCardLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;sdCardLayout.Name" xml:space="preserve">
+    <value>sdCardLayout</value>
+  </data>
+  <data name="&gt;&gt;sdCardLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sdCardLayout.Parent" xml:space="preserve">
+    <value>SdCardTabPage</value>
+  </data>
+  <data name="&gt;&gt;sdCardLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="sdCardLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="directoryButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="timePlanGroup" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="SdCardTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="SdCardTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>356, 261</value>
+  </data>
+  <data name="SdCardTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="SdCardTabPage.Text" xml:space="preserve">
+    <value>SD-Card</value>
+  </data>
+  <data name="&gt;&gt;SdCardTabPage.Name" xml:space="preserve">
+    <value>SdCardTabPage</value>
+  </data>
+  <data name="&gt;&gt;SdCardTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SdCardTabPage.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;SdCardTabPage.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>

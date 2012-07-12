@@ -48,7 +48,7 @@ namespace SolvisSC2Viewer {
             return 0.0;
         }
 
-        private CodeDomProvider CreateCompiler() {
+        private static CodeDomProvider CreateCompiler() {
             //Create an instance of the C# provider   
             return new CSharpCodeProvider();
         }
@@ -57,7 +57,7 @@ namespace SolvisSC2Viewer {
         /// Create parameters for compiling
         /// </summary>
         /// <returns></returns>
-        private CompilerParameters CreateCompilerParameters() {
+        private static CompilerParameters CreateCompilerParameters() {
             //add compiler parameters and assembly references
             CompilerParameters compilerParams = new CompilerParameters();
             compilerParams.CompilerOptions = "/target:library /optimize";
@@ -77,7 +77,7 @@ namespace SolvisSC2Viewer {
         }
 
         /// <summary>
-        /// Writes the output to the text box on the win form
+        /// Writes the output for a MessageBox
         /// </summary>
         /// <param name="txt"></param>
         /// <param name="args"></param>
@@ -102,7 +102,7 @@ namespace SolvisSC2Viewer {
                 foreach (CompilerError error in results.Errors) {
                     WriteLine("Compile Error: " + error.ErrorText);
                 }
-                MessageBox.Show(txtCompile, "Freie Formeln");
+                MessageBox.Show(txtCompile, "Freie Formeln", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                 return null;
             }
             return results;
@@ -162,7 +162,7 @@ namespace SolvisSC2Viewer {
         /// Runs the Calculate method in our on-the-fly assembly
         /// </summary>
         /// <param name="results"></param>
-        private void RunCode(CompilerResults results) {
+        private static void RunCode(CompilerResults results) {
             Assembly executingAssembly = results.CompiledAssembly;
             try {
                 //cant call the entry method if the assembly is null
@@ -198,13 +198,13 @@ namespace SolvisSC2Viewer {
         }
 
 
-        private CodeMemberField FieldVariable(string fieldName, string typeName, MemberAttributes accessLevel) {
+        private static CodeMemberField FieldVariable(string fieldName, string typeName, MemberAttributes accessLevel) {
             CodeMemberField field = new CodeMemberField(typeName, fieldName);
             field.Attributes = accessLevel;
             return field;
         }
 
-        private CodeMemberField FieldVariable(string fieldName, Type type, MemberAttributes accessLevel) {
+        private static CodeMemberField FieldVariable(string fieldName, Type type, MemberAttributes accessLevel) {
             CodeMemberField field = new CodeMemberField(type, fieldName);
             field.Attributes = accessLevel;
             return field;
@@ -217,7 +217,7 @@ namespace SolvisSC2Viewer {
         /// <param name="internalName"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        CodeMemberProperty MakeProperty(string propertyName, string internalName, Type type) {
+        private static CodeMemberProperty MakeProperty(string propertyName, string internalName, Type type) {
             CodeMemberProperty myProperty = new CodeMemberProperty();
             myProperty.Name = propertyName;
             myProperty.Comments.Add(new CodeCommentStatement(String.Format("The {0} property is the returned result", propertyName)));

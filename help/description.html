@@ -5,7 +5,7 @@
 	<TITLE></TITLE>
 	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Windows)">
 	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGED" CONTENT="20120617;12223793">
+	<META NAME="CHANGED" CONTENT="20120628;10022430">
 	<STYLE TYPE="text/css">
 	<!--
 		H2.cjk { font-family: "SimSun" }
@@ -48,13 +48,18 @@ relevanten Parameter eingestellt werden. Diese Parameter werden in
 dem zusätzlichen Dialogfenster nach dem Betätigen von „OK“
 direkt übernommen.<BR>Unter dem Tabulator „Heizkurve“ können
 die Grundwerte für das Fenster eingestellt werden, welches über
-Extras-&gt;Heizkurve aufgerufen wird.<BR>Mit dem „Defaults“-Schalter
-werden die im Programm festgelegten Grundwerte aktiviert.<BR><BR>Nach
-Änderung der Konfiguration ist es sinnvoll das Programm neu zu
-starten.<BR><BR>Nach dem Beenden des Programms wird eine
-Konfigurationsdatei (User.config) angelegt. Der Pfad für die
-User.config ist unterschiedlich bei verschiedenen Betriebssystemen.
-<BR>Unter Windows XP lautet der Pfad „Dokumente und
+Extras-&gt;Heizkurve aufgerufen wird.<BR>Unter dem Tabulator
+„SD-Card“ können die Grundwerte für das Zeitplan Fenster
+eingestellt werden, welches über Extras-&gt;SD-Card Infos-&gt;Zeitplan
+aufgerufen wird. Das Dateiverzeichnis muß auf ein Verzeichnis
+gesetzt werden, in dem sich die Datei zeitplan.txt, zaehlst.txt und
+paramact.txt befinden.<BR>Mit dem „Defaults“-Schalter werden die
+im Programm festgelegten Grundwerte aktiviert.<BR><BR>Nach Änderung
+der Konfiguration ist es sinnvoll das Programm neu zu starten.<BR><BR>Nach
+dem Beenden des Programms wird eine Konfigurationsdatei (User.config)
+angelegt. Der Pfad für die User.config ist unterschiedlich bei
+verschiedenen Betriebssystemen. <BR>Unter Windows XP lautet der Pfad
+„Dokumente und
 Einstellungen\&lt;<I>UserName</I>&gt;\Anwendungsdaten\Solvis\SolvisViewer“.
 <BR>Unter Windows Vista lautet der Pfad
 „Benutzer\&lt;<I>UserName</I>&gt;\AppData\Roaming\Solvis\SolvisViewer“.<BR><BR>Die
@@ -517,6 +522,25 @@ werden. Hierbei wird überprüft, ob die Temperaturfühler S01
 sind. Falls ein Meldungsfenster erscheint mit dem Meldungstext
 „Temperatur Sensoren S01 und S04 vertauscht“, dann ist der
 Heizungsbetrieb zu rufen. Dieser muss die Anlage in Ordnung bringen.</P>
+<H2 CLASS="western"><A NAME="SDCard"></A>SD-Card Infos</H2>
+<P>Unter dem Menupunkt „Extras“ gibt es den Eintrag „SD-Card
+Infos“. In dem Untermenu ist die Anzeige für den Zeitplan
+auswählbar. Der Zeitplan beinhaltet tabellarisch die
+Zeiteinstellungen der Heizkreise, Zirkulation, Warmwasser und
+Speicher Durchladung. Die Information für die Zeiteinstellungen wird
+aus der Datei „zeitplan.txt“ entnommen. Optional können für den
+Zeitplan die Heizkreise 2 und 3 und die Speicher Durchladung
+ausgeblendet werden. Zusätzlich kann auch das Zeitplan-Fenster als
+Bild-Datei namens „TimeOverview.png“ im Konfigurationsverzeichnis
+gespeichert werden. Die Einstellungen dafür werden im
+Konfigurations-Editor durchgeführt.</P>
+<P>Wenn Informationen zu den Dateien zaehlst.txt und paramact.txt zur
+Verfügung stehen, dann wären auch Anzeigen über Zählerstand und
+Parameter im SolvisSC2Viewer möglich.<BR>Datei zaehlst.txt: Es
+fehlen die Bedeutungen der Werte 4 bis 6.<BR>Datei paramact.txt: Es
+fehlen noch viele Parameter Bedeutungen (siehe Sourcecode Enums.cs
+und HeatSettings.cs im Verzeichnis app\system\solvis. 
+</P>
 <H2 CLASS="western"><BR><BR>
 </H2>
 <P><BR><BR>

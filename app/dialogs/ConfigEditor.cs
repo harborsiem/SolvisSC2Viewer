@@ -16,6 +16,9 @@ namespace SolvisSC2Viewer {
         private int temperature;
         private int niveau;
         private double gradient;
+        public int timePlanSuppressMask;
+        public bool timePlanPicture;
+
         public bool Changed { get; set; }
 
         public ConfigEditor() {
@@ -44,9 +47,19 @@ namespace SolvisSC2Viewer {
             gradientUpDown.Value = (decimal)ConfigManager.Gradient;
             gradientUpDown.Maximum = HeatCurve.GradientMaximum;
             gradientUpDown.Minimum = HeatCurve.GradientMinimum;
+            timePlanSuppressMask = AppManager.ConfigManager.TimePlanSuppressMask;
+            timePlanPicture = AppManager.ConfigManager.TimePlanBitmap;
+            savePictureCheckBox.Checked = timePlanPicture;
+            hk2CheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.HK2) == 0;
+            hk3CheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.HK3) == 0;
+            dLadCheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.DLad) == 0;
             this.temperatureUpDown.ValueChanged += new System.EventHandler(this.temperatureUpDown_ValueChanged);
             this.niveauUpDown.ValueChanged += new System.EventHandler(this.niveauUpDown_ValueChanged);
             this.gradientUpDown.ValueChanged += new System.EventHandler(this.gradientUpDown_ValueChanged);
+            this.hk2CheckBox.CheckedChanged += new System.EventHandler(this.hk2CheckBox_CheckedChanged);
+            this.hk3CheckBox.CheckedChanged += new System.EventHandler(this.hk3CheckBox_CheckedChanged);
+            this.dLadCheckBox.CheckedChanged += new System.EventHandler(this.dLadCheckBox_CheckedChanged);
+            this.savePictureCheckBox.CheckedChanged += new System.EventHandler(this.savePictureCheckBox_CheckedChanged);
 
             sensorsListBox.SelectedIndex = 0;
             actorsListBox.SelectedIndex = 0;
@@ -78,6 +91,8 @@ namespace SolvisSC2Viewer {
             RowValues.Latitude = (double)defaults[ConfigXml.LatitudeTag];
             RowValues.BurnerMinPower = (double)defaults[ConfigXml.BurnerMinPowerTag];
             RowValues.BurnerMaxPower = (double)defaults[ConfigXml.BurnerMaxPowerTag];
+            manager.TimePlanSuppressMask = (int)defaults[ConfigXml.TimePlanSuppressMaskTag];
+            manager.TimePlanBitmap = (bool)defaults[ConfigXml.TimePlanBitmapTag];
 
             manager.UpdateMainForm();
             this.Cursor = Cursors.Default;
@@ -105,6 +120,9 @@ namespace SolvisSC2Viewer {
                 ConfigManager.Temperature = temperature;
                 ConfigManager.Niveau = niveau;
                 ConfigManager.Gradient = gradient;
+                manager.TimePlanSuppressMask = timePlanSuppressMask;
+                manager.TimePlanBitmap = timePlanPicture;
+
                 manager.UpdateMainForm();
                 this.Cursor = Cursors.Default;
             }
@@ -271,6 +289,49 @@ namespace SolvisSC2Viewer {
                         break;
                 }
             }
+        }
+
+        private void directoryButton_Click(object sender, EventArgs e) {
+            ConfigManager manager = AppManager.ConfigManager;
+            FolderBrowserDialog folder = new FolderBrowserDialog();
+            if (!string.IsNullOrWhiteSpace(manager.SdCardDir)) {
+                folder.SelectedPath = manager.SdCardDir;
+            }
+            if (folder.ShowDialog() == DialogResult.OK) {
+                manager.SdCardDir = folder.SelectedPath;
+            }
+        }
+
+        private void hk2CheckBox_CheckedChanged(object sender, EventArgs e) {
+            if (hk2CheckBox.Checked) {
+                timePlanSuppressMask &= ~(int)SuppressMask.HK2;
+            } else {
+                timePlanSuppressMask |= (int)SuppressMask.HK2;
+            }
+            Changed = true;
+        }
+
+        private void hk3CheckBox_CheckedChanged(object sender, EventArgs e) {
+            if (hk3CheckBox.Checked) {
+                timePlanSuppressMask &= ~(int)SuppressMask.HK3;
+            } else {
+                timePlanSuppressMask |= (int)SuppressMask.HK3;
+            }
+            Changed = true;
+        }
+
+        private void dLadCheckBox_CheckedChanged(object sender, EventArgs e) {
+            if (dLadCheckBox.Checked) {
+                timePlanSuppressMask &= ~(int)SuppressMask.DLad;
+            } else {
+                timePlanSuppressMask |= (int)SuppressMask.DLad;
+            }
+            Changed = true;
+        }
+
+        private void savePictureCheckBox_CheckedChanged(object sender, EventArgs e) {
+            timePlanPicture = savePictureCheckBox.Checked;
+            Changed = true;
         }
     }
 }

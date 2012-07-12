@@ -13,7 +13,7 @@ namespace SolvisSC2Viewer {
     [Serializable]
     public class RowValues {
         private const int MaxNumColumns = 46;
-        private const int MinNumColumns = 37;
+        private const int MinNumColumns = 36;
         public DateTime DateAndTime { get; private set; }
         public DateTime UtcPlus1DateTime { get { return DateAndTime.ToUniversalTime().AddHours(1); } }
         private double[] sensors;
@@ -196,8 +196,8 @@ namespace SolvisSC2Viewer {
             }
         }
 
-        public double CalculateSolarVSG(int value) {
-            return (value == 0) ? 0 : (1.0 / ((double)value - 7.6365)) * 80148.4 + 4.53375; //empirisch ermittelte Formel von Vortex
+        public static double CalculateSolarVSG(int value) {
+            return (value == 0) ? 0 : (1.0 / ((double)value - 7.6365)) * 80148.4 + 4.53375; //empirisch ermittelte Formel von "Vortex"
         }
 
         public double Calculator1 {

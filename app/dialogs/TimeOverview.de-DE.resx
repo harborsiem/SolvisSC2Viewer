@@ -117,122 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="sensorsColorlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
+  <data name="MondayColumn.HeaderText" xml:space="preserve">
+    <value>Montag</value>
   </data>
-  <data name="sensorsColorlabel.Text" xml:space="preserve">
-    <value>Farbe:</value>
+  <data name="TuesdayColumn.HeaderText" xml:space="preserve">
+    <value>Dienstag</value>
   </data>
-  <data name="sensorsColorButton.Text" xml:space="preserve">
-    <value>Wählen</value>
+  <data name="WednesdayColumn.HeaderText" xml:space="preserve">
+    <value>Mittwoch</value>
   </data>
-  <data name="sensorsVisibleCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
+  <data name="ThursdayColumn.HeaderText" xml:space="preserve">
+    <value>Donnerstag</value>
   </data>
-  <data name="sensorsVisibleCheckBox.Text" xml:space="preserve">
-    <value>Sichtbar</value>
+  <data name="FridayColumn.HeaderText" xml:space="preserve">
+    <value>Freitag</value>
   </data>
-  <data name="sensorsTabPage.Text" xml:space="preserve">
-    <value>Sensoren</value>
+  <data name="SaturdayColumn.HeaderText" xml:space="preserve">
+    <value>Samstag</value>
   </data>
-  <data name="actorsColorlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
-  </data>
-  <data name="actorsColorlabel.Text" xml:space="preserve">
-    <value>Farbe:</value>
-  </data>
-  <data name="actorsColorButton.Text" xml:space="preserve">
-    <value>Wählen</value>
-  </data>
-  <data name="actorsVisibleCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
-  </data>
-  <data name="actorsVisibleCheckBox.Text" xml:space="preserve">
-    <value>Sichtbar</value>
-  </data>
-  <data name="actorsTabPage.Text" xml:space="preserve">
-    <value>Aktoren</value>
-  </data>
-  <data name="optionsColorlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
-  </data>
-  <data name="optionsColorlabel.Text" xml:space="preserve">
-    <value>Farbe:</value>
-  </data>
-  <data name="optionsColorButton.Text" xml:space="preserve">
-    <value>Wählen</value>
-  </data>
-  <data name="optionsVisibleCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
-  </data>
-  <data name="optionsVisibleCheckBox.Text" xml:space="preserve">
-    <value>Sichtbar</value>
-  </data>
-  <data name="parameterButton.Text" xml:space="preserve">
-    <value>Ändern</value>
-  </data>
-  <data name="optionsTabPage.Text" xml:space="preserve">
-    <value>Optionen</value>
-  </data>
-  <data name="temperatureLabel.Text" xml:space="preserve">
-    <value>Temperatur</value>
-  </data>
-  <data name="gradientLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
-  </data>
-  <data name="gradientLabel.Text" xml:space="preserve">
-    <value>Steilheit</value>
-  </data>
-  <data name="heatCurveGroup.Text" xml:space="preserve">
-    <value>Voreinstellung für Heizkurve</value>
-  </data>
-  <data name="heatCurveTabPage.Text" xml:space="preserve">
-    <value>Heizkurve</value>
-  </data>
-  <data name="directoryButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 23</value>
-  </data>
-  <data name="directoryButton.Text" xml:space="preserve">
-    <value>Dateiverzeichnis wählen</value>
-  </data>
-  <data name="hk2CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="hk2CheckBox.Text" xml:space="preserve">
-    <value>Anzeige HK2</value>
-  </data>
-  <data name="hk3CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="hk3CheckBox.Text" xml:space="preserve">
-    <value>Anzeige HK3</value>
-  </data>
-  <data name="dLadCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 17</value>
-  </data>
-  <data name="dLadCheckBox.Text" xml:space="preserve">
-    <value>Anzeige SpeicherDurchladung</value>
-  </data>
-  <data name="savePictureCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 17</value>
-  </data>
-  <data name="savePictureCheckBox.Text" xml:space="preserve">
-    <value>Als Bild speichern</value>
-  </data>
-  <data name="timePlanGroupLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 92</value>
-  </data>
-  <data name="timePlanGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 127</value>
-  </data>
-  <data name="timePlanGroup.Text" xml:space="preserve">
-    <value>Einstellungen Zeitplan</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Abbrechen</value>
+  <data name="SundayColumn.HeaderText" xml:space="preserve">
+    <value>Sonntag</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Konfiguration</value>
+    <value>Zeitübersichten</value>
   </data>
 </root>

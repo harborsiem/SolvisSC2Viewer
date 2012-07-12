@@ -36,7 +36,7 @@ namespace SolvisSC2Viewer {
         public HeatCurve() {
             InitializeComponent();
             chartMain.ChartAreas[0].AxisX.Title = "Aussen Temp.";
-            //chartMain.ChartAreas[0].AxisY2.Title = "Vorlauf Temp.";
+            chartMain.ChartAreas[0].AxisY2.Title = "Vorlauf Temp.";
             this.Icon = AppManager.IconManager.AppIcon;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

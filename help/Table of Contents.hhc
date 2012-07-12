@@ -89,6 +89,10 @@
 			<param name="Name" value="Sensoren prüfen">
 			<param name="Local" value="description.html#SensorsCheck">
 			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="SD-Card Infos">
+			<param name="Local" value="description.html#SDCard">
+			</OBJECT>
 
 	</UL>
 </UL>

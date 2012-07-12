@@ -31,6 +31,9 @@ namespace SolvisSC2Viewer {
         public IDictionary<String, Object> Parameters { get; private set; } //@Todo
         public IDictionary<String, Object> ParametersDefault { get; private set; }
         public string OpenDir { get; set; }
+        public string SdCardDir { get; set; }
+        public int TimePlanSuppressMask { get; set; }
+        public bool TimePlanBitmap { get; set; }
         public bool SuperUser { get; set; }
         //HeatCurve parameter
         public static int Temperature { get; set; }
@@ -60,6 +63,7 @@ namespace SolvisSC2Viewer {
             RowValues.Temperature = (int)ParametersDefault[ConfigXml.TemperatureVLTag];
             RowValues.Niveau = (int)ParametersDefault[ConfigXml.NiveauVLTag];
             RowValues.Gradient = (double)ParametersDefault[ConfigXml.GradientVLTag];
+            TimePlanSuppressMask = (int)ParametersDefault[ConfigXml.TimePlanSuppressMaskTag];
             SuperUser = false;
             OpenDir = AppManager.BaseDir;
             Temperature = (int)ParametersDefault[ConfigXml.TemperatureTag];
@@ -116,7 +120,7 @@ namespace SolvisSC2Viewer {
             AppConfigChanged = true;
         }
 
-        private void UpdateParameters(IDictionary<String, ConfigData> oldDict, IDictionary<String, ConfigData> newDict, bool options) {
+        private static void UpdateParameters(IDictionary<String, ConfigData> oldDict, IDictionary<String, ConfigData> newDict, bool options) {
             IEnumerator<KeyValuePair<String, ConfigData>> it = oldDict.GetEnumerator();
             while (it.MoveNext()) {
                 KeyValuePair<String, ConfigData> pair = it.Current;
@@ -142,6 +146,8 @@ namespace SolvisSC2Viewer {
             ParametersDefault[ConfigXml.GradientVLTag] = 1.15;
             ParametersDefault[ConfigXml.BurnerMinPowerTag] = 5.0;
             ParametersDefault[ConfigXml.BurnerMaxPowerTag] = 20.0;
+            ParametersDefault[ConfigXml.TimePlanSuppressMaskTag] = 38;
+            ParametersDefault[ConfigXml.TimePlanBitmapTag] = false;
         }
 
         public void UpdateMainForm() {

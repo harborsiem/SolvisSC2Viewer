@@ -124,7 +124,7 @@
             chartArea1.AxisY2.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
             chartArea1.AxisY2.Maximum = 70D;
             chartArea1.AxisY2.Minimum = 15D;
-            chartArea1.AxisY2.Title = "Vorlauf Temp.";
+            chartArea1.AxisY2.Title = "Heat flow Temp.";
             chartArea1.AxisY2.TitleAlignment = System.Drawing.StringAlignment.Far;
             chartArea1.Name = "ChartArea1";
             this.chartMain.ChartAreas.Add(chartArea1);

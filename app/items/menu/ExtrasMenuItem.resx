@@ -133,6 +133,40 @@
   <data name="sensorsCheck.Text" xml:space="preserve">
     <value>Sensors Check</value>
   </data>
+  <data name="timePlan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 22</value>
+  </data>
+  <data name="timePlan.Text" xml:space="preserve">
+    <value>Zeitplan</value>
+  </data>
+  <data name="countingList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 22</value>
+  </data>
+  <data name="countingList.Text" xml:space="preserve">
+    <value>Zählstand</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="countingList.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="parameterList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 22</value>
+  </data>
+  <data name="parameterList.Text" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="parameterList.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="sdCardInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="sdCardInfo.Text" xml:space="preserve">
+    <value>SD-Card Infos</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 6</value>
+  </data>
   <data name="configEditor.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 22</value>
   </data>
