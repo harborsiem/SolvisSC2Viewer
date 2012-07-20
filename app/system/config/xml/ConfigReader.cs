@@ -38,43 +38,43 @@ namespace SolvisSC2Viewer {
                                 ParseOptions(node1);
                                 break;
                             case ConfigXml.OpenDirTag:
-                                manager.OpenDir = ParseSimpleTag(node1);
+                                manager.OpenDir = node1.InnerText;
                                 break;
                             case ConfigXml.BurnerMinPowerTag:
-                                RowValues.BurnerMinPower = GetDouble(node1);
+                                RowValues.BurnerMinPower = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.BurnerMaxPowerTag:
-                                RowValues.BurnerMaxPower = GetDouble(node1);
+                                RowValues.BurnerMaxPower = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.LatitudeTag:
-                                RowValues.Latitude = GetDouble(node1);
+                                RowValues.Latitude = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.LongitudeTag:
-                                RowValues.Longitude = GetDouble(node1);
+                                RowValues.Longitude = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.TemperatureTag:
-                                ConfigManager.Temperature = GetInt32(node1);
+                                ConfigManager.Temperature = XmlConvert.ToInt32(node1.InnerText);
                                 break;
                             case ConfigXml.NiveauTag:
-                                ConfigManager.Niveau = GetInt32(node1);
+                                ConfigManager.Niveau = XmlConvert.ToInt32(node1.InnerText);
                                 break;
                             case ConfigXml.GradientTag:
-                                ConfigManager.Gradient = GetDouble(node1);
+                                ConfigManager.Gradient = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.TemperatureVLTag:
-                                RowValues.Temperature = GetDouble(node1);
+                                RowValues.Temperature = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.NiveauVLTag:
-                                RowValues.Niveau = GetDouble(node1);
+                                RowValues.Niveau = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.GradientVLTag:
-                                RowValues.Gradient = GetDouble(node1);
+                                RowValues.Gradient = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.VersionTag:
-                                manager.Version = ParseSimpleTag(node1);
+                                manager.Version = node1.InnerText;
                                 break;
                             case ConfigXml.SuperUserTag:
-                                manager.SuperUser = bool.Parse(node1.InnerText);
+                                manager.SuperUser = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
                                 break;
                             case ConfigXml.Formula1Tag:
                                 manager.Formula1 = node1.InnerText;
@@ -86,13 +86,13 @@ namespace SolvisSC2Viewer {
                                 manager.Formula3 = node1.InnerText;
                                 break;
                             case ConfigXml.SdCardDirTag:
-                                manager.SdCardDir = ParseSimpleTag(node1);
+                                manager.SdCardDir = node1.InnerText;
                                 break;
                             case ConfigXml.TimePlanSuppressMaskTag:
-                                manager.TimePlanSuppressMask = GetInt32(node1);
+                                manager.TimePlanSuppressMask = XmlConvert.ToInt32(node1.InnerText);
                                 break;
                             case ConfigXml.TimePlanBitmapTag:
-                                manager.TimePlanBitmap = GetBoolean(node1);
+                                manager.TimePlanBitmap = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
                                 break;
                             default:
                                 break;
@@ -107,52 +107,12 @@ namespace SolvisSC2Viewer {
             return false;
         }
 
-        private static string ParseConfigs(XmlNode child) {
-            XmlNamedNodeMap param = child.Attributes;
+        //private static string ParseConfigs(XmlNode child) {
+        //    XmlNamedNodeMap param = child.Attributes;
 
-            XmlNode nodeValue = param.GetNamedItem(ConfigXml.AttributeValue);
-            return nodeValue.Value;
-        }
-
-        private static string ParseSimpleTag(XmlNode child) {
-            return child.InnerText;
-        }
-
-        private static bool GetBoolean(XmlNode child) {
-            bool result = false;
-            try {
-                string value = ParseSimpleTag(child);
-                result = bool.Parse(value);
-            }
-            catch (FormatException e) {
-                AppExtension.PrintStackTrace(e);
-            }
-            return result;
-        }
-
-        private static int GetInt32(XmlNode child) {
-            int result = 0;
-            try {
-                string value = ParseSimpleTag(child);
-                result = int.Parse(value, CultureInfo.InvariantCulture);
-            }
-            catch (FormatException e) {
-                AppExtension.PrintStackTrace(e);
-            }
-            return result;
-        }
-
-        private static double GetDouble(XmlNode child) {
-            double result = 0D;
-            try {
-                string value = ParseSimpleTag(child);
-                result = double.Parse(value, CultureInfo.InvariantCulture);
-            }
-            catch (FormatException e) {
-                AppExtension.PrintStackTrace(e);
-            }
-            return result;
-        }
+        //    XmlNode nodeValue = param.GetNamedItem(ConfigXml.AttributeValue);
+        //    return nodeValue.Value;
+        //}
 
         private void ParseActors(XmlNode node) {
             if (manager.ActorConfigValues != null && node != null) {
@@ -203,8 +163,8 @@ namespace SolvisSC2Viewer {
                             ConfigData data = new ConfigData();
                             data.Text = text;
                             data.ToolTipText = toolTipText;
-                            data.Visible = bool.Parse(visible);
-                            data.Checked = bool.Parse(checked0);
+                            data.Visible = XmlConvert.ToBoolean(visible.ToLowerInvariant());
+                            data.Checked = XmlConvert.ToBoolean(checked0.ToLowerInvariant());
                             data.Color = ConfigManager.GetColor(color);
 
                             config.Add(key, data);

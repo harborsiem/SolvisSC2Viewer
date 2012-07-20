@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ComponentModel;
+using System.Globalization;
 using System.IO;
 
 namespace SolvisSC2Viewer {
@@ -11,7 +12,19 @@ namespace SolvisSC2Viewer {
         //@Todo: Viele der unten aufgelisteten Properties als string definieren
         // Dann kann auch die Einheit im string enthalten sein.
 
+        //Beginn: HK1 = 187; HK2 = 233; HK3 = 279 (HK1 evtl. schon ab 184 ?)
+        //Zirkular Index: Ruhezeit: 326, Funkt. Ein :327, Temp: 328, Betriebsart: 329 (Auto = 3), Diff Ein: 330, Laufzeit: 332,
+        //Wasser Index: Temp: 45, NachheizL. : 58, dT Start: 59, dt Ende: 60
+        //Solar Index: Max. Koll.Temp.: 3 usw.
+        //Temp.Sensor Korrekturwerte Index: ab 164 ? S10 ist auf 173
+        //Eco Betrieb: ab Index: 359, 4 Werte ?
+
         public HeatSettings(IList<int> list, int index) {
+            //Gebläsedrehzahl (index = 108 ?) mit Formel %-Wert für Brenner Stufe 2 ?
+            //ModeHK
+            //WaterPriority
+            //RunWW
+            //RunHK
             HeatMode = (HeatMode)list[index++];
             FixVLDay = list[index++];
             FixVLDown = list[index++];
@@ -20,7 +33,7 @@ namespace SolvisSC2Viewer {
             Temperature3 = list[index++];
             TemperatureDown = list[index++];
             Gradient = list[index++] / 100.0;
-            RaisingSetpoint = list[index++]; //? Einschaltüberhöhung
+            RaisingSetpoint = list[index++]; // ? Einschaltüberhöhung
             RoomEffect = list[index++]; // ? Raumeinfluss
             RateTime = list[index++];
             TemperatureMax = list[index++];
@@ -37,13 +50,28 @@ namespace SolvisSC2Viewer {
             OutDoorNightTemperature = list[index++];
             OutDoorNightHysterese = list[index++];
 
-            index += 2;
+            index += 2; //@Todo: index = 211, 212
 
             FreezeTemperature = list[index++];
             RoomTemperature = list[index++];
             MixerTime = list[index++];
             MixerInterval = list[index++];
             MixerFactor = list[index++] / 10.0;
+            DayModeTemperature = list[index++];
+            DayModeHours = list[index++];
+            NightModeTemperature = list[index++];
+            NightModeHours = list[index++];
+            HolidayHomeTemperature = list[index++];
+            HolidayHomeDays = list[index++];
+            string tmpTime = new DateTime((long)list[index++] * 15 * 60 * 10000000).ToString("HH:mm", CultureInfo.InvariantCulture);
+            HolidayHomeTimeFrom = tmpTime;
+            tmpTime = new DateTime((long)list[index++] * 15 * 60 * 10000000).ToString("HH:mm", CultureInfo.InvariantCulture);
+            HolidayHomeTimeTo = tmpTime;
+            HolidayTemperature = list[index++];
+            int day = list[index++];
+            int month = list[index++];
+            int year = list[index++];
+            HolidayEndDate = new DateTime(year, month, day);
 
             CircOffTime = list[326];
             CircPump = (Mode)list[327];
@@ -52,22 +80,31 @@ namespace SolvisSC2Viewer {
             CircDeltaForOn = list[330];
             CircRuntime = list[332];
 
+            WaterPumpMode = (Mode)list[44]; //?
             WaterTemp = list[45];
+            WaterPufferTmin = list[53]; //oder index = 61
+            WaterNachHeizStart = list[54];
+            WaterNachHeizSperrzeit = list[55];
+            WaterNachheizLaufzeit = list[56];
             WaterPower = list[58];
             WaterDTStart = list[59];
             WaterDTEnd = list[60];
         }
 
-        //Beginn: HK1 = 187; HK2 = 233; HK3 = 279 
-        //Zirkular Index: Ruhezeit: 326, Funkt. Ein :327, Temp: 328, Betriebsart: 329 (Auto = 3), Diff Ein: 330, Laufzeit: 332,
-        //Wasser Index: Temp: 45, NachheizL. : 58, dT Start: 59, dt Ende: 60
-        //Solar Index: Max. Koll.Temp.: 3 usw.
-        //Temp.Sensor Korrekturwerte Index: ab 164 ? S10 ist auf 173
+        [DisplayName("Wasserpumpe Betriebsart")]
+        [Category("Wasser")]
+        [ReadOnly(true)]
+        public Mode WaterPumpMode { get; set; }
 
         [DisplayName("Wasser Sollwert")]
         [Category("Wasser")]
         [ReadOnly(true)]
         public int WaterTemp { get; set; }
+
+        [DisplayName("Wasser Puffer Tmin")]
+        [Category("Wasser")]
+        [ReadOnly(true)]
+        public int WaterPufferTmin { get; set; }
 
         [DisplayName("Wasser Nachheizleistung")]
         [Category("Wasser")]
@@ -83,6 +120,21 @@ namespace SolvisSC2Viewer {
         [Category("Wasser")]
         [ReadOnly(true)]
         public int WaterDTEnd { get; set; }
+
+        [DisplayName("Wasser Nachheiz Start")]
+        [Category("Wasser")]
+        [ReadOnly(true)]
+        public int WaterNachHeizStart { get; set; }
+
+        [DisplayName("Wasser Nachheiz Sperrzeit")]
+        [Category("Wasser")]
+        [ReadOnly(true)]
+        public int WaterNachHeizSperrzeit { get; set; }
+
+        [DisplayName("Wasser Nachheiz Laufzeit")]
+        [Category("Wasser")]
+        [ReadOnly(true)]
+        public int WaterNachheizLaufzeit { get; set; }
 
         [DisplayName("Zirkulations Betriebsart")]
         [Category("Zirkular")]
@@ -115,16 +167,24 @@ namespace SolvisSC2Viewer {
         public int CircRuntime { get; set; }
 
         //[DisplayName("Warmwasser-Vorrang")]
-        ////[Description("Warmwasser-Vorrang")]
         //[Category("Heizkreis")]
         //[ReadOnly(true)]
         //public WaterMode WaterPriority { get; set; }
 
         //[DisplayName("Betriebsart Heizkreis")]
-        ////[Description("Betriebsart Heizkreis")]
         //[Category("Heizkreis")]
         //[ReadOnly(true)]
         //public Mode ModeHK { get; set; }
+
+        //[DisplayName("Laufzeit WW-Bereitung")]
+        //[Category("Heizkreis")]
+        //[ReadOnly(true)]
+        //public int RunWW { get; set; }
+
+        //[DisplayName("Laufzeit Heizkreise")]
+        //[Category("Heizkreis")]
+        //[ReadOnly(true)]
+        //public int RunHK { get; set; }
 
         [DisplayName("Betriebsart VL Temp.")]
         [Category("Heizkreis")]
@@ -196,7 +256,7 @@ namespace SolvisSC2Viewer {
         [ReadOnly(true)]
         public int Offset { get; set; }
 
-        [DisplayName("Heizung Wippe")]
+        [DisplayName("Heizung Temperatur Wippe")]
         [Category("Heizkreis")]
         [ReadOnly(true)]
         public int Niveau { get; set; }
@@ -271,12 +331,55 @@ namespace SolvisSC2Viewer {
         [ReadOnly(true)]
         public double MixerFactor { get; set; }
 
+        [DisplayName("Tagbetrieb Temperatur")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public int DayModeTemperature { get; set; }
 
-        //[DisplayName("Status Heizkreis")]
-        ////[Description("Status Heizkreis")]
-        //[Category("Heizkreis")]
-        //[ReadOnly(true)]
-        //public DayNight Status_Heizkreis { get; set; }
+        [DisplayName("Tagbetrieb Stunden")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public int DayModeHours { get; set; }
+
+        [DisplayName("Absenkbetrieb Temperatur")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public int NightModeTemperature { get; set; }
+
+        [DisplayName("Absenkbetrieb Stunden")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public int NightModeHours { get; set; }
+
+        [DisplayName("Urlaub zu Hause Temperatur")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public int HolidayHomeTemperature { get; set; }
+
+        [DisplayName("Urlaub zu Hause Tage")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public int HolidayHomeDays { get; set; }
+
+        [DisplayName("Urlaub zu Hause Heizzeit von")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public string HolidayHomeTimeFrom { get; set; }
+
+        [DisplayName("Urlaub zu Hause Heizzeit bis")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public string HolidayHomeTimeTo { get; set; }
+
+        [DisplayName("Urlaub abwesend Temperatur")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public int HolidayTemperature { get; set; }
+
+        [DisplayName("Datum Urlaubs Ende")]
+        [Category("Heizkreis")]
+        [ReadOnly(true)]
+        public DateTime HolidayEndDate { get; set; }
 
     }
 }

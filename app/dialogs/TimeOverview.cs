@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Globalization;
 using System.IO;
 
 namespace SolvisSC2Viewer {
@@ -14,12 +15,13 @@ namespace SolvisSC2Viewer {
         private const int Gap = 42;
         private const int DayOffset = 6;
         private const string TimeRaster = "Zeitfenster";
+        private const string Title = "Zeitübersichten";
         private const int Days = 7;
         private const int TimeRasters = 3;
         private const int TimeItems = 6;
         private static readonly string[] Names = { "HK1", "HK2", "HK3", "Zirk", "WW", "SDLad" };
         private static readonly string[] FromTo = { "von", "bis" };
-        private FileToInt32List zeitPlan;
+        private FileToInt32List timePlan;
 
         public TimeOverview() {
             InitializeComponent();
@@ -40,12 +42,17 @@ namespace SolvisSC2Viewer {
         }
 
         public FileToInt32List TimePlan {
-            get { return zeitPlan; }
-            set { zeitPlan = value; }
+            get { return timePlan; }
+            set { timePlan = value; }
         }
 
         protected override void OnLoad(EventArgs e) {
             FillTimeValues();
+            if (timePlan != null) {
+                this.Text = Title + " -- " + timePlan.DateTime.ToString();
+            } else {
+                this.Text = Title;
+            }
             base.OnLoad(e);
         }
 
@@ -74,8 +81,8 @@ namespace SolvisSC2Viewer {
 
         private void FillTimeValues() {
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBottom)).BeginInit();
-            if (zeitPlan != null && !zeitPlan.Empty) {
-                IList<int> list = zeitPlan.ParamList;
+            if (timePlan != null && !timePlan.Empty) {
+                IList<int> list = timePlan.ParamList;
                 for (int i = 0; i < TimeItems; i++) {
                     if (((1 << i) & (int)SuppressMask) != 0) { //evtl. HK2, HK3, Speicher Durchladung ausblenden
                         continue;
@@ -92,8 +99,8 @@ namespace SolvisSC2Viewer {
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBottom)).EndInit();
         }
 
-        private string GetTimeString(int value) {
-            return (new DateTime((long)value * 15 * 60 * 10000000)).ToString("HH:mm");
+        private static string GetTimeString(int value) {
+            return (new DateTime((long)value * 15 * 60 * 10000000)).ToString("HH:mm", CultureInfo.InvariantCulture);
         }
 
         private void TimeOverview_Shown(object sender, EventArgs e) {

@@ -83,8 +83,8 @@ namespace SolvisSC2Viewer {
             // 
             // description
             // 
-            this.description.Controls.Add(this.textDescription);
             resources.ApplyResources(this.description, "description");
+            this.description.Controls.Add(this.textDescription);
             this.description.Name = "description";
             this.description.UseVisualStyleBackColor = true;
             // 
@@ -96,8 +96,8 @@ namespace SolvisSC2Viewer {
             // 
             // authors
             // 
-            this.authors.Controls.Add(this.textAuthors);
             resources.ApplyResources(this.authors, "authors");
+            this.authors.Controls.Add(this.textAuthors);
             this.authors.Name = "authors";
             this.authors.UseVisualStyleBackColor = true;
             // 
@@ -109,8 +109,8 @@ namespace SolvisSC2Viewer {
             // 
             // license
             // 
-            this.license.Controls.Add(this.textLicense);
             resources.ApplyResources(this.license, "license");
+            this.license.Controls.Add(this.textLicense);
             this.license.Name = "license";
             this.license.UseVisualStyleBackColor = true;
             // 
@@ -136,8 +136,8 @@ namespace SolvisSC2Viewer {
             // AboutDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.dialogLayout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;

@@ -17,6 +17,8 @@ namespace SolvisSC2Viewer {
                 ConfigManager manager = AppManager.ConfigManager;
                 if (string.IsNullOrWhiteSpace(manager.SdCardDir)) {
                     FolderBrowserDialog folder = new FolderBrowserDialog();
+                    folder.Description = ConfigEditor.FolderDescription;
+                    folder.ShowNewFolderButton = false;
                     if (folder.ShowDialog() == DialogResult.OK) {
                         manager.SdCardDir = folder.SelectedPath;
                     } else {

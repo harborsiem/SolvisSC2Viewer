@@ -34,25 +34,25 @@ namespace SolvisSC2Viewer {
                 SetOptions();
             }
             SetSimpleNodeValue(ConfigXml.OpenDirTag, manager.OpenDir);
-            SetSimpleNodeValue(ConfigXml.BurnerMinPowerTag, RowValues.BurnerMinPower.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.BurnerMaxPowerTag, RowValues.BurnerMaxPower.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.LatitudeTag, RowValues.Latitude.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.LongitudeTag, RowValues.Longitude.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.TemperatureTag, ConfigManager.Temperature.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.NiveauTag, ConfigManager.Niveau.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.GradientTag, ConfigManager.Gradient.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.TemperatureVLTag, RowValues.Temperature.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.NiveauVLTag, RowValues.Niveau.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.GradientVLTag, RowValues.Gradient.ToString(CultureInfo.InvariantCulture));
+            SetSimpleNodeValue(ConfigXml.BurnerMinPowerTag, XmlConvert.ToString(RowValues.BurnerMinPower));
+            SetSimpleNodeValue(ConfigXml.BurnerMaxPowerTag, XmlConvert.ToString(RowValues.BurnerMaxPower));
+            SetSimpleNodeValue(ConfigXml.LatitudeTag, XmlConvert.ToString(RowValues.Latitude));
+            SetSimpleNodeValue(ConfigXml.LongitudeTag, XmlConvert.ToString(RowValues.Longitude));
+            SetSimpleNodeValue(ConfigXml.TemperatureTag, XmlConvert.ToString(ConfigManager.Temperature));
+            SetSimpleNodeValue(ConfigXml.NiveauTag, XmlConvert.ToString(ConfigManager.Niveau));
+            SetSimpleNodeValue(ConfigXml.GradientTag, XmlConvert.ToString(ConfigManager.Gradient));
+            SetSimpleNodeValue(ConfigXml.TemperatureVLTag, XmlConvert.ToString(RowValues.Temperature));
+            SetSimpleNodeValue(ConfigXml.NiveauVLTag, XmlConvert.ToString(RowValues.Niveau));
+            SetSimpleNodeValue(ConfigXml.GradientVLTag, XmlConvert.ToString(RowValues.Gradient));
             SetSimpleNodeValue(ConfigXml.VersionTag, manager.Version);
             SetSimpleNodeValue(ConfigXml.Formula1Tag, manager.Formula1);
             SetSimpleNodeValue(ConfigXml.Formula2Tag, manager.Formula2);
             SetSimpleNodeValue(ConfigXml.Formula3Tag, manager.Formula3);
             SetSimpleNodeValue(ConfigXml.SdCardDirTag, manager.SdCardDir);
-            SetSimpleNodeValue(ConfigXml.TimePlanSuppressMaskTag, manager.TimePlanSuppressMask.ToString(CultureInfo.InvariantCulture));
-            SetSimpleNodeValue(ConfigXml.TimePlanBitmapTag, manager.TimePlanBitmap.ToString());
+            SetSimpleNodeValue(ConfigXml.TimePlanSuppressMaskTag, XmlConvert.ToString(manager.TimePlanSuppressMask));
+            SetSimpleNodeValue(ConfigXml.TimePlanBitmapTag, XmlConvert.ToString(manager.TimePlanBitmap));
             if (manager.SuperUser) {
-                SetSimpleNodeValue(ConfigXml.SuperUserTag, manager.SuperUser.ToString(CultureInfo.InvariantCulture));
+                SetSimpleNodeValue(ConfigXml.SuperUserTag, XmlConvert.ToString(manager.SuperUser));
             }
             document.AppendChild(configNode);
             SaveDocument(document, file);
@@ -65,13 +65,13 @@ namespace SolvisSC2Viewer {
             configNode.AppendChild(node);
         }
 
-        private void SetConfigs(string tag, string value) {
-            XmlNode node = document.CreateElement(tag);
-            configNode.AppendChild(node);
-            XmlAttribute attrValue = document.CreateAttribute(ConfigXml.AttributeValue);
-            attrValue.Value = value;
-            node.Attributes.SetNamedItem(attrValue);
-        }
+        //private void SetConfigs(string tag, string value) {
+        //    XmlNode node = document.CreateElement(tag);
+        //    configNode.AppendChild(node);
+        //    XmlAttribute attrValue = document.CreateAttribute(ConfigXml.AttributeValue);
+        //    attrValue.Value = value;
+        //    node.Attributes.SetNamedItem(attrValue);
+        //}
 
         private void SetActors() {
             XmlNode actorsNode = document.CreateElement(ConfigXml.ActorsTag);
@@ -109,8 +109,8 @@ namespace SolvisSC2Viewer {
                 attrKey.Value = config.Key;
                 attrText.Value = config.Value.Text;
                 attrToolTipText.Value = config.Value.ToolTipText;
-                attrVisible.Value = config.Value.Visible.ToString();
-                attrChecked.Value = config.Value.Checked.ToString();
+                attrVisible.Value = XmlConvert.ToString(config.Value.Visible);
+                attrChecked.Value = XmlConvert.ToString(config.Value.Checked);
                 attrColor.Value = ConfigManager.GetColorString(config.Value.Color);
 
                 node1.Attributes.SetNamedItem(attrKey);

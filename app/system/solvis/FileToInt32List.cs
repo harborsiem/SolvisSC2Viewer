@@ -6,8 +6,9 @@ using System.IO;
 
 namespace SolvisSC2Viewer {
     public class FileToInt32List {
-        public List<int> ParamList { get; private set; }
+        public IList<int> ParamList { get; private set; }
         public bool Empty { get; private set; }
+        public DateTime DateTime { get; private set; }
 
         public FileToInt32List(string path, string fileName) {
             ParamList = new List<int>();
@@ -16,6 +17,7 @@ namespace SolvisSC2Viewer {
                 string filePath = Path.Combine(path, fileName);
                 if (File.Exists(filePath)) {
                     FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read);
+                    DateTime = File.GetLastWriteTime(filePath);
                     StreamReader reader = new StreamReader(stream);
                     try {
                         while (!reader.EndOfStream) {

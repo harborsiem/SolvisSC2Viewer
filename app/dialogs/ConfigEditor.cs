@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace SolvisSC2Viewer {
     public partial class ConfigEditor : BaseForm {
+        public const string FolderDescription = "Ordner mit Datei zeitplan.txt suchen";
         private ColorDialog colorDialog = new ColorDialog();
         private IDictionary<String, ConfigData> sensorDatas;
         private IDictionary<String, ConfigData> actorDatas;
@@ -16,8 +17,8 @@ namespace SolvisSC2Viewer {
         private int temperature;
         private int niveau;
         private double gradient;
-        public int timePlanSuppressMask;
-        public bool timePlanPicture;
+        private int timePlanSuppressMask;
+        private bool timePlanBitmap;
 
         public bool Changed { get; set; }
 
@@ -48,8 +49,8 @@ namespace SolvisSC2Viewer {
             gradientUpDown.Maximum = HeatCurve.GradientMaximum;
             gradientUpDown.Minimum = HeatCurve.GradientMinimum;
             timePlanSuppressMask = AppManager.ConfigManager.TimePlanSuppressMask;
-            timePlanPicture = AppManager.ConfigManager.TimePlanBitmap;
-            savePictureCheckBox.Checked = timePlanPicture;
+            timePlanBitmap = AppManager.ConfigManager.TimePlanBitmap;
+            savePictureCheckBox.Checked = timePlanBitmap;
             hk2CheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.HK2) == 0;
             hk3CheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.HK3) == 0;
             dLadCheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.DLad) == 0;
@@ -121,7 +122,7 @@ namespace SolvisSC2Viewer {
                 ConfigManager.Niveau = niveau;
                 ConfigManager.Gradient = gradient;
                 manager.TimePlanSuppressMask = timePlanSuppressMask;
-                manager.TimePlanBitmap = timePlanPicture;
+                manager.TimePlanBitmap = timePlanBitmap;
 
                 manager.UpdateMainForm();
                 this.Cursor = Cursors.Default;
@@ -297,6 +298,8 @@ namespace SolvisSC2Viewer {
             if (!string.IsNullOrWhiteSpace(manager.SdCardDir)) {
                 folder.SelectedPath = manager.SdCardDir;
             }
+            folder.Description = FolderDescription;
+            folder.ShowNewFolderButton = false;
             if (folder.ShowDialog() == DialogResult.OK) {
                 manager.SdCardDir = folder.SelectedPath;
             }
@@ -330,7 +333,7 @@ namespace SolvisSC2Viewer {
         }
 
         private void savePictureCheckBox_CheckedChanged(object sender, EventArgs e) {
-            timePlanPicture = savePictureCheckBox.Checked;
+            timePlanBitmap = savePictureCheckBox.Checked;
             Changed = true;
         }
     }
