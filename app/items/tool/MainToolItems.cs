@@ -118,12 +118,12 @@ namespace SolvisSC2Viewer {
         }
 
         private void PreviousWeek_Click(object sender, EventArgs e) {
-            TimeSpan delta = new TimeSpan(7, 0, 0, 0);
+            //TimeSpan delta = new TimeSpan(7, 0, 0, 0);
             newMinMaxDate = false;
         }
 
         private void NextWeek_Click(object sender, EventArgs e) {
-            TimeSpan delta = new TimeSpan(7, 0, 0, 0);
+            //TimeSpan delta = new TimeSpan(7, 0, 0, 0);
         }
 
         private void crosshair_Click(object sender, EventArgs e) {

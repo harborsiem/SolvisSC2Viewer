@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SolvisSC2Viewer {
     [Flags]
-    internal enum CircMode { //?
+    internal enum CircMode {
         Aus,
         Pulse = 1,
         Time = 2,

@@ -113,8 +113,8 @@
             // BurnerPower
             // 
             this.AcceptButton = this.buttonOK;
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
             this.CancelButton = this.buttonCancel;
             this.Controls.Add(this.dialogLayout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

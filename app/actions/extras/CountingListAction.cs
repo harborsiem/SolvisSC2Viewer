@@ -20,6 +20,8 @@ namespace SolvisSC2Viewer {
                 if (!zaehlstand.Empty) {
                     countingSettings = new CountingSettings(zaehlstand.ParamList);
                     PropertiesForm dialog = new PropertiesForm();
+                    dialog.Description = "Zählerstand";
+                    dialog.DateTime = zaehlstand.DateTime;
                     dialog.SelectedObject = countingSettings;
                     dialog.ShowDialog(AppManager.MainForm);
                 }

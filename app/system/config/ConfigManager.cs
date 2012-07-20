@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 using System.Drawing;
+using System.Diagnostics;
 
 namespace SolvisSC2Viewer {
     internal class ConfigManager {
@@ -87,6 +87,9 @@ namespace SolvisSC2Viewer {
         public void Init() {
             SetDefaults();
             ReadConfig();
+#if DEBUG
+            SuperUser = true;
+#endif
             new CodeBuilder().Calculate(Formula1, Formula2, Formula3);
             bool newVersionDetected = Application.ProductVersion.CompareTo(Version) == 1;
             if (newVersionDetected) {

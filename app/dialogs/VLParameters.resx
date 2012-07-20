@@ -532,6 +532,6 @@
     <value>VLParameters</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BaseForm, SolvisSC2Viewer, Version=0.5.0.0, Culture=neutral, PublicKeyToken=c36682b29f44cba7</value>
+    <value>System.Windows.Forms.BaseForm, SolvisSC2Viewer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c36682b29f44cba7</value>
   </data>
 </root>
