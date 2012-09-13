@@ -18,6 +18,7 @@ namespace SolvisSC2Viewer {
                 FileToInt32List zaehlstand = new FileToInt32List(manager.SdCardDir, "zaehlst.txt");
                 CountingSettings countingSettings = null;
                 if (!zaehlstand.Empty) {
+                    AppManager.MainForm.Cursor = Cursors.WaitCursor;
                     countingSettings = new CountingSettings(zaehlstand.ParamList);
                     PropertiesForm dialog = new PropertiesForm();
                     dialog.Description = "Zählerstand";
@@ -28,6 +29,9 @@ namespace SolvisSC2Viewer {
             }
             catch (Exception ex) {
                 AppExtension.PrintStackTrace(ex);
+            }
+            finally {
+                AppManager.MainForm.Cursor = Cursors.Default;
             }
             return 0;
         }

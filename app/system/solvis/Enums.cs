@@ -13,8 +13,12 @@ namespace SolvisSC2Viewer {
 
     internal enum WaterMode { //?
         Aus,
-        Alt,
         Ein,
+        Alt,
+    }
+
+    internal enum HeatingCircuitMode { //?
+        Absenk, Tag, Auto, unknown1, unknown2, Standby = 5, unknown3
     }
 
     internal enum Mode { //?
@@ -26,11 +30,7 @@ namespace SolvisSC2Viewer {
         Aus, Ein
     }
 
-    internal enum DayNight {
-        Absenk, Tag
-    }
-
-    internal enum HeatMode {
+    internal enum FlowTemperatureMode {
         Kurve, Fixed 
     }
 

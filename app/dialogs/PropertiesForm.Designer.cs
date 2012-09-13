@@ -23,41 +23,75 @@
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent() {
-            this.heatPropertyGrid = new System.Windows.Forms.PropertyGrid();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PropertiesForm));
+            this.heatingPropertyGrid = new System.Windows.Forms.PropertyGrid();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.printHeadItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPreviewItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // heatPropertyGrid
+            // heatingPropertyGrid
             // 
-            this.heatPropertyGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.heatPropertyGrid.Location = new System.Drawing.Point(12, 12);
-            this.heatPropertyGrid.Name = "heatPropertyGrid";
-            this.heatPropertyGrid.PropertySort = System.Windows.Forms.PropertySort.NoSort;
-            this.heatPropertyGrid.Size = new System.Drawing.Size(502, 335);
-            this.heatPropertyGrid.TabIndex = 0;
+            resources.ApplyResources(this.heatingPropertyGrid, "heatingPropertyGrid");
+            this.heatingPropertyGrid.Name = "heatingPropertyGrid";
+            this.heatingPropertyGrid.PropertySort = System.Windows.Forms.PropertySort.NoSort;
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printHeadItem});
+            resources.ApplyResources(this.menuStrip, "menuStrip");
+            this.menuStrip.Name = "menuStrip";
+            // 
+            // printHeadItem
+            // 
+            this.printHeadItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printPreviewItem,
+            this.printItem});
+            this.printHeadItem.Name = "printHeadItem";
+            resources.ApplyResources(this.printHeadItem, "printHeadItem");
+            // 
+            // printPreviewItem
+            // 
+            this.printPreviewItem.Name = "printPreviewItem";
+            resources.ApplyResources(this.printPreviewItem, "printPreviewItem");
+            this.printPreviewItem.Click += new System.EventHandler(this.printPreviewItem_Click);
+            // 
+            // printItem
+            // 
+            this.printItem.Name = "printItem";
+            resources.ApplyResources(this.printItem, "printItem");
+            this.printItem.Click += new System.EventHandler(this.printItem_Click);
             // 
             // PropertiesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 359);
-            this.Controls.Add(this.heatPropertyGrid);
+            this.Controls.Add(this.heatingPropertyGrid);
+            this.Controls.Add(this.menuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PropertiesForm";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Properties";
             this.Shown += new System.EventHandler(this.Form1_Shown);
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PropertyGrid heatPropertyGrid;
+        private System.Windows.Forms.PropertyGrid heatingPropertyGrid;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem printHeadItem;
+        private System.Windows.Forms.ToolStripMenuItem printPreviewItem;
+        private System.Windows.Forms.ToolStripMenuItem printItem;
     }
 }
 

@@ -72,7 +72,8 @@ namespace SolvisSC2Viewer {
                             FillSeriesWithNewData(tag, fromDateTime, toDateTime);
                         } else {
                             chartMain.BeginInit();
-                            tag.Series.Points.Clear();
+                            DataPointCollection points = tag.Series.Points;
+                            points.ClearPoints(); //MsChartExtension
                             if (chartMain.Series.Contains(tag.Series)) {
                                 chartMain.Series.Remove(tag.Series);
                             }
@@ -137,7 +138,7 @@ namespace SolvisSC2Viewer {
                 int toIndex = GetSolvisListIndex(to);
                 chartMain.BeginInit();
                 DataPointCollection points = tag.Series.Points;
-                points.Clear();
+                points.ClearPoints(); //MsChartExtension
                 if (fromIndex < 0 || fromIndex >= toIndex) {
                     return;
                 }
@@ -178,7 +179,7 @@ namespace SolvisSC2Viewer {
                 if (checkBox.Checked) {
                     Series series = SensorsSeriesList[seriesIndex];
                     DataPointCollection points = series.Points;
-                    points.Clear();
+                    points.ClearPoints(); //MsChartExtension
                     if (fromIndex < 0 || fromIndex >= toIndex) {
                         continue;
                     }
@@ -198,7 +199,7 @@ namespace SolvisSC2Viewer {
                 Series series = ActorsSeriesList[seriesIndex];
                 if (checkBox.Checked) {
                     DataPointCollection points = series.Points;
-                    points.Clear();
+                    points.ClearPoints(); //MsChartExtension
                     if (fromIndex < 0 || fromIndex >= toIndex) {
                         continue;
                     }
@@ -218,7 +219,7 @@ namespace SolvisSC2Viewer {
                 Series series = OptionsSeriesList[seriesIndex];
                 if (checkBox.Checked) {
                     DataPointCollection points = series.Points;
-                    points.Clear();
+                    points.ClearPoints(); //MsChartExtension
                     if (fromIndex < 0 || fromIndex >= toIndex) {
                         continue;
                     }
