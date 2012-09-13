@@ -25,6 +25,7 @@ namespace SolvisSC2Viewer {
                         return 0;
                     }
                 }
+                AppManager.MainForm.Cursor = Cursors.WaitCursor;
                 FileToInt32List timePlan = new FileToInt32List(manager.SdCardDir, "zeitplan.txt");
                 if (!timePlan.Empty) {
                     TimeOverview dialog = new TimeOverview();
@@ -36,6 +37,9 @@ namespace SolvisSC2Viewer {
             }
             catch (Exception ex) {
                 AppExtension.PrintStackTrace(ex);
+            }
+            finally {
+                AppManager.MainForm.Cursor = Cursors.Default;
             }
             return 0;
         }

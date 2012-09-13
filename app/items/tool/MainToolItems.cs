@@ -35,18 +35,18 @@ namespace SolvisSC2Viewer {
             maxDate = now;
             actMinDate = now;
             actMaxDate = now;
-            fromDateTime.DateTimeHasChanged += new DateTimeHasChangedHandler(fromDateTime_DateTimeHasChanged);
-            toDateTime.DateTimeHasChanged += new DateTimeHasChangedHandler(toDateTime_DateTimeHasChanged);
+            fromDateTime.DateTimeHasChanged += fromDateTime_DateTimeHasChanged;
+            toDateTime.DateTimeHasChanged += toDateTime_DateTimeHasChanged;
         }
 
-        private void toDateTime_DateTimeHasChanged(DateTime newDateTime) {
-            if (newDateTime.CompareTo(maxDate) == 1) {
+        private void toDateTime_DateTimeHasChanged(object sender, DateTimeEventArgs e) {
+            if (e.NewDateTime.CompareTo(maxDate) == 1) {
                 toDateTime.Value = maxDate;
-            } else if (newDateTime.CompareTo(actMinDate) == -1) {
+            } else if (e.NewDateTime.CompareTo(actMinDate) == -1) {
                 toDateTime.Value = actMinDate;
                 actMaxDate = actMinDate;
             } else {
-                actMaxDate = newDateTime;
+                actMaxDate = e.NewDateTime;
             }
             if (!newMinMaxDate) {
                 DateEventArgs args = new DateEventArgs(fromDateTime.Value, toDateTime.Value);
@@ -55,14 +55,14 @@ namespace SolvisSC2Viewer {
             newMinMaxDate = false;
         }
 
-        private void fromDateTime_DateTimeHasChanged(DateTime newDateTime) {
-            if (newDateTime.CompareTo(minDate) == -1) {
+        private void fromDateTime_DateTimeHasChanged(object sender, DateTimeEventArgs e) {
+            if (e.NewDateTime.CompareTo(minDate) == -1) {
                 fromDateTime.Value = minDate;
-            } else if (newDateTime.CompareTo(actMaxDate) == 1) {
+            } else if (e.NewDateTime.CompareTo(actMaxDate) == 1) {
                 fromDateTime.Value = actMaxDate;
                 actMinDate = actMaxDate;
             } else {
-                actMinDate = newDateTime;
+                actMinDate = e.NewDateTime;
             }
             if (!newMinMaxDate) {
                 DateEventArgs args = new DateEventArgs(fromDateTime.Value, toDateTime.Value);

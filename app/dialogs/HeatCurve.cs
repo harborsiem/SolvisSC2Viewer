@@ -104,74 +104,95 @@ namespace SolvisSC2Viewer {
         private void Curve(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
-            chartMain.Series[serieIndex].Points.Clear();
+            DataPointCollection points = chartMain.Series[serieIndex].Points;
+            points.ClearPoints(); //MsChartExtension
+            points.SuspendUpdates();
             for (int i = -20; i <= max; i++) {
-                chartMain.Series[serieIndex].Points.AddXY((double)i, (double)(int)SolvisCurve(commandTemperature, niveau, gradient, i));
+                points.AddXY((double)i, (double)(int)SolvisCurve(commandTemperature, niveau, gradient, i));
             }
+            points.ResumeUpdates();
             chartMain.EndInit();
         }
 
         private void CurveStep(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
-            chartMain.Series[serieIndex].Points.Clear();
+            DataPointCollection points = chartMain.Series[serieIndex].Points;
+            points.ClearPoints(); //MsChartExtension
+            points.SuspendUpdates();
             for (double i = -20; i <= max; i = i + 0.1D) {
                 double result = (double)(int)SolvisCurve(commandTemperature, niveau, gradient, (int)i);
-                chartMain.Series[serieIndex].Points.AddXY((double)i, result);
+                points.AddXY((double)i, result);
             }
+            points.ResumeUpdates();
             chartMain.EndInit();
         }
 
         private void CurveStepRoundOptimized(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
-            chartMain.Series[serieIndex].Points.Clear();
+            DataPointCollection points = chartMain.Series[serieIndex].Points;
+            points.ClearPoints(); //MsChartExtension
+            points.SuspendUpdates();
             for (double i = -20; i <= max; i = i + 0.1D) {
                 double result = Math.Round(SolvisCurve(commandTemperature, niveau, gradient, Math.Round(i * 2) / 2));
-                chartMain.Series[serieIndex].Points.AddXY((double)i, result);
+                points.AddXY((double)i, result);
             }
+            points.ResumeUpdates();
             chartMain.EndInit();
         }
 
         private void CurveStepOptimized(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
-            chartMain.Series[serieIndex].Points.Clear();
+            DataPointCollection points = chartMain.Series[serieIndex].Points;
+            points.ClearPoints(); //MsChartExtension
+            points.SuspendUpdates();
             for (double i = -20; i <= max; i = i + 0.1D) {
                 double result = Math.Round(SolvisCurve(commandTemperature, niveau, gradient, (i))); //
-                chartMain.Series[serieIndex].Points.AddXY((double)i, result);
+                points.AddXY((double)i, result);
             }
+            points.ResumeUpdates();
             chartMain.EndInit();
         }
 
         private void CurveStepFloorOptimized(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
-            chartMain.Series[serieIndex].Points.Clear();
+            DataPointCollection points = chartMain.Series[serieIndex].Points;
+            points.ClearPoints(); //MsChartExtension
+            points.SuspendUpdates();
             for (double i = -20; i <= max; i = i + 0.1D) {
                 double result = (int)(SolvisCurve(commandTemperature, niveau, gradient, Math.Floor(i))); //Math.Round
-                chartMain.Series[serieIndex].Points.AddXY((double)i, result);
+                points.AddXY((double)i, result);
             }
+            points.ResumeUpdates();
             chartMain.EndInit();
         }
 
         private void IdealCurve(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
-            chartMain.Series[serieIndex].Points.Clear();
+            DataPointCollection points = chartMain.Series[serieIndex].Points;
+            points.ClearPoints(); //MsChartExtension
+            points.SuspendUpdates();
             for (int i = -20; i <= max; i++) {
-                chartMain.Series[serieIndex].Points.AddXY((double)i, (double)SolvisCurve(commandTemperature, niveau, gradient, i));
+                points.AddXY((double)i, (double)SolvisCurve(commandTemperature, niveau, gradient, i));
             }
+            points.ResumeUpdates();
             chartMain.EndInit();
         }
 
         private void IdealCurveTest(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
-            chartMain.Series[serieIndex].Points.Clear();
+            DataPointCollection points = chartMain.Series[serieIndex].Points;
+            points.ClearPoints(); //MsChartExtension
+            points.SuspendUpdates();
             for (int i = -20; i <= max; i++) {
-                chartMain.Series[serieIndex].Points.AddXY((double)i, (double)IdealCurveTest(commandTemperature, niveau, gradient, i));
+                points.AddXY((double)i, (double)IdealCurveTest(commandTemperature, niveau, gradient, i));
             }
+            points.ResumeUpdates();
             chartMain.EndInit();
         }
 

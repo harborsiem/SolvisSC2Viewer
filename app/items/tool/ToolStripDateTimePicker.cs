@@ -13,7 +13,7 @@ namespace SystemX.Windows.Forms {
     [ToolboxBitmap(typeof(resfinder), "SolvisSC2Viewer.files.ToolStripDateTimePicker.bmp")]
     [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.All)]
     public class ToolStripDateTimePicker : ToolStripControlHost {
-        public event DateTimeHasChangedHandler DateTimeHasChanged;
+        public event EventHandler<DateTimeEventArgs> DateTimeHasChanged;
         private DateTimePicker control;
 
         public ToolStripDateTimePicker()
@@ -77,8 +77,9 @@ namespace SystemX.Windows.Forms {
         }
 
         void DateTimeValueHasChanged(object sender, EventArgs e) {
-            if (this.DateTimeHasChanged != null) {
-                DateTimeHasChanged(DateTimePicker.Value);
+            EventHandler<DateTimeEventArgs> handler = this.DateTimeHasChanged;
+            if (handler != null) {
+                handler(this, new DateTimeEventArgs(DateTimePicker.Value));
             }
         }
 
@@ -97,6 +98,13 @@ namespace SystemX.Windows.Forms {
         }
 
     }
-    public delegate void DateTimeHasChangedHandler(DateTime newDateTime);
+
+    public class DateTimeEventArgs : EventArgs {
+        public DateTime NewDateTime { get; private set; }
+
+        public DateTimeEventArgs(DateTime newDT) {
+            NewDateTime = newDT;
+        }
+    }
 }
 internal class resfinder { }

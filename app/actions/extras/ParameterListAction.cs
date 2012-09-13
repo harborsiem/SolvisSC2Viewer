@@ -16,18 +16,23 @@ namespace SolvisSC2Viewer {
             try {
                 ConfigManager manager = AppManager.ConfigManager;
                 FileToInt32List paramact = new FileToInt32List(manager.SdCardDir, "paramact.txt");
-                HeatSettings heatSettings = null;
+                HeatingSettings heatingSettings = null;
                 if (!paramact.Empty) {
-                    heatSettings = new HeatSettings(paramact.ParamList, 187); //Beginn: HK1 = 187; HK2 = 233; HK3 = 279 (HK1 evtl. schon ab 184 ?)
+                    AppManager.MainForm.Cursor = Cursors.WaitCursor;
+                    heatingSettings = new HeatingSettings(paramact.ParamList, 185); //Beginn: HK1 = 185; HK2 = 231; HK3 = 277 (HK1 evtl. schon ab 184 ?)
                     PropertiesForm dialog = new PropertiesForm();
                     dialog.Description = "Parameter";
                     dialog.DateTime = paramact.DateTime;
-                    dialog.SelectedObject = heatSettings;
+                    dialog.SelectedObject = heatingSettings;
+                    dialog.PrintProperties = PrintProperty.GetPrintProperties(dialog.SelectedObject);
                     dialog.ShowDialog(AppManager.MainForm);
                 }
             }
             catch (Exception ex) {
                 AppExtension.PrintStackTrace(ex);
+            }
+            finally {
+                AppManager.MainForm.Cursor = Cursors.Default;
             }
             return 0;
         }
