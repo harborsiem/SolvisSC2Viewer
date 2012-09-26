@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -25,7 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -77,8 +77,11 @@
     <Compile Include="app\actions\ActionLock.cs" />
     <Compile Include="app\actions\ActionManager.cs" />
     <Compile Include="app\actions\extras\ConfigEditorAction.cs" />
+    <Compile Include="app\actions\extras\CountingListAction.cs" />
     <Compile Include="app\actions\extras\HeatCurveAction.cs" />
+    <Compile Include="app\actions\extras\ParameterListAction.cs" />
     <Compile Include="app\actions\extras\SensorsCheckAction.cs" />
+    <Compile Include="app\actions\extras\TimePlanAction.cs" />
     <Compile Include="app\actions\file\ExitAction.cs" />
     <Compile Include="app\actions\file\OpenFileAction.cs" />
     <Compile Include="app\actions\file\PrintAction.cs" />
@@ -95,6 +98,7 @@
     <Compile Include="app\controls\ChartControl.Designer.cs">
       <DependentUpon>ChartControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="app\controls\MsChartExtension.cs" />
     <Compile Include="app\controls\SensorsActors.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,11 +135,23 @@
     <Compile Include="app\dialogs\HeatCurve.Designer.cs">
       <DependentUpon>HeatCurve.cs</DependentUpon>
     </Compile>
+    <Compile Include="app\dialogs\PropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\dialogs\PropertiesForm.designer.cs">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="app\dialogs\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="app\dialogs\SplashScreen.designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\dialogs\TimeOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app\dialogs\TimeOverview.designer.cs">
+      <DependentUpon>TimeOverview.cs</DependentUpon>
     </Compile>
     <Compile Include="app\dialogs\VLParameters.cs">
       <SubType>Form</SubType>
@@ -187,6 +203,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="app\printer\PrintManager.cs" />
+    <Compile Include="app\printer\PrintProperty.cs" />
     <Compile Include="app\system\config\ConfigData.cs" />
     <Compile Include="app\system\config\ConfigManager.cs" />
     <Compile Include="app\system\config\xml\ConfigReader.cs" />
@@ -195,6 +212,11 @@
     <Compile Include="app\system\DataManager.cs" />
     <Compile Include="app\system\AppManager.cs" />
     <Compile Include="app\system\icons\IconManager.cs" />
+    <Compile Include="app\system\solvis\CountingSettings.cs" />
+    <Compile Include="app\system\solvis\Enums.cs" />
+    <Compile Include="app\system\solvis\FileToInt32List.cs" />
+    <Compile Include="app\system\solvis\HeatingSettings.cs" />
+    <Compile Include="app\system\solvis\HeatingUserAttribute.cs" />
     <Compile Include="app\system\solvis\RowValues.cs" />
     <Compile Include="app\util\AppExtension.cs" />
     <Compile Include="app\util\CheckBoxTag.cs" />
@@ -250,8 +272,20 @@
     <EmbeddedResource Include="app\dialogs\HeatCurve.resx">
       <DependentUpon>HeatCurve.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\PropertiesForm.de-DE.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\PropertiesForm.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app\dialogs\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\TimeOverview.de-DE.resx">
+      <DependentUpon>TimeOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\dialogs\TimeOverview.resx">
+      <DependentUpon>TimeOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app\dialogs\VLParameters.de-DE.resx">
       <DependentUpon>VLParameters.cs</DependentUpon>
