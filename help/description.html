@@ -5,7 +5,7 @@
 	<TITLE></TITLE>
 	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Windows)">
 	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGED" CONTENT="20120717;10044145">
+	<META NAME="CHANGED" CONTENT="20120904;12153083">
 	<STYLE TYPE="text/css">
 	<!--
 		H2.cjk { font-family: "SimSun" }
@@ -112,9 +112,10 @@ Raum-Solltemperatur (Temperature) (Display Heizkreismenu, Seite 3),
 Steilheit (Gradient) (Heizkreismenu, Seite 2) und Niveau
 (Thermometersymbol im Heizungsmenu) vorgegeben werden.</P>
 <P><B>Anmerkung des Verfassers:</B> &lt;Den Parameter „Niveau“
-hätte ich auch im Heizkreismenu erwartet, da es doch bis zu drei
-getrennte Heizkreise gibt. Das Thermometersymbol wäre nur zur
-(additiven) Feinregulierung des „Niveaus“ notwendig.&gt;</P>
+hätte ich auch im Heizkreismenu erwartet. Das Thermometersymbol wäre
+nur zur (additiven) Feinregulierung des „Niveaus“ notwendig.<BR>Aber
+es gibt zumindest eine getrennte Einstellung des „Niveaus“ für
+jeden Heizkreis über das Thermometersymbol im Heizungsmenu.&gt;</P>
 <P>Durch Variation der im unteren Teil des Fensters verfügbaren
 Parameter wird der Einfluss in der Heizkurve grafisch sichtbar
 gemacht. Somit kann man relativ leicht beurteilen, wie sich die
@@ -250,6 +251,12 @@ wurden im Installateur-Bereich folgende Parameter angepasst:</P>
 	<LI><P STYLE="margin-bottom: 0cm; font-weight: normal">Wasser Anf.
 	Stop: 10</P>
 </UL>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal">Für die
+Sommermonate hat es sich bewährt, die Heizung in den „Standby
+Betrieb“ zu schalten. Für die Wintermonate wurde der „Zeit /
+Automatik Betrieb“ gewählt.</P>
 <H2 CLASS="western"><A NAME="LogFiles"></A>Logdateien anzeigen</H2>
 <P>Im Hauptfenster des Programms SolvisSC2Viewer können die
 Logdateien, die auf der Speicherkarte der „Solvis Control 2“
@@ -533,7 +540,7 @@ Zeitplan die Heizkreise 2 und 3 und die Speicher Durchladung
 ausgeblendet werden. Zusätzlich kann auch das Zeitplan-Fenster als
 Bild-Datei namens „TimeOverview.png“ im Konfigurationsverzeichnis
 gespeichert werden. Die Einstellungen dafür werden im
-Konfigurations-Editor durchgeführt.<BR> Die Datei „TimeOverview.png“
+Konfigurations-Editor durchgeführt.<BR>Die Datei „TimeOverview.png“
 kann bei Bedarf mit einem Standardprogramm für die Bildbetrachtung
 gedruckt werden.</P>
 <P>Wenn Informationen zu den Dateien zaehlst.txt und paramact.txt zur
@@ -541,7 +548,7 @@ Verfügung stehen, dann wären auch Anzeigen über Zählerstand und
 Parameter im SolvisSC2Viewer möglich.<BR>Datei zaehlst.txt: Es
 fehlen die Bedeutungen der Werte 4 bis 6.<BR>Datei paramact.txt: Es
 fehlen noch viele Parameter Bedeutungen (siehe Sourcecode Enums.cs
-und HeatSettings.cs im Verzeichnis app\system\solvis. 
+und HeatingSettings.cs im Verzeichnis app\system\solvis. 
 </P>
 <H2 CLASS="western"><BR><BR>
 </H2>
