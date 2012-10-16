@@ -29,12 +29,13 @@ namespace SolvisSC2Viewer {
         public IDictionary<String, ConfigData> SensorConfigDefault { get; private set; }
         public IDictionary<String, ConfigData> OptionConfigDefault { get; private set; }
         public IDictionary<String, Object> Parameters { get; private set; } //@Todo
-        public IDictionary<String, Object> ParametersDefault { get; private set; }
+        private IDictionary<String, Object> DefaultParameters { get; set; }
         public string OpenDir { get; set; }
         public string SdCardDir { get; set; }
         public int TimePlanSuppressMask { get; set; }
         public bool TimePlanBitmap { get; set; }
         public bool SuperUser { get; set; }
+        public bool Prototype { get; set; }
         //HeatCurve parameter
         public static int Temperature { get; set; }
         public static int Niveau { get; set; }
@@ -52,23 +53,12 @@ namespace SolvisSC2Viewer {
         public ConfigManager() {
             AppConfigChanged = true; //@Todo: 
             Version = "1.0.0.0";
-            ParametersDefault = new Dictionary<String, Object>();
+            DefaultParameters = new Dictionary<String, Object>();
             Parameters = new Dictionary<String, Object>();
             InitDefaultParameter();
-            RowValues.Longitude = (double)ParametersDefault[ConfigXml.LongitudeTag];
-            RowValues.Latitude = (double)ParametersDefault[ConfigXml.LatitudeTag];
-            RowValues.BurnerMinPower = (double)ParametersDefault[ConfigXml.BurnerMinPowerTag];
-            RowValues.BurnerMaxPower = (double)ParametersDefault[ConfigXml.BurnerMaxPowerTag];
-
-            RowValues.Temperature = (int)ParametersDefault[ConfigXml.TemperatureVLTag];
-            RowValues.Niveau = (int)ParametersDefault[ConfigXml.NiveauVLTag];
-            RowValues.Gradient = (double)ParametersDefault[ConfigXml.GradientVLTag];
-            TimePlanSuppressMask = (int)ParametersDefault[ConfigXml.TimePlanSuppressMaskTag];
             SuperUser = false;
             OpenDir = AppManager.BaseDir;
-            Temperature = (int)ParametersDefault[ConfigXml.TemperatureTag];
-            Niveau = (int)ParametersDefault[ConfigXml.NiveauTag];
-            Gradient = (double)ParametersDefault[ConfigXml.GradientTag];
+            SetParametersDefault();
             ActorConfigValues = new Dictionary<String, ConfigData>();
             SensorConfigValues = new Dictionary<String, ConfigData>();
             OptionConfigValues = new Dictionary<String, ConfigData>();
@@ -139,24 +129,26 @@ namespace SolvisSC2Viewer {
         }
 
         private void InitDefaultParameter() {
-            ParametersDefault[ConfigXml.LatitudeTag] = 52.3175;
-            ParametersDefault[ConfigXml.LongitudeTag] = 10.4905; //Position Solvis Braunschweig
-            ParametersDefault[ConfigXml.TemperatureTag] = 21;
-            ParametersDefault[ConfigXml.NiveauTag] = 2;
-            ParametersDefault[ConfigXml.GradientTag] = 1.2;
-            ParametersDefault[ConfigXml.TemperatureVLTag] = 21;
-            ParametersDefault[ConfigXml.NiveauVLTag] = 3;
-            ParametersDefault[ConfigXml.GradientVLTag] = 1.15;
-            ParametersDefault[ConfigXml.BurnerMinPowerTag] = 5.0;
-            ParametersDefault[ConfigXml.BurnerMaxPowerTag] = 20.0;
-            ParametersDefault[ConfigXml.TimePlanSuppressMaskTag] = 38;
-            ParametersDefault[ConfigXml.TimePlanBitmapTag] = false;
+            DefaultParameters[ConfigXml.LatitudeTag] = 52.3175;
+            DefaultParameters[ConfigXml.LongitudeTag] = 10.4905; //Position Solvis Braunschweig
+            DefaultParameters[ConfigXml.TemperatureTag] = 21;
+            DefaultParameters[ConfigXml.NiveauTag] = 2;
+            DefaultParameters[ConfigXml.GradientTag] = 1.2;
+            DefaultParameters[ConfigXml.TemperatureVLTag] = 21;
+            DefaultParameters[ConfigXml.NiveauVLTag] = 3;
+            DefaultParameters[ConfigXml.GradientVLTag] = 1.15;
+            DefaultParameters[ConfigXml.BurnerMinPowerTag] = 5.0;
+            DefaultParameters[ConfigXml.BurnerMaxPowerTag] = 20.0;
+            DefaultParameters[ConfigXml.TimePlanSuppressMaskTag] = 38;
+            DefaultParameters[ConfigXml.TimePlanBitmapTag] = false;
+            DefaultParameters[ConfigXml.PrototypeTag] = false;
         }
 
         public void UpdateMainForm() {
             ConfigureActors();
             ConfigureSensors();
             ConfigureOptions();
+            AppManager.MainForm.UpdateSeriesColors();
             AppManager.DataManager.UpdateSeries();
             AppManager.MainForm.UpdateToolTips();
         }
@@ -177,6 +169,23 @@ namespace SolvisSC2Viewer {
                 }
             }
             return colorTab[i];
+        }
+
+        public void SetParametersDefault() {
+            RowValues.Longitude = (double)DefaultParameters[ConfigXml.LongitudeTag];
+            RowValues.Latitude = (double)DefaultParameters[ConfigXml.LatitudeTag];
+            RowValues.BurnerMinPower = (double)DefaultParameters[ConfigXml.BurnerMinPowerTag];
+            RowValues.BurnerMaxPower = (double)DefaultParameters[ConfigXml.BurnerMaxPowerTag];
+
+            RowValues.Temperature = (int)DefaultParameters[ConfigXml.TemperatureVLTag];
+            RowValues.Niveau = (int)DefaultParameters[ConfigXml.NiveauVLTag];
+            RowValues.Gradient = (double)DefaultParameters[ConfigXml.GradientVLTag];
+            TimePlanSuppressMask = (int)DefaultParameters[ConfigXml.TimePlanSuppressMaskTag];
+            TimePlanBitmap = (bool)DefaultParameters[ConfigXml.TimePlanBitmapTag];
+            Temperature = (int)DefaultParameters[ConfigXml.TemperatureTag];
+            Niveau = (int)DefaultParameters[ConfigXml.NiveauTag];
+            Gradient = (double)DefaultParameters[ConfigXml.GradientTag];
+            Prototype = (bool)DefaultParameters[ConfigXml.PrototypeTag];
         }
 
         private void SetDefaults() {

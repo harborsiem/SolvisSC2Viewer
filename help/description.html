@@ -5,7 +5,7 @@
 	<TITLE></TITLE>
 	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Windows)">
 	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGED" CONTENT="20120904;12153083">
+	<META NAME="CHANGED" CONTENT="20121004;17122305">
 	<STYLE TYPE="text/css">
 	<!--
 		H2.cjk { font-family: "SimSun" }
@@ -54,8 +54,10 @@ eingestellt werden, welches über Extras-&gt;SD-Card Infos-&gt;Zeitplan
 aufgerufen wird. Das Dateiverzeichnis muß auf ein Verzeichnis
 gesetzt werden, in dem sich die Datei zeitplan.txt, zaehlst.txt und
 paramact.txt befinden.<BR>Mit dem „Defaults“-Schalter werden die
-im Programm festgelegten Grundwerte aktiviert.<BR><BR>Nach Änderung
-der Konfiguration ist es sinnvoll das Programm neu zu starten.<BR><BR>Nach
+im Programm festgelegten Grundwerte aktiviert.<BR><BR>Die meisten
+Änderungen der Konfiguration sind sofort wirksam. Nach Änderung
+einiger spezieller Konfigurationseinstellungen (z.B. Freie Formeln)
+ist es allerdings notwendig das Programm neu zu starten.<BR><BR>Nach
 dem Beenden des Programms wird eine Konfigurationsdatei (User.config)
 angelegt. Der Pfad für die User.config ist unterschiedlich bei
 verschiedenen Betriebssystemen. <BR>Unter Windows XP lautet der Pfad
@@ -251,7 +253,7 @@ wurden im Installateur-Bereich folgende Parameter angepasst:</P>
 	<LI><P STYLE="margin-bottom: 0cm; font-weight: normal">Wasser Anf.
 	Stop: 10</P>
 </UL>
-<P STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+<P STYLE="margin-bottom: 0cm"><BR>
 </P>
 <P STYLE="margin-bottom: 0cm; font-weight: normal">Für die
 Sommermonate hat es sich bewährt, die Heizung in den „Standby
@@ -548,7 +550,15 @@ Verfügung stehen, dann wären auch Anzeigen über Zählerstand und
 Parameter im SolvisSC2Viewer möglich.<BR>Datei zaehlst.txt: Es
 fehlen die Bedeutungen der Werte 4 bis 6.<BR>Datei paramact.txt: Es
 fehlen noch viele Parameter Bedeutungen (siehe Sourcecode Enums.cs
-und HeatingSettings.cs im Verzeichnis app\system\solvis. 
+und HeatingSettings.cs im Verzeichnis app\system\solvis.</P>
+<P>Zum Testen der Anzeige für Zählerstände und Parameter muß in
+der Konfigurationsdatei User.config der hinten stehende Eintrag
+„Prototype“ von „false“ auf „true“ gesetzt werden. Nach
+einem anschliessenden Programmstart sind Zählerstände und Parameter
+auswählbar für die Anzeige. Die Parameter können auch gedruckt
+werden. Bei den Parametern werden die Parameter für Heizkreis 1,
+Wasser und Zirkulation angezeigt.</P>
+<P><BR><BR>
 </P>
 <H2 CLASS="western"><BR><BR>
 </H2>

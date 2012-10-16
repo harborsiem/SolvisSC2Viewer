@@ -26,7 +26,7 @@ namespace SolvisSC2Viewer {
         }
 
         public void UpdateItems() {
-            if (AppManager.ConfigManager.SuperUser) {
+            if (AppManager.ConfigManager.SuperUser || AppManager.ConfigManager.Prototype) {
                 countingList.Visible = true;
                 parameterList.Visible = true;
             }

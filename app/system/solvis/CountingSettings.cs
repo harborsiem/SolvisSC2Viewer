@@ -6,44 +6,46 @@ using System.ComponentModel;
 
 namespace SolvisSC2Viewer {
     class CountingSettings {
+        private const string Hours = " Std.";
+
         public CountingSettings(IList<int> list) {
-            SolarPumpSpan = list[0];
-            BurnerSpan = list[1];
+            SolarPumpSpan = list[0].ToString() + Hours;
+            BurnerSpan = list[1].ToString() + Hours;
             BurnerStarts = list[2];
             //@Todo: 3 weitere Werte: Bedeutung ?
-            DontKnow1 = list[3];
-            DontKnow2 = list[4];
-            DontKnow3 = list[5];
+            Unknown1 = list[3];
+            Unknown2 = list[4];
+            Unknown3 = list[5];
         }
 
         [DisplayName("Laufzeit Solarpumpe")]
         [Category("Counting")]
         [ReadOnly(true)]
-        public int SolarPumpSpan { get; set; }
+        public string SolarPumpSpan { get; set; }
 
         [DisplayName("Laufzeit Brenner")]
         [Category("Counting")]
         [ReadOnly(true)]
-        public int BurnerSpan { get; set; }
+        public string BurnerSpan { get; set; }
 
         [DisplayName("Starts Brenner")]
         [Category("Counting")]
         [ReadOnly(true)]
         public int BurnerStarts { get; set; }
 
-        [DisplayName("Keine Ahnung 1")]
+        [DisplayName("Unbekannt 1")]
         [Category("Counting")]
         [ReadOnly(true)]
-        public int DontKnow1 { get; set; }
+        public int Unknown1 { get; set; }
 
-        [DisplayName("Keine Ahnung 2")]
+        [DisplayName("Unbekannt 2")]
         [Category("Counting")]
         [ReadOnly(true)]
-        public int DontKnow2 { get; set; }
+        public int Unknown2 { get; set; }
 
-        [DisplayName("Keine Ahnung 3")]
+        [DisplayName("Unbekannt 3")]
         [Category("Counting")]
         [ReadOnly(true)]
-        public int DontKnow3 { get; set; }
+        public int Unknown3 { get; set; }
     }
 }

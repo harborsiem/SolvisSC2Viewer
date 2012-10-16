@@ -94,6 +94,9 @@ namespace SolvisSC2Viewer {
                             case ConfigXml.TimePlanBitmapTag:
                                 manager.TimePlanBitmap = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
                                 break;
+                            case ConfigXml.PrototypeTag:
+                                manager.Prototype = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
+                                break;
                             default:
                                 break;
                         }
