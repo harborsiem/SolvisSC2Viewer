@@ -20,10 +20,6 @@ namespace SolvisSC2Viewer {
         public List<Series> SensorsSeriesList { get; private set; }
         public List<Series> ActorsSeriesList { get; private set; }
         public List<Series> OptionsSeriesList { get; private set; }
-        private IList<CheckBox> SensorsCheckBoxes { get; set; }
-        private IList<CheckBox> ActorsCheckBoxes { get; set; }
-        private IList<CheckBox> OptionsCheckBoxes { get; set; }
-        private Chart chartMain;
         private DateTime fromDateTime;
         private DateTime toDateTime;
         private string serializeFileName;
@@ -40,10 +36,6 @@ namespace SolvisSC2Viewer {
         }
 
         public void Init() {
-            chartMain = AppManager.MainForm.ChartControl.ChartMain;
-            SensorsCheckBoxes = AppManager.MainForm.SensorsCheckBoxes;
-            ActorsCheckBoxes = AppManager.MainForm.ActorsCheckBoxes;
-            OptionsCheckBoxes = AppManager.MainForm.OptionsCheckBoxes;
             serializeFileName = ConfigManager.ConfigDir + Path.DirectorySeparatorChar + "solvis.bin";
             AppManager.ItemManager.ToolMenu.DateEvent += DateEvent;
         }
@@ -71,6 +63,7 @@ namespace SolvisSC2Viewer {
                         if (checkBox.Checked) {
                             FillSeriesWithNewData(tag, fromDateTime, toDateTime);
                         } else {
+                            Chart chartMain = AppManager.MainForm.ChartControl.ChartMain;
                             chartMain.BeginInit();
                             DataPointCollection points = tag.Series.Points;
                             points.ClearPoints(); //MsChartExtension
@@ -134,6 +127,7 @@ namespace SolvisSC2Viewer {
 
         private void FillSeriesWithNewData(CheckBoxTag tag, DateTime from, DateTime to) {
             if (tag != null) {
+                Chart chartMain = AppManager.MainForm.ChartControl.ChartMain;
                 int fromIndex = GetSolvisListIndex(from);
                 int toIndex = GetSolvisListIndex(to);
                 chartMain.BeginInit();
@@ -171,11 +165,12 @@ namespace SolvisSC2Viewer {
         }
 
         private void FillAllCheckedSeriesWithNewData(DateTime from, DateTime to) {
+            Chart chartMain = AppManager.MainForm.ChartControl.ChartMain;
             int fromIndex = GetSolvisListIndex(from);
             int toIndex = GetSolvisListIndex(to);
             chartMain.BeginInit();
             for (int seriesIndex = 0; seriesIndex < SensorsSeriesList.Count; seriesIndex++) {
-                CheckBox checkBox = SensorsCheckBoxes[seriesIndex];
+                CheckBox checkBox = AppManager.MainForm.SensorsCheckBoxes[seriesIndex];
                 if (checkBox.Checked) {
                     Series series = SensorsSeriesList[seriesIndex];
                     DataPointCollection points = series.Points;
@@ -195,7 +190,7 @@ namespace SolvisSC2Viewer {
                 }
             }
             for (int seriesIndex = 0; seriesIndex < ActorsSeriesList.Count; seriesIndex++) {
-                CheckBox checkBox = ActorsCheckBoxes[seriesIndex];
+                CheckBox checkBox = AppManager.MainForm.ActorsCheckBoxes[seriesIndex];
                 Series series = ActorsSeriesList[seriesIndex];
                 if (checkBox.Checked) {
                     DataPointCollection points = series.Points;
@@ -215,7 +210,7 @@ namespace SolvisSC2Viewer {
                 }
             }
             for (int seriesIndex = 0; seriesIndex < OptionsSeriesList.Count; seriesIndex++) {
-                CheckBox checkBox = OptionsCheckBoxes[seriesIndex];
+                CheckBox checkBox = AppManager.MainForm.OptionsCheckBoxes[seriesIndex];
                 Series series = OptionsSeriesList[seriesIndex];
                 if (checkBox.Checked) {
                     DataPointCollection points = series.Points;

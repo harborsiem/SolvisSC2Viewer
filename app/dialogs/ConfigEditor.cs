@@ -83,17 +83,7 @@ namespace SolvisSC2Viewer {
                 manager.OptionConfigDefault[pair.Key].Copy(value);
             }
 
-            IDictionary<string, object> defaults = manager.ParametersDefault;
-            ConfigManager.Temperature = (int)defaults[ConfigXml.TemperatureTag];
-            ConfigManager.Niveau = (int)defaults[ConfigXml.NiveauTag];
-            ConfigManager.Gradient = (double)defaults[ConfigXml.GradientTag];
-
-            RowValues.Longitude = (double)defaults[ConfigXml.LongitudeTag];
-            RowValues.Latitude = (double)defaults[ConfigXml.LatitudeTag];
-            RowValues.BurnerMinPower = (double)defaults[ConfigXml.BurnerMinPowerTag];
-            RowValues.BurnerMaxPower = (double)defaults[ConfigXml.BurnerMaxPowerTag];
-            manager.TimePlanSuppressMask = (int)defaults[ConfigXml.TimePlanSuppressMaskTag];
-            manager.TimePlanBitmap = (bool)defaults[ConfigXml.TimePlanBitmapTag];
+            manager.SetParametersDefault();
 
             manager.UpdateMainForm();
             this.Cursor = Cursors.Default;

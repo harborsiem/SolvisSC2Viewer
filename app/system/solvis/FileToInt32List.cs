@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Windows.Forms;
 
 namespace SolvisSC2Viewer {
     public class FileToInt32List {
@@ -11,6 +12,7 @@ namespace SolvisSC2Viewer {
         public DateTime DateTime { get; private set; }
 
         public FileToInt32List(string path, string fileName) {
+            bool error = false;
             ParamList = new List<int>();
             Empty = true;
             if (Directory.Exists(path)) {
@@ -29,12 +31,24 @@ namespace SolvisSC2Viewer {
                     }
                     catch (FormatException) {
                         ParamList.Clear();
+                        error = true;
                     }
                     finally {
                         reader.Close();
                     }
+                } else {
+                    error = true;
                 }
+            } else {
+                error = true;
             }
+            if (error) {
+                Error(fileName);
+            }
+        }
+
+        private void Error(string fileName) {
+            MessageBox.Show("Datei: " + fileName, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

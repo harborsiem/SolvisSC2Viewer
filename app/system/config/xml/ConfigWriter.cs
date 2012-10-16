@@ -51,6 +51,7 @@ namespace SolvisSC2Viewer {
             SetSimpleNodeValue(ConfigXml.SdCardDirTag, manager.SdCardDir);
             SetSimpleNodeValue(ConfigXml.TimePlanSuppressMaskTag, XmlConvert.ToString(manager.TimePlanSuppressMask));
             SetSimpleNodeValue(ConfigXml.TimePlanBitmapTag, XmlConvert.ToString(manager.TimePlanBitmap));
+            SetSimpleNodeValue(ConfigXml.PrototypeTag, XmlConvert.ToString(manager.Prototype));
             if (manager.SuperUser) {
                 SetSimpleNodeValue(ConfigXml.SuperUserTag, XmlConvert.ToString(manager.SuperUser));
             }

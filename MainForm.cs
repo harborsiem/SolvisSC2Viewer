@@ -61,6 +61,28 @@ namespace SolvisSC2Viewer {
             get { return sensorsActors.OptionsCheckBoxes; }
         }
 
+        public void UpdateSeriesColors() {
+            for (int i = 0; i < SensorsCheckBoxes.Count; i++) {
+                CheckBoxTag tag = SensorsCheckBoxes[i].Tag as CheckBoxTag;
+                if (tag != null) {
+                    tag.Series.Color = tag.CheckBox.ForeColor;
+                }
+            }
+
+            for (int i = 0; i < ActorsCheckBoxes.Count; i++) {
+                CheckBoxTag tag = ActorsCheckBoxes[i].Tag as CheckBoxTag;
+                if (tag != null) {
+                    tag.Series.Color = tag.CheckBox.ForeColor;
+                }
+            }
+            for (int i = 0; i < OptionsCheckBoxes.Count; i++) {
+                CheckBoxTag tag = OptionsCheckBoxes[i].Tag as CheckBoxTag;
+                if (tag != null) {
+                    tag.Series.Color = tag.CheckBox.ForeColor;
+                }
+            }
+        }
+
         public void UpdateToolTips() {
             sensorsActors.MakeTips();
         }

@@ -9,8 +9,10 @@ using System.IO;
 namespace SolvisSC2Viewer {
     class HeatingSettings {
 
-        //@Todo: Viele der unten aufgelisteten Properties als string definieren
-        // Dann kann auch die Einheit im string enthalten sein.
+        private const string DegreeCelsius = "°C";
+        private const string Minute = " Min.";
+        private const string Hours = " Std.";
+        private const string Days = " Tage";
 
         //Beginn: HK1 = 185; HK2 = 231; HK3 = 277 (HK1 evtl. schon ab 184 ?)
         //Zirkular Index: Ruhezeit: 326, Funkt. Ein :327, Temp: 328, Betriebsart: 329, Diff Ein: 330, Laufzeit: 332,
@@ -22,82 +24,93 @@ namespace SolvisSC2Viewer {
 
         public HeatingSettings(IList<int> list, int index) {
             //Gebläsedrehzahl (index = 108 ?) mit Formel %-Wert für Brenner Stufe 2 ?
-            //RunWW
-            //RunHK
+            //RunWater
+            //RunHeatingCircuit
             WaterPriority = (WaterMode)list[index++];
             ModeHeatingCircuit = (HeatingCircuitMode)list[index++];
             ModeFlowTemperature = (FlowTemperatureMode)list[index++];
-            FixFlowDay = list[index++];
-            FixFlowLowering = list[index++];
-            Temperature1 = list[index++];
-            Temperature2 = list[index++];
-            Temperature3 = list[index++];
-            LoweringTemperature = list[index++];
+            FixFlowDay = list[index++].ToString() + DegreeCelsius;
+            FixFlowLowering = list[index++].ToString() + DegreeCelsius;
+            Temperature1 = list[index++].ToString() + DegreeCelsius;
+            Temperature2 = list[index++].ToString() + DegreeCelsius;
+            Temperature3 = list[index++].ToString() + DegreeCelsius;
+            LoweringTemperature = list[index++].ToString() + DegreeCelsius;
             Gradient = list[index++] / 100.0;
-            RaisingSetpoint = list[index++]; // ? Einschaltüberhöhung
-            RoomInfluence = list[index++]; // ? Raumeinfluss
-            HoldTime = list[index++];
-            FlowTemperatureMax = list[index++];
-            FlowTemperatureMin = list[index++];
-            Offset = list[index++];
-            Niveau = list[index++];
-            S10MeanTime = list[index++];
+            RaisingSetpoint = list[index++].ToString() + "%"; // ? Einschaltüberhöhung
+            RoomInfluence = list[index++].ToString() + "%"; // ? Raumeinfluss
+            HoldTime = list[index++].ToString() + Minute;
+            FlowTemperatureMax = list[index++].ToString() + DegreeCelsius;
+            FlowTemperatureMin = list[index++].ToString() + DegreeCelsius;
+            Offset = list[index++].ToString() + "K";
+            Niveau = list[index++].ToString() + "K";
+            S10MeanTime = list[index++].ToString() + Minute;
             RoomShutDown = (OnOffSwitch)list[index++];
-            RoomHysterese = list[index++];
+            RoomHysterese = list[index++].ToString() + "K";
             OutsideDayShutDown = (OnOffSwitch)list[index++];
-            OutsideDayTemperature = list[index++];
-            OutsideDayHysterese = list[index++];
+            OutsideDayTemperature = list[index++].ToString() + DegreeCelsius;
+            OutsideDayHysterese = list[index++].ToString() + "K";
             OutsideLoweringShutDown = (OnOffSwitch)list[index++];
-            OutsideLoweringTemperature = list[index++];
-            OutsideLoweringHysterese = list[index++];
+            OutsideLoweringTemperature = list[index++].ToString() + DegreeCelsius;
+            OutsideLoweringHysterese = list[index++].ToString() + "K";
 
             index += 2; //@Todo: index = 211, 212
             //? HeatPumpMode, BurnerMode ?
 
-            FreezeTemperature = list[index++];
-            FreezeRoomTemperature = list[index++];
-            MixerTime = list[index++];
-            MixerInterval = list[index++];
-            MixerFactor = list[index++] / 10.0;
-            DayModeTemperature = list[index++];
-            DayModeHours = list[index++];
-            LoweringModeTemperature = list[index++];
-            LoweringModeHours = list[index++];
-            LeaveHomeTemperature = list[index++];
-            LeaveHomeDuration = list[index++];
+            FreezeTemperature = "<" + list[index++].ToString() + DegreeCelsius;
+            FreezeRoomTemperature = "<" + list[index++].ToString() + DegreeCelsius;
+            MixerTime = list[index++].ToString() + "s";
+            MixerInterval = list[index++].ToString() + "s";
+            MixerFactor = (list[index++] / 10.0).ToString("f1") + "s/K";
+            DayModeTemperature = list[index++].ToString() + DegreeCelsius;
+            DayModeHours = list[index++].ToString() + Hours;
+            LoweringModeTemperature = list[index++].ToString() + DegreeCelsius;
+            LoweringModeHours = list[index++].ToString() + Hours;
+            LeaveHomeTemperature = list[index++].ToString() + DegreeCelsius;
+            LeaveHomeDuration = list[index++].ToString() + Days;
             string tmpTime = new DateTime((long)list[index++] * 15 * 60 * 10000000).ToString("HH:mm", CultureInfo.InvariantCulture);
             LeaveHomeTimeFrom = tmpTime;
             tmpTime = new DateTime((long)list[index++] * 15 * 60 * 10000000).ToString("HH:mm", CultureInfo.InvariantCulture);
             LeaveHomeTimeTo = tmpTime;
-            LeaveAwayTemperature = list[index++];
+            LeaveAwayTemperature = list[index++].ToString() + DegreeCelsius;
             int day = list[index++];
             int month = list[index++];
             int year = list[index++];
             LeaveEndDate = new DateTime(year, month, day);
 
-            WaterPumpMode = (Mode)list[44]; //?
-            WaterTargetTemperature = list[45];
-            WaterBufferTmin = list[53]; //oder index = 61
-            WaterAuxHeatingStart = list[54];
-            WaterAuxHeatingSperrzeit = list[55];
-            WaterAuxHeatingRuntime = list[56];
-            WaterAuxHeatingPower = list[58];
-            WaterDTStart = list[59];
-            WaterDTEnd = list[60];
+            //Burner2Start = list[113].ToString() + "K";
+            //Burner2Stop = list[114].ToString() + "K";
+            //ModulationTMin = list[115].ToString() + DegreeCelsius;
+            //ModulationVMin = (list[116] / 10.0).ToString("f1") + "V";
+            //ModulationTMax = list[117].ToString() + DegreeCelsius;
+            //ModulationVMax = (list[118] / 10.0).ToString("f1") + "V";
+            //EcoWater = list[359].ToString() + DegreeCelsius;
+            //EcoTemperature1 = list[360].ToString() + DegreeCelsius;
+            //EcoTemperature2 = list[361].ToString() + DegreeCelsius;
+            //EcoTemperature3 = list[362].ToString() + DegreeCelsius;
 
-            CircOffTime = list[326];
+            WaterPumpMode = (Mode)list[44]; //?
+            WaterTargetTemperature = list[45].ToString() + DegreeCelsius;
+            WaterBufferTmin = list[53].ToString() + DegreeCelsius; //oder index = 61
+            WaterAuxHeatingStart = list[54].ToString() + "K";
+            WaterAuxHeatingSperrzeit = list[55].ToString() + Minute;
+            WaterAuxHeatingRuntime = list[56].ToString() + "s";
+            WaterAuxHeatingPower = list[58].ToString() + "%";
+            WaterDTStart = list[59].ToString() + "K";
+            WaterDTEnd = list[60].ToString() + "K";
+
+            CircOffTime = list[326].ToString() + Minute;
             CircPump = (Mode)list[327];
-            CircCommandTemperature = list[328];
+            CircCommandTemperature = list[328].ToString() + DegreeCelsius;
             CircMode = (CircMode)list[329];
-            CircDeltaForOn = list[330];
-            CircMinRuntime = list[332];
+            CircDeltaForOn = list[330].ToString() + "K";
+            CircMinRuntime = list[332].ToString() + "s";
         }
 
         [DisplayName("Heizung Temperatur Wippe")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int Niveau { get; set; }
+        public string Niveau { get; set; }
 
         [DisplayName("Warmwasser-Vorrang")]
         [Category("Heizkreis")]
@@ -124,12 +137,12 @@ namespace SolvisSC2Viewer {
         //[DisplayName("Laufzeit WW-Bereitung")]
         //[Category("Heizkreis")]
         //[ReadOnly(true)]
-        //public int RunWW { get; set; }
+        //public int RunWater { get; set; }
 
         //[DisplayName("Laufzeit Heizkreise")]
         //[Category("Heizkreis")]
         //[ReadOnly(true)]
-        //public int RunHK { get; set; }
+        //public int RunHeatingCircuit { get; set; }
 
         [DisplayName("Betriebsart VL Temp.")]
         [Category("Heizkreis")]
@@ -141,13 +154,13 @@ namespace SolvisSC2Viewer {
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int FixFlowDay { get; set; }
+        public string FixFlowDay { get; set; }
 
         [DisplayName("Fix Vorlauf Absenk")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int FixFlowLowering { get; set; }
+        public string FixFlowLowering { get; set; }
 
         [DisplayName("Steilheit")]
         [Category("Heizkreis")]
@@ -159,67 +172,67 @@ namespace SolvisSC2Viewer {
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int Temperature1 { get; set; }
+        public string Temperature1 { get; set; }
 
         [DisplayName("Tag-Temp. Zeitfenster 2")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int Temperature2 { get; set; }
+        public string Temperature2 { get; set; }
 
         [DisplayName("Tag-Temp. Zeitfenster 3")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int Temperature3 { get; set; }
+        public string Temperature3 { get; set; }
 
         [DisplayName("Absenk-Temperatur")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int LoweringTemperature { get; set; }
+        public string LoweringTemperature { get; set; }
 
         [DisplayName("Einschaltüberhöhung HK")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int RaisingSetpoint { get; set; }
+        public string RaisingSetpoint { get; set; }
 
         [DisplayName("Raumeinfluss HK")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int RoomInfluence { get; set; }
+        public string RoomInfluence { get; set; }
 
         [DisplayName("Vorhaltezeit HK")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int HoldTime { get; set; }
+        public string HoldTime { get; set; }
 
         [DisplayName("Max. Vorlauf-Temperatur")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int FlowTemperatureMax { get; set; }
+        public string FlowTemperatureMax { get; set; }
 
         [DisplayName("Min. Vorlauf-Temperatur")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int FlowTemperatureMin { get; set; }
+        public string FlowTemperatureMin { get; set; }
 
         [DisplayName("Offset")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int Offset { get; set; }
+        public string Offset { get; set; }
 
         [DisplayName("Mittelwertzeitraum")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int S10MeanTime { get; set; }
+        public string S10MeanTime { get; set; }
 
         [DisplayName("Abschaltbedingung wenn Raum-Solltemp. erreicht ist")]
         [Category("Raum-Solltemp.")]
@@ -231,7 +244,7 @@ namespace SolvisSC2Viewer {
         [Category("Raum-Solltemp.")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int RoomHysterese { get; set; }
+        public string RoomHysterese { get; set; }
 
         [DisplayName("wenn Außentemp. im Tagbetrieb größer als max. Außentemp")]
         [Category("Tagbetrieb-Solltemp.")]
@@ -243,13 +256,13 @@ namespace SolvisSC2Viewer {
         [Category("Tagbetrieb-Solltemp.")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int OutsideDayTemperature { get; set; }
+        public string OutsideDayTemperature { get; set; }
 
         [DisplayName("Tag Temp. Hysterese")]
         [Category("Tagbetrieb-Solltemp.")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int OutsideDayHysterese { get; set; }
+        public string OutsideDayHysterese { get; set; }
 
         [DisplayName("wenn Außentemp. im Absenkbetrieb größer als max. Außentemp")]
         [Category("Absenkbetrieb-Solltemp.")]
@@ -261,79 +274,79 @@ namespace SolvisSC2Viewer {
         [Category("Absenkbetrieb-Solltemp.")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int OutsideLoweringTemperature { get; set; }
+        public string OutsideLoweringTemperature { get; set; }
 
         [DisplayName("Absenk Temp. Hysterese")]
         [Category("Absenkbetrieb-Solltemp.")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int OutsideLoweringHysterese { get; set; }
+        public string OutsideLoweringHysterese { get; set; }
 
         [DisplayName("Frostschutztemp.")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int FreezeTemperature { get; set; }
+        public string FreezeTemperature { get; set; }
 
         [DisplayName("Frostschutz Raumtemp.")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int FreezeRoomTemperature { get; set; }
+        public string FreezeRoomTemperature { get; set; }
 
         [DisplayName("Mischer Gesamtlaufzeit")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int MixerTime { get; set; }
+        public string MixerTime { get; set; }
 
         [DisplayName("Mischer Taktzeit")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int MixerInterval { get; set; }
+        public string MixerInterval { get; set; }
 
         [DisplayName("Mischer Faktor")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public double MixerFactor { get; set; }
+        public string MixerFactor { get; set; }
 
         [DisplayName("Tagbetrieb Temperatur")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int DayModeTemperature { get; set; }
+        public string DayModeTemperature { get; set; }
 
         [DisplayName("Tagbetrieb Stunden")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int DayModeHours { get; set; }
+        public string DayModeHours { get; set; }
 
         [DisplayName("Absenkbetrieb Temperatur")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int LoweringModeTemperature { get; set; }
+        public string LoweringModeTemperature { get; set; }
 
         [DisplayName("Absenkbetrieb Stunden")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int LoweringModeHours { get; set; }
+        public string LoweringModeHours { get; set; }
 
         [DisplayName("Urlaub zu Hause Temperatur")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int LeaveHomeTemperature { get; set; }
+        public string LeaveHomeTemperature { get; set; }
 
         [DisplayName("Urlaub zu Hause Tage")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int LeaveHomeDuration { get; set; }
+        public string LeaveHomeDuration { get; set; }
 
         [DisplayName("Urlaub zu Hause Heizzeit von")]
         [Category("Heizkreis")]
@@ -351,13 +364,73 @@ namespace SolvisSC2Viewer {
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int LeaveAwayTemperature { get; set; }
+        public string LeaveAwayTemperature { get; set; }
 
         [DisplayName("Datum Urlaubs Ende")]
         [Category("Heizkreis")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
         public DateTime LeaveEndDate { get; set; }
+
+        //[DisplayName("Brenner 2 Start")]
+        //[Category("Heizung")]
+        //[HeatingUser(HeatingUser.Installateur)]
+        //[ReadOnly(true)]
+        //public string Burner2Start { get; set; }
+
+        //[DisplayName("Brenner 2 Stop")]
+        //[Category("Heizung")]
+        //[HeatingUser(HeatingUser.Installateur)]
+        //[ReadOnly(true)]
+        //public string Burner2Stop { get; set; }
+
+        //[DisplayName("Modulation T Min")]
+        //[Category("Heizung Modulation")]
+        //[HeatingUser(HeatingUser.Installateur)]
+        //[ReadOnly(true)]
+        //public string ModulationTMin { get; set; }
+
+        //[DisplayName("Modulation V Min")]
+        //[Category("Heizung Modulation")]
+        //[HeatingUser(HeatingUser.Installateur)]
+        //[ReadOnly(true)]
+        //public string ModulationVMin { get; set; }
+
+        //[DisplayName("Modulation T Max")]
+        //[Category("Heizung Modulation")]
+        //[HeatingUser(HeatingUser.Installateur)]
+        //[ReadOnly(true)]
+        //public string ModulationTMax { get; set; }
+
+        //[DisplayName("Modulation V Max")]
+        //[Category("Heizung Modulation")]
+        //[HeatingUser(HeatingUser.Installateur)]
+        //[ReadOnly(true)]
+        //public string ModulationVMax { get; set; }
+
+        //[DisplayName("Eco Warmwasser Temp.")]
+        //[Category("Heizung")]
+        //[HeatingUser(HeatingUser.FachNutzer)]
+        //[ReadOnly(true)]
+        //public string EcoWater { get; set; }
+
+        //[DisplayName("Eco Temperatur 1")]
+        //[Category("Heizung")]
+        //[HeatingUser(HeatingUser.FachNutzer)]
+        //[ReadOnly(true)]
+        //public string EcoTemperature1 { get; set; }
+
+        //[DisplayName("Eco Temperatur 2")]
+        //[Category("Heizung")]
+        //[HeatingUser(HeatingUser.FachNutzer)]
+        //[ReadOnly(true)]
+        //public string EcoTemperature2 { get; set; }
+
+        //[DisplayName("Eco Temperatur 3")]
+        //[Category("Heizung")]
+        //[HeatingUser(HeatingUser.FachNutzer)]
+        //[ReadOnly(true)]
+        //public string EcoTemperature3 { get; set; }
 
         [DisplayName("Wasserpumpe Betriebsart")]
         [Category("Wasser")]
@@ -369,49 +442,49 @@ namespace SolvisSC2Viewer {
         [Category("Wasser")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int WaterTargetTemperature { get; set; }
+        public string WaterTargetTemperature { get; set; }
 
         [DisplayName("Wasser Puffer Tmin")]
         [Category("Wasser")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int WaterBufferTmin { get; set; }
+        public string WaterBufferTmin { get; set; }
 
         [DisplayName("Wasser Nachheizleistung")]
         [Category("Wasser")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int WaterAuxHeatingPower { get; set; }
+        public string WaterAuxHeatingPower { get; set; }
 
         [DisplayName("Wasser dT Start")]
         [Category("Wasser")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int WaterDTStart { get; set; }
+        public string WaterDTStart { get; set; }
 
         [DisplayName("Wasser dT Ende")]
         [Category("Wasser")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int WaterDTEnd { get; set; }
+        public string WaterDTEnd { get; set; }
 
         [DisplayName("Wasser Nachheiz Start")]
         [Category("Wasser")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int WaterAuxHeatingStart { get; set; }
+        public string WaterAuxHeatingStart { get; set; }
 
         [DisplayName("Wasser Nachheiz Sperrzeit")]
         [Category("Wasser")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int WaterAuxHeatingSperrzeit { get; set; }
+        public string WaterAuxHeatingSperrzeit { get; set; }
 
         [DisplayName("Wasser Nachheiz Laufzeit")]
         [Category("Wasser")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int WaterAuxHeatingRuntime { get; set; }
+        public string WaterAuxHeatingRuntime { get; set; }
 
         [DisplayName("Zirkulations Betriebsart")]
         [Category("Zirkular")]
@@ -429,25 +502,25 @@ namespace SolvisSC2Viewer {
         [Category("Zirkular")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int CircCommandTemperature { get; set; }
+        public string CircCommandTemperature { get; set; }
 
         [DisplayName("Zirk. Laufzeit")]
         [Category("Zirkular")]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public int CircMinRuntime { get; set; }
+        public string CircMinRuntime { get; set; }
 
         [DisplayName("Zirk. Ruhezeit")]
         [Category("Zirkular")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int CircOffTime { get; set; }
+        public string CircOffTime { get; set; }
 
         [DisplayName("Zirk. Differenz ein")]
         [Category("Zirkular")]
         [HeatingUser(HeatingUser.Installateur)]
         [ReadOnly(true)]
-        public int CircDeltaForOn { get; set; }
+        public string CircDeltaForOn { get; set; }
 
     }
 }

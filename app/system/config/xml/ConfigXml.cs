@@ -31,6 +31,7 @@ namespace SolvisSC2Viewer {
         public const string SdCardDirTag = "SdCardDir";
         public const string TimePlanSuppressMaskTag = "TimePlanSuppressMask";
         public const string TimePlanBitmapTag = "TimePlanBitmap";
+        public const string PrototypeTag = "Prototype";
         public const string AttributeText = "Text";
         public const string AttributeToolTipText = "ToolTipText";
         public const string AttributeKey = "Key";
