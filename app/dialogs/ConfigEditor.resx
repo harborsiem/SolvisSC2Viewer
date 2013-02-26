@@ -358,10 +358,10 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="sensorsTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 3</value>
+    <value>154, 3</value>
   </data>
   <data name="sensorsTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
+    <value>199, 20</value>
   </data>
   <data name="sensorsTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -382,10 +382,10 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="sensorsToolTipTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 29</value>
+    <value>154, 29</value>
   </data>
   <data name="sensorsToolTipTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
+    <value>199, 20</value>
   </data>
   <data name="sensorsToolTipTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -406,7 +406,7 @@
     <value>True</value>
   </data>
   <data name="sensorsColorButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 55</value>
+    <value>154, 55</value>
   </data>
   <data name="sensorsColorButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -433,7 +433,7 @@
     <value>True</value>
   </data>
   <data name="sensorsVisibleCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 84</value>
+    <value>154, 84</value>
   </data>
   <data name="sensorsVisibleCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 17</value>
@@ -456,6 +456,78 @@
   <data name="&gt;&gt;sensorsVisibleCheckBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="sensorsParameterLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="sensorsParameterLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sensorsParameterLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="sensorsParameterLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 112</value>
+  </data>
+  <data name="sensorsParameterLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="sensorsParameterLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="sensorsParameterLabel.Text" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="sensorsParameterLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;sensorsParameterLabel.Name" xml:space="preserve">
+    <value>sensorsParameterLabel</value>
+  </data>
+  <data name="&gt;&gt;sensorsParameterLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sensorsParameterLabel.Parent" xml:space="preserve">
+    <value>sensorsTabLayout</value>
+  </data>
+  <data name="&gt;&gt;sensorsParameterLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="sensorsParameterButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sensorsParameterButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="sensorsParameterButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="sensorsParameterButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 107</value>
+  </data>
+  <data name="sensorsParameterButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="sensorsParameterButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="sensorsParameterButton.Text" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="sensorsParameterButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;sensorsParameterButton.Name" xml:space="preserve">
+    <value>sensorsParameterButton</value>
+  </data>
+  <data name="&gt;&gt;sensorsParameterButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sensorsParameterButton.Parent" xml:space="preserve">
+    <value>sensorsTabLayout</value>
+  </data>
+  <data name="&gt;&gt;sensorsParameterButton.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="sensorsTabLayout.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -463,7 +535,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="sensorsTabLayout.RowCount" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="sensorsTabLayout.Size" type="System.Drawing.Size, System.Drawing">
     <value>356, 258</value>
@@ -484,7 +556,7 @@
     <value>0</value>
   </data>
   <data name="sensorsTabLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="sensorsListBox" Row="0" RowSpan="5" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="sensorsTextLabel" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsToolTipLabel" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsColorlabel" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsVisibleLabel" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsTextBox" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="sensorsToolTipTextBox" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="sensorsColorButton" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="sensorsVisibleCheckBox" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,68,Absolute,20,AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="sensorsListBox" Row="0" RowSpan="6" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="sensorsTextLabel" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsToolTipLabel" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsColorlabel" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsVisibleLabel" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsTextBox" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="sensorsToolTipTextBox" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="sensorsColorButton" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="sensorsVisibleCheckBox" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="sensorsParameterLabel" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="sensorsParameterButton" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,68,Absolute,20,AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="sensorsTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -920,6 +992,12 @@
   </data>
   <data name="optionsListBox.Items7" xml:space="preserve">
     <value>P08</value>
+  </data>
+  <data name="optionsListBox.Items8" xml:space="preserve">
+    <value>P09</value>
+  </data>
+  <data name="optionsListBox.Items9" xml:space="preserve">
+    <value>P10</value>
   </data>
   <data name="optionsListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1603,13 +1681,13 @@
     <value>3, 3</value>
   </data>
   <data name="hk2CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 17</value>
+    <value>83, 17</value>
   </data>
   <data name="hk2CheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="hk2CheckBox.Text" xml:space="preserve">
-    <value>Show HK2</value>
+    <value>Show Flow2</value>
   </data>
   <data name="&gt;&gt;hk2CheckBox.Name" xml:space="preserve">
     <value>hk2CheckBox</value>
@@ -1630,13 +1708,13 @@
     <value>3, 26</value>
   </data>
   <data name="hk3CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 17</value>
+    <value>83, 17</value>
   </data>
   <data name="hk3CheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="hk3CheckBox.Text" xml:space="preserve">
-    <value>Show HK3</value>
+    <value>Show Flow3</value>
   </data>
   <data name="&gt;&gt;hk3CheckBox.Name" xml:space="preserve">
     <value>hk3CheckBox</value>
@@ -1650,34 +1728,34 @@
   <data name="&gt;&gt;hk3CheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="dLadCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="ecoCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="dLadCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="ecoCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="dLadCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ecoCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 49</value>
   </data>
-  <data name="dLadCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 17</value>
+  <data name="ecoCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
   </data>
-  <data name="dLadCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="ecoCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="dLadCheckBox.Text" xml:space="preserve">
-    <value>Show SpeicherDurchladung</value>
+  <data name="ecoCheckBox.Text" xml:space="preserve">
+    <value>Show Eco</value>
   </data>
-  <data name="&gt;&gt;dLadCheckBox.Name" xml:space="preserve">
-    <value>dLadCheckBox</value>
+  <data name="&gt;&gt;ecoCheckBox.Name" xml:space="preserve">
+    <value>ecoCheckBox</value>
   </data>
-  <data name="&gt;&gt;dLadCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;ecoCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dLadCheckBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ecoCheckBox.Parent" xml:space="preserve">
     <value>timePlanGroupLayout</value>
   </data>
-  <data name="&gt;&gt;dLadCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ecoCheckBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="savePictureCheckBox.AutoSize" type="System.Boolean, mscorlib">
@@ -1738,7 +1816,7 @@
     <value>0</value>
   </data>
   <data name="timePlanGroupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="hk2CheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="hk3CheckBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dLadCheckBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="savePictureCheckBox" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="hk2CheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="hk3CheckBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ecoCheckBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="savePictureCheckBox" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="timePlanGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 32</value>
@@ -1764,6 +1842,33 @@
   <data name="&gt;&gt;timePlanGroup.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="prototype.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="prototype.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 165</value>
+  </data>
+  <data name="prototype.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 17</value>
+  </data>
+  <data name="prototype.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="prototype.Text" xml:space="preserve">
+    <value>Show Parameters, Counting</value>
+  </data>
+  <data name="&gt;&gt;prototype.Name" xml:space="preserve">
+    <value>prototype</value>
+  </data>
+  <data name="&gt;&gt;prototype.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;prototype.Parent" xml:space="preserve">
+    <value>sdCardLayout</value>
+  </data>
+  <data name="&gt;&gt;prototype.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="sdCardLayout.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -1771,7 +1876,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="sdCardLayout.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="sdCardLayout.Size" type="System.Drawing.Size, System.Drawing">
     <value>353, 258</value>
@@ -1792,7 +1897,7 @@
     <value>0</value>
   </data>
   <data name="sdCardLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="directoryButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="timePlanGroup" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="directoryButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="timePlanGroup" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="prototype" Row="2" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="SdCardTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

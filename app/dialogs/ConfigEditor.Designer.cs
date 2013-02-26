@@ -37,6 +37,8 @@
             this.sensorsToolTipTextBox = new System.Windows.Forms.TextBox();
             this.sensorsColorButton = new System.Windows.Forms.Button();
             this.sensorsVisibleCheckBox = new System.Windows.Forms.CheckBox();
+            this.sensorsParameterLabel = new System.Windows.Forms.Label();
+            this.sensorsParameterButton = new System.Windows.Forms.Button();
             this.actorsTabPage = new System.Windows.Forms.TabPage();
             this.actorsTabLayout = new System.Windows.Forms.TableLayoutPanel();
             this.actorsListBox = new System.Windows.Forms.ListBox();
@@ -77,8 +79,9 @@
             this.timePlanGroupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.hk2CheckBox = new System.Windows.Forms.CheckBox();
             this.hk3CheckBox = new System.Windows.Forms.CheckBox();
-            this.dLadCheckBox = new System.Windows.Forms.CheckBox();
+            this.ecoCheckBox = new System.Windows.Forms.CheckBox();
             this.savePictureCheckBox = new System.Windows.Forms.CheckBox();
+            this.prototype = new System.Windows.Forms.CheckBox();
             this.buttons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDefault = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
@@ -141,6 +144,8 @@
             this.sensorsTabLayout.Controls.Add(this.sensorsToolTipTextBox, 3, 1);
             this.sensorsTabLayout.Controls.Add(this.sensorsColorButton, 3, 2);
             this.sensorsTabLayout.Controls.Add(this.sensorsVisibleCheckBox, 3, 3);
+            this.sensorsTabLayout.Controls.Add(this.sensorsParameterLabel, 2, 4);
+            this.sensorsTabLayout.Controls.Add(this.sensorsParameterButton, 3, 4);
             this.sensorsTabLayout.Name = "sensorsTabLayout";
             // 
             // sensorsListBox
@@ -173,7 +178,7 @@
             resources.GetString("sensorsListBox.Items22"),
             resources.GetString("sensorsListBox.Items23")});
             this.sensorsListBox.Name = "sensorsListBox";
-            this.sensorsTabLayout.SetRowSpan(this.sensorsListBox, 5);
+            this.sensorsTabLayout.SetRowSpan(this.sensorsListBox, 6);
             this.sensorsListBox.SelectedIndexChanged += new System.EventHandler(this.sensorsListBox_SelectedIndexChanged);
             // 
             // sensorsTextLabel
@@ -221,6 +226,18 @@
             this.sensorsVisibleCheckBox.Name = "sensorsVisibleCheckBox";
             this.sensorsVisibleCheckBox.UseVisualStyleBackColor = true;
             this.sensorsVisibleCheckBox.CheckedChanged += new System.EventHandler(this.VisibleCheckBox_CheckedChanged);
+            // 
+            // sensorsParameterLabel
+            // 
+            resources.ApplyResources(this.sensorsParameterLabel, "sensorsParameterLabel");
+            this.sensorsParameterLabel.Name = "sensorsParameterLabel";
+            // 
+            // sensorsParameterButton
+            // 
+            resources.ApplyResources(this.sensorsParameterButton, "sensorsParameterButton");
+            this.sensorsParameterButton.Name = "sensorsParameterButton";
+            this.sensorsParameterButton.UseVisualStyleBackColor = true;
+            this.sensorsParameterButton.Click += new System.EventHandler(this.parameterButton_Click);
             // 
             // actorsTabPage
             // 
@@ -353,7 +370,9 @@
             resources.GetString("optionsListBox.Items4"),
             resources.GetString("optionsListBox.Items5"),
             resources.GetString("optionsListBox.Items6"),
-            resources.GetString("optionsListBox.Items7")});
+            resources.GetString("optionsListBox.Items7"),
+            resources.GetString("optionsListBox.Items8"),
+            resources.GetString("optionsListBox.Items9")});
             this.optionsListBox.Name = "optionsListBox";
             this.optionsTabLayout.SetRowSpan(this.optionsListBox, 6);
             this.optionsListBox.SelectedIndexChanged += new System.EventHandler(this.optionsListBox_SelectedIndexChanged);
@@ -450,16 +469,6 @@
             // temperatureUpDown
             // 
             resources.ApplyResources(this.temperatureUpDown, "temperatureUpDown");
-            this.temperatureUpDown.Maximum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.temperatureUpDown.Minimum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
             this.temperatureUpDown.Name = "temperatureUpDown";
             this.temperatureUpDown.Value = new decimal(new int[] {
             21,
@@ -510,6 +519,7 @@
             resources.ApplyResources(this.sdCardLayout, "sdCardLayout");
             this.sdCardLayout.Controls.Add(this.directoryButton, 0, 0);
             this.sdCardLayout.Controls.Add(this.timePlanGroup, 0, 1);
+            this.sdCardLayout.Controls.Add(this.prototype, 0, 2);
             this.sdCardLayout.Name = "sdCardLayout";
             // 
             // directoryButton
@@ -531,7 +541,7 @@
             resources.ApplyResources(this.timePlanGroupLayout, "timePlanGroupLayout");
             this.timePlanGroupLayout.Controls.Add(this.hk2CheckBox, 0, 0);
             this.timePlanGroupLayout.Controls.Add(this.hk3CheckBox, 0, 1);
-            this.timePlanGroupLayout.Controls.Add(this.dLadCheckBox, 0, 2);
+            this.timePlanGroupLayout.Controls.Add(this.ecoCheckBox, 0, 2);
             this.timePlanGroupLayout.Controls.Add(this.savePictureCheckBox, 0, 3);
             this.timePlanGroupLayout.Name = "timePlanGroupLayout";
             // 
@@ -547,17 +557,25 @@
             this.hk3CheckBox.Name = "hk3CheckBox";
             this.hk3CheckBox.UseVisualStyleBackColor = true;
             // 
-            // dLadCheckBox
+            // ecoCheckBox
             // 
-            resources.ApplyResources(this.dLadCheckBox, "dLadCheckBox");
-            this.dLadCheckBox.Name = "dLadCheckBox";
-            this.dLadCheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.ecoCheckBox, "ecoCheckBox");
+            this.ecoCheckBox.Name = "ecoCheckBox";
+            this.ecoCheckBox.UseVisualStyleBackColor = true;
             // 
             // savePictureCheckBox
             // 
             resources.ApplyResources(this.savePictureCheckBox, "savePictureCheckBox");
             this.savePictureCheckBox.Name = "savePictureCheckBox";
             this.savePictureCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // prototype
+            // 
+            resources.ApplyResources(this.prototype, "prototype");
+            this.sdCardLayout.SetColumnSpan(this.prototype, 2);
+            this.prototype.Name = "prototype";
+            this.prototype.UseVisualStyleBackColor = true;
+            this.prototype.CheckedChanged += new System.EventHandler(this.prototype_CheckedChanged);
             // 
             // buttons
             // 
@@ -699,8 +717,11 @@
         private System.Windows.Forms.GroupBox timePlanGroup;
         private System.Windows.Forms.TableLayoutPanel timePlanGroupLayout;
         private System.Windows.Forms.CheckBox savePictureCheckBox;
-        private System.Windows.Forms.CheckBox dLadCheckBox;
+        private System.Windows.Forms.CheckBox ecoCheckBox;
         private System.Windows.Forms.CheckBox hk2CheckBox;
         private System.Windows.Forms.CheckBox hk3CheckBox;
+        private System.Windows.Forms.Label sensorsParameterLabel;
+        private System.Windows.Forms.Button sensorsParameterButton;
+        private System.Windows.Forms.CheckBox prototype;
     }
 }

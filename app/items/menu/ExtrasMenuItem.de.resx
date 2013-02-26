@@ -117,10 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Abbrechen</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="heatCurve.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Formel Editor</value>
+  <data name="heatCurve.Text" xml:space="preserve">
+    <value>Heizkurve</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 6</value>
+  </data>
+  <data name="sensorsCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="sensorsCheck.Text" xml:space="preserve">
+    <value>Sensoren prüfen</value>
+  </data>
+  <data name="timePlan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 22</value>
+  </data>
+  <data name="timePlan.Text" xml:space="preserve">
+    <value>Zeitplan</value>
+  </data>
+  <data name="countingList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 22</value>
+  </data>
+  <data name="countingList.Text" xml:space="preserve">
+    <value>Zählstand</value>
+  </data>
+  <data name="parameterList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 22</value>
+  </data>
+  <data name="parameterList.Text" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="sdCardInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 6</value>
+  </data>
+  <data name="configEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="configEditor.Text" xml:space="preserve">
+    <value>Konfiguration</value>
   </data>
 </root>

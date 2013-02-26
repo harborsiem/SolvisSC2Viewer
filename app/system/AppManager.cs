@@ -13,6 +13,7 @@ namespace SolvisSC2Viewer {
         private static ConfigManager configManager = new ConfigManager();
         private static HelpManager helpManager = new HelpManager();
         private static PrintManager printManager = new PrintManager();
+        private static SolvisFileManager solvisFileManager = new SolvisFileManager();
         private static MainForm form;
         public static string BaseDir { get { return baseDir; } }
 
@@ -62,6 +63,10 @@ namespace SolvisSC2Viewer {
 
         public static HelpManager HelpManager {
             get { return helpManager; }
+        }
+
+        public static SolvisFileManager SolvisFileManager {
+            get { return solvisFileManager; }
         }
 
         public static MainForm MainForm {

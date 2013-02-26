@@ -118,37 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="open.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="printPreviewItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
   </data>
-  <data name="open.Text" xml:space="preserve">
-    <value>Öffnen</value>
-  </data>
-  <data name="printPreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="printPreview.Text" xml:space="preserve">
+  <data name="printPreviewItem.Text" xml:space="preserve">
     <value>Druck Vorschau</value>
   </data>
-  <data name="print.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="printItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
   </data>
-  <data name="print.Text" xml:space="preserve">
-    <value>Drucken</value>
+  <data name="printItem.Text" xml:space="preserve">
+    <value>Druck</value>
   </data>
-  <data name="exit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+  <data name="printHeadItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
   </data>
-  <data name="exit.Text" xml:space="preserve">
-    <value>Beenden</value>
-  </data>
-  <data name="separator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 6</value>
-  </data>
-  <data name="separator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 6</value>
-  </data>
-  <data name="separator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 6</value>
+  <data name="printHeadItem.Text" xml:space="preserve">
+    <value>Datei</value>
   </data>
 </root>

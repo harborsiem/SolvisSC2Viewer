@@ -48,9 +48,25 @@ namespace SolvisSC2Viewer {
             SetSimpleNodeValue(ConfigXml.Formula1Tag, manager.Formula1);
             SetSimpleNodeValue(ConfigXml.Formula2Tag, manager.Formula2);
             SetSimpleNodeValue(ConfigXml.Formula3Tag, manager.Formula3);
+            if (!string.IsNullOrWhiteSpace(manager.Formula4)) {
+                SetSimpleNodeValue(ConfigXml.Formula4Tag, manager.Formula4);
+            }
+            if (!string.IsNullOrWhiteSpace(manager.Formula5)) {
+                SetSimpleNodeValue(ConfigXml.Formula5Tag, manager.Formula5);
+            }
+            if (!string.IsNullOrWhiteSpace(manager.FormulaSolarVSG)) {
+                SetSimpleNodeValue(ConfigXml.SolarVSGTag, manager.FormulaSolarVSG);
+            }
+            if (!string.IsNullOrWhiteSpace(manager.FormulaSolarKW)) {
+                SetSimpleNodeValue(ConfigXml.SolarKWTag, manager.FormulaSolarKW);
+            }
+            if (manager.IsExternCode) {
+                SetSimpleNodeValue(ConfigXml.IsExternCodeTag, XmlConvert.ToString(manager.IsExternCode));
+            }
             SetSimpleNodeValue(ConfigXml.SdCardDirTag, manager.SdCardDir);
             SetSimpleNodeValue(ConfigXml.TimePlanSuppressMaskTag, XmlConvert.ToString(manager.TimePlanSuppressMask));
             SetSimpleNodeValue(ConfigXml.TimePlanBitmapTag, XmlConvert.ToString(manager.TimePlanBitmap));
+            SetSimpleNodeValue(ConfigXml.OneDayModeTag, XmlConvert.ToString(manager.OneDayMode));
             SetSimpleNodeValue(ConfigXml.PrototypeTag, XmlConvert.ToString(manager.Prototype));
             if (manager.SuperUser) {
                 SetSimpleNodeValue(ConfigXml.SuperUserTag, XmlConvert.ToString(manager.SuperUser));

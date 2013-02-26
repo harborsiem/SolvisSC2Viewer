@@ -6,10 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     public partial class ConfigEditor : BaseForm {
-        public const string FolderDescription = "Ordner mit Datei zeitplan.txt suchen";
+        public static readonly string FolderDescription = Resources.ConfigEditorSearch; //@Language Resource
         private ColorDialog colorDialog = new ColorDialog();
         private IDictionary<String, ConfigData> sensorDatas;
         private IDictionary<String, ConfigData> actorDatas;
@@ -40,6 +41,8 @@ namespace SolvisSC2Viewer {
                 optionDatas.Add(pair.Key, value.Clone());
             }
             temperature = ConfigManager.Temperature;
+            temperatureUpDown.Maximum = HeatCurve.SetTemperatureMaximum;
+            temperatureUpDown.Minimum = HeatCurve.SetTemperatureMinimum;
             temperatureUpDown.Value = ConfigManager.Temperature;
             niveau = ConfigManager.Niveau;
             niveauUpDown.Value = ConfigManager.Niveau;
@@ -53,13 +56,14 @@ namespace SolvisSC2Viewer {
             savePictureCheckBox.Checked = timePlanBitmap;
             hk2CheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.HK2) == 0;
             hk3CheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.HK3) == 0;
-            dLadCheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.DLad) == 0;
+            ecoCheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.Eco) == 0;
+            prototype.Checked = AppManager.ConfigManager.Prototype;
             this.temperatureUpDown.ValueChanged += new System.EventHandler(this.temperatureUpDown_ValueChanged);
             this.niveauUpDown.ValueChanged += new System.EventHandler(this.niveauUpDown_ValueChanged);
             this.gradientUpDown.ValueChanged += new System.EventHandler(this.gradientUpDown_ValueChanged);
             this.hk2CheckBox.CheckedChanged += new System.EventHandler(this.hk2CheckBox_CheckedChanged);
             this.hk3CheckBox.CheckedChanged += new System.EventHandler(this.hk3CheckBox_CheckedChanged);
-            this.dLadCheckBox.CheckedChanged += new System.EventHandler(this.dLadCheckBox_CheckedChanged);
+            this.ecoCheckBox.CheckedChanged += new System.EventHandler(this.ecoCheckBox_CheckedChanged);
             this.savePictureCheckBox.CheckedChanged += new System.EventHandler(this.savePictureCheckBox_CheckedChanged);
 
             sensorsListBox.SelectedIndex = 0;
@@ -113,6 +117,7 @@ namespace SolvisSC2Viewer {
                 ConfigManager.Gradient = gradient;
                 manager.TimePlanSuppressMask = timePlanSuppressMask;
                 manager.TimePlanBitmap = timePlanBitmap;
+                manager.Prototype = prototype.Checked;
 
                 manager.UpdateMainForm();
                 this.Cursor = Cursors.Default;
@@ -132,6 +137,19 @@ namespace SolvisSC2Viewer {
                 sensorsColorButton.ForeColor = data.Color;
                 sensorsVisibleCheckBox.Tag = data;
                 sensorsVisibleCheckBox.Checked = data.Visible;
+                sensorsParameterButton.Tag = key;
+                switch (key) {
+                    case "S17":
+                        sensorsParameterLabel.Visible = true;
+                        sensorsParameterButton.Visible = true;
+                        sensorsParameterButton.Enabled = true;
+                        break;
+                    default:
+                        sensorsParameterLabel.Visible = false;
+                        sensorsParameterButton.Visible = false;
+                        sensorsParameterButton.Enabled = false;
+                        break;
+                }
             }
         }
 
@@ -165,11 +183,14 @@ namespace SolvisSC2Viewer {
                 parameterButton.Tag = key;
                 switch (key) {
                     case "P01":
+                    case "P02":
                     case "P03":
                     case "P04":
                     case "P06":
                     case "P07":
                     case "P08":
+                    case "P09":
+                    case "P10":
                         parameterButton.Enabled = true;
                         break;
                     default:
@@ -254,7 +275,11 @@ namespace SolvisSC2Viewer {
 
         private void parameterButton_Click(object sender, EventArgs e) {
             Form dialog;
-            string key = parameterButton.Tag as string;
+            Button parameter = sender as Button;
+            if (parameter == null) {
+                return;
+            }
+            string key = parameter.Tag as string;
             if (key != null) {
                 switch (key) {
                     case "P01":
@@ -269,9 +294,13 @@ namespace SolvisSC2Viewer {
                         dialog = new VLParameters();
                         dialog.ShowDialog(this);
                         break;
+                    case "S17":
+                    case "P02":
                     case "P06":
                     case "P07":
                     case "P08":
+                    case "P09":
+                    case "P10":
                         dialog = new FormulaEditor();
                         dialog.Tag = key;
                         dialog.ShowDialog(this);
@@ -313,17 +342,21 @@ namespace SolvisSC2Viewer {
             Changed = true;
         }
 
-        private void dLadCheckBox_CheckedChanged(object sender, EventArgs e) {
-            if (dLadCheckBox.Checked) {
-                timePlanSuppressMask &= ~(int)SuppressMask.DLad;
+        private void ecoCheckBox_CheckedChanged(object sender, EventArgs e) {
+            if (ecoCheckBox.Checked) {
+                timePlanSuppressMask &= ~(int)SuppressMask.Eco;
             } else {
-                timePlanSuppressMask |= (int)SuppressMask.DLad;
+                timePlanSuppressMask |= (int)SuppressMask.Eco;
             }
             Changed = true;
         }
 
         private void savePictureCheckBox_CheckedChanged(object sender, EventArgs e) {
             timePlanBitmap = savePictureCheckBox.Checked;
+            Changed = true;
+        }
+
+        private void prototype_CheckedChanged(object sender, EventArgs e) {
             Changed = true;
         }
     }

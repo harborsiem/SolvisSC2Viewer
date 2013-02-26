@@ -15,6 +15,7 @@ namespace SolvisSC2Viewer {
         public void Init() {
             //file actions
             AddAction(new OpenFileAction());
+            AddAction(new Open1DayModeAction());
             AddAction(new PrintPreviewAction());
             AddAction(new PrintAction());
             AddAction(new ExitAction());

@@ -121,6 +121,9 @@
   <data name="print.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 22</value>
   </data>
+  <data name="open1DayMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 22</value>
+  </data>
   <data name="separator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 6</value>
   </data>
@@ -130,17 +133,20 @@
   <data name="printPreview.Text" xml:space="preserve">
     <value>Print Preview</value>
   </data>
-  <data name="open.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 22</value>
-  </data>
   <data name="print.Text" xml:space="preserve">
     <value>Print</value>
+  </data>
+  <data name="open1DayMode.Text" xml:space="preserve">
+    <value>1 Day Mode</value>
   </data>
   <data name="printPreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 22</value>
   </data>
   <data name="exit.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 22</value>
+  </data>
+  <data name="separator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 6</value>
   </data>
   <data name="separator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 6</value>
@@ -151,8 +157,8 @@
   <data name="open.Text" xml:space="preserve">
     <value>Open</value>
   </data>
-  <data name="separator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 6</value>
+  <data name="open.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 22</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>File</value>
@@ -162,5 +168,8 @@
   </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>de-DE</value>
   </metadata>
 </root>

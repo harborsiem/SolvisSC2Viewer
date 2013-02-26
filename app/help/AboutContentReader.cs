@@ -5,7 +5,7 @@ using System.IO;
 using System.Reflection;
 
 namespace SolvisSC2Viewer {
-    public class AboutContentReader {
+    internal class AboutContentReader {
 
         private const String Prefix = "about_";
         private const String Extension = ".dist";
@@ -32,10 +32,14 @@ namespace SolvisSC2Viewer {
             return stream;
         }
 
-        public String[] Read(String doc) {
+        public String[] Read(String doc, string language) {
             String ressourceFileName;
             Stream stream = null;
-            ressourceFileName = Prefix + doc + Extension;
+            if (string.IsNullOrEmpty(language)) {
+                ressourceFileName = Prefix + doc + Extension;
+            } else {
+                ressourceFileName = Prefix + doc + language;
+            }
             stream = GetResourceStream(ressourceFileName);
             if (stream == null) {
                 return new String[] { };

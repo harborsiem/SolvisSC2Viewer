@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
@@ -16,6 +17,7 @@ namespace SolvisSC2Viewer {
         private MethodInfo MoveSplitterTo;
         private PropertyInfo InternalLabelWidth;
         private IList<PrintProperty> printProperties;
+        private FileInfo fileInfo;
 
         public PropertiesForm() {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace SolvisSC2Viewer {
         }
 
         protected override void OnLoad(EventArgs e) {
-            this.Text = Description + " -- " + DateTime.ToString();
+            this.Text = Description + " -- " + FileInfo.LastWriteTime.ToString();
             base.OnLoad(e);
         }
 
@@ -39,11 +41,21 @@ namespace SolvisSC2Viewer {
 
         public string Description { get; set; }
 
-        public DateTime DateTime { get; set; }
+        public FileInfo FileInfo {
+            get { return fileInfo; }
+            set {
+                fileInfo = value;
+            }
+        }
 
         public object SelectedObject {
             get { return heatingPropertyGrid.SelectedObject; }
             set { heatingPropertyGrid.SelectedObject = value; }
+        }
+
+        public object[] SelectedObjects {
+            get { return heatingPropertyGrid.SelectedObjects; }
+            set { heatingPropertyGrid.SelectedObjects = value; }
         }
 
         private void GetPropertyGridViewInfos() {
@@ -74,11 +86,12 @@ namespace SolvisSC2Viewer {
 
         private void printPreviewItem_Click(object sender, EventArgs e) {
             if (PrintProperties != null && PrintProperties.Count > 0) {
-                AppManager.PrintManager.PrintParameters(PrintProperties, DateTime);
+                AppManager.PrintManager.PrintParameters(PrintProperties, FileInfo, Description);
                 PrintDocument document = AppManager.PrintManager.PrintDocument;
                 PrintPreviewDialog dialog = new PrintPreviewDialog();
                 dialog.ClientSize = new Size(800, 600);
                 dialog.Document = document;
+                dialog.Icon = AppManager.IconManager.PrintPreviewIcon;
                 if (dialog.ShowDialog(AppManager.MainForm) == DialogResult.OK) {
                 }
             }
@@ -86,7 +99,7 @@ namespace SolvisSC2Viewer {
 
         private void printItem_Click(object sender, EventArgs e) {
             if (PrintProperties != null && PrintProperties.Count > 0) {
-                AppManager.PrintManager.PrintParameters(PrintProperties, DateTime);
+                AppManager.PrintManager.PrintParameters(PrintProperties, FileInfo, Description);
                 PrintDocument document = AppManager.PrintManager.PrintDocument;
                 PrintDialog dialog = new PrintDialog();
                 PrinterSettings printerSettings = new PrinterSettings();

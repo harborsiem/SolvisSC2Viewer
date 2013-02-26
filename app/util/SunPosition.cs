@@ -1,5 +1,8 @@
 using System;
 
+//Copied from:
+//http://guideving.blogspot.de/2010/08/sun-position-in-c.html
+
 public static class SunPosition {
     private const double Deg2Rad = Math.PI / 180.0;
     private const double Rad2Deg = 180.0 / Math.PI;

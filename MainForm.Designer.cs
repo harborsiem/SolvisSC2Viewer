@@ -30,6 +30,8 @@
             this.scrollPanel = new System.Windows.Forms.Panel();
             this.sensorsActors = new SolvisSC2Viewer.SensorsActors();
             this.chartControl = new SolvisSC2Viewer.ChartControl();
+            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip.SuspendLayout();
             this.toolStripContainer.ContentPanel.SuspendLayout();
             this.toolStripContainer.SuspendLayout();
             this.dialogLayout.SuspendLayout();
@@ -38,6 +40,8 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 710);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1008, 22);
@@ -121,6 +125,11 @@
             this.chartControl.TabIndex = 1;
             this.chartControl.TabStop = false;
             // 
+            // statusLabel
+            // 
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(0, 17);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -136,6 +145,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.toolStripContainer.ContentPanel.ResumeLayout(false);
             this.toolStripContainer.ResumeLayout(false);
             this.toolStripContainer.PerformLayout();
@@ -155,6 +166,7 @@
         private System.Windows.Forms.Panel scrollPanel;
         internal SensorsActors sensorsActors;
         internal ChartControl chartControl;
+        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
     }
 }
 

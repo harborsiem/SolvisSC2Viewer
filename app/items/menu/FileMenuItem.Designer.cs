@@ -32,6 +32,7 @@ namespace SolvisSC2Viewer {
             this.separator2 = new System.Windows.Forms.ToolStripSeparator();
             this.separator3 = new System.Windows.Forms.ToolStripSeparator();
             this.separator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.open1DayMode = new System.Windows.Forms.ToolStripMenuItem();
             // 
             // open
             // 
@@ -73,12 +74,19 @@ namespace SolvisSC2Viewer {
             resources.ApplyResources(this.separator4, "separator4");
             this.separator4.Name = "separator4";
             // 
+            // open1DayMode
+            // 
+            resources.ApplyResources(this.open1DayMode, "open1DayMode");
+            this.open1DayMode.CheckOnClick = true;
+            this.open1DayMode.Name = "open1DayMode";
+            // 
             // FileMenuItem
             // 
             resources.ApplyResources(this, "$this");
             this.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.open,
             this.separator1,
+            this.open1DayMode,
             this.separator3,
             this.printPreview,
             this.print,
@@ -97,5 +105,6 @@ namespace SolvisSC2Viewer {
         private System.Windows.Forms.ToolStripSeparator separator2;
         private System.Windows.Forms.ToolStripSeparator separator3;
         private System.Windows.Forms.ToolStripSeparator separator4;
+        private System.Windows.Forms.ToolStripMenuItem open1DayMode;
     }
 }

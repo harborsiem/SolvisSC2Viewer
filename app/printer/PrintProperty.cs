@@ -14,56 +14,70 @@ namespace SolvisSC2Viewer {
         Counting
     }
 
-    class PrintProperty {
+    internal class PrintProperty {
         public PrintCategory PrintCategory { get; private set; }
         public string Category { get; private set; }
         public string DisplayName { get; private set; }
         public string ValueString { get; private set; }
         public string HeatingUser { get; private set; }
 
-        private PrintProperty(Object obj, PropertyInfo info) {
-            Object[] att = info.GetCustomAttributes(typeof(DisplayNameAttribute), true);
-            DisplayName = info.Name;
-            if (att.Length > 0) {
-                DisplayName = ((DisplayNameAttribute)att[0]).DisplayName;
+        private PrintProperty(MetaProp prop, BasicPropertyBag bag) {
+            Attribute[] attributes = prop.Attributes;
+            Attribute att = GetAttribute(attributes, typeof(DisplayNameAttribute));
+            DisplayName = prop.Name;
+            if (att != null) {
+                DisplayName = ((DisplayNameAttribute)att).DisplayName;
             }
-            att = info.GetCustomAttributes(typeof(HeatingUserAttribute), true);
+            att = GetAttribute(attributes, typeof(HeatingUserAttribute));
             HeatingUser = string.Empty;
-            if (att.Length > 0) {
-                HeatingUser = ((HeatingUserAttribute)att[0]).HeatingUser.ToString();
+            if (att != null) {
+                HeatingUser = ((HeatingUserAttribute)att).HeatingUser.ToString();
             }
-            att = info.GetCustomAttributes(typeof(CategoryAttribute), true);
+            att = GetAttribute(attributes, typeof(CategoryAttribute));
             Category = string.Empty;
-            if (att.Length > 0) {
-                Category = ((CategoryAttribute)att[0]).Category;
+            if (att != null) {
+                Category = ((CategoryAttribute)att).Category;
             }
-            switch (Category) {
-                case "Zirkular":
+            SetPrintCategory(Category);
+            object value = bag[prop.Name];
+            SetValueString(value);
+        }
+
+        private static Attribute GetAttribute(Attribute[] attributes, Type type) {
+            for (int i = 0; i < attributes.Length; i++) {
+                if (attributes[i].GetType() == type) {
+                    return attributes[i];
+                }
+            }
+            return null;
+        }
+
+        private void SetPrintCategory(string value) {
+            switch (value) {
+                case CirculationSettings.CategoryCirc:
                     PrintCategory = PrintCategory.Circulation;
                     break;
-                case "Wasser":
+                case WaterSettings.CategoryWater:
                     PrintCategory = PrintCategory.Water;
                     break;
-                case "Heizkreis":
+                case HeatingSettings.CategoryHC:
+                case HeatingSettings.CategoryHeating:
+                case HeatingSettings.CategoryRoomTemp:
+                case HeatingSettings.CategoryDay:
+                case HeatingSettings.CategoryNight:
+                case HeatingSettings.CategoryModulation:
                     PrintCategory = PrintCategory.Heating1;
                     break;
-                case "Raum-Solltemp.":
-                    PrintCategory = PrintCategory.Heating1;
-                    break;
-                case "Tagbetrieb-Solltemp.":
-                    PrintCategory = PrintCategory.Heating1;
-                    break;
-                case "Absenkbetrieb-Solltemp.":
-                    PrintCategory = PrintCategory.Heating1;
-                    break;
-                case "Counting":
+                case CountingSettings.CategoryCount:
                     PrintCategory = PrintCategory.Counting;
                     break;
                 default:
                     PrintCategory = PrintCategory.None;
                     break;
             }
-            Object value = info.GetValue(obj, null);
+        }
+
+        private void SetValueString(object value) {
             if (value is string) {
                 ValueString = (string)value;
             } else if (value is DateTime) {
@@ -73,13 +87,14 @@ namespace SolvisSC2Viewer {
             }
         }
 
-        public static IList<PrintProperty> GetPrintProperties(Object obj) {
+        public static IList<PrintProperty> GetPrintProperties(BasicPropertyBag bag) {
             List<PrintProperty> result = new List<PrintProperty>();
-            Type type = obj.GetType();
-            PropertyInfo[] infos = type.GetProperties();
-            for (int i = 0; i < infos.Length; i++) {
-                PrintProperty item = new PrintProperty(obj, infos[i]);
-                result.Add(item);
+            if (bag != null) {
+                List<MetaProp> properties = bag.Properties;
+                for (int i = 0; i < properties.Count; i++) {
+                    PrintProperty item = new PrintProperty(properties[i], bag);
+                    result.Add(item);
+                }
             }
             return result;
         }

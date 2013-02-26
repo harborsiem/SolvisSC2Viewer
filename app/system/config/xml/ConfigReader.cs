@@ -85,6 +85,21 @@ namespace SolvisSC2Viewer {
                             case ConfigXml.Formula3Tag:
                                 manager.Formula3 = node1.InnerText;
                                 break;
+                            case ConfigXml.Formula4Tag:
+                                manager.Formula4 = node1.InnerText;
+                                break;
+                            case ConfigXml.Formula5Tag:
+                                manager.Formula5 = node1.InnerText;
+                                break;
+                            case ConfigXml.IsExternCodeTag:
+                                manager.IsExternCode = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
+                                break;
+                            case ConfigXml.SolarVSGTag:
+                                manager.FormulaSolarVSG = node1.InnerText;
+                                break;
+                            case ConfigXml.SolarKWTag:
+                                manager.FormulaSolarKW = node1.InnerText;
+                                break;
                             case ConfigXml.SdCardDirTag:
                                 manager.SdCardDir = node1.InnerText;
                                 break;
@@ -93,6 +108,9 @@ namespace SolvisSC2Viewer {
                                 break;
                             case ConfigXml.TimePlanBitmapTag:
                                 manager.TimePlanBitmap = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
+                                break;
+                            case ConfigXml.OneDayModeTag:
+                                manager.OneDayMode = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
                                 break;
                             case ConfigXml.PrototypeTag:
                                 manager.Prototype = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());

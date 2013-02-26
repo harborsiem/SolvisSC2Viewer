@@ -20,7 +20,15 @@ namespace SolvisSC2Viewer {
                 PrintingManager manager = AppManager.MainForm.ChartControl.ChartMain.Printing;
                 manager.PrintDocument.DefaultPageSettings.Landscape = true;
                 manager.PrintDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(39, 39, 39, 39);
-                manager.PrintPreview();
+                PrintPreviewDialog dialog = new PrintPreviewDialog();
+                dialog.ClientSize = new Size(800, 600);
+                dialog.Document = manager.PrintDocument;
+                dialog.Icon = AppManager.IconManager.PrintPreviewIcon;
+
+                dialog.ShowDialog(AppManager.MainForm);
+
+
+                //manager.PrintPreview();
             }
             catch (Exception ex) {
                 AppExtension.PrintStackTrace(ex);

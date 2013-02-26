@@ -118,60 +118,63 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="sdCardInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
   <data name="heatCurve.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 22</value>
   </data>
-  <data name="heatCurve.Text" xml:space="preserve">
-    <value>Heat Curve</value>
+  <data name="parameterList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
   </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 6</value>
+  <data name="configEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
   </data>
   <data name="sensorsCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 22</value>
   </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 6</value>
+  </data>
   <data name="sensorsCheck.Text" xml:space="preserve">
     <value>Sensors Check</value>
   </data>
-  <data name="timePlan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 22</value>
-  </data>
-  <data name="timePlan.Text" xml:space="preserve">
-    <value>Zeitplan</value>
+  <data name="configEditor.Text" xml:space="preserve">
+    <value>Config Editor</value>
   </data>
   <data name="countingList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 22</value>
+    <value>133, 22</value>
   </data>
   <data name="countingList.Text" xml:space="preserve">
-    <value>Zählstand</value>
+    <value>Countings</value>
+  </data>
+  <data name="sdCardInfo.Text" xml:space="preserve">
+    <value>SD-Card Infos</value>
+  </data>
+  <data name="timePlan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="parameterList.Text" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 6</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="heatCurve.Text" xml:space="preserve">
+    <value>Heat Curve</value>
+  </data>
+  <data name="timePlan.Text" xml:space="preserve">
+    <value>Timeplan</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="countingList.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="parameterList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 22</value>
-  </data>
-  <data name="parameterList.Text" xml:space="preserve">
-    <value>Parameter</value>
-  </data>
   <data name="parameterList.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="sdCardInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 22</value>
-  </data>
-  <data name="sdCardInfo.Text" xml:space="preserve">
-    <value>SD-Card Infos</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 6</value>
-  </data>
-  <data name="configEditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 22</value>
-  </data>
-  <data name="configEditor.Text" xml:space="preserve">
-    <value>Config Editor</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -179,7 +182,4 @@
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Extras</value>
-  </data>
 </root>

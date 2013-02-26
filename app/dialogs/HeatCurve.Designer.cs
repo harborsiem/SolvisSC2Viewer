@@ -122,7 +122,7 @@
             chartArea1.AxisY2.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.AxisY2.MajorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea1.AxisY2.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea1.AxisY2.Maximum = 70D;
+            chartArea1.AxisY2.Maximum = 75D;
             chartArea1.AxisY2.Minimum = 15D;
             chartArea1.AxisY2.Title = "Heat flow Temp.";
             chartArea1.AxisY2.TitleAlignment = System.Drawing.StringAlignment.Far;
@@ -192,16 +192,6 @@
             // temperatureUpDown1
             // 
             resources.ApplyResources(this.temperatureUpDown1, "temperatureUpDown1");
-            this.temperatureUpDown1.Maximum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.temperatureUpDown1.Minimum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
             this.temperatureUpDown1.Name = "temperatureUpDown1";
             this.temperatureUpDown1.Value = new decimal(new int[] {
             21,
@@ -267,16 +257,6 @@
             // temperatureUpDown2
             // 
             resources.ApplyResources(this.temperatureUpDown2, "temperatureUpDown2");
-            this.temperatureUpDown2.Maximum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.temperatureUpDown2.Minimum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
             this.temperatureUpDown2.Name = "temperatureUpDown2";
             this.temperatureUpDown2.Value = new decimal(new int[] {
             21,
@@ -342,16 +322,6 @@
             // temperatureUpDown3
             // 
             resources.ApplyResources(this.temperatureUpDown3, "temperatureUpDown3");
-            this.temperatureUpDown3.Maximum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.temperatureUpDown3.Minimum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
             this.temperatureUpDown3.Name = "temperatureUpDown3";
             this.temperatureUpDown3.Value = new decimal(new int[] {
             21,
@@ -368,12 +338,12 @@
             // 
             resources.ApplyResources(this.niveauUpDown3, "niveauUpDown3");
             this.niveauUpDown3.Maximum = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
             this.niveauUpDown3.Minimum = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             -2147483648});

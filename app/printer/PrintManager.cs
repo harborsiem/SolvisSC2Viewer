@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Globalization;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     internal class PrintManager : IDisposable {
@@ -18,6 +20,9 @@ namespace SolvisSC2Viewer {
         private static readonly int PrintRowHeight = regularFont.Height + 3;
         private static int rowsFirstPage;
         private static int rowsNextPages;
+        private static readonly string file = Resources.AllClassesFile;
+        private static readonly string date = Resources.PrintManagerDate;
+        private static readonly string time = Resources.PrintManagerTime;
 
         private Rectangle printArea;
         private StringFormat format;
@@ -36,7 +41,7 @@ namespace SolvisSC2Viewer {
         public PrintManager() {
         }
 
-        public void PrintParameters(IList<PrintProperty> list, DateTime fileDate) {
+        public void PrintParameters(IList<PrintProperty> list, FileInfo fileInfo, string title) {
             PageSettings pageSettings = new PageSettings();
             pageSettings.Margins = new Margins(78, 59, 59, 59); //(20, 15, 15, 15)mm
             pageSettings.Landscape = false;
@@ -45,10 +50,10 @@ namespace SolvisSC2Viewer {
             printDocument.PrintPage += PrintAll;
             printDocument.EndPrint += EndPrint;
             printDocument.DefaultPageSettings = pageSettings;
-            parameterFileName = "paramact.txt";
-            this.parameterFileDate = fileDate;
+            parameterFileName = fileInfo.Name;
+            this.parameterFileDate = fileInfo.LastWriteTime;
             parameterList = list;
-            printTitle = "Parameter";
+            printTitle = title;
         }
 
         public void Dispose() {
@@ -166,7 +171,7 @@ namespace SolvisSC2Viewer {
                 boldFont, Brushes.Black, printArea, format);
             printArea.Y += boldFont.Height;
 
-            graphics.DrawString("** File : " + parameterFileName,
+            graphics.DrawString("** " + file + " : " + parameterFileName,
                 boldFont, Brushes.Black, printArea, format);
             printArea.Y += boldFont.Height;
 
@@ -174,7 +179,7 @@ namespace SolvisSC2Viewer {
                 boldFont, Brushes.Black, printArea, format);
             printArea.Y += boldFont.Height;
 
-            graphics.DrawString("** Date : " + fileDate.ToShortDateString() + "        Time : " + fileDate.ToLongTimeString(),
+            graphics.DrawString("** " + date + " : " + fileDate.ToShortDateString() + "        " + time + " : " + fileDate.ToLongTimeString(),
                 boldFont, Brushes.Black, printArea, format);
             printArea.Y += boldFont.Height;
 

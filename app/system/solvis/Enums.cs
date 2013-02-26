@@ -5,32 +5,32 @@ using System.Text;
 
 namespace SolvisSC2Viewer {
     [Flags]
-    internal enum CircMode {
+    public enum CircMode {
         Aus,
         Pulse = 1,
         Time = 2,
     }
 
-    internal enum WaterMode { //?
+    public enum WaterMode { //?
         Aus,
         Ein,
         Alt,
     }
 
-    internal enum HeatingCircuitMode { //?
+    public enum HeatingCircuitMode { //?
         Absenk, Tag, Auto, unknown1, unknown2, Standby = 5, unknown3
     }
 
-    internal enum Mode { //?
+    public enum Mode { //?
         Aus,
         Auto, Ein,
     }
 
-    internal enum OnOffSwitch {
+    public enum OnOffSwitch {
         Aus, Ein
     }
 
-    internal enum FlowTemperatureMode {
+    public enum FlowTemperatureMode {
         Kurve, Fixed 
     }
 
@@ -38,6 +38,12 @@ namespace SolvisSC2Viewer {
     public enum SuppressMask {
         HK2 = 2,
         HK3 = 4,
-        DLad = 32 // Speicher Durchladung
+        Eco = 32
+    }
+
+    public enum S01S04State {
+        None,
+        S01S04Ok,
+        S01S04InterChanged
     }
 }

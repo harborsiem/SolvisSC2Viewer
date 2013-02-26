@@ -5,47 +5,48 @@ using System.Text;
 using System.ComponentModel;
 
 namespace SolvisSC2Viewer {
-    class CountingSettings {
-        private const string Hours = " Std.";
+    public class CountingSettings {
+
+        public const string CategoryCount = "Counting";
 
         public CountingSettings(IList<int> list) {
-            SolarPumpSpan = list[0].ToString() + Hours;
-            BurnerSpan = list[1].ToString() + Hours;
+            SolarPumpSpan = list[0].ToString() + Unit.Hours;
+            BurnerSpan = list[1].ToString() + Unit.Hours;
             BurnerStarts = list[2];
             //@Todo: 3 weitere Werte: Bedeutung ?
-            Unknown1 = list[3];
-            Unknown2 = list[4];
-            Unknown3 = list[5];
+            Value4 = list[3];
+            Value5 = list[4];
+            Value6 = list[5];
         }
 
         [DisplayName("Laufzeit Solarpumpe")]
-        [Category("Counting")]
+        [Category(CategoryCount)]
         [ReadOnly(true)]
         public string SolarPumpSpan { get; set; }
 
         [DisplayName("Laufzeit Brenner")]
-        [Category("Counting")]
+        [Category(CategoryCount)]
         [ReadOnly(true)]
         public string BurnerSpan { get; set; }
 
         [DisplayName("Starts Brenner")]
-        [Category("Counting")]
+        [Category(CategoryCount)]
         [ReadOnly(true)]
         public int BurnerStarts { get; set; }
 
-        [DisplayName("Unbekannt 1")]
-        [Category("Counting")]
+        [DisplayName("Wert 4")]
+        [Category(CategoryCount)]
         [ReadOnly(true)]
-        public int Unknown1 { get; set; }
+        public int Value4 { get; set; }
 
-        [DisplayName("Unbekannt 2")]
-        [Category("Counting")]
+        [DisplayName("Wert 5")]
+        [Category(CategoryCount)]
         [ReadOnly(true)]
-        public int Unknown2 { get; set; }
+        public int Value5 { get; set; }
 
-        [DisplayName("Unbekannt 3")]
-        [Category("Counting")]
+        [DisplayName("Wert 6")]
+        [Category(CategoryCount)]
         [ReadOnly(true)]
-        public int Unknown3 { get; set; }
+        public int Value6 { get; set; }
     }
 }

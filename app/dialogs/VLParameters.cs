@@ -11,6 +11,8 @@ namespace SolvisSC2Viewer {
     public partial class VLParameters : BaseForm {
         public VLParameters() {
             InitializeComponent();
+            temperatureUpDown.Maximum = HeatCurve.SetTemperatureMaximum;
+            temperatureUpDown.Minimum = HeatCurve.SetTemperatureMinimum;
             temperatureUpDown.Value = (decimal)RowValues.Temperature;
             niveauUpDown.Value = (decimal)RowValues.Niveau;
             gradientUpDown.Increment = HeatCurve.GradientIncrement;

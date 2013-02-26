@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,111 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AllClassesFile" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="CalculatorProxyRuntimeError" xml:space="preserve">
+    <value>Formula has runtime error, =&gt; see StackTrace.txt</value>
+  </data>
+  <data name="ChartControlNewDay" xml:space="preserve">
+    <value>new Day</value>
+  </data>
+  <data name="CodeBuilderCompileError" xml:space="preserve">
+    <value>Compile Error: </value>
+  </data>
+  <data name="CodeBuilderFreeFormulas" xml:space="preserve">
+    <value>Free formulas</value>
+  </data>
+  <data name="ConfigEditorSearch" xml:space="preserve">
+    <value>Search directory for file zeitplan.txt</value>
+  </data>
+  <data name="ConfigManagerBurnerKW" xml:space="preserve">
+    <value>Burner KW</value>
+  </data>
+  <data name="ConfigManagerFlowHC1" xml:space="preserve">
+    <value>Flow HC1 (act. - set)</value>
+  </data>
+  <data name="ConfigManagerFormula" xml:space="preserve">
+    <value>Formula</value>
+  </data>
+  <data name="ConfigManagerIdealFormula" xml:space="preserve">
+    <value>Ideal Formula</value>
+  </data>
+  <data name="ConfigManagerSolarKW" xml:space="preserve">
+    <value>Solar KW</value>
+  </data>
+  <data name="ConfigManagerSolvisFormula" xml:space="preserve">
+    <value>Solvis Formula</value>
+  </data>
+  <data name="ConfigManagerSunPosition" xml:space="preserve">
+    <value>SunPosition</value>
+  </data>
+  <data name="CountingListActionCountings" xml:space="preserve">
+    <value>Countings</value>
+  </data>
+  <data name="DataManagerSolvisFileError" xml:space="preserve">
+    <value>Solvis file error</value>
+  </data>
+  <data name="FileToInt32ListError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="HeatCurveAxisXTitle" xml:space="preserve">
+    <value>Outdoor temp.</value>
+  </data>
+  <data name="HeatCurveAxisYTitle" xml:space="preserve">
+    <value>Flow temp.</value>
+  </data>
+  <data name="HeatCurveRunCurve" xml:space="preserve">
+    <value>Run of the curve</value>
+  </data>
+  <data name="ParameterListActionParameters" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="PrintManagerDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="PrintManagerTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="SensorsCheckActionInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="SensorsCheckActionSensorsNotOK" xml:space="preserve">
+    <value>Temperature sensors S01 and S04 inverted</value>
+  </data>
+  <data name="SensorsCheckActionSensorsOK" xml:space="preserve">
+    <value>Temperature sensors S01 and S04 Ok</value>
+  </data>
+  <data name="TimeOverviewCirc" xml:space="preserve">
+    <value>Circ</value>
+  </data>
+  <data name="TimeOverviewFrom" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="TimeOverviewHC" xml:space="preserve">
+    <value>HC</value>
+  </data>
+  <data name="TimeOverviewTimeRaster" xml:space="preserve">
+    <value>TimeRaster</value>
+  </data>
+  <data name="TimeOverviewTitle" xml:space="preserve">
+    <value>TimeOverview</value>
+  </data>
+  <data name="TimeOverviewTo" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="UnitDays" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="UnitHours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="UnitMinutes" xml:space="preserve">
+    <value>Min.</value>
+  </data>
 </root>

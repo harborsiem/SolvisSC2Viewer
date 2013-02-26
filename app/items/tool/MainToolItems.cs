@@ -7,6 +7,9 @@ using SystemX.Windows.Forms;
 namespace SolvisSC2Viewer {
     public partial class MainToolItems : ToolStrip, IItemBase {
         public const String Name0 = "file.items";
+        private const int FromDateTimeIndex = 4;
+        private const int ToDateTimeIndex = FromDateTimeIndex + 2;
+        private const int OverlapMaxDateMinutes = 3;
         internal event EventHandler<DateEventArgs> DateEvent;
         private ToolStripDateTimePicker fromDateTime;
         private ToolStripDateTimePicker toDateTime;
@@ -29,8 +32,8 @@ namespace SolvisSC2Viewer {
             toDateTime.Name = "toDateTime";
             toDateTime.Size = new System.Drawing.Size(80, 23);
             toDateTime.Value = now;
-            this.Items.Insert(4, fromDateTime);
-            this.Items.Insert(6, toDateTime);
+            this.Items.Insert(FromDateTimeIndex, fromDateTime);
+            this.Items.Insert(ToDateTimeIndex, toDateTime);
             minDate = now;
             maxDate = now;
             actMinDate = now;
@@ -48,6 +51,13 @@ namespace SolvisSC2Viewer {
             } else {
                 actMaxDate = e.NewDateTime;
             }
+            if (actMaxDate == maxDate) {
+                nextDay.Enabled = false;
+                lastDay.Enabled = false;
+            } else {
+                nextDay.Enabled = true;
+                lastDay.Enabled = true;
+            }
             if (!newMinMaxDate) {
                 DateEventArgs args = new DateEventArgs(fromDateTime.Value, toDateTime.Value);
                 OnDateChanged(args);
@@ -64,6 +74,13 @@ namespace SolvisSC2Viewer {
             } else {
                 actMinDate = e.NewDateTime;
             }
+            if (actMinDate == minDate) {
+                previousDay.Enabled = false;
+                firstDay.Enabled = false;
+            } else {
+                previousDay.Enabled = true;
+                firstDay.Enabled = true;
+            }
             if (!newMinMaxDate) {
                 DateEventArgs args = new DateEventArgs(fromDateTime.Value, toDateTime.Value);
                 OnDateChanged(args);
@@ -71,10 +88,7 @@ namespace SolvisSC2Viewer {
             newMinMaxDate = false;
         }
 
-        //int eventCount;
-
         private void OnDateChanged(DateEventArgs e) {
-            //eventCount++;
             EventHandler<DateEventArgs> handler = DateEvent;
             if (handler != null) {
                 handler(this, e);
@@ -117,13 +131,12 @@ namespace SolvisSC2Viewer {
             }
         }
 
-        private void PreviousWeek_Click(object sender, EventArgs e) {
-            //TimeSpan delta = new TimeSpan(7, 0, 0, 0);
-            newMinMaxDate = false;
+        private void PreviousFile_Click(object sender, EventArgs e) {
+            AppManager.SolvisFileManager.PreviousFileClick();
         }
 
-        private void NextWeek_Click(object sender, EventArgs e) {
-            //TimeSpan delta = new TimeSpan(7, 0, 0, 0);
+        private void NextFile_Click(object sender, EventArgs e) {
+            AppManager.SolvisFileManager.NextFileClick();
         }
 
         private void crosshair_Click(object sender, EventArgs e) {
@@ -135,15 +148,34 @@ namespace SolvisSC2Viewer {
             }
         }
 
+        public void SetFileItemsVisible(bool visible) {
+            separator4.Visible = visible;
+            previousFile.Visible = visible;
+            nextFile.Visible = visible;
+        }
+
+        public void SetFileItemsEnabled(bool previousEnabled, bool nextEnabled) {
+            previousFile.Enabled = previousEnabled;
+            nextFile.Enabled = nextEnabled;
+        }
+
+        public void SetDayItemsDisabled() {
+            firstDay.Enabled = false;
+            lastDay.Enabled = false;
+            previousDay.Enabled = false;
+            nextDay.Enabled = false;
+        }
+
         public void Init() {
+            SetDayItemsDisabled();
             this.open.Click += AppManager.GetAction(OpenFileAction.Name).ProcessEvent;
             this.print.Click += AppManager.GetAction(PrintAction.Name).ProcessEvent;
             this.firstDay.Click += FirstDay_Click;
             this.lastDay.Click += LastDay_Click;
             this.previousDay.Click += PreviousDay_Click;
             this.nextDay.Click += NextDay_Click;
-            this.previousWeek.Click += PreviousWeek_Click;
-            this.nextWeek.Click += NextWeek_Click;
+            this.previousFile.Click += PreviousFile_Click;
+            this.nextFile.Click += NextFile_Click;
             this.crosshair.Click += crosshair_Click;
 
             //
@@ -152,7 +184,7 @@ namespace SolvisSC2Viewer {
         }
 
         public void UpdateItems() {
-            this.print.Enabled = true;
+            this.print.Enabled = !AppManager.DataManager.IsSolvisListEmpty;
         }
 
         public void LoadProperties() {
@@ -163,32 +195,43 @@ namespace SolvisSC2Viewer {
             this.open.Image = iconManager.FileOpen;
             this.print.Image = iconManager.Print;
             this.firstDay.Image = iconManager.FirstDay;
-            this.previousWeek.Image = iconManager.PreviousWeek;
+            this.previousFile.Image = iconManager.PreviousFile;
             this.previousDay.Image = iconManager.PreviousDay;
             this.nextDay.Image = iconManager.NextDay;
-            this.nextWeek.Image = iconManager.NextWeek;
+            this.nextFile.Image = iconManager.NextFile;
             this.lastDay.Image = iconManager.LastDay;
             this.crosshair.Image = iconManager.CrossHair;
         }
 
         public void SetMinMaxDate(DateTime min, DateTime max) {
-            if (fromDateTime.Value != min && toDateTime.Value != max) {
+            DateTime lMin = new DateTime(min.Year, min.Month, min.Day);
+            DateTime lMax = new DateTime(max.Year, max.Month, max.Day, 0, OverlapMaxDateMinutes, 0);
+            if (fromDateTime.Value != lMin && toDateTime.Value != lMax) {
                 newMinMaxDate = true;
             }
-            minDate = min;
-            maxDate = max;
-            actMinDate = min;
-            actMaxDate = max;
+            if (max > lMax) {
+                lMax = lMax.AddDays(1);
+            }
+            minDate = lMin;
+            maxDate = lMax;
+            actMinDate = lMin;
+            actMaxDate = lMax;
+            if (AppManager.ConfigManager.OneDayMode) {
+                DateTime tryActMaxDate = actMinDate.Add(new TimeSpan(1, 0, OverlapMaxDateMinutes, 0));
+                if (tryActMaxDate < actMaxDate) {
+                    actMaxDate = tryActMaxDate;
+                }
+            }
             fromDateTime.MinDate = DateTimePicker.MinimumDateTime;
             fromDateTime.MaxDate = DateTimePicker.MaximumDateTime;
-            fromDateTime.Value = min;
-            //fromDateTime.MinDate = min;
-            //fromDateTime.MaxDate = max;
+            fromDateTime.Value = actMinDate;
+            //fromDateTime.MinDate = lMin;
+            //fromDateTime.MaxDate = lMax;
             toDateTime.MinDate = DateTimePicker.MinimumDateTime;
             toDateTime.MaxDate = DateTimePicker.MaximumDateTime;
-            toDateTime.Value = max;
-            //toDateTime.MinDate = min;
-            //toDateTime.MaxDate = max;
+            toDateTime.Value = actMaxDate;
+            //toDateTime.MinDate = lMin;
+            //toDateTime.MaxDate = lMax;
         }
     }
 }

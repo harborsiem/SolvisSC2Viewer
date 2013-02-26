@@ -95,16 +95,6 @@
             // temperatureUpDown
             // 
             resources.ApplyResources(this.temperatureUpDown, "temperatureUpDown");
-            this.temperatureUpDown.Maximum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.temperatureUpDown.Minimum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
             this.temperatureUpDown.Name = "temperatureUpDown";
             this.temperatureUpDown.Value = new decimal(new int[] {
             21,

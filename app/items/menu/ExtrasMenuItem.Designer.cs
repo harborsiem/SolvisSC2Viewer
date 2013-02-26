@@ -36,55 +36,56 @@ namespace SolvisSC2Viewer {
             // 
             // heatCurve
             // 
-            this.heatCurve.Name = "heatCurve";
             resources.ApplyResources(this.heatCurve, "heatCurve");
+            this.heatCurve.Name = "heatCurve";
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // sensorsCheck
             // 
-            this.sensorsCheck.Name = "sensorsCheck";
             resources.ApplyResources(this.sensorsCheck, "sensorsCheck");
+            this.sensorsCheck.Name = "sensorsCheck";
             // 
             // sdCardInfo
             // 
+            resources.ApplyResources(this.sdCardInfo, "sdCardInfo");
             this.sdCardInfo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.timePlan,
             this.countingList,
             this.parameterList});
             this.sdCardInfo.Name = "sdCardInfo";
-            resources.ApplyResources(this.sdCardInfo, "sdCardInfo");
             // 
             // timePlan
             // 
-            this.timePlan.Name = "timePlan";
             resources.ApplyResources(this.timePlan, "timePlan");
+            this.timePlan.Name = "timePlan";
             // 
             // countingList
             // 
-            this.countingList.Name = "countingList";
             resources.ApplyResources(this.countingList, "countingList");
+            this.countingList.Name = "countingList";
             // 
             // parameterList
             // 
-            this.parameterList.Name = "parameterList";
             resources.ApplyResources(this.parameterList, "parameterList");
+            this.parameterList.Name = "parameterList";
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // configEditor
             // 
-            this.configEditor.Name = "configEditor";
             resources.ApplyResources(this.configEditor, "configEditor");
+            this.configEditor.Name = "configEditor";
             // 
             // ExtrasMenuItem
             // 
+            resources.ApplyResources(this, "$this");
             this.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.heatCurve,
             this.toolStripSeparator1,
@@ -92,7 +93,6 @@ namespace SolvisSC2Viewer {
             this.sdCardInfo,
             this.toolStripSeparator2,
             this.configEditor});
-            resources.ApplyResources(this, "$this");
 
         }
 

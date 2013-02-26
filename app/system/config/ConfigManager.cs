@@ -6,22 +6,27 @@ using System.IO;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Diagnostics;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     internal class ConfigManager {
         public static readonly string[] DefaultOptionsToolTip = 
-        {   "Brenner kW",
-            "Solar kW",
-            "Sonnenstand",
-            "Vorlauf HK1 (Ist - Soll), Ideale Formel",
-            "Vorlauf HK1 (Ist - Soll), Solvis Formel",
-            "Formel 1",
-            "Formel 2",
-            "Formel 3",
-        };
-        public static string ConfigDir { get; set; }
+        {   Resources.ConfigManagerBurnerKW,
+            Resources.ConfigManagerSolarKW,
+            Resources.ConfigManagerSunPosition,
+            Resources.ConfigManagerFlowHC1 + ", " + Resources.ConfigManagerIdealFormula,
+            Resources.ConfigManagerFlowHC1 + ", " + Resources.ConfigManagerSolvisFormula,
+            Resources.ConfigManagerFormula + " 1",
+            Resources.ConfigManagerFormula + " 2",
+            Resources.ConfigManagerFormula + " 3",
+            Resources.ConfigManagerFormula + " 4",
+            Resources.ConfigManagerFormula + " 5",
+        }; //@Language Resource
+        public static string ConfigDir { get; private set; }
+        public static string DocumentsDir { get; private set; }
         private static string appConfigFile;
         private static string userConfigFile;
+        private static bool userConfigExists;
         public IDictionary<String, ConfigData> ActorConfigValues { get; private set; }
         public IDictionary<String, ConfigData> SensorConfigValues { get; private set; }
         public IDictionary<String, ConfigData> OptionConfigValues { get; private set; }
@@ -36,6 +41,7 @@ namespace SolvisSC2Viewer {
         public bool TimePlanBitmap { get; set; }
         public bool SuperUser { get; set; }
         public bool Prototype { get; set; }
+        public bool OneDayMode { get; set; }
         //HeatCurve parameter
         public static int Temperature { get; set; }
         public static int Niveau { get; set; }
@@ -48,6 +54,11 @@ namespace SolvisSC2Viewer {
         public string Formula1 { get; set; }
         public string Formula2 { get; set; }
         public string Formula3 { get; set; }
+        public string Formula4 { get; set; }
+        public string Formula5 { get; set; }
+        public string FormulaSolarVSG { get; set; }
+        public string FormulaSolarKW { get; set; }
+        public bool IsExternCode { get; set; }
         public bool AppConfigChanged { get; set; }
 
         public ConfigManager() {
@@ -70,7 +81,9 @@ namespace SolvisSC2Viewer {
             if (!Directory.Exists(ConfigDir)) {
                 Directory.CreateDirectory(ConfigDir);
             }
+            DocumentsDir = GetDocumentsDirectory();
             userConfigFile = ConfigDir + Path.DirectorySeparatorChar + "User.config";
+            userConfigExists = File.Exists(userConfigFile);
             appConfigFile = ConfigDir + Path.DirectorySeparatorChar + "App.config"; //@Todo
         }
 
@@ -80,7 +93,7 @@ namespace SolvisSC2Viewer {
 #if DEBUG
             SuperUser = true;
 #endif
-            new CodeBuilder().Calculate(Formula1, Formula2, Formula3);
+            CreateFormulas();
             bool newVersionDetected = Application.ProductVersion.CompareTo(Version) == 1;
             if (newVersionDetected) {
                 ParameterUpdateForNewVersion();
@@ -92,22 +105,24 @@ namespace SolvisSC2Viewer {
         }
 
         private void ParameterUpdateForNewVersion() {
-            string lastVersion = Version;
-            string destFileName = Path.GetDirectoryName(userConfigFile) + Path.DirectorySeparatorChar + "User" + lastVersion + ".Config";
-            if (!File.Exists(destFileName)) {
-                //File.Delete(destFileName);
-                File.Move(userConfigFile, destFileName);
-            }
-            if (lastVersion == "1.0.0.0") {
-                IDictionary<String, ConfigData> data = ActorConfigValues;
-                ActorConfigValues = GetDefault(ActorConfigDefault);
-                UpdateParameters(data, ActorConfigValues, false);
-                data = SensorConfigValues;
-                SensorConfigValues = GetDefault(SensorConfigDefault);
-                UpdateParameters(data, SensorConfigValues, false);
-                data = OptionConfigValues;
-                OptionConfigValues = GetDefault(OptionConfigDefault);
-                UpdateParameters(data, OptionConfigValues, true);
+            if (userConfigExists) {
+                string lastVersion = Version;
+                string destFileName = Path.GetDirectoryName(userConfigFile) + Path.DirectorySeparatorChar + "User" + lastVersion + ".Config";
+                if (!File.Exists(destFileName)) {
+                    //File.Delete(destFileName);
+                    File.Move(userConfigFile, destFileName);
+                }
+                if (lastVersion == "1.0.0.0") {
+                    IDictionary<String, ConfigData> data = ActorConfigValues;
+                    ActorConfigValues = GetDefault(ActorConfigDefault);
+                    UpdateParameters(data, ActorConfigValues, false);
+                    data = SensorConfigValues;
+                    SensorConfigValues = GetDefault(SensorConfigDefault);
+                    UpdateParameters(data, SensorConfigValues, false);
+                    data = OptionConfigValues;
+                    OptionConfigValues = GetDefault(OptionConfigDefault);
+                    UpdateParameters(data, OptionConfigValues, true);
+                }
             }
             Version = Application.ProductVersion;
             AppConfigChanged = true;
@@ -142,6 +157,8 @@ namespace SolvisSC2Viewer {
             DefaultParameters[ConfigXml.TimePlanSuppressMaskTag] = 38;
             DefaultParameters[ConfigXml.TimePlanBitmapTag] = false;
             DefaultParameters[ConfigXml.PrototypeTag] = false;
+            DefaultParameters[ConfigXml.OneDayModeTag] = false;
+            DefaultParameters[ConfigXml.IsExternCodeTag] = false;
         }
 
         public void UpdateMainForm() {
@@ -151,6 +168,24 @@ namespace SolvisSC2Viewer {
             AppManager.MainForm.UpdateSeriesColors();
             AppManager.DataManager.UpdateSeries();
             AppManager.MainForm.UpdateToolTips();
+            AppManager.ItemManager.UpdateItems();
+        }
+
+        private void CreateFormulas() {
+            if (string.IsNullOrWhiteSpace(Formula1)) {
+                if (ExternCode.MakeProxy()) {
+                    return;
+                }
+            }
+            Dictionary<FreeFormulas, string> formulas = new Dictionary<FreeFormulas, string>();
+            formulas.Add(FreeFormulas.Formula1, Formula1);
+            formulas.Add(FreeFormulas.Formula2, Formula2);
+            formulas.Add(FreeFormulas.Formula3, Formula3);
+            formulas.Add(FreeFormulas.Formula4, Formula4);
+            formulas.Add(FreeFormulas.Formula5, Formula5);
+            formulas.Add(FreeFormulas.SolarVSG, FormulaSolarVSG);
+            formulas.Add(FreeFormulas.SolarKW, FormulaSolarKW);
+            new CodeBuilder().Calculate(formulas);
         }
 
         private static Color GetColor(GroupIdent ident, int index) {
@@ -186,6 +221,7 @@ namespace SolvisSC2Viewer {
             Niveau = (int)DefaultParameters[ConfigXml.NiveauTag];
             Gradient = (double)DefaultParameters[ConfigXml.GradientTag];
             Prototype = (bool)DefaultParameters[ConfigXml.PrototypeTag];
+            IsExternCode = (bool)DefaultParameters[ConfigXml.IsExternCodeTag];
         }
 
         private void SetDefaults() {
@@ -231,15 +267,17 @@ namespace SolvisSC2Viewer {
         }
 
         public void WriteConfig() {
-            if (AppConfigChanged) {
+            if (AppConfigChanged || userConfigExists == false) {
                 ConfigWriter writer = new ConfigWriter(this);
                 writer.Write(userConfigFile);
             }
         }
 
         private void ReadConfig() {
-            ConfigReader reader = new ConfigReader(this);
-            reader.Parse(userConfigFile);
+            if (userConfigExists) {
+                ConfigReader reader = new ConfigReader(this);
+                reader.Parse(userConfigFile);
+            }
             if (ActorConfigValues.Count == 0) {
                 ActorConfigValues = GetDefault(ActorConfigDefault);
             }
@@ -383,5 +421,14 @@ namespace SolvisSC2Viewer {
         public static string GetColorString(Color color) {
             return color.R + "," + color.G + "," + color.B;
         }
+
+        private static string GetDocumentsDirectory() {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), MainForm.ConfigPath);
+            if (!Directory.Exists(path)) {
+                Directory.CreateDirectory(path);
+            }
+            return path;
+        }
+
     }
 }

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     public class FileToInt32List {
         public IList<int> ParamList { get; private set; }
         public bool Empty { get; private set; }
-        public DateTime DateTime { get; private set; }
+        public FileInfo FileInfo { get; private set; }
 
         public FileToInt32List(string path, string fileName) {
             bool error = false;
@@ -18,8 +19,9 @@ namespace SolvisSC2Viewer {
             if (Directory.Exists(path)) {
                 string filePath = Path.Combine(path, fileName);
                 if (File.Exists(filePath)) {
+                    FileInfo = new FileInfo(filePath);
                     FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read);
-                    DateTime = File.GetLastWriteTime(filePath);
+                    //DateTime = File.GetLastWriteTime(filePath);
                     StreamReader reader = new StreamReader(stream);
                     try {
                         while (!reader.EndOfStream) {
@@ -47,8 +49,8 @@ namespace SolvisSC2Viewer {
             }
         }
 
-        private void Error(string fileName) {
-            MessageBox.Show("Datei: " + fileName, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private static void Error(string fileName) {
+            MessageBox.Show(Resources.AllClassesFile + ": " + fileName, Resources.FileToInt32ListError, MessageBoxButtons.OK, MessageBoxIcon.Error); //@Language Resource
         }
     }
 }

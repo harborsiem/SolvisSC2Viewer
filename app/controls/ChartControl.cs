@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     public partial class ChartControl : UserControl {
+        private double resetZoomInterval = 6D;
+        private double resetZoomAxisInterval = 1D;
 
         public ChartControl() {
             InitializeComponent();
+            chartMain.ChartAreas["ChartArea1"].AxisX.StripLines[0].Text = Resources.ChartControlNewDay; //@Language Resource
             chartMain.AxisViewChanged += new EventHandler<ViewEventArgs>(ChartMain_AxisViewChanged);
         }
 
@@ -20,40 +24,49 @@ namespace SolvisSC2Viewer {
             get { return chartMain; }
         }
 
-        private static void CalculateLabelInterval(Axis axis) {
-            double diff = axis.ScaleView.ViewMaximum - axis.ScaleView.ViewMinimum;
-            if (diff > 1.03) { // > 1 day
-                axis.LabelStyle.Interval = 6;
-                axis.LabelStyle.IntervalType = DateTimeIntervalType.Hours;
+        private static void CalculateLabelInterval(Axis axisX1) {
+            double diff = axisX1.ScaleView.ViewMaximum - axisX1.ScaleView.ViewMinimum;
+            if (diff > 7.03) { // > 7 days
+                axisX1.Interval = 6;
+                axisX1.LabelStyle.Interval = 24;
+                axisX1.LabelStyle.IntervalType = DateTimeIntervalType.Hours;
+            } else if (diff > 1.03) { // > 1 day
+                axisX1.Interval = 1;
+                axisX1.LabelStyle.Interval = 6;
+                axisX1.LabelStyle.IntervalType = DateTimeIntervalType.Hours;
             } else if (diff > 0.25) { // 24 hours > diff > 6 hours 
-                axis.LabelStyle.Interval = 1;
-                axis.LabelStyle.IntervalType = DateTimeIntervalType.Hours;
+                axisX1.Interval = 1;
+                axisX1.LabelStyle.Interval = 1;
+                axisX1.LabelStyle.IntervalType = DateTimeIntervalType.Hours;
             } else if (diff > 0.085) { // 6 hours > diff > 2 hours 
-                axis.LabelStyle.Interval = 15;
-                axis.LabelStyle.IntervalType = DateTimeIntervalType.Minutes;
+                axisX1.Interval = 1;
+                axisX1.LabelStyle.Interval = 15;
+                axisX1.LabelStyle.IntervalType = DateTimeIntervalType.Minutes;
             } else { // diff <= 2 hours 
-                axis.LabelStyle.Interval = 5;
-                axis.LabelStyle.IntervalType = DateTimeIntervalType.Minutes;
+                axisX1.Interval = 1;
+                axisX1.LabelStyle.Interval = 5;
+                axisX1.LabelStyle.IntervalType = DateTimeIntervalType.Minutes;
             }
         }
 
         public void ResetZoom() {
             chartMain.SuspendLayout();
-            Axis axisX = chartMain.ChartAreas["ChartArea1"].AxisX;
-            axisX.LabelStyle.Angle = -90;
-            if (axisX.ScaleView.IsZoomed) {
-                ResetZoom(axisX);
-                axisX.ScaleView.ZoomReset(100);
+            Axis axisX1 = chartMain.ChartAreas["ChartArea1"].AxisX;
+            axisX1.LabelStyle.Angle = -90;
+            if (axisX1.ScaleView.IsZoomed) {
+                ResetZoom(axisX1);
+                axisX1.ScaleView.ZoomReset(100);
             }
             chartMain.ResumeLayout();
         }
 
-        private void ResetZoom(Axis axisX) {
+        private void ResetZoom(Axis axisX1) {
             chartMain.ChartAreas["ChartArea2"].AxisX.MinorGrid.Enabled = false;
-            axisX.MinorGrid.Enabled = false;
-            axisX.LabelStyle.Angle = -90;
-            axisX.LabelStyle.Interval = 6;
-            axisX.LabelStyle.IntervalType = DateTimeIntervalType.Hours;
+            axisX1.MinorGrid.Enabled = false;
+            axisX1.LabelStyle.Angle = -90;
+            axisX1.Interval = resetZoomAxisInterval;
+            axisX1.LabelStyle.Interval = resetZoomInterval;
+            axisX1.LabelStyle.IntervalType = DateTimeIntervalType.Hours;
         }
 
         public void SetCursorCrossHairState() {
@@ -92,6 +105,28 @@ namespace SolvisSC2Viewer {
             cursorY2.IsUserEnabled = false;
             cursorY2.LineWidth = 0;
             chartMain.ResumeLayout();
+        }
+
+        public void SetIntervals(TimeSpan delta) {
+            Axis axisX1 = chartMain.ChartAreas["ChartArea1"].AxisX;
+            Axis axisX2 = chartMain.ChartAreas["ChartArea2"].AxisX;
+            if (delta <= new TimeSpan(7, 0, 3, 0)) {
+                axisX1.MajorGrid.Interval = 6D;
+                axisX1.LabelStyle.Interval = 6D;
+                axisX2.MajorGrid.Interval = 6D;
+                axisX2.LabelStyle.Interval = 6D;
+                axisX1.Interval = 1D;
+                resetZoomInterval = 6D;
+                resetZoomAxisInterval = 1D;
+            } else {
+                axisX1.MajorGrid.Interval = 24D;
+                axisX1.LabelStyle.Interval = 24D;
+                axisX2.MajorGrid.Interval = 24D;
+                axisX2.LabelStyle.Interval = 24D;
+                axisX1.Interval = 6D;
+                resetZoomInterval = 24D;
+                resetZoomAxisInterval = 6D;
+            }
         }
 
         private void ChartMain_AxisViewChanged(object sender, ViewEventArgs e) {
