@@ -1,10 +1,10 @@
 SolvisSC2Viewer is an Open Source program written in C#.
 
-SolvisSC2Viewer wertet die Log-Dateien der Solvis Heizung aus und stellt die Werte grafisch dar.
-Als Extra wird die Heizkurve sichtbar gemacht.
-Eine Beschreibung zum Einstellen der Heizkurve und weiterer Parameter ist in der Dokumentation enthalten.
-Die Zeiteinstellungen (Zeitplan) werden tabellarisch  dargestellt.
+SolvisSC2Viewer interpret the Logfiles of the "Solvis Heating" and shows values in a chart.
+You can also see the "Flow curve" in a different chart.
+A description to setup the flow curve and further parameters you can see in documentation.
+The Timeplan is in tabulate form.
 
-Copyright (C) 2012 Hartmut Borkenhagen
+Copyright (C) 2012, 2013 Hartmut Borkenhagen
 
 

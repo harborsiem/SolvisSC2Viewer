@@ -37,32 +37,33 @@
             resources.ApplyResources(this.heatingPropertyGrid, "heatingPropertyGrid");
             this.heatingPropertyGrid.Name = "heatingPropertyGrid";
             this.heatingPropertyGrid.PropertySort = System.Windows.Forms.PropertySort.NoSort;
+            this.heatingPropertyGrid.ToolbarVisible = false;
             // 
             // menuStrip
             // 
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.printHeadItem});
-            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
             // 
             // printHeadItem
             // 
+            resources.ApplyResources(this.printHeadItem, "printHeadItem");
             this.printHeadItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.printPreviewItem,
             this.printItem});
             this.printHeadItem.Name = "printHeadItem";
-            resources.ApplyResources(this.printHeadItem, "printHeadItem");
             // 
             // printPreviewItem
             // 
-            this.printPreviewItem.Name = "printPreviewItem";
             resources.ApplyResources(this.printPreviewItem, "printPreviewItem");
+            this.printPreviewItem.Name = "printPreviewItem";
             this.printPreviewItem.Click += new System.EventHandler(this.printPreviewItem_Click);
             // 
             // printItem
             // 
-            this.printItem.Name = "printItem";
             resources.ApplyResources(this.printItem, "printItem");
+            this.printItem.Name = "printItem";
             this.printItem.Click += new System.EventHandler(this.printItem_Click);
             // 
             // PropertiesForm

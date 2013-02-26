@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +20,109 @@ namespace SolvisSC2Viewer {
             points.Clear(); //Force refresh.
         }
 
-        public static void ClearPoints(this DataPointCollection points) {
-            points.SuspendUpdates();
-            while (points.Count > 0) {
-                points.RemoveAt(points.Count - 1);
+        public static void ClearFast(this DataPointCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
             }
-            points.ResumeUpdates();
-            points.Clear();
+            collection.ResumeUpdates();
+            collection.Clear();
+        }
+
+        public static void ClearFast(this AnnotationPathPointCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this CustomLabelsCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this LegendItemsCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this StripLinesCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this AnnotationCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this ChartAreaCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this LegendCellCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this LegendCellColumnCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this LegendCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this NamedImagesCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this SeriesCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
+        }
+
+        public static void ClearFast(this TitleCollection collection) {
+            collection.SuspendUpdates();
+            while (collection.Count > 0) {
+                collection.RemoveAt(collection.Count - 1);
+            }
+            collection.ResumeUpdates();
         }
     }
 }

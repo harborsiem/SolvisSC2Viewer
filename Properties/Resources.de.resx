@@ -117,26 +117,106 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="heatCurve.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
+  <data name="AllClassesFile" xml:space="preserve">
+    <value>Datei</value>
   </data>
-  <data name="heatCurve.Text" xml:space="preserve">
-    <value>Heizkurve</value>
+  <data name="CalculatorProxyRuntimeError" xml:space="preserve">
+    <value>Formel hat Laufzeitfehler, =&gt; siehe StackTrace.txt</value>
   </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 6</value>
+  <data name="ChartControlNewDay" xml:space="preserve">
+    <value>neuer Tag</value>
   </data>
-  <data name="sensorsCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
+  <data name="CodeBuilderCompileError" xml:space="preserve">
+    <value>Compile Fehler: </value>
   </data>
-  <data name="sensorsCheck.Text" xml:space="preserve">
-    <value>Sensoren prüfen</value>
+  <data name="CodeBuilderFreeFormulas" xml:space="preserve">
+    <value>Freie Formeln</value>
   </data>
-  <data name="configEditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
+  <data name="ConfigEditorSearch" xml:space="preserve">
+    <value>Ordner mit Datei zeitplan.txt suchen</value>
   </data>
-  <data name="configEditor.Text" xml:space="preserve">
-    <value>Konfiguration</value>
+  <data name="ConfigManagerBurnerKW" xml:space="preserve">
+    <value>Brenner KW</value>
+  </data>
+  <data name="ConfigManagerFlowHC1" xml:space="preserve">
+    <value>Vorlauf HK1 (Ist - Soll)</value>
+  </data>
+  <data name="ConfigManagerFormula" xml:space="preserve">
+    <value>Formel</value>
+  </data>
+  <data name="ConfigManagerIdealFormula" xml:space="preserve">
+    <value>Ideale Formel</value>
+  </data>
+  <data name="ConfigManagerSolarKW" xml:space="preserve">
+    <value>Solar KW</value>
+  </data>
+  <data name="ConfigManagerSolvisFormula" xml:space="preserve">
+    <value>Solvis Formel</value>
+  </data>
+  <data name="ConfigManagerSunPosition" xml:space="preserve">
+    <value>Sonnenstand</value>
+  </data>
+  <data name="CountingListActionCountings" xml:space="preserve">
+    <value>Zählerstand</value>
+  </data>
+  <data name="DataManagerSolvisFileError" xml:space="preserve">
+    <value>Solvis Datei fehlerhaft</value>
+  </data>
+  <data name="FileToInt32ListError" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="HeatCurveAxisXTitle" xml:space="preserve">
+    <value>Aussen Temp.</value>
+  </data>
+  <data name="HeatCurveAxisYTitle" xml:space="preserve">
+    <value>Vorlauf Temp.</value>
+  </data>
+  <data name="HeatCurveRunCurve" xml:space="preserve">
+    <value>Kurvenverlauf</value>
+  </data>
+  <data name="ParameterListActionParameters" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="PrintManagerDate" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="PrintManagerTime" xml:space="preserve">
+    <value>Zeit</value>
+  </data>
+  <data name="SensorsCheckActionInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="SensorsCheckActionSensorsNotOK" xml:space="preserve">
+    <value>Temperatur Sensoren S01 und S04 vertauscht</value>
+  </data>
+  <data name="SensorsCheckActionSensorsOK" xml:space="preserve">
+    <value>Temperatur Sensoren S01 und S04 Ok</value>
+  </data>
+  <data name="TimeOverviewCirc" xml:space="preserve">
+    <value>Zirk</value>
+  </data>
+  <data name="TimeOverviewFrom" xml:space="preserve">
+    <value>von</value>
+  </data>
+  <data name="TimeOverviewHC" xml:space="preserve">
+    <value>HK</value>
+  </data>
+  <data name="TimeOverviewTimeRaster" xml:space="preserve">
+    <value>Zeitfenster</value>
+  </data>
+  <data name="TimeOverviewTitle" xml:space="preserve">
+    <value>Zeitübersichten</value>
+  </data>
+  <data name="TimeOverviewTo" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="UnitDays" xml:space="preserve">
+    <value>Tage</value>
+  </data>
+  <data name="UnitHours" xml:space="preserve">
+    <value>Std.</value>
+  </data>
+  <data name="UnitMinutes" xml:space="preserve">
+    <value>Min.</value>
   </data>
 </root>

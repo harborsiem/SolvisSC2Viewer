@@ -9,18 +9,23 @@ using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
 using System.IO;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     public partial class TimeOverview : BaseForm {
         private const int Gap = 42;
         private const int DayOffset = 6;
-        private const string TimeRaster = "Zeitfenster";
-        private const string Title = "Zeitübersichten";
+        private static readonly string TimeRaster = Resources.TimeOverviewTimeRaster; //@Language Resource
+        private static readonly string Title = Resources.TimeOverviewTitle; //@Language Resource
         private const int Days = 7;
         private const int TimeRasters = 3;
         private const int TimeItems = 6;
-        private static readonly string[] Names = { "HK1", "HK2", "HK3", "Zirk", "WW", "SDLad" };
-        private static readonly string[] FromTo = { "von", "bis" };
+        private static readonly string[] Names = { Resources.TimeOverviewHC + "1",
+                                                     Resources.TimeOverviewHC + "2",
+                                                     Resources.TimeOverviewHC + "3",
+                                                     Resources.TimeOverviewCirc, "WW", "Eco" }; //@Language Resource
+        private static readonly string[] FromTo = { Resources.TimeOverviewFrom,
+                                                      Resources.TimeOverviewTo }; //@Language Resource
         private FileToInt32List timePlan;
 
         public TimeOverview() {
@@ -49,7 +54,7 @@ namespace SolvisSC2Viewer {
         protected override void OnLoad(EventArgs e) {
             FillTimeValues();
             if (timePlan != null) {
-                this.Text = Title + " -- " + timePlan.DateTime.ToString();
+                this.Text = Title + " -- " + timePlan.FileInfo.LastWriteTime.ToString();
             } else {
                 this.Text = Title;
             }
@@ -84,7 +89,7 @@ namespace SolvisSC2Viewer {
             if (timePlan != null && !timePlan.Empty) {
                 IList<int> list = timePlan.ParamList;
                 for (int i = 0; i < TimeItems; i++) {
-                    if (((1 << i) & (int)SuppressMask) != 0) { //evtl. HK2, HK3, Speicher Durchladung ausblenden
+                    if (((1 << i) & (int)SuppressMask) != 0) { //evtl. HK2, HK3, Eco ausblenden
                         continue;
                     }
                     DataGridViewRow dgvRow1 = dataGridViewBottom.Rows[i * 2];
@@ -112,7 +117,7 @@ namespace SolvisSC2Viewer {
         private void FormToBitmap() {
             Bitmap map = new Bitmap(this.Width, this.Height);
             this.DrawToBitmap(map, new Rectangle(0, 0, this.Width, this.Height));
-            map.Save(Path.Combine(ConfigManager.ConfigDir, "TimeOverview.png"), ImageFormat.Png);
+            map.Save(Path.Combine(ConfigManager.DocumentsDir, "TimeOverview.png"), ImageFormat.Png);
         }
     }
 }

@@ -83,6 +83,8 @@ namespace SolvisSC2Viewer {
             this.p06Check = new System.Windows.Forms.CheckBox();
             this.p07Check = new System.Windows.Forms.CheckBox();
             this.p08Check = new System.Windows.Forms.CheckBox();
+            this.p09Check = new System.Windows.Forms.CheckBox();
+            this.p10Check = new System.Windows.Forms.CheckBox();
             this.controlLayout.SuspendLayout();
             this.sensorsGroup.SuspendLayout();
             this.sensorsGroupLayout.SuspendLayout();
@@ -487,6 +489,7 @@ namespace SolvisSC2Viewer {
             // optionsGroupLayout
             // 
             resources.ApplyResources(this.optionsGroupLayout, "optionsGroupLayout");
+            this.optionsGroupLayout.Controls.Add(this.p10Check, 0, 9);
             this.optionsGroupLayout.Controls.Add(this.p01Check, 0, 0);
             this.optionsGroupLayout.Controls.Add(this.p02Check, 0, 1);
             this.optionsGroupLayout.Controls.Add(this.p03Check, 0, 2);
@@ -495,6 +498,7 @@ namespace SolvisSC2Viewer {
             this.optionsGroupLayout.Controls.Add(this.p06Check, 0, 5);
             this.optionsGroupLayout.Controls.Add(this.p07Check, 0, 6);
             this.optionsGroupLayout.Controls.Add(this.p08Check, 0, 7);
+            this.optionsGroupLayout.Controls.Add(this.p09Check, 0, 8);
             this.optionsGroupLayout.Name = "optionsGroupLayout";
             // 
             // p01Check
@@ -549,6 +553,18 @@ namespace SolvisSC2Viewer {
             resources.ApplyResources(this.p08Check, "p08Check");
             this.p08Check.Name = "p08Check";
             this.p08Check.UseVisualStyleBackColor = true;
+            // 
+            // p09Check
+            // 
+            resources.ApplyResources(this.p09Check, "p09Check");
+            this.p09Check.Name = "p09Check";
+            this.p09Check.UseVisualStyleBackColor = true;
+            // 
+            // p10Check
+            // 
+            resources.ApplyResources(this.p10Check, "p10Check");
+            this.p10Check.Name = "p10Check";
+            this.p10Check.UseVisualStyleBackColor = true;
             // 
             // SensorsActors
             // 
@@ -637,5 +653,7 @@ namespace SolvisSC2Viewer {
         private System.Windows.Forms.CheckBox p06Check;
         private System.Windows.Forms.CheckBox p07Check;
         private System.Windows.Forms.CheckBox p08Check;
+        private System.Windows.Forms.CheckBox p10Check;
+        private System.Windows.Forms.CheckBox p09Check;
     }
 }

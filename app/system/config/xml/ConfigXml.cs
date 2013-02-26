@@ -28,10 +28,16 @@ namespace SolvisSC2Viewer {
         public const string Formula1Tag = "Formula1";
         public const string Formula2Tag = "Formula2";
         public const string Formula3Tag = "Formula3";
+        public const string Formula4Tag = "Formula4";
+        public const string Formula5Tag = "Formula5";
+        public const string IsExternCodeTag = "IsExternCode";
+        public const string SolarVSGTag = "SolarVSG";
+        public const string SolarKWTag = "SolarKW";
         public const string SdCardDirTag = "SdCardDir";
         public const string TimePlanSuppressMaskTag = "TimePlanSuppressMask";
         public const string TimePlanBitmapTag = "TimePlanBitmap";
         public const string PrototypeTag = "Prototype";
+        public const string OneDayModeTag = "OneDayMode";
         public const string AttributeText = "Text";
         public const string AttributeToolTipText = "ToolTipText";
         public const string AttributeKey = "Key";

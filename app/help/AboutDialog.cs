@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace SolvisSC2Viewer {
     internal partial class AboutDialog : BaseForm {
@@ -25,52 +26,54 @@ namespace SolvisSC2Viewer {
         }
 
         public void Init() {
-            AboutDialog dialog = this;
-            //dialog.Text = "About";
 
             //--------------------HEADER----------------------------------
             this.image = AppManager.IconManager.AboutDescription;
 
-            dialog.imageComposite.Paint += delegate(object sender, PaintEventArgs e) {
+            imageComposite.Paint += delegate(object sender, PaintEventArgs e) {
                 Size bounds = this.image.Size;
                 e.Graphics.DrawImage(this.image, ((ImageWidth - (int)bounds.Width) / 2), ((ImageHeight - (int)bounds.Height) / 2));
             };
 
-            dialog.title.ForeColor = Color.Gray;
-            dialog.title.Font = new Font(dialog.title.Font.Name, 24, FontStyle.Italic | FontStyle.Bold);
-            dialog.title.Text = (ReleaseName);
+            title.ForeColor = Color.Gray;
+            title.Font = new Font(title.Font.Name, 24, FontStyle.Italic | FontStyle.Bold);
+            title.Text = (ReleaseName);
 
             //-------------------TABS-----------------------
+            string language = string.Empty;
+            CultureInfo info = CultureInfo.CurrentUICulture;
+            if (info.TwoLetterISOLanguageName == "de") {
+                language = "." + "de";
+            }
             docReader = new AboutContentReader();
 
-            MakeTabItem(AboutContentReader.Description, dialog.textDescription);
-            MakeTabItem(AboutContentReader.Authors, dialog.textAuthors);
-            MakeTabItem(AboutContentReader.License, dialog.textLicense);
+            MakeTabItem(AboutContentReader.Description, language, textDescription);
+            MakeTabItem(AboutContentReader.Authors, language, textAuthors);
+            MakeTabItem(AboutContentReader.License, "", textLicense);
 
-            dialog.tabFolder.SelectedIndexChanged += delegate(object sender, EventArgs e) {
-                if (dialog.tabFolder.SelectedIndex == 0) {
+            tabFolder.SelectedIndexChanged += delegate(object sender, EventArgs e) {
+                if (tabFolder.SelectedIndex == 0) {
                     this.image = AppManager.IconManager.AboutDescription;
-                } else if (dialog.tabFolder.SelectedIndex == 1) {
+                } else if (tabFolder.SelectedIndex == 1) {
                     this.image = AppManager.IconManager.AboutAuthors;
-                } else if (dialog.tabFolder.SelectedIndex == 2) {
+                } else if (tabFolder.SelectedIndex == 2) {
                     this.image = AppManager.IconManager.AboutLicense;
                 }
-                dialog.imageComposite.Refresh();
+                imageComposite.Invalidate();
             };
 
             //------------------BUTTONS--------------------------
-            //dialog.buttonClose.Text = "Close";
-            dialog.buttonClose.Click += delegate(object sender, EventArgs e) {
-                dialog.Dispose();
+            buttonClose.Click += delegate(object sender, EventArgs e) {
+                Close();
             };
 
-            dialog.tabFolder.SelectedIndex = 0;
+            tabFolder.SelectedIndex = 0;
 
-            dialog.buttonClose.Select();
+            buttonClose.Select();
         }
 
-        private void MakeTabItem(String itemName, TextBox text) {
-            text.Lines = docReader.Read(itemName.ToLowerInvariant());
+        private void MakeTabItem(String itemName, string language, TextBox text) {
+            text.Lines = docReader.Read(itemName.ToLowerInvariant(), language);
         }
     }
 }

@@ -120,6 +120,8 @@ namespace SolvisSC2Viewer {
             options.Add(p06Check);
             options.Add(p07Check);
             options.Add(p08Check);
+            options.Add(p09Check);
+            options.Add(p10Check);
         }
 
         public IList<CheckBox> SensorsCheckBoxes {

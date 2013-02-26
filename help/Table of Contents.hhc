@@ -46,12 +46,6 @@
 		<param name="Name" value="Was ist neu ?">
 		<param name="Local" value="whatsnew.html">
 		</OBJECT>
-	<UL>
-		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Version 1.2.1.0">
-			<param name="Local" value="whatsnew.html">
-			</OBJECT>
-	</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Beschreibung">
 		<param name="Local" value="description.html">
@@ -84,6 +78,10 @@
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Freie Formeln für Chartanzeige">
 			<param name="Local" value="description.html#Formulas">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Formeln für Solar-Volumenstrom und Solar KW">
+			<param name="Local" value="description.html#FormulaSolar">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Sensoren prüfen">

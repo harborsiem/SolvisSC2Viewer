@@ -10,16 +10,17 @@ using Microsoft.Win32;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using System.Xml.Serialization;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     internal class DataManager {
 
         private static DataManager s_instance = new DataManager();
-
-        public List<RowValues> SolvisList { get; private set; }
-        public List<Series> SensorsSeriesList { get; private set; }
-        public List<Series> ActorsSeriesList { get; private set; }
-        public List<Series> OptionsSeriesList { get; private set; }
+        private static readonly string rFile = " --- " + Resources.AllClassesFile + ": "; //@Language Resource
+        private List<RowValues> SolvisList { get; set; }
+        private List<Series> SensorsSeriesList { get; set; }
+        private List<Series> ActorsSeriesList { get; set; }
+        private List<Series> OptionsSeriesList { get; set; }
         private DateTime fromDateTime;
         private DateTime toDateTime;
         private string serializeFileName;
@@ -38,6 +39,70 @@ namespace SolvisSC2Viewer {
         public void Init() {
             serializeFileName = ConfigManager.ConfigDir + Path.DirectorySeparatorChar + "solvis.bin";
             AppManager.ItemManager.ToolMenu.DateEvent += DateEvent;
+        }
+
+        public void FillSolvisList(string fileName) {
+            if (!File.Exists(fileName)) {
+                return;
+            }
+            try {
+                AppManager.MainForm.Cursor = Cursors.WaitCursor;
+                AppManager.MainForm.SetStatusLabel(string.Empty);
+                RowValues.mean.Reset();
+                SolvisList.Clear();
+                StreamReader reader = File.OpenText(fileName);
+                try {
+                    while (!reader.EndOfStream) {
+                        RowValues item = new RowValues(reader.ReadLine());
+                        SolvisList.Add(item);
+                    }
+                    DateTime min = (SolvisList[0].DateAndTime);
+                    DateTime max = (SolvisList[SolvisList.Count - 1].DateAndTime);
+                    AppManager.ItemManager.ToolMenu.SetMinMaxDate(min, max);
+                    AppManager.MainForm.Text = MainForm.ApplicationText + rFile + Path.GetFileNameWithoutExtension(fileName);
+                }
+                finally {
+                    if (reader != null) {
+                        reader.Close();
+                    }
+                }
+                //Serialize();
+                //DeSerialize();
+            }
+            catch (ArgumentException ex) {
+                AppManager.MainForm.Text = MainForm.ApplicationText;
+                SolvisList.Clear();
+                DateTime now = DateTime.Now;
+                AppManager.ItemManager.ToolMenu.SetMinMaxDate(now, now);
+                AppManager.ItemManager.ToolMenu.SetDayItemsDisabled();
+                AppManager.MainForm.SetStatusLabel(Resources.DataManagerSolvisFileError); //@Language Resource
+                AppExtension.PrintStackTrace(ex);
+            }
+            finally {
+                AppManager.ItemManager.UpdateItems();
+                AppManager.MainForm.Cursor = Cursors.Default;
+            }
+        }
+
+        public bool IsSolvisListEmpty {
+            get { return SolvisList.Count == 0; }
+        }
+
+        public S01S04State CheckS01S04() {
+            if (SolvisList.Count > 0) {
+                double s01Values = 0;
+                double s04Values = 0;
+                for (int i = 0; i < SolvisList.Count; i++) {
+                    s01Values += SolvisList[i].S01;
+                    s04Values += SolvisList[i].S04;
+                }
+                if (s01Values < s04Values) {
+                    return S01S04State.S01S04InterChanged;
+                } else {
+                    return S01S04State.S01S04Ok;
+                }
+            }
+            return S01S04State.None;
         }
 
         public void UpdateSeries() {
@@ -66,7 +131,7 @@ namespace SolvisSC2Viewer {
                             Chart chartMain = AppManager.MainForm.ChartControl.ChartMain;
                             chartMain.BeginInit();
                             DataPointCollection points = tag.Series.Points;
-                            points.ClearPoints(); //MsChartExtension
+                            points.ClearFast(); //MsChartExtension
                             if (chartMain.Series.Contains(tag.Series)) {
                                 chartMain.Series.Remove(tag.Series);
                             }
@@ -132,7 +197,7 @@ namespace SolvisSC2Viewer {
                 int toIndex = GetSolvisListIndex(to);
                 chartMain.BeginInit();
                 DataPointCollection points = tag.Series.Points;
-                points.ClearPoints(); //MsChartExtension
+                points.ClearFast(); //MsChartExtension
                 if (fromIndex < 0 || fromIndex >= toIndex) {
                     return;
                 }
@@ -142,7 +207,11 @@ namespace SolvisSC2Viewer {
                     RowValues values = SolvisList[i];
                     if (tag.Ident == GroupIdent.Sensor) {
                         array = values.GetSensors();
-                        points.AddXY(values.DateAndTime, array[tag.Index]);
+                        if (tag.Index != RowValues.SolarVSGIndex) {
+                            points.AddXY(values.DateAndTime, array[tag.Index]);
+                        } else {
+                            points.AddXY(values.DateAndTime, values.FormulaSolarVSG);
+                        }
                     } else if (tag.Ident == GroupIdent.Actor) {
                         array = values.GetActors();
                         points.AddXY(values.DateAndTime, array[tag.Index]);
@@ -169,19 +238,24 @@ namespace SolvisSC2Viewer {
             int fromIndex = GetSolvisListIndex(from);
             int toIndex = GetSolvisListIndex(to);
             chartMain.BeginInit();
+            AppManager.MainForm.ChartControl.SetIntervals(new TimeSpan(to.Ticks - from.Ticks));
             for (int seriesIndex = 0; seriesIndex < SensorsSeriesList.Count; seriesIndex++) {
                 CheckBox checkBox = AppManager.MainForm.SensorsCheckBoxes[seriesIndex];
                 if (checkBox.Checked) {
                     Series series = SensorsSeriesList[seriesIndex];
                     DataPointCollection points = series.Points;
-                    points.ClearPoints(); //MsChartExtension
+                    points.ClearFast(); //MsChartExtension
                     if (fromIndex < 0 || fromIndex >= toIndex) {
                         continue;
                     }
                     points.SuspendUpdates();
                     for (int i = fromIndex; i <= toIndex; i++) {
                         RowValues values = SolvisList[i];
-                        points.AddXY(values.DateAndTime, values.GetSensors()[seriesIndex]);
+                        if (seriesIndex != RowValues.SolarVSGIndex) {
+                            points.AddXY(values.DateAndTime, values.GetSensors()[seriesIndex]);
+                        } else {
+                            points.AddXY(values.DateAndTime, values.FormulaSolarVSG);
+                        }
                     }
                     points.ResumeUpdates();
                     if (!chartMain.Series.Contains(series)) {
@@ -194,7 +268,7 @@ namespace SolvisSC2Viewer {
                 Series series = ActorsSeriesList[seriesIndex];
                 if (checkBox.Checked) {
                     DataPointCollection points = series.Points;
-                    points.ClearPoints(); //MsChartExtension
+                    points.ClearFast(); //MsChartExtension
                     if (fromIndex < 0 || fromIndex >= toIndex) {
                         continue;
                     }
@@ -214,7 +288,7 @@ namespace SolvisSC2Viewer {
                 Series series = OptionsSeriesList[seriesIndex];
                 if (checkBox.Checked) {
                     DataPointCollection points = series.Points;
-                    points.ClearPoints(); //MsChartExtension
+                    points.ClearFast(); //MsChartExtension
                     if (fromIndex < 0 || fromIndex >= toIndex) {
                         continue;
                     }
@@ -251,13 +325,12 @@ namespace SolvisSC2Viewer {
         }
 
         private static void SetOptionsPoints(int index, RowValues values, DataPointCollection points, SeriesState state) {
-            values.State = state;
             switch (index) {
                 case 0:
                     points.AddXY(values.DateAndTime, values.FormulaBurner);
                     break;
                 case 1:
-                    points.AddXY(values.DateAndTime, values.FormulaSolar);
+                    points.AddXY(values.DateAndTime, values.FormulaSolarKW);
                     break;
                 case 2:
                     points.AddXY(values.DateAndTime, values.FormulaSunPosition);
@@ -269,13 +342,19 @@ namespace SolvisSC2Viewer {
                     points.AddXY(values.DateAndTime, values.FormulaIst_Soll2);
                     break;
                 case 5:
-                    points.AddXY(values.DateAndTime, values.Calculator1);
+                    points.AddXY(values.DateAndTime, CalculatorProxy.Formula1(values, state));
                     break;
                 case 6:
-                    points.AddXY(values.DateAndTime, values.Calculator2);
+                    points.AddXY(values.DateAndTime, CalculatorProxy.Formula2(values, state));
                     break;
                 case 7:
-                    points.AddXY(values.DateAndTime, values.Calculator3);
+                    points.AddXY(values.DateAndTime, CalculatorProxy.Formula3(values, state));
+                    break;
+                case 8:
+                    points.AddXY(values.DateAndTime, CalculatorProxy.Formula4(values, state));
+                    break;
+                case 9:
+                    points.AddXY(values.DateAndTime, CalculatorProxy.Formula5(values, state));
                     break;
                 default:
                     break;

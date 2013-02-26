@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Runtime.Serialization;
+using System.Globalization;
 
 namespace SolvisSC2Viewer {
     public enum GroupIdent {
@@ -12,8 +13,11 @@ namespace SolvisSC2Viewer {
 
     [Serializable]
     public class RowValues {
-        private const int MaxNumColumns = 46;
-        private const int MinNumColumns = 36;
+        public const int SolarVSGIndex = 16;
+        private const int MaxNumColumns = 46; //2 date + time, 24 sensors, 20 actors
+        private const int MinNumColumns = 36; //maybe 39 columns; 2 date + time, 18 sensors ?, 19 actors ?
+        private static readonly CultureInfo locale = new CultureInfo("de");
+
         public DateTime DateAndTime { get; private set; }
         public DateTime UtcPlus1DateTime { get { return DateAndTime.ToUniversalTime().AddHours(1); } }
         private double[] sensors;
@@ -35,7 +39,7 @@ namespace SolvisSC2Viewer {
         public double S14 { get { return sensors[13]; } } //Vorlauf HK3
         public double S15 { get { return sensors[14]; } } //Solar VL1
         public double S16 { get { return sensors[15]; } } //Kollektor 2 oder Holzkessel
-        public double S17 { get { return (double)s17Raw; } } //VSG Solar
+        public double S17 { get { return sensors[16]; } } //VSG Solar
         public double S18 { get { return sensors[17]; } } //VSG Warmwasser
         public double S19 { get { return sensors[18]; } } //Raumfühler 1
         public double S20 { get { return sensors[19]; } } //Raumfühler 2 ?
@@ -71,9 +75,8 @@ namespace SolvisSC2Viewer {
         public static double Niveau { get; set; }
         public static double Gradient { get; set; }
         internal static MeanTemperature mean = new MeanTemperature(30);
-        internal SeriesState State { get; set; } //just for the Calculate
+        public double S10Raw { get; private set; }
         public double S10MeanValue { get; private set; }
-        private int s17Raw; //VSG Solar
 
         public RowValues() {
             sensors = new double[24];
@@ -87,31 +90,32 @@ namespace SolvisSC2Viewer {
                 throw new ArgumentException("Wrong count of values", "row");
             }
             try {
-                DateTime date = Convert.ToDateTime(values[0]);
-                DateTime time = Convert.ToDateTime(values[1]);
+                DateTime date = Convert.ToDateTime(values[0], locale);
+                DateTime time = Convert.ToDateTime(values[1], locale);
                 DateAndTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Local);
                 int k, j;
                 for (k = 2, j = 0; j < 16; k++, j++) {
                     int tmp = Convert.ToInt32(values[k]);
                     if (j == 9) { //Aussen Temperatur S10
+                        S10Raw = (double)tmp / 10.0D;
                         int last = mean.GetLastValue(tmp);
-                        if (Math.Abs(last - tmp) > 20) { //2 Grad Abweichung zulässig
+                        if (Math.Abs(last - tmp) > 40) { //4 Grad Abweichung zulässig
                             tmp = last;
                         }
                         mean.Write(tmp);
                     }
                     sensors[j] = (double)tmp / 10.0D;
                 }
-                s17Raw = Convert.ToInt32(values[k++]);
-                sensors[j++] = CalculateSolarVSG(s17Raw); //S17 @Todo: Umrechnung korrekt ?
+                int s17Raw = Convert.ToInt32(values[k++]);
+                sensors[j++] = (double)s17Raw;
                 sensors[j++] = (double)Convert.ToInt32(values[k++]) / 10.0D;
                 int i = 20;
                 if (values.Length == MaxNumColumns) {
-                    sensors[18] = (double)Convert.ToInt32(values[i]) / 10.0D;
+                    sensors[18] = (double)Convert.ToInt32(values[i]);
                     i++;
-                    sensors[19] = (double)Convert.ToInt32(values[i]) / 10.0D;
+                    sensors[19] = (double)Convert.ToInt32(values[i]);
                     i++;
-                    sensors[20] = (double)Convert.ToInt32(values[i]) / 10.0D;
+                    sensors[20] = (double)Convert.ToInt32(values[i]);
                     i++;
                     sensors[21] = (double)Convert.ToInt32(values[i]);
                     i++;
@@ -158,19 +162,34 @@ namespace SolvisSC2Viewer {
             }
         }
 
-        public double FormulaSolar {
+        public double FormulaSolarKW {
             get {
                 if (S17 > 0) {
-                    return (S05 - S06) / (S17 / 100.0D) * 15D; //@Todo: Was bedeutet der Wert 15 ? Konfiguration notwendig ?
-                } else {
-                    return 0.0D;
+                    if (CalculatorProxy.HasFormulaSolarKW) {
+                        return CalculatorProxy.FormulaSolarKW(this);
+                    }
+                    return SolarKW;
                 }
+                return 0.0D;
+            }
+        }
+
+        public double SolarKW {
+            get {
+                double deltaTemperature = S05 - S06;
+                if (deltaTemperature > 0) {
+                    return deltaTemperature / (S17 / 100.0D) * 15D; //@Todo: Was bedeutet der Wert 15 ? Konfiguration notwendig ?
+                    //return deltaTemperature * SolarVSG / 1000 * 60 * 1.02;
+                    //Wert 1.02 ist spezifische Wärmekapazität Solarmittel
+                    //return (rowValues.S05 - rowValues.S06) / (rowValues.S17 / 100.0) * 15.0;
+                }
+                return 0.0D;
             }
         }
 
         public double FormulaIst_Soll1 {
             get {
-                if (S10 <= 19) {
+                if (S10 <= 20) {
                     double result = S12 - HeatCurve.SolvisCurve(Temperature, Niveau, Gradient, S10);
                     if (result > -5D) {
                         return result;
@@ -184,7 +203,7 @@ namespace SolvisSC2Viewer {
 
         public double FormulaIst_Soll2 {
             get {
-                if (S10 <= 19) {
+                if (S10MeanValue <= 20) {
                     double result = S12 - (int)HeatCurve.SolvisCurve(Temperature, Niveau, Gradient, (int)(S10MeanValue));
                     if (result > -5D) {
                         return result;
@@ -196,25 +215,22 @@ namespace SolvisSC2Viewer {
             }
         }
 
-        public static double CalculateSolarVSG(int value) {
-            return (value == 0) ? 0 : (1.0 / ((double)value - 7.6365)) * 80148.4 + 4.53375; //empirisch ermittelte Formel von "Vortex"
-        }
-
-        public double Calculator1 {
+        public double FormulaSolarVSG { //@Todo: Umrechnung korrekt ?
             get {
-                return CodeBuilder.Calculate1(this, State);
+                if (S17 != 0) {
+                    if (CalculatorProxy.HasFormulaSolarVSG) {
+                        return CalculatorProxy.FormulaSolarVSG(this);
+                    }
+                    return SolarVSG;
+                }
+                return 0.0;
             }
         }
 
-        public double Calculator2 {
+        public double SolarVSG { //@Todo: Umrechnung korrekt ?
             get {
-                return CodeBuilder.Calculate2(this, State);
-            }
-        }
-
-        public double Calculator3 {
-            get {
-                return CodeBuilder.Calculate3(this, State);
+                return (1.0 / (S17 - 7.6365)) * 80148.4 + 4.53375; //empirisch ermittelte Formel von "Vortex"
+                //return (1.0 / (rowValues.S17 - 7.6365)) * 80148.4 + 4.53375;
             }
         }
     }

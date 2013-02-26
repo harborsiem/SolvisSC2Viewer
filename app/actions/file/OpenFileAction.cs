@@ -14,50 +14,24 @@ namespace SolvisSC2Viewer {
         }
 
         protected override int Execute(ActionData data) {
-            try {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.DefaultExt = "txt";
-                dialog.FileName = "so*.txt";
-                dialog.InitialDirectory = AppManager.ConfigManager.OpenDir;
-                dialog.Filter = "Solvis File (*.txt)|*.txt";
-                dialog.CheckFileExists = true;
-                dialog.CheckPathExists = true;
-                dialog.ReadOnlyChecked = true;
-                if (dialog.ShowDialog(AppManager.MainForm) == DialogResult.OK) {
-                    AppManager.MainForm.Cursor = Cursors.WaitCursor;
-                    RowValues.mean.Reset();
-                    AppManager.ConfigManager.OpenDir = Path.GetDirectoryName(dialog.FileName);
-                    AppManager.DataManager.SolvisList.Clear();
-                    StreamReader reader = File.OpenText(dialog.FileName);
-                    try {
-                        List<RowValues> list = AppManager.DataManager.SolvisList;
-                        while (!reader.EndOfStream) {
-                            RowValues item = new RowValues(reader.ReadLine());
-                            list.Add(item);
-                        }
-                        DateTime min = (list[0].DateAndTime);
-                        DateTime max = (list[list.Count - 1].DateAndTime);
-                        AppManager.ItemManager.ToolMenu.SetMinMaxDate(min, max);
-                        AppManager.MainForm.Text = MainForm.ApplicationText + " --- Datei: " + Path.GetFileNameWithoutExtension(dialog.FileName);
-                    }
-                    finally {
-                        if (reader != null) {
-                            reader.Close();
-                        }
-                        AppManager.MainForm.Cursor = Cursors.Default;
-                    }
-                    //AppManager.DataManager.Serialize();
-                    //AppManager.DataManager.DeSerialize();
-                    AppManager.ItemManager.UpdateItems();
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.DefaultExt = "txt";
+            dialog.FileName = "so*.txt";
+            dialog.InitialDirectory = AppManager.ConfigManager.OpenDir;
+            dialog.Filter = "Solvis File (*.txt)|*.txt"; //@Language Resource ?
+            dialog.CheckFileExists = true;
+            dialog.CheckPathExists = true;
+            dialog.ReadOnlyChecked = true;
+            dialog.Multiselect = true;
+            if (dialog.ShowDialog(AppManager.MainForm) == DialogResult.OK) {
+                AppManager.ConfigManager.OpenDir = Path.GetDirectoryName(dialog.FileName);
+                string[] names = dialog.FileNames;
+                if (names.Length > 0) {
+                    Array.Sort(names);
+
+                    AppManager.SolvisFileManager.NewFileSelection(names);
+                    AppManager.DataManager.FillSolvisList(names[0]);
                 }
-            }
-            catch (ArgumentException ex) {
-                AppManager.MainForm.Text = MainForm.ApplicationText;
-                AppManager.DataManager.SolvisList.Clear();
-                DateTime now = DateTime.Now;
-                AppManager.ItemManager.ToolMenu.SetMinMaxDate(now, now);
-                AppManager.ItemManager.UpdateItems();
-                AppExtension.PrintStackTrace(ex);
             }
             return 0;
         }

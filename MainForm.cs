@@ -90,5 +90,9 @@ namespace SolvisSC2Viewer {
         public ChartControl ChartControl {
             get { return chartControl; }
         }
+
+        public void SetStatusLabel(string text) {
+            statusLabel.Text = text;
+        }
     }
 }

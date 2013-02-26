@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     internal class CountingListAction : Action {
@@ -21,9 +22,11 @@ namespace SolvisSC2Viewer {
                     AppManager.MainForm.Cursor = Cursors.WaitCursor;
                     countingSettings = new CountingSettings(zaehlstand.ParamList);
                     PropertiesForm dialog = new PropertiesForm();
-                    dialog.Description = "Zählerstand";
-                    dialog.DateTime = zaehlstand.DateTime;
-                    dialog.SelectedObject = countingSettings;
+                    dialog.Description = Resources.CountingListActionCountings; //@Language Resource
+                    dialog.FileInfo = zaehlstand.FileInfo;
+                    BasicPropertyBag bag = new BasicPropertyBag(new object[] { countingSettings });
+                    dialog.SelectedObject = bag;
+                    dialog.PrintProperties = PrintProperty.GetPrintProperties(bag);
                     dialog.ShowDialog(AppManager.MainForm);
                 }
             }

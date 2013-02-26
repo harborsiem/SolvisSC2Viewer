@@ -8,16 +8,19 @@ using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Drawing.Printing;
+using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
     public partial class HeatCurve : BaseForm {
+        public const decimal SetTemperatureMaximum = 28.0M;
+        public const decimal SetTemperatureMinimum = 12.0M;
         public const decimal GradientIncrement = 0.05M;
         public const decimal GradientMaximum = 2.0M;
         public const decimal GradientMinimum = 0.5M;
 
         private CheckState curve1State;
         private CheckState curve2State;
-        private const string runCurve = "Kurvenverlauf"; //"run of the curve"
+        private static readonly string runCurve = Resources.HeatCurveRunCurve; //@Language Resource
         public FormWindowState LastWindowState {
             get;
             private set;
@@ -35,8 +38,8 @@ namespace SolvisSC2Viewer {
 
         public HeatCurve() {
             InitializeComponent();
-            chartMain.ChartAreas[0].AxisX.Title = "Aussen Temp.";
-            chartMain.ChartAreas[0].AxisY2.Title = "Vorlauf Temp.";
+            chartMain.ChartAreas[0].AxisX.Title = Resources.HeatCurveAxisXTitle; //@Language Resource
+            chartMain.ChartAreas[0].AxisY2.Title = Resources.HeatCurveAxisYTitle; //@Language Resource
             this.Icon = AppManager.IconManager.AppIcon;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -49,9 +52,15 @@ namespace SolvisSC2Viewer {
             decimal temperature = ConfigManager.Temperature;
             decimal niveau = ConfigManager.Niveau;
             decimal gradient = (decimal)(Math.Round(ConfigManager.Gradient * 2, 1) / 2D);
+            temperatureUpDown1.Maximum = SetTemperatureMaximum;
+            temperatureUpDown1.Minimum = SetTemperatureMinimum;
             temperatureUpDown1.Value = temperature;
+            temperatureUpDown2.Maximum = SetTemperatureMaximum;
+            temperatureUpDown2.Minimum = SetTemperatureMinimum;
             temperatureUpDown2.Value = temperature;
-            temperatureUpDown2.Value = temperature;
+            temperatureUpDown3.Maximum = SetTemperatureMaximum;
+            temperatureUpDown3.Minimum = SetTemperatureMinimum;
+            temperatureUpDown3.Value = temperature;
             niveauUpDown1.Value = niveau;
             niveauUpDown2.Value = niveau;
             niveauUpDown3.Increment = 1.0M;
@@ -83,11 +92,14 @@ namespace SolvisSC2Viewer {
             IdealCurve(2, (double)temperatureUpDown3.Value, (double)niveauUpDown3.Value, (double)gradientUpDown3.Value);
         }
 
+        //Wenn bei der Kurve mehr Bauch nach oben gehen soll, dann ist Exponent (0.8) zu verkleinern und Faktor (1.8207) zu
+        //vergrößern
         public static double SolvisCurve(double commandTemperature, double niveau, double gradient, double outdoorTemperature) {
             double result = (gradient * 1.8207 * Math.Pow((commandTemperature - outdoorTemperature), 0.8) + commandTemperature + niveau); //Solvis Curve ?
             return result;
         }
 
+#if Test
         //not used
         private static double IdealCurve(double commandTemperature, double niveau, double gradient, double outdoorTemperature) {
             //double result = (gradient * 1.8317984 * Math.Pow((commandTemperature - outdoorTemperature), 0.8281902) + commandTemperature + niveau);
@@ -105,7 +117,7 @@ namespace SolvisSC2Viewer {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
             DataPointCollection points = chartMain.Series[serieIndex].Points;
-            points.ClearPoints(); //MsChartExtension
+            points.ClearFast(); //MsChartExtension
             points.SuspendUpdates();
             for (int i = -20; i <= max; i++) {
                 points.AddXY((double)i, (double)(int)SolvisCurve(commandTemperature, niveau, gradient, i));
@@ -113,12 +125,13 @@ namespace SolvisSC2Viewer {
             points.ResumeUpdates();
             chartMain.EndInit();
         }
+#endif
 
         private void CurveStep(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
             DataPointCollection points = chartMain.Series[serieIndex].Points;
-            points.ClearPoints(); //MsChartExtension
+            points.ClearFast(); //MsChartExtension
             points.SuspendUpdates();
             for (double i = -20; i <= max; i = i + 0.1D) {
                 double result = (double)(int)SolvisCurve(commandTemperature, niveau, gradient, (int)i);
@@ -132,7 +145,7 @@ namespace SolvisSC2Viewer {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
             DataPointCollection points = chartMain.Series[serieIndex].Points;
-            points.ClearPoints(); //MsChartExtension
+            points.ClearFast(); //MsChartExtension
             points.SuspendUpdates();
             for (double i = -20; i <= max; i = i + 0.1D) {
                 double result = Math.Round(SolvisCurve(commandTemperature, niveau, gradient, Math.Round(i * 2) / 2));
@@ -146,7 +159,7 @@ namespace SolvisSC2Viewer {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
             DataPointCollection points = chartMain.Series[serieIndex].Points;
-            points.ClearPoints(); //MsChartExtension
+            points.ClearFast(); //MsChartExtension
             points.SuspendUpdates();
             for (double i = -20; i <= max; i = i + 0.1D) {
                 double result = Math.Round(SolvisCurve(commandTemperature, niveau, gradient, (i))); //
@@ -160,7 +173,7 @@ namespace SolvisSC2Viewer {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
             DataPointCollection points = chartMain.Series[serieIndex].Points;
-            points.ClearPoints(); //MsChartExtension
+            points.ClearFast(); //MsChartExtension
             points.SuspendUpdates();
             for (double i = -20; i <= max; i = i + 0.1D) {
                 double result = (int)(SolvisCurve(commandTemperature, niveau, gradient, Math.Floor(i))); //Math.Round
@@ -174,7 +187,7 @@ namespace SolvisSC2Viewer {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
             DataPointCollection points = chartMain.Series[serieIndex].Points;
-            points.ClearPoints(); //MsChartExtension
+            points.ClearFast(); //MsChartExtension
             points.SuspendUpdates();
             for (int i = -20; i <= max; i++) {
                 points.AddXY((double)i, (double)SolvisCurve(commandTemperature, niveau, gradient, i));
@@ -183,11 +196,12 @@ namespace SolvisSC2Viewer {
             chartMain.EndInit();
         }
 
+#if Test
         private void IdealCurveTest(int serieIndex, double commandTemperature, double niveau, double gradient) {
             int max = (commandTemperature < 20) ? (int)commandTemperature : 20;
             chartMain.BeginInit();
             DataPointCollection points = chartMain.Series[serieIndex].Points;
-            points.ClearPoints(); //MsChartExtension
+            points.ClearFast(); //MsChartExtension
             points.SuspendUpdates();
             for (int i = -20; i <= max; i++) {
                 points.AddXY((double)i, (double)IdealCurveTest(commandTemperature, niveau, gradient, i));
@@ -195,6 +209,7 @@ namespace SolvisSC2Viewer {
             points.ResumeUpdates();
             chartMain.EndInit();
         }
+#endif
 
         private void HeatCurve_FormClosing(object sender, FormClosingEventArgs e) {
             if (e.CloseReason == CloseReason.UserClosing) {
@@ -350,7 +365,15 @@ namespace SolvisSC2Viewer {
             //manager.PageSetup();
             manager.PrintDocument.DefaultPageSettings.Landscape = true;
             manager.PrintDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(39, 39, 39, 39);
-            manager.PrintPreview();
+
+            PrintPreviewDialog dialog = new PrintPreviewDialog();
+            dialog.ClientSize = new Size(800, 600);
+            dialog.Document = manager.PrintDocument;
+            dialog.Icon = AppManager.IconManager.PrintPreviewIcon;
+
+            dialog.ShowDialog(AppManager.MainForm);
+
+            //manager.PrintPreview();
         }
 
         private void printItem_Click(object sender, EventArgs e) {

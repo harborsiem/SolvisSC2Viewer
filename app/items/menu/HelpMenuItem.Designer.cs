@@ -29,20 +29,20 @@ namespace SolvisSC2Viewer {
             // 
             // doc
             // 
-            resources.ApplyResources(this.doc, "doc");
             this.doc.Name = "doc";
+            resources.ApplyResources(this.doc, "doc");
             // 
             // about
             // 
-            resources.ApplyResources(this.about, "about");
             this.about.Name = "about";
+            resources.ApplyResources(this.about, "about");
             // 
             // HelpMenuItem
             // 
-            resources.ApplyResources(this, "$this");
             this.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.doc,
             this.about});
+            resources.ApplyResources(this, "$this");
 
         }
 

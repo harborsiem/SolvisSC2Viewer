@@ -31,98 +31,103 @@ namespace SolvisSC2Viewer {
             this.toLabelDateTime = new System.Windows.Forms.ToolStripLabel();
             this.separator2 = new System.Windows.Forms.ToolStripSeparator();
             this.firstDay = new System.Windows.Forms.ToolStripButton();
-            this.previousWeek = new System.Windows.Forms.ToolStripButton();
             this.previousDay = new System.Windows.Forms.ToolStripButton();
             this.nextDay = new System.Windows.Forms.ToolStripButton();
-            this.nextWeek = new System.Windows.Forms.ToolStripButton();
             this.lastDay = new System.Windows.Forms.ToolStripButton();
             this.separator3 = new System.Windows.Forms.ToolStripSeparator();
             this.crosshair = new System.Windows.Forms.ToolStripButton();
+            this.separator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.previousFile = new System.Windows.Forms.ToolStripButton();
+            this.nextFile = new System.Windows.Forms.ToolStripButton();
             this.SuspendLayout();
             // 
             // open
             // 
-            resources.ApplyResources(this.open, "open");
             this.open.Name = "open";
+            resources.ApplyResources(this.open, "open");
             // 
             // print
             // 
-            resources.ApplyResources(this.print, "print");
             this.print.Name = "print";
+            resources.ApplyResources(this.print, "print");
             // 
             // separator1
             // 
-            resources.ApplyResources(this.separator1, "separator1");
             this.separator1.Name = "separator1";
+            resources.ApplyResources(this.separator1, "separator1");
             // 
             // fromLabelDateTime
             // 
-            resources.ApplyResources(this.fromLabelDateTime, "fromLabelDateTime");
             this.fromLabelDateTime.Name = "fromLabelDateTime";
+            resources.ApplyResources(this.fromLabelDateTime, "fromLabelDateTime");
             // 
             // toLabelDateTime
             // 
-            resources.ApplyResources(this.toLabelDateTime, "toLabelDateTime");
             this.toLabelDateTime.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.toLabelDateTime.Name = "toLabelDateTime";
+            resources.ApplyResources(this.toLabelDateTime, "toLabelDateTime");
             // 
             // separator2
             // 
-            resources.ApplyResources(this.separator2, "separator2");
             this.separator2.Name = "separator2";
+            resources.ApplyResources(this.separator2, "separator2");
             // 
             // firstDay
             // 
-            resources.ApplyResources(this.firstDay, "firstDay");
             this.firstDay.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.firstDay, "firstDay");
             this.firstDay.Margin = new System.Windows.Forms.Padding(16, 1, 0, 2);
             this.firstDay.Name = "firstDay";
             // 
-            // previousWeek
-            // 
-            resources.ApplyResources(this.previousWeek, "previousWeek");
-            this.previousWeek.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.previousWeek.Name = "previousWeek";
-            // 
             // previousDay
             // 
-            resources.ApplyResources(this.previousDay, "previousDay");
             this.previousDay.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.previousDay, "previousDay");
             this.previousDay.Name = "previousDay";
             // 
             // nextDay
             // 
-            resources.ApplyResources(this.nextDay, "nextDay");
             this.nextDay.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.nextDay, "nextDay");
             this.nextDay.Name = "nextDay";
-            // 
-            // nextWeek
-            // 
-            resources.ApplyResources(this.nextWeek, "nextWeek");
-            this.nextWeek.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.nextWeek.Name = "nextWeek";
             // 
             // lastDay
             // 
-            resources.ApplyResources(this.lastDay, "lastDay");
             this.lastDay.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.lastDay, "lastDay");
             this.lastDay.Name = "lastDay";
             // 
             // separator3
             // 
-            resources.ApplyResources(this.separator3, "separator3");
             this.separator3.Name = "separator3";
+            resources.ApplyResources(this.separator3, "separator3");
             // 
             // crosshair
             // 
-            resources.ApplyResources(this.crosshair, "crosshair");
             this.crosshair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.crosshair, "crosshair");
             this.crosshair.Margin = new System.Windows.Forms.Padding(16, 1, 0, 2);
             this.crosshair.Name = "crosshair";
             // 
+            // separator4
+            // 
+            this.separator4.Name = "separator4";
+            resources.ApplyResources(this.separator4, "separator4");
+            // 
+            // previousFile
+            // 
+            this.previousFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.previousFile, "previousFile");
+            this.previousFile.Name = "previousFile";
+            // 
+            // nextFile
+            // 
+            this.nextFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.nextFile, "nextFile");
+            this.nextFile.Name = "nextFile";
+            // 
             // MainToolItems
             // 
-            resources.ApplyResources(this, "$this");
             this.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.open,
             this.print,
@@ -131,13 +136,15 @@ namespace SolvisSC2Viewer {
             this.toLabelDateTime,
             this.separator2,
             this.firstDay,
-            this.previousWeek,
             this.previousDay,
             this.nextDay,
-            this.nextWeek,
             this.lastDay,
             this.separator3,
+            this.previousFile,
+            this.nextFile,
+            this.separator4,
             this.crosshair});
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
 
         }
@@ -151,12 +158,13 @@ namespace SolvisSC2Viewer {
         private System.Windows.Forms.ToolStripLabel toLabelDateTime;
         private System.Windows.Forms.ToolStripSeparator separator2;
         private System.Windows.Forms.ToolStripButton firstDay;
-        private System.Windows.Forms.ToolStripButton previousWeek;
         private System.Windows.Forms.ToolStripButton previousDay;
         private System.Windows.Forms.ToolStripButton nextDay;
-        private System.Windows.Forms.ToolStripButton nextWeek;
         private System.Windows.Forms.ToolStripButton lastDay;
         private System.Windows.Forms.ToolStripSeparator separator3;
         private System.Windows.Forms.ToolStripButton crosshair;
+        private System.Windows.Forms.ToolStripSeparator separator4;
+        private System.Windows.Forms.ToolStripButton previousFile;
+        private System.Windows.Forms.ToolStripButton nextFile;
     }
 }

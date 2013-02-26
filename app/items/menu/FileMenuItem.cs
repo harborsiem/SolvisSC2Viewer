@@ -19,6 +19,8 @@ namespace SolvisSC2Viewer {
             this.open.ShortcutKeys = Keys.Control | Keys.O;
             this.open.Click += AppManager.GetAction(OpenFileAction.Name).ProcessEvent;
 
+            this.open1DayMode.Click += AppManager.GetAction(Open1DayModeAction.Name).ProcessEvent;
+
             this.printPreview.Click += AppManager.GetAction(PrintPreviewAction.Name).ProcessEvent;
 
             this.print.Click += AppManager.GetAction(PrintAction.Name).ProcessEvent;
@@ -35,8 +37,10 @@ namespace SolvisSC2Viewer {
         }
 
         public void UpdateItems() {
-            this.printPreview.Enabled = true;
-            this.print.Enabled = true;
+            this.open1DayMode.Checked = AppManager.ConfigManager.OneDayMode;
+            bool printEnabled = !AppManager.DataManager.IsSolvisListEmpty;
+            this.printPreview.Enabled = printEnabled;
+            this.print.Enabled = printEnabled;
         }
 
         public void LoadProperties() {

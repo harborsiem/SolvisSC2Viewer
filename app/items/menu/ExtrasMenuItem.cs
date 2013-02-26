@@ -26,11 +26,11 @@ namespace SolvisSC2Viewer {
         }
 
         public void UpdateItems() {
-            if (AppManager.ConfigManager.SuperUser || AppManager.ConfigManager.Prototype) {
+            if (AppManager.ConfigManager.Prototype) {
                 countingList.Visible = true;
                 parameterList.Visible = true;
             }
-            this.sensorsCheck.Enabled = AppManager.DataManager.SolvisList.Count > 0;
+            this.sensorsCheck.Enabled = !AppManager.DataManager.IsSolvisListEmpty;
         }
 
         public void LoadProperties() {

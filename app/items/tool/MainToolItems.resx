@@ -121,105 +121,29 @@
   <data name="open.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="nextWeek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 4</value>
-  </data>
-  <data name="previousDay.ToolTipText" xml:space="preserve">
-    <value>Previous day</value>
-  </data>
-  <data name="&gt;&gt;nextDay.Name" xml:space="preserve">
-    <value>nextDay</value>
-  </data>
-  <data name="&gt;&gt;open.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;previousWeek.Name" xml:space="preserve">
-    <value>previousWeek</value>
-  </data>
-  <data name="&gt;&gt;nextDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;separator1.Name" xml:space="preserve">
-    <value>separator1</value>
-  </data>
-  <data name="firstDay.ToolTipText" xml:space="preserve">
-    <value>First day</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lastDay.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="nextDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 4</value>
-  </data>
-  <data name="nextWeek.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainToolItems</value>
-  </data>
-  <data name="&gt;&gt;fromLabelDateTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="crosshair.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="separator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="&gt;&gt;crosshair.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="previousWeek.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;firstDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fromLabelDateTime.Name" xml:space="preserve">
-    <value>fromLabelDateTime</value>
-  </data>
-  <data name="&gt;&gt;print.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lastDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 4</value>
+  <data name="open.ToolTipText" xml:space="preserve">
+    <value>Open</value>
   </data>
   <data name="print.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="&gt;&gt;separator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="print.ToolTipText" xml:space="preserve">
+    <value>Print</value>
   </data>
-  <data name="&gt;&gt;previousWeek.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="previousWeek.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;separator2.Name" xml:space="preserve">
-    <value>separator2</value>
-  </data>
-  <data name="previousWeek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 4</value>
-  </data>
-  <data name="firstDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 4</value>
-  </data>
-  <data name="&gt;&gt;nextWeek.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toLabelDateTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;print.Name" xml:space="preserve">
-    <value>print</value>
+  <data name="separator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
   </data>
   <data name="fromLabelDateTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 15</value>
+  </data>
+  <data name="fromLabelDateTime.Text" xml:space="preserve">
+    <value>from Date</value>
+  </data>
+  <data name="toLabelDateTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 15</value>
+  </data>
+  <data name="toLabelDateTime.Text" xml:space="preserve">
+    <value>to Date</value>
   </data>
   <data name="separator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -227,86 +151,81 @@
   <data name="firstDay.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;nextWeek.Name" xml:space="preserve">
-    <value>nextWeek</value>
+  <data name="firstDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 4</value>
   </data>
-  <data name="&gt;&gt;crosshair.Name" xml:space="preserve">
-    <value>crosshair</value>
-  </data>
-  <data name="fromLabelDateTime.Text" xml:space="preserve">
-    <value>from Date</value>
-  </data>
-  <data name="print.ToolTipText" xml:space="preserve">
-    <value>Print</value>
+  <data name="firstDay.ToolTipText" xml:space="preserve">
+    <value>First day</value>
   </data>
   <data name="previousDay.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;lastDay.Name" xml:space="preserve">
-    <value>lastDay</value>
+  <data name="previousDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 4</value>
   </data>
-  <data name="&gt;&gt;previousDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="crosshair.ToolTipText" xml:space="preserve">
-    <value>Crosshair</value>
-  </data>
-  <data name="&gt;&gt;open.Name" xml:space="preserve">
-    <value>open</value>
-  </data>
-  <data name="lastDay.ToolTipText" xml:space="preserve">
-    <value>Last day</value>
-  </data>
-  <data name="&gt;&gt;previousDay.Name" xml:space="preserve">
-    <value>previousDay</value>
-  </data>
-  <data name="&gt;&gt;separator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;separator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lastDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="previousDay.ToolTipText" xml:space="preserve">
+    <value>Previous day</value>
   </data>
   <data name="nextDay.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="open.ToolTipText" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="crosshair.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="&gt;&gt;firstDay.Name" xml:space="preserve">
-    <value>firstDay</value>
-  </data>
-  <data name="$this.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="previousDay.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="nextDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 4</value>
-  </data>
-  <data name="toLabelDateTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 15</value>
-  </data>
-  <data name="nextWeek.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;separator3.Name" xml:space="preserve">
-    <value>separator3</value>
   </data>
   <data name="nextDay.ToolTipText" xml:space="preserve">
     <value>Next day</value>
   </data>
-  <data name="separator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+  <data name="lastDay.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;toLabelDateTime.Name" xml:space="preserve">
-    <value>toLabelDateTime</value>
+  <data name="lastDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 4</value>
   </data>
-  <data name="toLabelDateTime.Text" xml:space="preserve">
-    <value>to Date</value>
+  <data name="lastDay.ToolTipText" xml:space="preserve">
+    <value>Last day</value>
+  </data>
+  <data name="separator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="crosshair.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="crosshair.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 4</value>
+  </data>
+  <data name="crosshair.ToolTipText" xml:space="preserve">
+    <value>Crosshair</value>
+  </data>
+  <data name="separator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="separator4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="previousFile.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="previousFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 4</value>
+  </data>
+  <data name="previousFile.ToolTipText" xml:space="preserve">
+    <value>Previous file</value>
+  </data>
+  <data name="previousFile.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="nextFile.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="nextFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 4</value>
+  </data>
+  <data name="nextFile.ToolTipText" xml:space="preserve">
+    <value>Next file</value>
+  </data>
+  <data name="nextFile.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -314,4 +233,103 @@
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="$this.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;open.Name" xml:space="preserve">
+    <value>open</value>
+  </data>
+  <data name="&gt;&gt;open.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;print.Name" xml:space="preserve">
+    <value>print</value>
+  </data>
+  <data name="&gt;&gt;print.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;separator1.Name" xml:space="preserve">
+    <value>separator1</value>
+  </data>
+  <data name="&gt;&gt;separator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fromLabelDateTime.Name" xml:space="preserve">
+    <value>fromLabelDateTime</value>
+  </data>
+  <data name="&gt;&gt;fromLabelDateTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toLabelDateTime.Name" xml:space="preserve">
+    <value>toLabelDateTime</value>
+  </data>
+  <data name="&gt;&gt;toLabelDateTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;separator2.Name" xml:space="preserve">
+    <value>separator2</value>
+  </data>
+  <data name="&gt;&gt;separator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstDay.Name" xml:space="preserve">
+    <value>firstDay</value>
+  </data>
+  <data name="&gt;&gt;firstDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;previousDay.Name" xml:space="preserve">
+    <value>previousDay</value>
+  </data>
+  <data name="&gt;&gt;previousDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nextDay.Name" xml:space="preserve">
+    <value>nextDay</value>
+  </data>
+  <data name="&gt;&gt;nextDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lastDay.Name" xml:space="preserve">
+    <value>lastDay</value>
+  </data>
+  <data name="&gt;&gt;lastDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;separator3.Name" xml:space="preserve">
+    <value>separator3</value>
+  </data>
+  <data name="&gt;&gt;separator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crosshair.Name" xml:space="preserve">
+    <value>crosshair</value>
+  </data>
+  <data name="&gt;&gt;crosshair.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;separator4.Name" xml:space="preserve">
+    <value>separator4</value>
+  </data>
+  <data name="&gt;&gt;separator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;previousFile.Name" xml:space="preserve">
+    <value>previousFile</value>
+  </data>
+  <data name="&gt;&gt;previousFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nextFile.Name" xml:space="preserve">
+    <value>nextFile</value>
+  </data>
+  <data name="&gt;&gt;nextFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainToolItems</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
