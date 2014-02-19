@@ -11,6 +11,7 @@ namespace SolvisSC2Viewer {
         public const string CategoryWater = "Wasser";
 
         public WaterSettings(IList<int> list) {
+            Title = HeatingSettings.Titlevalue;
             WaterPumpMode = (Mode)list[44]; //?
             WaterTargetTemperature = list[45].ToString() + Unit.DegreeCelsius;
             WaterBufferTmin = list[53].ToString() + Unit.DegreeCelsius; //oder index = 61 ?
@@ -21,6 +22,10 @@ namespace SolvisSC2Viewer {
             WaterDTStart = list[59].ToString() + Unit.Kelvin;
             WaterDTEnd = list[60].ToString() + Unit.Kelvin;
         }
+
+        [DisplayName("Wasser Parameter")]
+        [Category(CategoryWater)]
+        public string Title { get; set; }
 
         [DisplayName("Wasserpumpe Betriebsart")]
         [Description(HeatingSettings.Fachnutzer)]

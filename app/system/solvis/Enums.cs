@@ -17,8 +17,12 @@ namespace SolvisSC2Viewer {
         Alt,
     }
 
+    public enum SolarMode { //?
+        dt, Ziel
+    }
+
     public enum HeatingCircuitMode { //?
-        Absenk, Tag, Auto, unknown1, unknown2, Standby = 5, unknown3
+        Absenk, Tag, Auto, Unknown1, Unknown2, Standby = 5, Unknown3
     }
 
     public enum Mode { //?

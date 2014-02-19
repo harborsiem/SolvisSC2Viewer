@@ -60,11 +60,12 @@ namespace SolvisSC2Viewer {
             if (!string.IsNullOrWhiteSpace(manager.FormulaSolarKW)) {
                 SetSimpleNodeValue(ConfigXml.SolarKWTag, manager.FormulaSolarKW);
             }
-            if (manager.IsExternCode) {
-                SetSimpleNodeValue(ConfigXml.IsExternCodeTag, XmlConvert.ToString(manager.IsExternCode));
-            }
+            SetSimpleNodeValue(ConfigXml.HasFormulaDllTag, XmlConvert.ToString(manager.HasFormulaDll));
+            SetSimpleNodeValue(ConfigXml.SolvisControlVersionTag, XmlConvert.ToString(RowValues.SolvisControlVersion));
+            SetSimpleNodeValue(ConfigXml.SolarPulseTag, XmlConvert.ToString(RowValues.SolarPulse));
+            SetSimpleNodeValue(ConfigXml.HeatCapacityTag, XmlConvert.ToString(RowValues.HeatCapacity20));
             SetSimpleNodeValue(ConfigXml.SdCardDirTag, manager.SdCardDir);
-            SetSimpleNodeValue(ConfigXml.TimePlanSuppressMaskTag, XmlConvert.ToString(manager.TimePlanSuppressMask));
+            SetSimpleNodeValue(ConfigXml.SDCardSuppressMaskTag, XmlConvert.ToString(manager.SDCardSuppressMask));
             SetSimpleNodeValue(ConfigXml.TimePlanBitmapTag, XmlConvert.ToString(manager.TimePlanBitmap));
             SetSimpleNodeValue(ConfigXml.OneDayModeTag, XmlConvert.ToString(manager.OneDayMode));
             SetSimpleNodeValue(ConfigXml.PrototypeTag, XmlConvert.ToString(manager.Prototype));

@@ -11,6 +11,7 @@ namespace SolvisSC2Viewer {
         public const string CategoryCirc = "Zirkular";
 
         public CirculationSettings(IList<int> list) {
+            Title = HeatingSettings.Titlevalue;
             CircOffTime = list[326].ToString() + Unit.Minute;
             CircPump = (Mode)list[327];
             CircCommandTemperature = list[328].ToString() + Unit.DegreeCelsius;
@@ -18,6 +19,10 @@ namespace SolvisSC2Viewer {
             CircDeltaForOn = list[330].ToString() + Unit.Kelvin;
             CircMinRuntime = list[332].ToString() + Unit.Second;
         }
+
+        [DisplayName("Zirkulation Parameter")]
+        [Category(CategoryCirc)]
+        public string Title { get; set; }
 
         [DisplayName("Zirkulations Betriebsart")]
         [Description(HeatingSettings.Fachnutzer)]

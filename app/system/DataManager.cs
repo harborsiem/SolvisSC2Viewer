@@ -18,18 +18,12 @@ namespace SolvisSC2Viewer {
         private static DataManager s_instance = new DataManager();
         private static readonly string rFile = " --- " + Resources.AllClassesFile + ": "; //@Language Resource
         private List<RowValues> SolvisList { get; set; }
-        private List<Series> SensorsSeriesList { get; set; }
-        private List<Series> ActorsSeriesList { get; set; }
-        private List<Series> OptionsSeriesList { get; set; }
         private DateTime fromDateTime;
         private DateTime toDateTime;
         private string serializeFileName;
 
         private DataManager() {
             SolvisList = new List<RowValues>();
-            SensorsSeriesList = new List<Series>();
-            ActorsSeriesList = new List<Series>();
-            OptionsSeriesList = new List<Series>();
         }
 
         public static DataManager Instance {
@@ -59,7 +53,7 @@ namespace SolvisSC2Viewer {
                     DateTime min = (SolvisList[0].DateAndTime);
                     DateTime max = (SolvisList[SolvisList.Count - 1].DateAndTime);
                     AppManager.ItemManager.ToolMenu.SetMinMaxDate(min, max);
-                    AppManager.MainForm.Text = MainForm.ApplicationText + rFile + Path.GetFileNameWithoutExtension(fileName);
+                    AppManager.MainForm.Text = AppManager.ApplicationText + rFile + Path.GetFileNameWithoutExtension(fileName);
                 }
                 finally {
                     if (reader != null) {
@@ -70,7 +64,7 @@ namespace SolvisSC2Viewer {
                 //DeSerialize();
             }
             catch (ArgumentException ex) {
-                AppManager.MainForm.Text = MainForm.ApplicationText;
+                AppManager.MainForm.Text = AppManager.ApplicationText;
                 SolvisList.Clear();
                 DateTime now = DateTime.Now;
                 AppManager.ItemManager.ToolMenu.SetMinMaxDate(now, now);
@@ -106,7 +100,8 @@ namespace SolvisSC2Viewer {
         }
 
         public void UpdateSeries() {
-            if (SensorsSeriesList.Count > 0 && ActorsSeriesList.Count > 0 && OptionsSeriesList.Count > 0) {
+            MainForm mainForm = AppManager.MainForm;
+            if (mainForm.SensorsCheckBoxes.Count > 0 && mainForm.ActorsCheckBoxes.Count > 0 && mainForm.OptionsCheckBoxes.Count > 0) {
                 FillAllCheckedSeriesWithNewData(fromDateTime, toDateTime);
             }
             AppManager.MainForm.ChartControl.ResetZoom();
@@ -151,7 +146,7 @@ namespace SolvisSC2Viewer {
                 series.ChartArea = "ChartArea1";
                 series.Legend = "Legend1";
                 series.Color = checkBox.ForeColor;
-                SensorsSeriesList.Add(series);
+                series.LegendText = key;
                 CheckBoxTag tag = new CheckBoxTag(series, GroupIdent.Sensor, i, checkBox, key);
                 checkBox.Tag = tag;
                 checkBox.CheckedChanged += CheckBoxCheckedChanged;
@@ -167,7 +162,7 @@ namespace SolvisSC2Viewer {
                 series.ChartArea = "ChartArea2";
                 series.Legend = "Legend2";
                 series.Color = checkBox.ForeColor;
-                ActorsSeriesList.Add(series);
+                series.LegendText = key;
                 CheckBoxTag tag = new CheckBoxTag(series, GroupIdent.Actor, i, checkBox, key);
                 checkBox.Tag = tag;
                 checkBox.CheckedChanged += CheckBoxCheckedChanged;
@@ -183,7 +178,7 @@ namespace SolvisSC2Viewer {
                 series.ChartArea = "ChartArea1";
                 series.Legend = "Legend1";
                 series.Color = checkBox.ForeColor;
-                OptionsSeriesList.Add(series);
+                series.LegendText = key;
                 CheckBoxTag tag = new CheckBoxTag(series, GroupIdent.Option, i, checkBox, key);
                 checkBox.Tag = tag;
                 checkBox.CheckedChanged += CheckBoxCheckedChanged;
@@ -202,19 +197,12 @@ namespace SolvisSC2Viewer {
                     return;
                 }
                 points.SuspendUpdates();
-                double[] array = null;
                 for (int i = fromIndex; i <= toIndex; i++) {
                     RowValues values = SolvisList[i];
                     if (tag.Ident == GroupIdent.Sensor) {
-                        array = values.GetSensors();
-                        if (tag.Index != RowValues.SolarVSGIndex) {
-                            points.AddXY(values.DateAndTime, array[tag.Index]);
-                        } else {
-                            points.AddXY(values.DateAndTime, values.FormulaSolarVSG);
-                        }
+                        points.AddXY(values.DateAndTime, values.GetSensorValue(tag.Index));
                     } else if (tag.Ident == GroupIdent.Actor) {
-                        array = values.GetActors();
-                        points.AddXY(values.DateAndTime, array[tag.Index]);
+                        points.AddXY(values.DateAndTime, values.GetActors()[tag.Index]);
                     } else { //GroupIdent.Option
                         SeriesState state = SeriesState.Inner;
                         if (i == fromIndex) {
@@ -239,73 +227,79 @@ namespace SolvisSC2Viewer {
             int toIndex = GetSolvisListIndex(to);
             chartMain.BeginInit();
             AppManager.MainForm.ChartControl.SetIntervals(new TimeSpan(to.Ticks - from.Ticks));
-            for (int seriesIndex = 0; seriesIndex < SensorsSeriesList.Count; seriesIndex++) {
-                CheckBox checkBox = AppManager.MainForm.SensorsCheckBoxes[seriesIndex];
+            MainForm mainForm = AppManager.MainForm;
+            for (int seriesIndex = 0; seriesIndex < mainForm.SensorsCheckBoxes.Count; seriesIndex++) {
+                CheckBox checkBox = mainForm.SensorsCheckBoxes[seriesIndex];
                 if (checkBox.Checked) {
-                    Series series = SensorsSeriesList[seriesIndex];
-                    DataPointCollection points = series.Points;
-                    points.ClearFast(); //MsChartExtension
-                    if (fromIndex < 0 || fromIndex >= toIndex) {
-                        continue;
-                    }
-                    points.SuspendUpdates();
-                    for (int i = fromIndex; i <= toIndex; i++) {
-                        RowValues values = SolvisList[i];
-                        if (seriesIndex != RowValues.SolarVSGIndex) {
-                            points.AddXY(values.DateAndTime, values.GetSensors()[seriesIndex]);
-                        } else {
-                            points.AddXY(values.DateAndTime, values.FormulaSolarVSG);
+                    CheckBoxTag tag = checkBox.Tag as CheckBoxTag;
+                    if (tag != null) {
+                        Series series = tag.Series;
+                        DataPointCollection points = series.Points;
+                        points.ClearFast(); //MsChartExtension
+                        if (fromIndex < 0 || fromIndex >= toIndex) {
+                            continue;
                         }
-                    }
-                    points.ResumeUpdates();
-                    if (!chartMain.Series.Contains(series)) {
-                        chartMain.Series.Add(series);
+                        points.SuspendUpdates();
+                        for (int i = fromIndex; i <= toIndex; i++) {
+                            RowValues values = SolvisList[i];
+                            points.AddXY(values.DateAndTime, values.GetSensorValue(seriesIndex));
+                        }
+                        points.ResumeUpdates();
+                        if (!chartMain.Series.Contains(series)) {
+                            chartMain.Series.Add(series);
+                        }
                     }
                 }
             }
-            for (int seriesIndex = 0; seriesIndex < ActorsSeriesList.Count; seriesIndex++) {
-                CheckBox checkBox = AppManager.MainForm.ActorsCheckBoxes[seriesIndex];
-                Series series = ActorsSeriesList[seriesIndex];
+            for (int seriesIndex = 0; seriesIndex < mainForm.ActorsCheckBoxes.Count; seriesIndex++) {
+                CheckBox checkBox = mainForm.ActorsCheckBoxes[seriesIndex];
                 if (checkBox.Checked) {
-                    DataPointCollection points = series.Points;
-                    points.ClearFast(); //MsChartExtension
-                    if (fromIndex < 0 || fromIndex >= toIndex) {
-                        continue;
-                    }
-                    points.SuspendUpdates();
-                    for (int i = fromIndex; i <= toIndex; i++) {
-                        RowValues values = SolvisList[i];
-                        points.AddXY(values.DateAndTime, values.GetActors()[seriesIndex]);
-                    }
-                    points.ResumeUpdates();
-                    if (!chartMain.Series.Contains(series)) {
-                        chartMain.Series.Add(series);
+                    CheckBoxTag tag = checkBox.Tag as CheckBoxTag;
+                    if (tag != null) {
+                        Series series = tag.Series;
+                        DataPointCollection points = series.Points;
+                        points.ClearFast(); //MsChartExtension
+                        if (fromIndex < 0 || fromIndex >= toIndex) {
+                            continue;
+                        }
+                        points.SuspendUpdates();
+                        for (int i = fromIndex; i <= toIndex; i++) {
+                            RowValues values = SolvisList[i];
+                            points.AddXY(values.DateAndTime, values.GetActors()[seriesIndex]);
+                        }
+                        points.ResumeUpdates();
+                        if (!chartMain.Series.Contains(series)) {
+                            chartMain.Series.Add(series);
+                        }
                     }
                 }
             }
-            for (int seriesIndex = 0; seriesIndex < OptionsSeriesList.Count; seriesIndex++) {
-                CheckBox checkBox = AppManager.MainForm.OptionsCheckBoxes[seriesIndex];
-                Series series = OptionsSeriesList[seriesIndex];
+            for (int seriesIndex = 0; seriesIndex < mainForm.OptionsCheckBoxes.Count; seriesIndex++) {
+                CheckBox checkBox = mainForm.OptionsCheckBoxes[seriesIndex];
                 if (checkBox.Checked) {
-                    DataPointCollection points = series.Points;
-                    points.ClearFast(); //MsChartExtension
-                    if (fromIndex < 0 || fromIndex >= toIndex) {
-                        continue;
-                    }
-                    points.SuspendUpdates();
-                    for (int i = fromIndex; i <= toIndex; i++) {
-                        RowValues values = SolvisList[i];
-                        SeriesState state = SeriesState.Inner;
-                        if (i == fromIndex) {
-                            state = SeriesState.First;
-                        } else if (i == toIndex) {
-                            state = SeriesState.Last;
+                    CheckBoxTag tag = checkBox.Tag as CheckBoxTag;
+                    if (tag != null) {
+                        Series series = tag.Series;
+                        DataPointCollection points = series.Points;
+                        points.ClearFast(); //MsChartExtension
+                        if (fromIndex < 0 || fromIndex >= toIndex) {
+                            continue;
                         }
-                        SetOptionsPoints(seriesIndex, values, points, state);
-                    }
-                    points.ResumeUpdates();
-                    if (!chartMain.Series.Contains(series)) {
-                        chartMain.Series.Add(series);
+                        points.SuspendUpdates();
+                        for (int i = fromIndex; i <= toIndex; i++) {
+                            RowValues values = SolvisList[i];
+                            SeriesState state = SeriesState.Inner;
+                            if (i == fromIndex) {
+                                state = SeriesState.First;
+                            } else if (i == toIndex) {
+                                state = SeriesState.Last;
+                            }
+                            SetOptionsPoints(seriesIndex, values, points, state);
+                        }
+                        points.ResumeUpdates();
+                        if (!chartMain.Series.Contains(series)) {
+                            chartMain.Series.Add(series);
+                        }
                     }
                 }
             }

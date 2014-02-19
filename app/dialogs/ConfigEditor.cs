@@ -18,7 +18,7 @@ namespace SolvisSC2Viewer {
         private int temperature;
         private int niveau;
         private double gradient;
-        private int timePlanSuppressMask;
+        private int sDCardSuppressMask;
         private bool timePlanBitmap;
 
         public bool Changed { get; set; }
@@ -51,13 +51,14 @@ namespace SolvisSC2Viewer {
             gradientUpDown.Value = (decimal)ConfigManager.Gradient;
             gradientUpDown.Maximum = HeatCurve.GradientMaximum;
             gradientUpDown.Minimum = HeatCurve.GradientMinimum;
-            timePlanSuppressMask = AppManager.ConfigManager.TimePlanSuppressMask;
+            sDCardSuppressMask = AppManager.ConfigManager.SDCardSuppressMask;
             timePlanBitmap = AppManager.ConfigManager.TimePlanBitmap;
             savePictureCheckBox.Checked = timePlanBitmap;
-            hk2CheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.HK2) == 0;
-            hk3CheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.HK3) == 0;
-            ecoCheckBox.Checked = (timePlanSuppressMask & (int)SuppressMask.Eco) == 0;
+            hk2CheckBox.Checked = (sDCardSuppressMask & (int)SuppressMask.HK2) == 0;
+            hk3CheckBox.Checked = (sDCardSuppressMask & (int)SuppressMask.HK3) == 0;
+            ecoCheckBox.Checked = (sDCardSuppressMask & (int)SuppressMask.Eco) == 0;
             prototype.Checked = AppManager.ConfigManager.Prototype;
+            controlVersionUpDown.Value = RowValues.SolvisControlVersion;
             this.temperatureUpDown.ValueChanged += new System.EventHandler(this.temperatureUpDown_ValueChanged);
             this.niveauUpDown.ValueChanged += new System.EventHandler(this.niveauUpDown_ValueChanged);
             this.gradientUpDown.ValueChanged += new System.EventHandler(this.gradientUpDown_ValueChanged);
@@ -115,9 +116,10 @@ namespace SolvisSC2Viewer {
                 ConfigManager.Temperature = temperature;
                 ConfigManager.Niveau = niveau;
                 ConfigManager.Gradient = gradient;
-                manager.TimePlanSuppressMask = timePlanSuppressMask;
+                manager.SDCardSuppressMask = sDCardSuppressMask;
                 manager.TimePlanBitmap = timePlanBitmap;
                 manager.Prototype = prototype.Checked;
+                RowValues.SolvisControlVersion = (int)controlVersionUpDown.Value;
 
                 manager.UpdateMainForm();
                 this.Cursor = Cursors.Default;
@@ -286,6 +288,12 @@ namespace SolvisSC2Viewer {
                         dialog = new BurnerPower();
                         dialog.ShowDialog(this);
                         break;
+                    case "S17":
+                    case "P02":
+                        dialog = new S17Dialog();
+                        dialog.Tag = key;
+                        dialog.ShowDialog(this);
+                        break;
                     case "P03":
                         dialog = new EarthPosition();
                         dialog.ShowDialog(this);
@@ -294,8 +302,8 @@ namespace SolvisSC2Viewer {
                         dialog = new VLParameters();
                         dialog.ShowDialog(this);
                         break;
-                    case "S17":
-                    case "P02":
+                    //case "S17":
+                    //case "P02":
                     case "P06":
                     case "P07":
                     case "P08":
@@ -326,27 +334,27 @@ namespace SolvisSC2Viewer {
 
         private void hk2CheckBox_CheckedChanged(object sender, EventArgs e) {
             if (hk2CheckBox.Checked) {
-                timePlanSuppressMask &= ~(int)SuppressMask.HK2;
+                sDCardSuppressMask &= ~(int)SuppressMask.HK2;
             } else {
-                timePlanSuppressMask |= (int)SuppressMask.HK2;
+                sDCardSuppressMask |= (int)SuppressMask.HK2;
             }
             Changed = true;
         }
 
         private void hk3CheckBox_CheckedChanged(object sender, EventArgs e) {
             if (hk3CheckBox.Checked) {
-                timePlanSuppressMask &= ~(int)SuppressMask.HK3;
+                sDCardSuppressMask &= ~(int)SuppressMask.HK3;
             } else {
-                timePlanSuppressMask |= (int)SuppressMask.HK3;
+                sDCardSuppressMask |= (int)SuppressMask.HK3;
             }
             Changed = true;
         }
 
         private void ecoCheckBox_CheckedChanged(object sender, EventArgs e) {
             if (ecoCheckBox.Checked) {
-                timePlanSuppressMask &= ~(int)SuppressMask.Eco;
+                sDCardSuppressMask &= ~(int)SuppressMask.Eco;
             } else {
-                timePlanSuppressMask |= (int)SuppressMask.Eco;
+                sDCardSuppressMask |= (int)SuppressMask.Eco;
             }
             Changed = true;
         }

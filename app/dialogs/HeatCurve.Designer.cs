@@ -23,17 +23,14 @@
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeatCurve));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeatCurve));
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
             this.chartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.bottomLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.groupCurve1 = new System.Windows.Forms.GroupBox();
             this.group1Layout = new System.Windows.Forms.TableLayoutPanel();
             this.temperatureLabel1 = new System.Windows.Forms.Label();
             this.temperatureUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -41,7 +38,7 @@
             this.niveauUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel1 = new System.Windows.Forms.Label();
             this.gradientUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.groupCurve2 = new System.Windows.Forms.GroupBox();
+            this.groupCurve1 = new System.Windows.Forms.GroupBox();
             this.group2Layout = new System.Windows.Forms.TableLayoutPanel();
             this.temperatureLabel2 = new System.Windows.Forms.Label();
             this.temperatureUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -49,7 +46,7 @@
             this.niveauUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel2 = new System.Windows.Forms.Label();
             this.gradientUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.groupCurve3 = new System.Windows.Forms.GroupBox();
+            this.groupCurve2 = new System.Windows.Forms.GroupBox();
             this.group3Layout = new System.Windows.Forms.TableLayoutPanel();
             this.temperatureLabel3 = new System.Windows.Forms.Label();
             this.temperatureUpDown3 = new System.Windows.Forms.NumericUpDown();
@@ -57,7 +54,9 @@
             this.niveauUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel3 = new System.Windows.Forms.Label();
             this.gradientUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.groupCurve3 = new System.Windows.Forms.GroupBox();
             this.closeButton = new System.Windows.Forms.Button();
+            this.bottomLayout = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.printHeadItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,33 +69,27 @@
             this.curve2FloorItem = new System.Windows.Forms.ToolStripMenuItem();
             this.curve2RoundItem = new System.Windows.Forms.ToolStripMenuItem();
             this.curve2NotRoundItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dialogLayout.SuspendLayout();
+            this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.chartMain)).BeginInit();
-            this.bottomLayout.SuspendLayout();
-            this.groupCurve1.SuspendLayout();
             this.group1Layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown1)).BeginInit();
-            this.groupCurve2.SuspendLayout();
+            this.groupCurve1.SuspendLayout();
             this.group2Layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown2)).BeginInit();
-            this.groupCurve3.SuspendLayout();
+            this.groupCurve2.SuspendLayout();
             this.group3Layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown3)).BeginInit();
+            this.groupCurve3.SuspendLayout();
+            this.bottomLayout.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.dialogLayout.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dialogLayout
-            // 
-            resources.ApplyResources(this.dialogLayout, "dialogLayout");
-            this.dialogLayout.Controls.Add(this.chartMain, 0, 0);
-            this.dialogLayout.Controls.Add(this.bottomLayout, 0, 1);
-            this.dialogLayout.Name = "dialogLayout";
             // 
             // chartMain
             // 
@@ -156,22 +149,6 @@
             title1.Name = "Title1";
             this.chartMain.Titles.Add(title1);
             // 
-            // bottomLayout
-            // 
-            resources.ApplyResources(this.bottomLayout, "bottomLayout");
-            this.bottomLayout.Controls.Add(this.groupCurve1, 0, 0);
-            this.bottomLayout.Controls.Add(this.groupCurve2, 1, 0);
-            this.bottomLayout.Controls.Add(this.groupCurve3, 2, 0);
-            this.bottomLayout.Controls.Add(this.closeButton, 3, 0);
-            this.bottomLayout.Name = "bottomLayout";
-            // 
-            // groupCurve1
-            // 
-            resources.ApplyResources(this.groupCurve1, "groupCurve1");
-            this.groupCurve1.Controls.Add(this.group1Layout);
-            this.groupCurve1.Name = "groupCurve1";
-            this.groupCurve1.TabStop = false;
-            // 
             // group1Layout
             // 
             resources.ApplyResources(this.group1Layout, "group1Layout");
@@ -230,12 +207,12 @@
             this.gradientUpDown1.DecimalPlaces = 2;
             this.gradientUpDown1.Name = "gradientUpDown1";
             // 
-            // groupCurve2
+            // groupCurve1
             // 
-            resources.ApplyResources(this.groupCurve2, "groupCurve2");
-            this.groupCurve2.Controls.Add(this.group2Layout);
-            this.groupCurve2.Name = "groupCurve2";
-            this.groupCurve2.TabStop = false;
+            resources.ApplyResources(this.groupCurve1, "groupCurve1");
+            this.groupCurve1.Controls.Add(this.group1Layout);
+            this.groupCurve1.Name = "groupCurve1";
+            this.groupCurve1.TabStop = false;
             // 
             // group2Layout
             // 
@@ -295,12 +272,12 @@
             this.gradientUpDown2.DecimalPlaces = 2;
             this.gradientUpDown2.Name = "gradientUpDown2";
             // 
-            // groupCurve3
+            // groupCurve2
             // 
-            resources.ApplyResources(this.groupCurve3, "groupCurve3");
-            this.groupCurve3.Controls.Add(this.group3Layout);
-            this.groupCurve3.Name = "groupCurve3";
-            this.groupCurve3.TabStop = false;
+            resources.ApplyResources(this.groupCurve2, "groupCurve2");
+            this.groupCurve2.Controls.Add(this.group2Layout);
+            this.groupCurve2.Name = "groupCurve2";
+            this.groupCurve2.TabStop = false;
             // 
             // group3Layout
             // 
@@ -360,12 +337,28 @@
             this.gradientUpDown3.DecimalPlaces = 2;
             this.gradientUpDown3.Name = "gradientUpDown3";
             // 
+            // groupCurve3
+            // 
+            resources.ApplyResources(this.groupCurve3, "groupCurve3");
+            this.groupCurve3.Controls.Add(this.group3Layout);
+            this.groupCurve3.Name = "groupCurve3";
+            this.groupCurve3.TabStop = false;
+            // 
             // closeButton
             // 
             resources.ApplyResources(this.closeButton, "closeButton");
             this.closeButton.Name = "closeButton";
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // bottomLayout
+            // 
+            resources.ApplyResources(this.bottomLayout, "bottomLayout");
+            this.bottomLayout.Controls.Add(this.groupCurve1, 0, 0);
+            this.bottomLayout.Controls.Add(this.groupCurve2, 1, 0);
+            this.bottomLayout.Controls.Add(this.groupCurve3, 2, 0);
+            this.bottomLayout.Controls.Add(this.closeButton, 3, 0);
+            this.bottomLayout.Name = "bottomLayout";
             // 
             // menuStrip
             // 
@@ -450,6 +443,13 @@
             resources.ApplyResources(this.curve2NotRoundItem, "curve2NotRoundItem");
             this.curve2NotRoundItem.Click += new System.EventHandler(this.curve2NotRoundItem_Click);
             // 
+            // dialogLayout
+            // 
+            resources.ApplyResources(this.dialogLayout, "dialogLayout");
+            this.dialogLayout.Controls.Add(this.chartMain, 0, 0);
+            this.dialogLayout.Controls.Add(this.bottomLayout, 0, 1);
+            this.dialogLayout.Name = "dialogLayout";
+            // 
             // HeatCurve
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -458,34 +458,34 @@
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "HeatCurve";
-            this.dialogLayout.ResumeLayout(false);
-            this.dialogLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartMain)).EndInit();
-            this.bottomLayout.ResumeLayout(false);
-            this.bottomLayout.PerformLayout();
-            this.groupCurve1.ResumeLayout(false);
-            this.groupCurve1.PerformLayout();
             this.group1Layout.ResumeLayout(false);
             this.group1Layout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown1)).EndInit();
-            this.groupCurve2.ResumeLayout(false);
-            this.groupCurve2.PerformLayout();
+            this.groupCurve1.ResumeLayout(false);
+            this.groupCurve1.PerformLayout();
             this.group2Layout.ResumeLayout(false);
             this.group2Layout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown2)).EndInit();
-            this.groupCurve3.ResumeLayout(false);
-            this.groupCurve3.PerformLayout();
+            this.groupCurve2.ResumeLayout(false);
+            this.groupCurve2.PerformLayout();
             this.group3Layout.ResumeLayout(false);
             this.group3Layout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown3)).EndInit();
+            this.groupCurve3.ResumeLayout(false);
+            this.groupCurve3.PerformLayout();
+            this.bottomLayout.ResumeLayout(false);
+            this.bottomLayout.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.dialogLayout.ResumeLayout(false);
+            this.dialogLayout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,3 +1,5 @@
+//#define Store
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +46,8 @@ namespace SolvisSC2Viewer {
             if (results != null && results.CompiledAssembly != null) {
                 // run the evaluation function
                 RunCode(results);
+            } else {
+                CalculatorProxy.Calculator = null;
             }
         }
 
@@ -220,13 +224,14 @@ namespace SolvisSC2Viewer {
                         Object handle = Activator.CreateInstance(type);
                         ICalculator iCalc = handle as ICalculator;
                         if (iCalc != null) {
-                            new CalculatorProxy(iCalc);
+                            CalculatorProxy.Calculator = iCalc;
                             return;
                         }
                     }
                 }
             }
-            catch (Exception ex) {
+            catch (Exception) {
+                CalculatorProxy.Calculator = null;
                 //Console.WriteLine("Error:  An exception occurred while executing the script", ex);
             }
         }

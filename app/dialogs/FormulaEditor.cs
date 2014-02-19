@@ -11,6 +11,7 @@ namespace SolvisSC2Viewer {
     public partial class FormulaEditor : BaseForm {
         public FormulaEditor() {
             InitializeComponent();
+            this.hintLabel.Visible = false;
         }
 
         private void FormulaEditor_Shown(object sender, EventArgs e) {
@@ -50,7 +51,7 @@ namespace SolvisSC2Viewer {
             ConfigManager manager = AppManager.ConfigManager;
             ConfigEditor editor = this.Owner as ConfigEditor;
             if (editor != null) {
-                //editor.Changed = true;
+                editor.Changed = true;
                 AppManager.ConfigManager.AppConfigChanged = true;
             }
             StringBuilder formula = new StringBuilder();

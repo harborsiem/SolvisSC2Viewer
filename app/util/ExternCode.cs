@@ -32,13 +32,14 @@ namespace SolvisSC2Viewer {
                             Object handle = Activator.CreateInstance(type);
                             ICalculator iCalc = handle as ICalculator;
                             if (iCalc != null) {
-                                new CalculatorProxy(iCalc);
+                                CalculatorProxy.Calculator = iCalc;
                                 return true;
                             }
                         }
                     }
                 }
                 catch (Exception) {
+                    CalculatorProxy.Calculator = null;
                 }
             }
             return false;

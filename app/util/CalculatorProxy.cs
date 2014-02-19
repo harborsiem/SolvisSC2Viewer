@@ -5,9 +5,14 @@ using System.Text;
 using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
-    internal class CalculatorProxy {
+    internal static class CalculatorProxy {
 
         private static ICalculator iCalculator;
+
+        public static ICalculator Calculator {
+            get { return iCalculator; }
+            set { iCalculator = value; }
+        }
 
         public static bool HasFormulaSolarVSG {
             get {
@@ -25,10 +30,6 @@ namespace SolvisSC2Viewer {
                 }
                 return false;
             }
-        }
-
-        public CalculatorProxy(ICalculator calculator) {
-            iCalculator = calculator;
         }
 
         internal static double Formula1(RowValues rowValues, SeriesState state) {

@@ -28,22 +28,11 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            this.controlPanel = new System.Windows.Forms.Panel();
             this.chartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.controlPanel.SuspendLayout();
+            this.controlPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartMain)).BeginInit();
+            this.controlPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // controlPanel
-            // 
-            this.controlPanel.AutoScroll = true;
-            this.controlPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.controlPanel.Controls.Add(this.chartMain);
-            this.controlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlPanel.Location = new System.Drawing.Point(0, 0);
-            this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(782, 503);
-            this.controlPanel.TabIndex = 0;
             // 
             // chartMain
             // 
@@ -144,14 +133,25 @@
             this.chartMain.TabIndex = 0;
             this.chartMain.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
             // 
+            // controlPanel
+            // 
+            this.controlPanel.AutoScroll = true;
+            this.controlPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.controlPanel.Controls.Add(this.chartMain);
+            this.controlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlPanel.Location = new System.Drawing.Point(0, 0);
+            this.controlPanel.Name = "controlPanel";
+            this.controlPanel.Size = new System.Drawing.Size(782, 503);
+            this.controlPanel.TabIndex = 0;
+            // 
             // ChartControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.controlPanel);
             this.Name = "ChartControl";
             this.Size = new System.Drawing.Size(782, 503);
-            this.controlPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartMain)).EndInit();
+            this.controlPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -18,6 +18,19 @@ namespace SolvisSC2Viewer {
             InitializeComponent();
             chartMain.ChartAreas["ChartArea1"].AxisX.StripLines[0].Text = Resources.ChartControlNewDay; //@Language Resource
             chartMain.AxisViewChanged += new EventHandler<ViewEventArgs>(ChartMain_AxisViewChanged);
+            chartMain.PrePaint += new EventHandler<ChartPaintEventArgs>(chartMain_PrePaint);
+        }
+
+        void chartMain_PrePaint(object sender, ChartPaintEventArgs e) {
+            ChartArea area1 = chartMain.ChartAreas["ChartArea1"];
+            if (double.IsNaN(area1.AxisY.Maximum)) {
+                return;
+            }
+            if (area1.AxisY.Maximum <= 100.0) {
+                area1.AxisY.MajorGrid.Interval = 5;
+            } else {
+                area1.AxisY.MajorGrid.Interval = 20;
+            }
         }
 
         public Chart ChartMain {

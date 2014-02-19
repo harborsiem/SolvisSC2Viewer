@@ -19,13 +19,30 @@ namespace SolvisSC2Viewer {
                 FileToInt32List paramact = new FileToInt32List(manager.SdCardDir, "paramact.txt");
                 if (!paramact.Empty) {
                     AppManager.MainForm.Cursor = Cursors.WaitCursor;
-                    HeatingSettings heatingSettings = new HeatingSettings(paramact.ParamList, 185); //Beginn: HK1 = 185; HK2 = 231; HK3 = 277 (HK1 evtl. schon ab 184 ?)
+                    HeatCircuitSettings heatCircuitSettings1 = new HeatCircuitSettings(paramact.ParamList, HeatCircuit.HC1);
+                    HeatCircuitSettings heatCircuitSettings2 = new HeatCircuitSettings(paramact.ParamList, HeatCircuit.HC2);
+                    HeatCircuitSettings heatCircuitSettings3 = new HeatCircuitSettings(paramact.ParamList, HeatCircuit.HC3);
+                    HeatingSettings heatingSettings = new HeatingSettings(paramact.ParamList);
                     WaterSettings waterSettings = new WaterSettings(paramact.ParamList);
                     CirculationSettings circulationSettings = new CirculationSettings(paramact.ParamList);
+                    SolarSettings solarSettings = new SolarSettings(paramact.ParamList);
+                    SuppressMask suppressMask = (SuppressMask)AppManager.ConfigManager.SDCardSuppressMask;
                     PropertiesForm dialog = new PropertiesForm();
                     dialog.Description = Resources.ParameterListActionParameters; //@Language Resource
                     dialog.FileInfo = paramact.FileInfo;
-                    object[] selectedObjects = new object[] { heatingSettings, waterSettings, circulationSettings };
+                    List<object> objects = new List<object>();
+                    objects.Add(heatCircuitSettings1);
+                    if ((suppressMask & SuppressMask.HK2) == 0) {
+                        objects.Add(heatCircuitSettings2);
+                    }
+                    if ((suppressMask & SuppressMask.HK3) == 0) {
+                        objects.Add(heatCircuitSettings3);
+                    }
+                    //objects.Add(heatingSettings);
+                    objects.Add(waterSettings);
+                    objects.Add(circulationSettings);
+                    //objects.Add(solarSettings);
+                    object[] selectedObjects = objects.ToArray();
                     BasicPropertyBag bag = new BasicPropertyBag(selectedObjects);
                     dialog.SelectedObject = bag;
                     dialog.PrintProperties = PrintProperty.GetPrintProperties(bag);

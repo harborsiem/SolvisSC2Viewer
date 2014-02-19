@@ -11,7 +11,8 @@ namespace SolvisSC2Viewer {
         Water,
         Circulation,
         Heating1,
-        Counting
+        Counting,
+        Solar
     }
 
     internal class PrintProperty {
@@ -60,11 +61,14 @@ namespace SolvisSC2Viewer {
                 case WaterSettings.CategoryWater:
                     PrintCategory = PrintCategory.Water;
                     break;
-                case HeatingSettings.CategoryHC:
+                case SolarSettings.CategorySolar:
+                    PrintCategory = PrintCategory.Solar;
+                    break;
+                case HeatCircuitSettings.CategoryHC:
                 case HeatingSettings.CategoryHeating:
-                case HeatingSettings.CategoryRoomTemp:
-                case HeatingSettings.CategoryDay:
-                case HeatingSettings.CategoryNight:
+                case HeatCircuitSettings.CategoryRoomTemp:
+                case HeatCircuitSettings.CategoryDay:
+                case HeatCircuitSettings.CategoryNight:
                 case HeatingSettings.CategoryModulation:
                     PrintCategory = PrintCategory.Heating1;
                     break;
@@ -78,6 +82,10 @@ namespace SolvisSC2Viewer {
         }
 
         private void SetValueString(object value) {
+            if (value == null) {
+                ValueString = "Unknown";
+                return;
+            }
             if (value is string) {
                 ValueString = (string)value;
             } else if (value is DateTime) {
@@ -92,8 +100,13 @@ namespace SolvisSC2Viewer {
             if (bag != null) {
                 List<MetaProp> properties = bag.Properties;
                 for (int i = 0; i < properties.Count; i++) {
-                    PrintProperty item = new PrintProperty(properties[i], bag);
-                    result.Add(item);
+                    try {
+                        PrintProperty item = new PrintProperty(properties[i], bag);
+                        result.Add(item);
+                    }
+                    catch (NullReferenceException ex) {
+                        AppExtension.PrintStackTrace(ex);
+                    }
                 }
             }
             return result;

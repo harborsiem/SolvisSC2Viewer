@@ -24,23 +24,15 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormulaEditor));
-            this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
             this.formulaTextBox = new System.Windows.Forms.TextBox();
             this.hintLabel = new System.Windows.Forms.Label();
             this.buttons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.dialogLayout.SuspendLayout();
+            this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
             this.buttons.SuspendLayout();
+            this.dialogLayout.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dialogLayout
-            // 
-            resources.ApplyResources(this.dialogLayout, "dialogLayout");
-            this.dialogLayout.Controls.Add(this.formulaTextBox, 0, 0);
-            this.dialogLayout.Controls.Add(this.hintLabel, 0, 1);
-            this.dialogLayout.Controls.Add(this.buttons, 0, 2);
-            this.dialogLayout.Name = "dialogLayout";
             // 
             // formulaTextBox
             // 
@@ -76,6 +68,14 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
+            // dialogLayout
+            // 
+            resources.ApplyResources(this.dialogLayout, "dialogLayout");
+            this.dialogLayout.Controls.Add(this.formulaTextBox, 0, 0);
+            this.dialogLayout.Controls.Add(this.hintLabel, 0, 1);
+            this.dialogLayout.Controls.Add(this.buttons, 0, 2);
+            this.dialogLayout.Name = "dialogLayout";
+            // 
             // FormulaEditor
             // 
             this.AcceptButton = this.buttonOK;
@@ -89,10 +89,10 @@
             this.Name = "FormulaEditor";
             this.ShowInTaskbar = false;
             this.Shown += new System.EventHandler(this.FormulaEditor_Shown);
-            this.dialogLayout.ResumeLayout(false);
-            this.dialogLayout.PerformLayout();
             this.buttons.ResumeLayout(false);
             this.buttons.PerformLayout();
+            this.dialogLayout.ResumeLayout(false);
+            this.dialogLayout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

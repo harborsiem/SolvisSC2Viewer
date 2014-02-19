@@ -24,8 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigEditor));
-            this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.tabControl = new System.Windows.Forms.TabControl();
             this.sensorsTabPage = new System.Windows.Forms.TabPage();
             this.sensorsTabLayout = new System.Windows.Forms.TableLayoutPanel();
             this.sensorsListBox = new System.Windows.Forms.ListBox();
@@ -63,8 +61,6 @@
             this.optionsVisibleCheckBox = new System.Windows.Forms.CheckBox();
             this.parameterLabel = new System.Windows.Forms.Label();
             this.parameterButton = new System.Windows.Forms.Button();
-            this.heatCurveTabPage = new System.Windows.Forms.TabPage();
-            this.heatCurveGroup = new System.Windows.Forms.GroupBox();
             this.groupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.temperatureLabel = new System.Windows.Forms.Label();
             this.temperatureUpDown = new System.Windows.Forms.NumericUpDown();
@@ -72,58 +68,51 @@
             this.niveauUpDown = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel = new System.Windows.Forms.Label();
             this.gradientUpDown = new System.Windows.Forms.NumericUpDown();
-            this.SdCardTabPage = new System.Windows.Forms.TabPage();
-            this.sdCardLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.heatCurveGroup = new System.Windows.Forms.GroupBox();
+            this.heatCurveTabPage = new System.Windows.Forms.TabPage();
             this.directoryButton = new System.Windows.Forms.Button();
-            this.timePlanGroup = new System.Windows.Forms.GroupBox();
             this.timePlanGroupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.hk2CheckBox = new System.Windows.Forms.CheckBox();
             this.hk3CheckBox = new System.Windows.Forms.CheckBox();
             this.ecoCheckBox = new System.Windows.Forms.CheckBox();
             this.savePictureCheckBox = new System.Windows.Forms.CheckBox();
+            this.timePlanGroup = new System.Windows.Forms.GroupBox();
             this.prototype = new System.Windows.Forms.CheckBox();
+            this.sdCardLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.SdCardTabPage = new System.Windows.Forms.TabPage();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.othersTabPage = new System.Windows.Forms.TabPage();
+            this.miscLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.controlVersionLabel = new System.Windows.Forms.Label();
+            this.controlVersionUpDown = new System.Windows.Forms.NumericUpDown();
             this.buttons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDefault = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.dialogLayout.SuspendLayout();
-            this.tabControl.SuspendLayout();
+            this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
             this.sensorsTabPage.SuspendLayout();
             this.sensorsTabLayout.SuspendLayout();
             this.actorsTabPage.SuspendLayout();
             this.actorsTabLayout.SuspendLayout();
             this.optionsTabPage.SuspendLayout();
             this.optionsTabLayout.SuspendLayout();
-            this.heatCurveTabPage.SuspendLayout();
-            this.heatCurveGroup.SuspendLayout();
             this.groupLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown)).BeginInit();
-            this.SdCardTabPage.SuspendLayout();
-            this.sdCardLayout.SuspendLayout();
-            this.timePlanGroup.SuspendLayout();
+            this.heatCurveGroup.SuspendLayout();
+            this.heatCurveTabPage.SuspendLayout();
             this.timePlanGroupLayout.SuspendLayout();
+            this.timePlanGroup.SuspendLayout();
+            this.sdCardLayout.SuspendLayout();
+            this.SdCardTabPage.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.othersTabPage.SuspendLayout();
+            this.miscLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlVersionUpDown)).BeginInit();
             this.buttons.SuspendLayout();
+            this.dialogLayout.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dialogLayout
-            // 
-            resources.ApplyResources(this.dialogLayout, "dialogLayout");
-            this.dialogLayout.Controls.Add(this.tabControl, 0, 0);
-            this.dialogLayout.Controls.Add(this.buttons, 0, 1);
-            this.dialogLayout.Name = "dialogLayout";
-            // 
-            // tabControl
-            // 
-            resources.ApplyResources(this.tabControl, "tabControl");
-            this.tabControl.Controls.Add(this.sensorsTabPage);
-            this.tabControl.Controls.Add(this.actorsTabPage);
-            this.tabControl.Controls.Add(this.optionsTabPage);
-            this.tabControl.Controls.Add(this.heatCurveTabPage);
-            this.tabControl.Controls.Add(this.SdCardTabPage);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
             // 
             // sensorsTabPage
             // 
@@ -435,20 +424,6 @@
             this.parameterButton.UseVisualStyleBackColor = true;
             this.parameterButton.Click += new System.EventHandler(this.parameterButton_Click);
             // 
-            // heatCurveTabPage
-            // 
-            this.heatCurveTabPage.Controls.Add(this.heatCurveGroup);
-            resources.ApplyResources(this.heatCurveTabPage, "heatCurveTabPage");
-            this.heatCurveTabPage.Name = "heatCurveTabPage";
-            this.heatCurveTabPage.UseVisualStyleBackColor = true;
-            // 
-            // heatCurveGroup
-            // 
-            resources.ApplyResources(this.heatCurveGroup, "heatCurveGroup");
-            this.heatCurveGroup.Controls.Add(this.groupLayout);
-            this.heatCurveGroup.Name = "heatCurveGroup";
-            this.heatCurveGroup.TabStop = false;
-            // 
             // groupLayout
             // 
             resources.ApplyResources(this.groupLayout, "groupLayout");
@@ -507,20 +482,19 @@
             this.gradientUpDown.DecimalPlaces = 2;
             this.gradientUpDown.Name = "gradientUpDown";
             // 
-            // SdCardTabPage
+            // heatCurveGroup
             // 
-            this.SdCardTabPage.Controls.Add(this.sdCardLayout);
-            resources.ApplyResources(this.SdCardTabPage, "SdCardTabPage");
-            this.SdCardTabPage.Name = "SdCardTabPage";
-            this.SdCardTabPage.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.heatCurveGroup, "heatCurveGroup");
+            this.heatCurveGroup.Controls.Add(this.groupLayout);
+            this.heatCurveGroup.Name = "heatCurveGroup";
+            this.heatCurveGroup.TabStop = false;
             // 
-            // sdCardLayout
+            // heatCurveTabPage
             // 
-            resources.ApplyResources(this.sdCardLayout, "sdCardLayout");
-            this.sdCardLayout.Controls.Add(this.directoryButton, 0, 0);
-            this.sdCardLayout.Controls.Add(this.timePlanGroup, 0, 1);
-            this.sdCardLayout.Controls.Add(this.prototype, 0, 2);
-            this.sdCardLayout.Name = "sdCardLayout";
+            this.heatCurveTabPage.Controls.Add(this.heatCurveGroup);
+            resources.ApplyResources(this.heatCurveTabPage, "heatCurveTabPage");
+            this.heatCurveTabPage.Name = "heatCurveTabPage";
+            this.heatCurveTabPage.UseVisualStyleBackColor = true;
             // 
             // directoryButton
             // 
@@ -528,13 +502,6 @@
             this.directoryButton.Name = "directoryButton";
             this.directoryButton.UseVisualStyleBackColor = true;
             this.directoryButton.Click += new System.EventHandler(this.directoryButton_Click);
-            // 
-            // timePlanGroup
-            // 
-            resources.ApplyResources(this.timePlanGroup, "timePlanGroup");
-            this.timePlanGroup.Controls.Add(this.timePlanGroupLayout);
-            this.timePlanGroup.Name = "timePlanGroup";
-            this.timePlanGroup.TabStop = false;
             // 
             // timePlanGroupLayout
             // 
@@ -569,6 +536,13 @@
             this.savePictureCheckBox.Name = "savePictureCheckBox";
             this.savePictureCheckBox.UseVisualStyleBackColor = true;
             // 
+            // timePlanGroup
+            // 
+            resources.ApplyResources(this.timePlanGroup, "timePlanGroup");
+            this.timePlanGroup.Controls.Add(this.timePlanGroupLayout);
+            this.timePlanGroup.Name = "timePlanGroup";
+            this.timePlanGroup.TabStop = false;
+            // 
             // prototype
             // 
             resources.ApplyResources(this.prototype, "prototype");
@@ -576,6 +550,72 @@
             this.prototype.Name = "prototype";
             this.prototype.UseVisualStyleBackColor = true;
             this.prototype.CheckedChanged += new System.EventHandler(this.prototype_CheckedChanged);
+            // 
+            // sdCardLayout
+            // 
+            resources.ApplyResources(this.sdCardLayout, "sdCardLayout");
+            this.sdCardLayout.Controls.Add(this.directoryButton, 0, 0);
+            this.sdCardLayout.Controls.Add(this.timePlanGroup, 0, 1);
+            this.sdCardLayout.Controls.Add(this.prototype, 0, 2);
+            this.sdCardLayout.Name = "sdCardLayout";
+            // 
+            // SdCardTabPage
+            // 
+            this.SdCardTabPage.Controls.Add(this.sdCardLayout);
+            resources.ApplyResources(this.SdCardTabPage, "SdCardTabPage");
+            this.SdCardTabPage.Name = "SdCardTabPage";
+            this.SdCardTabPage.UseVisualStyleBackColor = true;
+            // 
+            // tabControl
+            // 
+            resources.ApplyResources(this.tabControl, "tabControl");
+            this.tabControl.Controls.Add(this.sensorsTabPage);
+            this.tabControl.Controls.Add(this.actorsTabPage);
+            this.tabControl.Controls.Add(this.optionsTabPage);
+            this.tabControl.Controls.Add(this.heatCurveTabPage);
+            this.tabControl.Controls.Add(this.SdCardTabPage);
+            this.tabControl.Controls.Add(this.othersTabPage);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            // 
+            // othersTabPage
+            // 
+            this.othersTabPage.Controls.Add(this.miscLayout);
+            resources.ApplyResources(this.othersTabPage, "othersTabPage");
+            this.othersTabPage.Name = "othersTabPage";
+            this.othersTabPage.UseVisualStyleBackColor = true;
+            // 
+            // miscLayout
+            // 
+            resources.ApplyResources(this.miscLayout, "miscLayout");
+            this.miscLayout.Controls.Add(this.controlVersionLabel, 0, 0);
+            this.miscLayout.Controls.Add(this.controlVersionUpDown, 1, 0);
+            this.miscLayout.Name = "miscLayout";
+            // 
+            // controlVersionLabel
+            // 
+            resources.ApplyResources(this.controlVersionLabel, "controlVersionLabel");
+            this.controlVersionLabel.Name = "controlVersionLabel";
+            // 
+            // controlVersionUpDown
+            // 
+            resources.ApplyResources(this.controlVersionUpDown, "controlVersionUpDown");
+            this.controlVersionUpDown.Maximum = new decimal(new int[] {
+            150,
+            0,
+            0,
+            0});
+            this.controlVersionUpDown.Minimum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.controlVersionUpDown.Name = "controlVersionUpDown";
+            this.controlVersionUpDown.Value = new decimal(new int[] {
+            131,
+            0,
+            0,
+            0});
             // 
             // buttons
             // 
@@ -609,6 +649,13 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
+            // dialogLayout
+            // 
+            resources.ApplyResources(this.dialogLayout, "dialogLayout");
+            this.dialogLayout.Controls.Add(this.tabControl, 0, 0);
+            this.dialogLayout.Controls.Add(this.buttons, 0, 1);
+            this.dialogLayout.Name = "dialogLayout";
+            // 
             // ConfigEditor
             // 
             this.AcceptButton = this.buttonOK;
@@ -621,9 +668,6 @@
             this.MinimizeBox = false;
             this.Name = "ConfigEditor";
             this.ShowInTaskbar = false;
-            this.dialogLayout.ResumeLayout(false);
-            this.dialogLayout.PerformLayout();
-            this.tabControl.ResumeLayout(false);
             this.sensorsTabPage.ResumeLayout(false);
             this.sensorsTabPage.PerformLayout();
             this.sensorsTabLayout.ResumeLayout(false);
@@ -636,25 +680,33 @@
             this.optionsTabPage.PerformLayout();
             this.optionsTabLayout.ResumeLayout(false);
             this.optionsTabLayout.PerformLayout();
-            this.heatCurveTabPage.ResumeLayout(false);
-            this.heatCurveTabPage.PerformLayout();
-            this.heatCurveGroup.ResumeLayout(false);
-            this.heatCurveGroup.PerformLayout();
             this.groupLayout.ResumeLayout(false);
             this.groupLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown)).EndInit();
-            this.SdCardTabPage.ResumeLayout(false);
-            this.SdCardTabPage.PerformLayout();
-            this.sdCardLayout.ResumeLayout(false);
-            this.sdCardLayout.PerformLayout();
-            this.timePlanGroup.ResumeLayout(false);
-            this.timePlanGroup.PerformLayout();
+            this.heatCurveGroup.ResumeLayout(false);
+            this.heatCurveGroup.PerformLayout();
+            this.heatCurveTabPage.ResumeLayout(false);
+            this.heatCurveTabPage.PerformLayout();
             this.timePlanGroupLayout.ResumeLayout(false);
             this.timePlanGroupLayout.PerformLayout();
+            this.timePlanGroup.ResumeLayout(false);
+            this.timePlanGroup.PerformLayout();
+            this.sdCardLayout.ResumeLayout(false);
+            this.sdCardLayout.PerformLayout();
+            this.SdCardTabPage.ResumeLayout(false);
+            this.SdCardTabPage.PerformLayout();
+            this.tabControl.ResumeLayout(false);
+            this.othersTabPage.ResumeLayout(false);
+            this.othersTabPage.PerformLayout();
+            this.miscLayout.ResumeLayout(false);
+            this.miscLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlVersionUpDown)).EndInit();
             this.buttons.ResumeLayout(false);
             this.buttons.PerformLayout();
+            this.dialogLayout.ResumeLayout(false);
+            this.dialogLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -723,5 +775,9 @@
         private System.Windows.Forms.Label sensorsParameterLabel;
         private System.Windows.Forms.Button sensorsParameterButton;
         private System.Windows.Forms.CheckBox prototype;
+        private System.Windows.Forms.TabPage othersTabPage;
+        private System.Windows.Forms.TableLayoutPanel miscLayout;
+        private System.Windows.Forms.Label controlVersionLabel;
+        private System.Windows.Forms.NumericUpDown controlVersionUpDown;
     }
 }

@@ -24,23 +24,68 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BurnerPower));
+            this.groupLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.minPowerLabel = new System.Windows.Forms.Label();
+            this.minUpDown = new System.Windows.Forms.NumericUpDown();
+            this.maxPowerLabel = new System.Windows.Forms.Label();
+            this.maxUpDown = new System.Windows.Forms.NumericUpDown();
+            this.group = new System.Windows.Forms.GroupBox();
+            this.buttons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.group = new System.Windows.Forms.GroupBox();
-            this.groupLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.maxUpDown = new System.Windows.Forms.NumericUpDown();
-            this.minUpDown = new System.Windows.Forms.NumericUpDown();
-            this.minPowerLabel = new System.Windows.Forms.Label();
-            this.maxPowerLabel = new System.Windows.Forms.Label();
-            this.buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.dialogLayout.SuspendLayout();
-            this.group.SuspendLayout();
             this.groupLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maxUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxUpDown)).BeginInit();
+            this.group.SuspendLayout();
             this.buttons.SuspendLayout();
+            this.dialogLayout.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupLayout
+            // 
+            resources.ApplyResources(this.groupLayout, "groupLayout");
+            this.groupLayout.Controls.Add(this.minPowerLabel, 0, 0);
+            this.groupLayout.Controls.Add(this.minUpDown, 1, 0);
+            this.groupLayout.Controls.Add(this.maxPowerLabel, 0, 1);
+            this.groupLayout.Controls.Add(this.maxUpDown, 1, 1);
+            this.groupLayout.Name = "groupLayout";
+            // 
+            // minPowerLabel
+            // 
+            resources.ApplyResources(this.minPowerLabel, "minPowerLabel");
+            this.minPowerLabel.MinimumSize = new System.Drawing.Size(100, 0);
+            this.minPowerLabel.Name = "minPowerLabel";
+            // 
+            // minUpDown
+            // 
+            resources.ApplyResources(this.minUpDown, "minUpDown");
+            this.minUpDown.Name = "minUpDown";
+            // 
+            // maxPowerLabel
+            // 
+            resources.ApplyResources(this.maxPowerLabel, "maxPowerLabel");
+            this.maxPowerLabel.MinimumSize = new System.Drawing.Size(100, 0);
+            this.maxPowerLabel.Name = "maxPowerLabel";
+            // 
+            // maxUpDown
+            // 
+            resources.ApplyResources(this.maxUpDown, "maxUpDown");
+            this.maxUpDown.Name = "maxUpDown";
+            // 
+            // group
+            // 
+            resources.ApplyResources(this.group, "group");
+            this.group.Controls.Add(this.groupLayout);
+            this.group.Name = "group";
+            this.group.TabStop = false;
+            // 
+            // buttons
+            // 
+            resources.ApplyResources(this.buttons, "buttons");
+            this.buttons.Controls.Add(this.buttonOK, 0, 0);
+            this.buttons.Controls.Add(this.buttonCancel, 1, 0);
+            this.buttons.Name = "buttons";
             // 
             // buttonOK
             // 
@@ -65,51 +110,6 @@
             this.dialogLayout.Controls.Add(this.buttons, 0, 1);
             this.dialogLayout.Name = "dialogLayout";
             // 
-            // group
-            // 
-            resources.ApplyResources(this.group, "group");
-            this.group.Controls.Add(this.groupLayout);
-            this.group.Name = "group";
-            this.group.TabStop = false;
-            // 
-            // groupLayout
-            // 
-            resources.ApplyResources(this.groupLayout, "groupLayout");
-            this.groupLayout.Controls.Add(this.maxUpDown, 1, 1);
-            this.groupLayout.Controls.Add(this.minUpDown, 1, 0);
-            this.groupLayout.Controls.Add(this.minPowerLabel, 0, 0);
-            this.groupLayout.Controls.Add(this.maxPowerLabel, 0, 1);
-            this.groupLayout.Name = "groupLayout";
-            // 
-            // maxUpDown
-            // 
-            resources.ApplyResources(this.maxUpDown, "maxUpDown");
-            this.maxUpDown.Name = "maxUpDown";
-            // 
-            // minUpDown
-            // 
-            resources.ApplyResources(this.minUpDown, "minUpDown");
-            this.minUpDown.Name = "minUpDown";
-            // 
-            // minPowerLabel
-            // 
-            resources.ApplyResources(this.minPowerLabel, "minPowerLabel");
-            this.minPowerLabel.MinimumSize = new System.Drawing.Size(100, 0);
-            this.minPowerLabel.Name = "minPowerLabel";
-            // 
-            // maxPowerLabel
-            // 
-            resources.ApplyResources(this.maxPowerLabel, "maxPowerLabel");
-            this.maxPowerLabel.MinimumSize = new System.Drawing.Size(100, 0);
-            this.maxPowerLabel.Name = "maxPowerLabel";
-            // 
-            // buttons
-            // 
-            resources.ApplyResources(this.buttons, "buttons");
-            this.buttons.Controls.Add(this.buttonOK, 0, 0);
-            this.buttons.Controls.Add(this.buttonCancel, 1, 0);
-            this.buttons.Name = "buttons";
-            // 
             // BurnerPower
             // 
             this.AcceptButton = this.buttonOK;
@@ -122,16 +122,16 @@
             this.MinimizeBox = false;
             this.Name = "BurnerPower";
             this.ShowInTaskbar = false;
-            this.dialogLayout.ResumeLayout(false);
-            this.dialogLayout.PerformLayout();
-            this.group.ResumeLayout(false);
-            this.group.PerformLayout();
             this.groupLayout.ResumeLayout(false);
             this.groupLayout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maxUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxUpDown)).EndInit();
+            this.group.ResumeLayout(false);
+            this.group.PerformLayout();
             this.buttons.ResumeLayout(false);
             this.buttons.PerformLayout();
+            this.dialogLayout.ResumeLayout(false);
+            this.dialogLayout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

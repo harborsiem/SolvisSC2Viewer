@@ -24,21 +24,64 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EarthPosition));
+            this.groupLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.longitudeLabel = new System.Windows.Forms.Label();
+            this.longitudeTextBox = new System.Windows.Forms.TextBox();
+            this.latitudeLabel = new System.Windows.Forms.Label();
+            this.latitudeTextBox = new System.Windows.Forms.TextBox();
+            this.group = new System.Windows.Forms.GroupBox();
+            this.buttons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.group = new System.Windows.Forms.GroupBox();
-            this.groupLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.longitudeLabel = new System.Windows.Forms.Label();
-            this.latitudeLabel = new System.Windows.Forms.Label();
-            this.longitudeTextBox = new System.Windows.Forms.TextBox();
-            this.latitudeTextBox = new System.Windows.Forms.TextBox();
-            this.buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.dialogLayout.SuspendLayout();
-            this.group.SuspendLayout();
             this.groupLayout.SuspendLayout();
+            this.group.SuspendLayout();
             this.buttons.SuspendLayout();
+            this.dialogLayout.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupLayout
+            // 
+            resources.ApplyResources(this.groupLayout, "groupLayout");
+            this.groupLayout.Controls.Add(this.longitudeLabel, 0, 0);
+            this.groupLayout.Controls.Add(this.longitudeTextBox, 1, 0);
+            this.groupLayout.Controls.Add(this.latitudeLabel, 0, 1);
+            this.groupLayout.Controls.Add(this.latitudeTextBox, 1, 1);
+            this.groupLayout.Name = "groupLayout";
+            // 
+            // longitudeLabel
+            // 
+            resources.ApplyResources(this.longitudeLabel, "longitudeLabel");
+            this.longitudeLabel.Name = "longitudeLabel";
+            // 
+            // longitudeTextBox
+            // 
+            resources.ApplyResources(this.longitudeTextBox, "longitudeTextBox");
+            this.longitudeTextBox.Name = "longitudeTextBox";
+            // 
+            // latitudeLabel
+            // 
+            resources.ApplyResources(this.latitudeLabel, "latitudeLabel");
+            this.latitudeLabel.Name = "latitudeLabel";
+            // 
+            // latitudeTextBox
+            // 
+            resources.ApplyResources(this.latitudeTextBox, "latitudeTextBox");
+            this.latitudeTextBox.Name = "latitudeTextBox";
+            // 
+            // group
+            // 
+            resources.ApplyResources(this.group, "group");
+            this.group.Controls.Add(this.groupLayout);
+            this.group.Name = "group";
+            this.group.TabStop = false;
+            // 
+            // buttons
+            // 
+            resources.ApplyResources(this.buttons, "buttons");
+            this.buttons.Controls.Add(this.buttonOK, 0, 0);
+            this.buttons.Controls.Add(this.buttonCancel, 1, 0);
+            this.buttons.Name = "buttons";
             // 
             // buttonOK
             // 
@@ -63,49 +106,6 @@
             this.dialogLayout.Controls.Add(this.buttons, 0, 1);
             this.dialogLayout.Name = "dialogLayout";
             // 
-            // group
-            // 
-            resources.ApplyResources(this.group, "group");
-            this.group.Controls.Add(this.groupLayout);
-            this.group.Name = "group";
-            this.group.TabStop = false;
-            // 
-            // groupLayout
-            // 
-            resources.ApplyResources(this.groupLayout, "groupLayout");
-            this.groupLayout.Controls.Add(this.longitudeLabel, 0, 0);
-            this.groupLayout.Controls.Add(this.latitudeLabel, 0, 1);
-            this.groupLayout.Controls.Add(this.longitudeTextBox, 1, 0);
-            this.groupLayout.Controls.Add(this.latitudeTextBox, 1, 1);
-            this.groupLayout.Name = "groupLayout";
-            // 
-            // longitudeLabel
-            // 
-            resources.ApplyResources(this.longitudeLabel, "longitudeLabel");
-            this.longitudeLabel.Name = "longitudeLabel";
-            // 
-            // latitudeLabel
-            // 
-            resources.ApplyResources(this.latitudeLabel, "latitudeLabel");
-            this.latitudeLabel.Name = "latitudeLabel";
-            // 
-            // longitudeTextBox
-            // 
-            resources.ApplyResources(this.longitudeTextBox, "longitudeTextBox");
-            this.longitudeTextBox.Name = "longitudeTextBox";
-            // 
-            // latitudeTextBox
-            // 
-            resources.ApplyResources(this.latitudeTextBox, "latitudeTextBox");
-            this.latitudeTextBox.Name = "latitudeTextBox";
-            // 
-            // buttons
-            // 
-            resources.ApplyResources(this.buttons, "buttons");
-            this.buttons.Controls.Add(this.buttonOK, 0, 0);
-            this.buttons.Controls.Add(this.buttonCancel, 1, 0);
-            this.buttons.Name = "buttons";
-            // 
             // EarthPosition
             // 
             this.AcceptButton = this.buttonOK;
@@ -118,14 +118,14 @@
             this.MinimizeBox = false;
             this.Name = "EarthPosition";
             this.ShowInTaskbar = false;
-            this.dialogLayout.ResumeLayout(false);
-            this.dialogLayout.PerformLayout();
-            this.group.ResumeLayout(false);
-            this.group.PerformLayout();
             this.groupLayout.ResumeLayout(false);
             this.groupLayout.PerformLayout();
+            this.group.ResumeLayout(false);
+            this.group.PerformLayout();
             this.buttons.ResumeLayout(false);
             this.buttons.PerformLayout();
+            this.dialogLayout.ResumeLayout(false);
+            this.dialogLayout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

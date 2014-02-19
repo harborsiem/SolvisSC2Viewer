@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SolvisSC2Viewer {
     internal static class AppManager {
-        private static string baseDir = Application.StartupPath;
+        public static string BaseDir { get { return Application.StartupPath; } }
+        public const string ApplicationName = "SolvisSC2Viewer";
+        public const string ApplicationText = "SolvisControl II Viewer";
+        public static readonly string ConfigPath = "Solvis" + Path.DirectorySeparatorChar + "SolvisViewer";
+
         private static ActionManager actionManager = new ActionManager();
         private static DataManager dataManager = GetDataManager();
         private static ItemManager itemManager = new ItemManager();
@@ -15,7 +20,7 @@ namespace SolvisSC2Viewer {
         private static PrintManager printManager = new PrintManager();
         private static SolvisFileManager solvisFileManager = new SolvisFileManager();
         private static MainForm form;
-        public static string BaseDir { get { return baseDir; } }
+
 
         public static void Init(MainForm mainForm) {
             form = mainForm;

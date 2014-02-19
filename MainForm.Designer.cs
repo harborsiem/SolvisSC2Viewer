@@ -24,18 +24,18 @@
         /// </summary>
         private void InitializeComponent() {
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
             this.scrollPanel = new System.Windows.Forms.Panel();
             this.sensorsActors = new SolvisSC2Viewer.SensorsActors();
             this.chartControl = new SolvisSC2Viewer.ChartControl();
-            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip.SuspendLayout();
-            this.toolStripContainer.ContentPanel.SuspendLayout();
-            this.toolStripContainer.SuspendLayout();
             this.dialogLayout.SuspendLayout();
             this.scrollPanel.SuspendLayout();
+            this.toolStripContainer.ContentPanel.SuspendLayout();
+            this.toolStripContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -47,6 +47,11 @@
             this.statusStrip.Size = new System.Drawing.Size(1008, 22);
             this.statusStrip.TabIndex = 3;
             // 
+            // statusLabel
+            // 
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(0, 17);
+            // 
             // menuStrip
             // 
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -54,22 +59,6 @@
             this.menuStrip.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
-            // 
-            // toolStripContainer
-            // 
-            this.toolStripContainer.BottomToolStripPanelVisible = false;
-            // 
-            // toolStripContainer.ContentPanel
-            // 
-            this.toolStripContainer.ContentPanel.Controls.Add(this.dialogLayout);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1008, 661);
-            this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer.LeftToolStripPanelVisible = false;
-            this.toolStripContainer.Location = new System.Drawing.Point(0, 24);
-            this.toolStripContainer.Name = "toolStripContainer";
-            this.toolStripContainer.RightToolStripPanelVisible = false;
-            this.toolStripContainer.Size = new System.Drawing.Size(1008, 686);
-            this.toolStripContainer.TabIndex = 2;
             // 
             // dialogLayout
             // 
@@ -125,10 +114,21 @@
             this.chartControl.TabIndex = 1;
             this.chartControl.TabStop = false;
             // 
-            // statusLabel
+            // toolStripContainer
             // 
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(0, 17);
+            this.toolStripContainer.BottomToolStripPanelVisible = false;
+            // 
+            // toolStripContainer.ContentPanel
+            // 
+            this.toolStripContainer.ContentPanel.Controls.Add(this.dialogLayout);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1008, 661);
+            this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer.LeftToolStripPanelVisible = false;
+            this.toolStripContainer.Location = new System.Drawing.Point(0, 24);
+            this.toolStripContainer.Name = "toolStripContainer";
+            this.toolStripContainer.RightToolStripPanelVisible = false;
+            this.toolStripContainer.Size = new System.Drawing.Size(1008, 686);
+            this.toolStripContainer.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -141,17 +141,16 @@
             this.MainMenuStrip = this.menuStrip;
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "MainForm";
-            this.Text = "Solvis Control II Viewer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
+            this.dialogLayout.ResumeLayout(false);
+            this.scrollPanel.ResumeLayout(false);
             this.toolStripContainer.ContentPanel.ResumeLayout(false);
             this.toolStripContainer.ResumeLayout(false);
             this.toolStripContainer.PerformLayout();
-            this.dialogLayout.ResumeLayout(false);
-            this.scrollPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

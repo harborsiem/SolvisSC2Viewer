@@ -91,8 +91,8 @@ namespace SolvisSC2Viewer {
                             case ConfigXml.Formula5Tag:
                                 manager.Formula5 = node1.InnerText;
                                 break;
-                            case ConfigXml.IsExternCodeTag:
-                                manager.IsExternCode = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
+                            case ConfigXml.HasFormulaDllTag:
+                                manager.HasFormulaDll = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
                                 break;
                             case ConfigXml.SolarVSGTag:
                                 manager.FormulaSolarVSG = node1.InnerText;
@@ -100,11 +100,23 @@ namespace SolvisSC2Viewer {
                             case ConfigXml.SolarKWTag:
                                 manager.FormulaSolarKW = node1.InnerText;
                                 break;
+                            case ConfigXml.SolvisControlVersionTag:
+                                RowValues.SolvisControlVersion = XmlConvert.ToInt32(node1.InnerText);
+                                break;
+                            case ConfigXml.SolarPulseTag:
+                                RowValues.SolarPulse = XmlConvert.ToInt32(node1.InnerText);
+                                break;
+                            case ConfigXml.HeatCapacityTag:
+                                RowValues.HeatCapacity20 = XmlConvert.ToDouble(node1.InnerText);
+                                break;
                             case ConfigXml.SdCardDirTag:
                                 manager.SdCardDir = node1.InnerText;
                                 break;
-                            case ConfigXml.TimePlanSuppressMaskTag:
-                                manager.TimePlanSuppressMask = XmlConvert.ToInt32(node1.InnerText);
+                            case ConfigXml.TimePlanSuppressMaskTag: //Compatibility Tag
+                                manager.SDCardSuppressMask = XmlConvert.ToInt32(node1.InnerText);
+                                break;
+                            case ConfigXml.SDCardSuppressMaskTag:
+                                manager.SDCardSuppressMask = XmlConvert.ToInt32(node1.InnerText);
                                 break;
                             case ConfigXml.TimePlanBitmapTag:
                                 manager.TimePlanBitmap = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
