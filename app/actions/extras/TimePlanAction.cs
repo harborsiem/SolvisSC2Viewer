@@ -31,7 +31,7 @@ namespace SolvisSC2Viewer {
                     TimeOverview dialog = new TimeOverview();
                     dialog.TimePlan = timePlan;
                     dialog.SaveFormBitmap = manager.TimePlanBitmap;
-                    dialog.SuppressMask = (SuppressMask)manager.TimePlanSuppressMask;
+                    dialog.SuppressMask = (SuppressMask)manager.SDCardSuppressMask;
                     dialog.ShowDialog(AppManager.MainForm);
                 }
             }

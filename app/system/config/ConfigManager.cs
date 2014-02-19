@@ -37,7 +37,7 @@ namespace SolvisSC2Viewer {
         private IDictionary<String, Object> DefaultParameters { get; set; }
         public string OpenDir { get; set; }
         public string SdCardDir { get; set; }
-        public int TimePlanSuppressMask { get; set; }
+        public int SDCardSuppressMask { get; set; }
         public bool TimePlanBitmap { get; set; }
         public bool SuperUser { get; set; }
         public bool Prototype { get; set; }
@@ -58,7 +58,7 @@ namespace SolvisSC2Viewer {
         public string Formula5 { get; set; }
         public string FormulaSolarVSG { get; set; }
         public string FormulaSolarKW { get; set; }
-        public bool IsExternCode { get; set; }
+        public bool HasFormulaDll { get; set; }
         public bool AppConfigChanged { get; set; }
 
         public ConfigManager() {
@@ -77,7 +77,7 @@ namespace SolvisSC2Viewer {
             SensorConfigDefault = new Dictionary<String, ConfigData>();
             OptionConfigDefault = new Dictionary<String, ConfigData>();
             ConfigDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar
-                + MainForm.ConfigPath;
+                + AppManager.ConfigPath;
             if (!Directory.Exists(ConfigDir)) {
                 Directory.CreateDirectory(ConfigDir);
             }
@@ -95,6 +95,7 @@ namespace SolvisSC2Viewer {
 #endif
             CreateFormulas();
             bool newVersionDetected = Application.ProductVersion.CompareTo(Version) == 1;
+            //bool newVersionDetected = string.Compare(Application.ProductVersion, Version, StringComparison.OrdinalIgnoreCase) == 1;
             if (newVersionDetected) {
                 ParameterUpdateForNewVersion();
             }
@@ -154,14 +155,18 @@ namespace SolvisSC2Viewer {
             DefaultParameters[ConfigXml.GradientVLTag] = 1.15;
             DefaultParameters[ConfigXml.BurnerMinPowerTag] = 5.0;
             DefaultParameters[ConfigXml.BurnerMaxPowerTag] = 20.0;
-            DefaultParameters[ConfigXml.TimePlanSuppressMaskTag] = 38;
+            DefaultParameters[ConfigXml.SDCardSuppressMaskTag] = 38;
             DefaultParameters[ConfigXml.TimePlanBitmapTag] = false;
             DefaultParameters[ConfigXml.PrototypeTag] = false;
             DefaultParameters[ConfigXml.OneDayModeTag] = false;
-            DefaultParameters[ConfigXml.IsExternCodeTag] = false;
+            DefaultParameters[ConfigXml.HasFormulaDllTag] = false;
+            DefaultParameters[ConfigXml.SolvisControlVersionTag] = 131;
+            DefaultParameters[ConfigXml.SolarPulseTag] = 42;
+            DefaultParameters[ConfigXml.HeatCapacityTag] = 3.65; //bei 20°C, alle +10K + 0.04 mehr
         }
 
         public void UpdateMainForm() {
+            CreateFormulas();
             ConfigureActors();
             ConfigureSensors();
             ConfigureOptions();
@@ -172,7 +177,7 @@ namespace SolvisSC2Viewer {
         }
 
         private void CreateFormulas() {
-            if (string.IsNullOrWhiteSpace(Formula1)) {
+            if (HasFormulaDll) {
                 if (ExternCode.MakeProxy()) {
                     return;
                 }
@@ -215,13 +220,16 @@ namespace SolvisSC2Viewer {
             RowValues.Temperature = (int)DefaultParameters[ConfigXml.TemperatureVLTag];
             RowValues.Niveau = (int)DefaultParameters[ConfigXml.NiveauVLTag];
             RowValues.Gradient = (double)DefaultParameters[ConfigXml.GradientVLTag];
-            TimePlanSuppressMask = (int)DefaultParameters[ConfigXml.TimePlanSuppressMaskTag];
+            SDCardSuppressMask = (int)DefaultParameters[ConfigXml.SDCardSuppressMaskTag];
             TimePlanBitmap = (bool)DefaultParameters[ConfigXml.TimePlanBitmapTag];
             Temperature = (int)DefaultParameters[ConfigXml.TemperatureTag];
             Niveau = (int)DefaultParameters[ConfigXml.NiveauTag];
             Gradient = (double)DefaultParameters[ConfigXml.GradientTag];
             Prototype = (bool)DefaultParameters[ConfigXml.PrototypeTag];
-            IsExternCode = (bool)DefaultParameters[ConfigXml.IsExternCodeTag];
+            HasFormulaDll = (bool)DefaultParameters[ConfigXml.HasFormulaDllTag];
+            RowValues.SolvisControlVersion = (int)DefaultParameters[ConfigXml.SolvisControlVersionTag];
+            RowValues.SolarPulse = (int)DefaultParameters[ConfigXml.SolarPulseTag];
+            RowValues.HeatCapacity20 = (double)DefaultParameters[ConfigXml.HeatCapacityTag];
         }
 
         private void SetDefaults() {
@@ -423,7 +431,7 @@ namespace SolvisSC2Viewer {
         }
 
         private static string GetDocumentsDirectory() {
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), MainForm.ConfigPath);
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), AppManager.ConfigPath);
             if (!Directory.Exists(path)) {
                 Directory.CreateDirectory(path);
             }

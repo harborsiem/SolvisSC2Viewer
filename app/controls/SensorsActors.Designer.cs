@@ -24,8 +24,6 @@ namespace SolvisSC2Viewer {
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorsActors));
-            this.controlLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.sensorsGroup = new System.Windows.Forms.GroupBox();
             this.sensorsGroupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.s1Check = new System.Windows.Forms.CheckBox();
             this.s2Check = new System.Windows.Forms.CheckBox();
@@ -51,7 +49,7 @@ namespace SolvisSC2Viewer {
             this.s22Check = new System.Windows.Forms.CheckBox();
             this.s23Check = new System.Windows.Forms.CheckBox();
             this.s24Check = new System.Windows.Forms.CheckBox();
-            this.actorsGroup = new System.Windows.Forms.GroupBox();
+            this.sensorsGroup = new System.Windows.Forms.GroupBox();
             this.actorsGroupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.a1Check = new System.Windows.Forms.CheckBox();
             this.a2Check = new System.Windows.Forms.CheckBox();
@@ -73,8 +71,9 @@ namespace SolvisSC2Viewer {
             this.a18Check = new System.Windows.Forms.CheckBox();
             this.a19Check = new System.Windows.Forms.CheckBox();
             this.a20Check = new System.Windows.Forms.CheckBox();
-            this.optionsGroup = new System.Windows.Forms.GroupBox();
+            this.actorsGroup = new System.Windows.Forms.GroupBox();
             this.optionsGroupLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.p10Check = new System.Windows.Forms.CheckBox();
             this.p01Check = new System.Windows.Forms.CheckBox();
             this.p02Check = new System.Windows.Forms.CheckBox();
             this.p03Check = new System.Windows.Forms.CheckBox();
@@ -84,31 +83,16 @@ namespace SolvisSC2Viewer {
             this.p07Check = new System.Windows.Forms.CheckBox();
             this.p08Check = new System.Windows.Forms.CheckBox();
             this.p09Check = new System.Windows.Forms.CheckBox();
-            this.p10Check = new System.Windows.Forms.CheckBox();
-            this.controlLayout.SuspendLayout();
-            this.sensorsGroup.SuspendLayout();
+            this.optionsGroup = new System.Windows.Forms.GroupBox();
+            this.controlLayout = new System.Windows.Forms.TableLayoutPanel();
             this.sensorsGroupLayout.SuspendLayout();
-            this.actorsGroup.SuspendLayout();
+            this.sensorsGroup.SuspendLayout();
             this.actorsGroupLayout.SuspendLayout();
-            this.optionsGroup.SuspendLayout();
+            this.actorsGroup.SuspendLayout();
             this.optionsGroupLayout.SuspendLayout();
+            this.optionsGroup.SuspendLayout();
+            this.controlLayout.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // controlLayout
-            // 
-            resources.ApplyResources(this.controlLayout, "controlLayout");
-            this.controlLayout.Controls.Add(this.sensorsGroup, 0, 0);
-            this.controlLayout.Controls.Add(this.actorsGroup, 0, 1);
-            this.controlLayout.Controls.Add(this.optionsGroup, 0, 2);
-            this.controlLayout.Name = "controlLayout";
-            this.controlLayout.Resize += new System.EventHandler(this.controlLayout_Resize);
-            // 
-            // sensorsGroup
-            // 
-            resources.ApplyResources(this.sensorsGroup, "sensorsGroup");
-            this.sensorsGroup.Controls.Add(this.sensorsGroupLayout);
-            this.sensorsGroup.Name = "sensorsGroup";
-            this.sensorsGroup.TabStop = false;
             // 
             // sensorsGroupLayout
             // 
@@ -307,12 +291,12 @@ namespace SolvisSC2Viewer {
             this.s24Check.UseVisualStyleBackColor = true;
             this.s24Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
             // 
-            // actorsGroup
+            // sensorsGroup
             // 
-            resources.ApplyResources(this.actorsGroup, "actorsGroup");
-            this.actorsGroup.Controls.Add(this.actorsGroupLayout);
-            this.actorsGroup.Name = "actorsGroup";
-            this.actorsGroup.TabStop = false;
+            resources.ApplyResources(this.sensorsGroup, "sensorsGroup");
+            this.sensorsGroup.Controls.Add(this.sensorsGroupLayout);
+            this.sensorsGroup.Name = "sensorsGroup";
+            this.sensorsGroup.TabStop = false;
             // 
             // actorsGroupLayout
             // 
@@ -479,12 +463,12 @@ namespace SolvisSC2Viewer {
             this.a20Check.UseVisualStyleBackColor = true;
             this.a20Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
             // 
-            // optionsGroup
+            // actorsGroup
             // 
-            resources.ApplyResources(this.optionsGroup, "optionsGroup");
-            this.optionsGroup.Controls.Add(this.optionsGroupLayout);
-            this.optionsGroup.Name = "optionsGroup";
-            this.optionsGroup.TabStop = false;
+            resources.ApplyResources(this.actorsGroup, "actorsGroup");
+            this.actorsGroup.Controls.Add(this.actorsGroupLayout);
+            this.actorsGroup.Name = "actorsGroup";
+            this.actorsGroup.TabStop = false;
             // 
             // optionsGroupLayout
             // 
@@ -500,6 +484,12 @@ namespace SolvisSC2Viewer {
             this.optionsGroupLayout.Controls.Add(this.p08Check, 0, 7);
             this.optionsGroupLayout.Controls.Add(this.p09Check, 0, 8);
             this.optionsGroupLayout.Name = "optionsGroupLayout";
+            // 
+            // p10Check
+            // 
+            resources.ApplyResources(this.p10Check, "p10Check");
+            this.p10Check.Name = "p10Check";
+            this.p10Check.UseVisualStyleBackColor = true;
             // 
             // p01Check
             // 
@@ -560,11 +550,21 @@ namespace SolvisSC2Viewer {
             this.p09Check.Name = "p09Check";
             this.p09Check.UseVisualStyleBackColor = true;
             // 
-            // p10Check
+            // optionsGroup
             // 
-            resources.ApplyResources(this.p10Check, "p10Check");
-            this.p10Check.Name = "p10Check";
-            this.p10Check.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.optionsGroup, "optionsGroup");
+            this.optionsGroup.Controls.Add(this.optionsGroupLayout);
+            this.optionsGroup.Name = "optionsGroup";
+            this.optionsGroup.TabStop = false;
+            // 
+            // controlLayout
+            // 
+            resources.ApplyResources(this.controlLayout, "controlLayout");
+            this.controlLayout.Controls.Add(this.sensorsGroup, 0, 0);
+            this.controlLayout.Controls.Add(this.actorsGroup, 0, 1);
+            this.controlLayout.Controls.Add(this.optionsGroup, 0, 2);
+            this.controlLayout.Name = "controlLayout";
+            this.controlLayout.Resize += new System.EventHandler(this.controlLayout_Resize);
             // 
             // SensorsActors
             // 
@@ -573,20 +573,20 @@ namespace SolvisSC2Viewer {
             resources.ApplyResources(this, "$this");
             this.Name = "SensorsActors";
             this.Load += new System.EventHandler(this.SensorsActors_Load);
-            this.controlLayout.ResumeLayout(false);
-            this.controlLayout.PerformLayout();
-            this.sensorsGroup.ResumeLayout(false);
-            this.sensorsGroup.PerformLayout();
             this.sensorsGroupLayout.ResumeLayout(false);
             this.sensorsGroupLayout.PerformLayout();
-            this.actorsGroup.ResumeLayout(false);
-            this.actorsGroup.PerformLayout();
+            this.sensorsGroup.ResumeLayout(false);
+            this.sensorsGroup.PerformLayout();
             this.actorsGroupLayout.ResumeLayout(false);
             this.actorsGroupLayout.PerformLayout();
-            this.optionsGroup.ResumeLayout(false);
-            this.optionsGroup.PerformLayout();
+            this.actorsGroup.ResumeLayout(false);
+            this.actorsGroup.PerformLayout();
             this.optionsGroupLayout.ResumeLayout(false);
             this.optionsGroupLayout.PerformLayout();
+            this.optionsGroup.ResumeLayout(false);
+            this.optionsGroup.PerformLayout();
+            this.controlLayout.ResumeLayout(false);
+            this.controlLayout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

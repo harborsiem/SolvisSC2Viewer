@@ -35,7 +35,9 @@ namespace SolvisSC2Viewer {
             FileOpen = LoadImage("openHS.png");
             Print = LoadImage("PrintHS.png");
             PrintPreview = LoadImage("PrintPreviewHS.png");
-            PrintPreviewIcon = Icon.FromHandle(((Bitmap)PrintPreview).GetHicon());
+            if (PrintPreview != null) {
+                PrintPreviewIcon = Icon.FromHandle(((Bitmap)PrintPreview).GetHicon());
+            }
             AppIcon = LoadIcon("Lupe.ico");
             Splash = LoadImage("Solvis_splash1.jpg");
             //AppIcon = LoadIcon("favicon.ico");
@@ -44,7 +46,9 @@ namespace SolvisSC2Viewer {
             AboutLicense = LoadImage("about_license.png");
             AboutAuthors = LoadImage("about_authors.png");
             Icon sun = LoadIcon("TheSun.ico");
-            AboutDescription = sun.ToBitmap();
+            if (sun != null) {
+                AboutDescription = sun.ToBitmap();
+            }
             FirstDay = LoadImage("DataContainer_MoveFirst.bmp");
             LastDay = LoadImage("DataContainer_MoveLast.bmp");
             NextDay = LoadImage("DataContainer_MoveNext.bmp");
@@ -57,7 +61,10 @@ namespace SolvisSC2Viewer {
         private static Icon LoadIcon(string name) {
             Icon icon = null;
             try {
-                icon = new Icon(GetResourceStream(name), 16, 16);
+                Stream stream = GetResourceStream(name);
+                if (stream != null) {
+                    icon = new Icon(stream, 16, 16);
+                }
             }
             catch (ArgumentException ex) {
                 AppExtension.PrintStackTrace(ex);
@@ -68,7 +75,10 @@ namespace SolvisSC2Viewer {
         private static Image LoadImage(string name) {
             Image image = null;
             try {
-                image = new Bitmap(GetResourceStream(name));
+                Stream stream = GetResourceStream(name);
+                if (stream != null) {
+                    image = new Bitmap(stream);
+                }
             }
             catch (ArgumentException ex) {
                 AppExtension.PrintStackTrace(ex);
@@ -77,7 +87,7 @@ namespace SolvisSC2Viewer {
         }
 
         private static Stream GetResourceStream(string resource) {
-            return exeAssembly.GetManifestResourceStream("SolvisSC2Viewer.files." + resource);
+            return exeAssembly.GetManifestResourceStream(AppManager.ApplicationName + ".files." + resource);
         }
     }
 }

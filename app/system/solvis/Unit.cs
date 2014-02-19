@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +15,7 @@ namespace SolvisSC2Viewer {
         public const string Kelvin = "K";
         public const string Percent = "%";
         public const string SecondsPerKelvin = "s/K";
+        public const string PulsePerLitre = "P/l";
 
         private Unit() {
         }

@@ -14,17 +14,27 @@ namespace SolvisSC2Viewer {
         }
 
         protected override int Execute(ActionData data) {
+            RowValues.SelectedSolvisControlVersion = 131;
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.DefaultExt = "txt";
-            dialog.FileName = "so*.txt";
+            dialog.FileName = "";
+            string solvisFiles = "Solvis Files"; //@Language Resource ?
+            if (RowValues.SolvisControlVersion < 132) {
+                dialog.Filter = solvisFiles + " (so*.txt)|so*.txt|" + solvisFiles + " (mi*.txt)|mi*.txt";
+            } else {
+                dialog.Filter = solvisFiles + " (mi*.txt)|mi*.txt|" + solvisFiles + " (so*.txt)|so*.txt";
+            }
             dialog.InitialDirectory = AppManager.ConfigManager.OpenDir;
-            dialog.Filter = "Solvis File (*.txt)|*.txt"; //@Language Resource ?
             dialog.CheckFileExists = true;
             dialog.CheckPathExists = true;
             dialog.ReadOnlyChecked = true;
             dialog.Multiselect = true;
             if (dialog.ShowDialog(AppManager.MainForm) == DialogResult.OK) {
                 AppManager.ConfigManager.OpenDir = Path.GetDirectoryName(dialog.FileName);
+                string fileName = Path.GetFileNameWithoutExtension(dialog.FileName);
+                if (fileName.StartsWith("MI", StringComparison.OrdinalIgnoreCase)) {
+                    RowValues.SelectedSolvisControlVersion = 132;
+                }
                 string[] names = dialog.FileNames;
                 if (names.Length > 0) {
                     Array.Sort(names);

@@ -11,13 +11,13 @@ namespace SolvisSC2Viewer {
         private static StreamWriter swTrace;
         private static StreamWriter swPrint;
         private static String traceFileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar +
-                                                  MainForm.ConfigPath + Path.DirectorySeparatorChar + "StackTrace.txt";
+                                                  AppManager.ConfigPath + Path.DirectorySeparatorChar + "StackTrace.txt";
         private static String printFileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar +
-                                                  MainForm.ConfigPath + Path.DirectorySeparatorChar + "PrintTrace.txt";
+                                                  AppManager.ConfigPath + Path.DirectorySeparatorChar + "PrintTrace.txt";
 
         private static void InitStackTrace() {
             string configDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar
-                + MainForm.ConfigPath;
+                + AppManager.ConfigPath;
             if (!Directory.Exists(configDir)) {
                 Directory.CreateDirectory(configDir);
             }
@@ -34,7 +34,7 @@ namespace SolvisSC2Viewer {
 
         private static void InitPrintTrace() {
             string configDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar
-                + MainForm.ConfigPath;
+                + AppManager.ConfigPath;
             if (!Directory.Exists(configDir)) {
                 Directory.CreateDirectory(configDir);
             }

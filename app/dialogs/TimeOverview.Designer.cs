@@ -24,9 +24,15 @@ namespace SolvisSC2Viewer {
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimeOverview));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewTop = new System.Windows.Forms.DataGridView();
+            this.MondayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TuesdayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WednesdayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThursdayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FridayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaturdayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SundayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewBottom = new System.Windows.Forms.DataGridView();
             this.ItemColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FromToColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,32 +57,19 @@ namespace SolvisSC2Viewer {
             this.Sunday1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sunday2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sunday3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MondayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TuesdayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WednesdayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThursdayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FridayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaturdayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SundayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dialogLayout.SuspendLayout();
+            this.dialogLayout = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBottom)).BeginInit();
+            this.dialogLayout.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dialogLayout
-            // 
-            resources.ApplyResources(this.dialogLayout, "dialogLayout");
-            this.dialogLayout.Controls.Add(this.dataGridViewTop, 0, 0);
-            this.dialogLayout.Controls.Add(this.dataGridViewBottom, 0, 1);
-            this.dialogLayout.Name = "dialogLayout";
             // 
             // dataGridViewTop
             // 
-            resources.ApplyResources(this.dataGridViewTop, "dataGridViewTop");
             this.dataGridViewTop.AllowUserToAddRows = false;
             this.dataGridViewTop.AllowUserToDeleteRows = false;
             this.dataGridViewTop.AllowUserToResizeColumns = false;
             this.dataGridViewTop.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.dataGridViewTop, "dataGridViewTop");
             this.dataGridViewTop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTop.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewTop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -93,15 +86,57 @@ namespace SolvisSC2Viewer {
             this.dataGridViewTop.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewTop.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             // 
+            // MondayColumn
+            // 
+            resources.ApplyResources(this.MondayColumn, "MondayColumn");
+            this.MondayColumn.Name = "MondayColumn";
+            this.MondayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TuesdayColumn
+            // 
+            resources.ApplyResources(this.TuesdayColumn, "TuesdayColumn");
+            this.TuesdayColumn.Name = "TuesdayColumn";
+            this.TuesdayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // WednesdayColumn
+            // 
+            resources.ApplyResources(this.WednesdayColumn, "WednesdayColumn");
+            this.WednesdayColumn.Name = "WednesdayColumn";
+            this.WednesdayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ThursdayColumn
+            // 
+            resources.ApplyResources(this.ThursdayColumn, "ThursdayColumn");
+            this.ThursdayColumn.Name = "ThursdayColumn";
+            this.ThursdayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // FridayColumn
+            // 
+            resources.ApplyResources(this.FridayColumn, "FridayColumn");
+            this.FridayColumn.Name = "FridayColumn";
+            this.FridayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SaturdayColumn
+            // 
+            resources.ApplyResources(this.SaturdayColumn, "SaturdayColumn");
+            this.SaturdayColumn.Name = "SaturdayColumn";
+            this.SaturdayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SundayColumn
+            // 
+            resources.ApplyResources(this.SundayColumn, "SundayColumn");
+            this.SundayColumn.Name = "SundayColumn";
+            this.SundayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // dataGridViewBottom
             // 
-            resources.ApplyResources(this.dataGridViewBottom, "dataGridViewBottom");
             this.dataGridViewBottom.AllowUserToAddRows = false;
             this.dataGridViewBottom.AllowUserToDeleteRows = false;
             this.dataGridViewBottom.AllowUserToResizeColumns = false;
             this.dataGridViewBottom.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridViewBottom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewBottom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.dataGridViewBottom, "dataGridViewBottom");
             this.dataGridViewBottom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBottom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBottom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -299,47 +334,12 @@ namespace SolvisSC2Viewer {
             this.Sunday3.ReadOnly = true;
             this.Sunday3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // MondayColumn
+            // dialogLayout
             // 
-            resources.ApplyResources(this.MondayColumn, "MondayColumn");
-            this.MondayColumn.Name = "MondayColumn";
-            this.MondayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TuesdayColumn
-            // 
-            resources.ApplyResources(this.TuesdayColumn, "TuesdayColumn");
-            this.TuesdayColumn.Name = "TuesdayColumn";
-            this.TuesdayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // WednesdayColumn
-            // 
-            resources.ApplyResources(this.WednesdayColumn, "WednesdayColumn");
-            this.WednesdayColumn.Name = "WednesdayColumn";
-            this.WednesdayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ThursdayColumn
-            // 
-            resources.ApplyResources(this.ThursdayColumn, "ThursdayColumn");
-            this.ThursdayColumn.Name = "ThursdayColumn";
-            this.ThursdayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // FridayColumn
-            // 
-            resources.ApplyResources(this.FridayColumn, "FridayColumn");
-            this.FridayColumn.Name = "FridayColumn";
-            this.FridayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // SaturdayColumn
-            // 
-            resources.ApplyResources(this.SaturdayColumn, "SaturdayColumn");
-            this.SaturdayColumn.Name = "SaturdayColumn";
-            this.SaturdayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // SundayColumn
-            // 
-            resources.ApplyResources(this.SundayColumn, "SundayColumn");
-            this.SundayColumn.Name = "SundayColumn";
-            this.SundayColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.dialogLayout, "dialogLayout");
+            this.dialogLayout.Controls.Add(this.dataGridViewTop, 0, 0);
+            this.dialogLayout.Controls.Add(this.dataGridViewBottom, 0, 1);
+            this.dialogLayout.Name = "dialogLayout";
             // 
             // TimeOverview
             // 
@@ -352,9 +352,9 @@ namespace SolvisSC2Viewer {
             this.Name = "TimeOverview";
             this.ShowInTaskbar = false;
             this.Shown += new System.EventHandler(this.TimeOverview_Shown);
-            this.dialogLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBottom)).EndInit();
+            this.dialogLayout.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

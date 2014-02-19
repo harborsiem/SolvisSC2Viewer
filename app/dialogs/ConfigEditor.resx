@@ -118,19 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dialogLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dialogLayout.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="sensorsTabLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="sensorsTabLayout.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1359,9 +1350,6 @@
   <data name="&gt;&gt;optionsTabPage.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="heatCurveGroup.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="groupLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -1572,6 +1560,9 @@
   <data name="groupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="temperatureLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="temperatureUpDown" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="niveauLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="niveauUpDown" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="gradientLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gradientUpDown" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
+  <data name="heatCurveGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="heatCurveGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -1620,15 +1611,6 @@
   <data name="&gt;&gt;heatCurveTabPage.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="sdCardLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="sdCardLayout.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="sdCardLayout.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="directoryButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -1658,12 +1640,6 @@
   </data>
   <data name="&gt;&gt;directoryButton.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="timePlanGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="timePlanGroup.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="timePlanGroupLayout.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1818,6 +1794,12 @@
   <data name="timePlanGroupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="hk2CheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="hk3CheckBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ecoCheckBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="savePictureCheckBox" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
+  <data name="timePlanGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="timePlanGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="timePlanGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 32</value>
   </data>
@@ -1845,28 +1827,13 @@
   <data name="prototype.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="prototype.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 165</value>
+  <data name="sdCardLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="prototype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 17</value>
+  <data name="sdCardLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="prototype.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="prototype.Text" xml:space="preserve">
-    <value>Show Parameters, Counting</value>
-  </data>
-  <data name="&gt;&gt;prototype.Name" xml:space="preserve">
-    <value>prototype</value>
-  </data>
-  <data name="&gt;&gt;prototype.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;prototype.Parent" xml:space="preserve">
-    <value>sdCardLayout</value>
-  </data>
-  <data name="&gt;&gt;prototype.ZOrder" xml:space="preserve">
+  <data name="sdCardLayout.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="sdCardLayout.Location" type="System.Drawing.Point, System.Drawing">
@@ -1899,6 +1866,30 @@
   <data name="sdCardLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="directoryButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="timePlanGroup" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="prototype" Row="2" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
+  <data name="prototype.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 165</value>
+  </data>
+  <data name="prototype.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 17</value>
+  </data>
+  <data name="prototype.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="prototype.Text" xml:space="preserve">
+    <value>Show Parameters, Counting</value>
+  </data>
+  <data name="&gt;&gt;prototype.Name" xml:space="preserve">
+    <value>prototype</value>
+  </data>
+  <data name="&gt;&gt;prototype.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;prototype.Parent" xml:space="preserve">
+    <value>sdCardLayout</value>
+  </data>
+  <data name="&gt;&gt;prototype.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="SdCardTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -1922,6 +1913,126 @@
   </data>
   <data name="&gt;&gt;SdCardTabPage.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="tabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="miscLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="miscLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="miscLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="controlVersionLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="controlVersionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="controlVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="controlVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 13</value>
+  </data>
+  <data name="controlVersionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="controlVersionLabel.Text" xml:space="preserve">
+    <value>SolvisControl Version (Z-Value)</value>
+  </data>
+  <data name="&gt;&gt;controlVersionLabel.Name" xml:space="preserve">
+    <value>controlVersionLabel</value>
+  </data>
+  <data name="&gt;&gt;controlVersionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;controlVersionLabel.Parent" xml:space="preserve">
+    <value>miscLayout</value>
+  </data>
+  <data name="&gt;&gt;controlVersionLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="controlVersionUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="controlVersionUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>181, 3</value>
+  </data>
+  <data name="controlVersionUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 20</value>
+  </data>
+  <data name="controlVersionUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;controlVersionUpDown.Name" xml:space="preserve">
+    <value>controlVersionUpDown</value>
+  </data>
+  <data name="&gt;&gt;controlVersionUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;controlVersionUpDown.Parent" xml:space="preserve">
+    <value>miscLayout</value>
+  </data>
+  <data name="&gt;&gt;controlVersionUpDown.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="miscLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="miscLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="miscLayout.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="miscLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>356, 26</value>
+  </data>
+  <data name="miscLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;miscLayout.Name" xml:space="preserve">
+    <value>miscLayout</value>
+  </data>
+  <data name="&gt;&gt;miscLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miscLayout.Parent" xml:space="preserve">
+    <value>othersTabPage</value>
+  </data>
+  <data name="&gt;&gt;miscLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="miscLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="controlVersionLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="controlVersionUpDown" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="othersTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="othersTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>356, 261</value>
+  </data>
+  <data name="othersTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="othersTabPage.Text" xml:space="preserve">
+    <value>Misc.</value>
+  </data>
+  <data name="&gt;&gt;othersTabPage.Name" xml:space="preserve">
+    <value>othersTabPage</value>
+  </data>
+  <data name="&gt;&gt;othersTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;othersTabPage.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;othersTabPage.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -2072,6 +2183,12 @@
   </data>
   <data name="buttons.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="buttonDefault" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="buttonOK" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="buttonCancel" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33,33333,Percent,33,33333,Percent,33,33333" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="dialogLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="dialogLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="dialogLayout.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 9</value>

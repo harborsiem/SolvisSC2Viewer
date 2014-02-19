@@ -26,15 +26,29 @@ namespace SolvisSC2Viewer {
             if (objects != null) {
                 for (int i = 0; i < objects.Length; i++) {
                     string name;
+                    string extensionName = string.Empty;
                     Type propertyType;
                     Attribute[] attributes;
                     Type objectType = objects[i].GetType();
+                    if (objectType == typeof(HeatCircuitSettings)) {
+                        extensionName = ((HeatCircuitSettings)objects[i]).GetHeatCircuit();
+                    }
                     PropertyInfo[] infos = objectType.GetProperties();
                     for (int j = 0; j < infos.Length; j++) {
                         name = infos[j].Name;
+                        name = extensionName + name;
                         propertyType = infos[j].PropertyType;
                         object value = infos[j].GetValue(objects[i], new object[0]);
                         object[] customAttributes = infos[j].GetCustomAttributes(false);
+                        if (!string.IsNullOrEmpty(extensionName)) {
+                            for (int k = 0; k < customAttributes.Length; k++) {
+                                DisplayNameAttribute displayName = customAttributes[k] as DisplayNameAttribute;
+                                if (displayName != null) {
+                                    displayName = new DisplayNameAttribute(extensionName + displayName.DisplayName);
+                                    customAttributes[k] = displayName;
+                                }
+                            }
+                        }
                         attributes = new Attribute[customAttributes.Length];
                         if (customAttributes.Length > 0) {
                             customAttributes.CopyTo(attributes, 0);

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Globalization;
+using System.Reflection;
 
 namespace SolvisSC2Viewer {
     internal partial class AboutDialog : BaseForm {
@@ -17,12 +18,23 @@ namespace SolvisSC2Viewer {
 
         private Image image;
         private AboutContentReader docReader;
+        private string signatureKey = String.Empty;
 
         public AboutDialog() {
             InitializeComponent();
             FileVersionInfo fi = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
             string productVersion = fi.ProductVersion;
-            ReleaseName = MainForm.ApplicationName + " " + productVersion;
+            ReleaseName = AppManager.ApplicationName + " " + productVersion;
+            signatureKey = GetSignature();
+        }
+
+        private string GetSignature() {
+            byte[] keyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken();
+            StringBuilder keyTokenString = new StringBuilder();
+            for (int i = 0; i < keyToken.Length; i++) {
+                keyTokenString.Append(keyToken[i].ToString("X2"));
+            }
+            return keyTokenString.ToString();
         }
 
         public void Init() {
@@ -48,6 +60,9 @@ namespace SolvisSC2Viewer {
             docReader = new AboutContentReader();
 
             MakeTabItem(AboutContentReader.Description, language, textDescription);
+            if (!String.IsNullOrEmpty(signatureKey)) {
+                textDescription.Text = textDescription.Text + Environment.NewLine + "PublicKeyToken: " + signatureKey + Environment.NewLine;
+            }
             MakeTabItem(AboutContentReader.Authors, language, textAuthors);
             MakeTabItem(AboutContentReader.License, "", textLicense);
 

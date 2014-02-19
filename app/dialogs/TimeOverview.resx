@@ -117,110 +117,356 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="WednesdayColumn.HeaderText" xml:space="preserve">
-    <value>Wednesday</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataGridViewTop.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;Friday3.Name" xml:space="preserve">
-    <value>Friday3</value>
+  <metadata name="MondayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MondayColumn.HeaderText" xml:space="preserve">
+    <value>Monday</value>
   </data>
-  <data name="&gt;&gt;Monday3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTop.Parent" xml:space="preserve">
-    <value>dialogLayout</value>
-  </data>
-  <data name="&gt;&gt;Friday2.Name" xml:space="preserve">
-    <value>Friday2</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dialogLayout.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Tuesday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <metadata name="TuesdayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="TuesdayColumn.HeaderText" xml:space="preserve">
     <value>Tuesday</value>
   </data>
-  <data name="&gt;&gt;Tuesday3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Monday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+  <metadata name="WednesdayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <data name="WednesdayColumn.HeaderText" xml:space="preserve">
+    <value>Wednesday</value>
   </data>
+  <metadata name="ThursdayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ThursdayColumn.HeaderText" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <metadata name="FridayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="FridayColumn.HeaderText" xml:space="preserve">
     <value>Friday</value>
   </data>
-  <data name="&gt;&gt;Wednesday3.Name" xml:space="preserve">
-    <value>Wednesday3</value>
+  <metadata name="SaturdayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SaturdayColumn.HeaderText" xml:space="preserve">
+    <value>Saturday</value>
   </data>
-  <data name="Friday2.HeaderText" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Saturday2.Name" xml:space="preserve">
-    <value>Saturday2</value>
+  <metadata name="SundayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SundayColumn.HeaderText" xml:space="preserve">
+    <value>Sunday</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dataGridViewBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>989, 311</value>
+  <data name="dataGridViewTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dialogLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridViewTop" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dataGridViewBottom" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  <data name="dataGridViewTop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 0</value>
   </data>
-  <data name="Tuesday3.HeaderText" xml:space="preserve">
-    <value>3</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataGridViewTop.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>88</value>
   </data>
-  <data name="&gt;&gt;dataGridViewBottom.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="dataGridViewBottom.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="dataGridViewTop.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BaseForm, SolvisSC2Viewer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c36682b29f44cba7</value>
-  </data>
-  <data name="&gt;&gt;FridayColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dataGridViewTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 43</value>
   </data>
   <data name="dataGridViewTop.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;Saturday3.Name" xml:space="preserve">
-    <value>Saturday3</value>
+  <data name="&gt;&gt;dataGridViewTop.Name" xml:space="preserve">
+    <value>dataGridViewTop</value>
   </data>
-  <data name="&gt;&gt;Saturday1.Name" xml:space="preserve">
-    <value>Saturday1</value>
+  <data name="&gt;&gt;dataGridViewTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTop.Parent" xml:space="preserve">
+    <value>dialogLayout</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTop.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewBottom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="ItemColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ItemColumn.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="FromToColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FromToColumn.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="Monday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Monday1.HeaderText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="Monday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Monday2.HeaderText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="Monday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Monday3.HeaderText" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="Tuesday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Tuesday1.HeaderText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="Tuesday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Tuesday2.HeaderText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="Tuesday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Tuesday3.HeaderText" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="Wednesday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Wednesday1.HeaderText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="Wednesday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Wednesday2.HeaderText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="Wednesday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Wednesday3.HeaderText" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="Thursday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Thursday1.HeaderText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="Thursday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Thursday2.HeaderText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="Thursday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Thursday3.HeaderText" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="Friday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Friday1.HeaderText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="Friday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Friday2.HeaderText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="Friday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Friday3.HeaderText" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="Saturday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Saturday1.HeaderText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="Saturday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Saturday2.HeaderText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="Saturday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Saturday3.HeaderText" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="Sunday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Sunday1.HeaderText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="Sunday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Sunday2.HeaderText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="Sunday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Sunday3.HeaderText" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dataGridViewBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 46</value>
+  </data>
+  <data name="dataGridViewBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 3</value>
+  </data>
+  <data name="dataGridViewBottom.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dataGridViewBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 311</value>
+  </data>
+  <data name="dataGridViewBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBottom.Name" xml:space="preserve">
+    <value>dataGridViewBottom</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBottom.Parent" xml:space="preserve">
+    <value>dialogLayout</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBottom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dialogLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dialogLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="dialogLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;Friday1.Name" xml:space="preserve">
-    <value>Friday1</value>
+  <data name="dialogLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="Monday3.HeaderText" xml:space="preserve">
-    <value>3</value>
+  <data name="dialogLayout.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="Wednesday1.HeaderText" xml:space="preserve">
-    <value>1</value>
+  <data name="dialogLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>995, 360</value>
+  </data>
+  <data name="dialogLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dialogLayout.Name" xml:space="preserve">
+    <value>dialogLayout</value>
+  </data>
+  <data name="&gt;&gt;dialogLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dialogLayout.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;dialogLayout.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;Friday3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dialogLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridViewTop" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dataGridViewBottom" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="&gt;&gt;Thursday2.Name" xml:space="preserve">
-    <value>Thursday2</value>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>995, 360</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
-  <data name="&gt;&gt;Monday2.Type" xml:space="preserve">
+  <data name="$this.Text" xml:space="preserve">
+    <value>TimeOverview</value>
+  </data>
+  <data name="&gt;&gt;MondayColumn.Name" xml:space="preserve">
+    <value>MondayColumn</value>
+  </data>
+  <data name="&gt;&gt;MondayColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TuesdayColumn.Name" xml:space="preserve">
+    <value>TuesdayColumn</value>
+  </data>
+  <data name="&gt;&gt;TuesdayColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WednesdayColumn.Name" xml:space="preserve">
+    <value>WednesdayColumn</value>
+  </data>
+  <data name="&gt;&gt;WednesdayColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ThursdayColumn.Name" xml:space="preserve">
+    <value>ThursdayColumn</value>
+  </data>
+  <data name="&gt;&gt;ThursdayColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FridayColumn.Name" xml:space="preserve">
+    <value>FridayColumn</value>
+  </data>
+  <data name="&gt;&gt;FridayColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaturdayColumn.Name" xml:space="preserve">
+    <value>SaturdayColumn</value>
+  </data>
+  <data name="&gt;&gt;SaturdayColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SundayColumn.Name" xml:space="preserve">
+    <value>SundayColumn</value>
+  </data>
+  <data name="&gt;&gt;SundayColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ItemColumn.Name" xml:space="preserve">
+    <value>ItemColumn</value>
+  </data>
+  <data name="&gt;&gt;ItemColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FromToColumn.Name" xml:space="preserve">
+    <value>FromToColumn</value>
   </data>
   <data name="&gt;&gt;FromToColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -228,379 +474,133 @@
   <data name="&gt;&gt;Monday1.Name" xml:space="preserve">
     <value>Monday1</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTop.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ItemColumn.Name" xml:space="preserve">
-    <value>ItemColumn</value>
-  </data>
-  <data name="Friday1.HeaderText" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ItemColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dataGridViewBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 46</value>
-  </data>
-  <data name="dialogLayout.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dataGridViewBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 3, 3</value>
-  </data>
-  <data name="dataGridViewTop.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>88</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTop.Name" xml:space="preserve">
-    <value>dataGridViewTop</value>
-  </data>
-  <data name="&gt;&gt;Thursday3.Name" xml:space="preserve">
-    <value>Thursday3</value>
-  </data>
-  <data name="&gt;&gt;dialogLayout.Name" xml:space="preserve">
-    <value>dialogLayout</value>
-  </data>
-  <data name="Monday1.HeaderText" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Tuesday2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Sunday3.Name" xml:space="preserve">
-    <value>Sunday3</value>
-  </data>
-  <data name="dataGridViewTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>989, 43</value>
-  </data>
-  <data name="Sunday2.HeaderText" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="dataGridViewTop.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="dataGridViewTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;SundayColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dataGridViewBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="dialogLayout.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="dataGridViewTop.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="Saturday1.HeaderText" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Thursday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FridayColumn.Name" xml:space="preserve">
-    <value>FridayColumn</value>
-  </data>
-  <data name="&gt;&gt;Saturday3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Sunday3.HeaderText" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Thursday3.HeaderText" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Monday3.Name" xml:space="preserve">
-    <value>Monday3</value>
-  </data>
-  <data name="&gt;&gt;Tuesday1.Name" xml:space="preserve">
-    <value>Tuesday1</value>
-  </data>
-  <data name="&gt;&gt;Tuesday3.Name" xml:space="preserve">
-    <value>Tuesday3</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
-  </data>
-  <data name="dataGridViewBottom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="dialogLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>995, 360</value>
-  </data>
-  <data name="&gt;&gt;SundayColumn.Name" xml:space="preserve">
-    <value>SundayColumn</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>TimeOverview</value>
-  </data>
-  <data name="&gt;&gt;Friday2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MondayColumn.Type" xml:space="preserve">
+  <data name="&gt;&gt;Monday1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Monday2.Name" xml:space="preserve">
     <value>Monday2</value>
   </data>
-  <data name="&gt;&gt;ThursdayColumn.Name" xml:space="preserve">
-    <value>ThursdayColumn</value>
-  </data>
-  <data name="Sunday1.HeaderText" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Thursday2.HeaderText" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dialogLayout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="FromToColumn.HeaderText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SaturdayColumn.HeaderText" xml:space="preserve">
-    <value>Saturday</value>
-  </data>
-  <data name="Tuesday2.HeaderText" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Sunday3.Type" xml:space="preserve">
+  <data name="&gt;&gt;Monday2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TuesdayColumn.Type" xml:space="preserve">
+  <data name="&gt;&gt;Monday3.Name" xml:space="preserve">
+    <value>Monday3</value>
+  </data>
+  <data name="&gt;&gt;Monday3.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Saturday2.HeaderText" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;Tuesday1.Name" xml:space="preserve">
+    <value>Tuesday1</value>
   </data>
-  <data name="&gt;&gt;Sunday1.Name" xml:space="preserve">
-    <value>Sunday1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Saturday2.Type" xml:space="preserve">
+  <data name="&gt;&gt;Tuesday1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ThursdayColumn.HeaderText" xml:space="preserve">
-    <value>Thursday</value>
-  </data>
-  <data name="&gt;&gt;WednesdayColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dialogLayout.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Friday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ItemColumn.HeaderText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;Sunday2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MondayColumn.HeaderText" xml:space="preserve">
-    <value>Monday</value>
-  </data>
-  <data name="SundayColumn.HeaderText" xml:space="preserve">
-    <value>Sunday</value>
-  </data>
-  <data name="dialogLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;SaturdayColumn.Name" xml:space="preserve">
-    <value>SaturdayColumn</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBottom.Parent" xml:space="preserve">
-    <value>dialogLayout</value>
-  </data>
-  <data name="&gt;&gt;Thursday2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Wednesday2.HeaderText" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="dataGridViewTop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 0</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBottom.Name" xml:space="preserve">
-    <value>dataGridViewBottom</value>
-  </data>
-  <data name="&gt;&gt;Wednesday3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ThursdayColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Thursday3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Wednesday3.HeaderText" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Sunday2.Name" xml:space="preserve">
-    <value>Sunday2</value>
-  </data>
-  <data name="Tuesday1.HeaderText" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TuesdayColumn.Name" xml:space="preserve">
-    <value>TuesdayColumn</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>TimeOverview</value>
-  </data>
-  <data name="&gt;&gt;Thursday1.Name" xml:space="preserve">
-    <value>Thursday1</value>
-  </data>
-  <data name="&gt;&gt;Wednesday1.Name" xml:space="preserve">
-    <value>Wednesday1</value>
-  </data>
-  <data name="&gt;&gt;WednesdayColumn.Name" xml:space="preserve">
-    <value>WednesdayColumn</value>
-  </data>
-  <data name="&gt;&gt;FromToColumn.Name" xml:space="preserve">
-    <value>FromToColumn</value>
-  </data>
-  <data name="&gt;&gt;dialogLayout.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Saturday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Wednesday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Monday2.HeaderText" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Wednesday2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>995, 360</value>
-  </data>
-  <data name="&gt;&gt;SaturdayColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MondayColumn.Name" xml:space="preserve">
-    <value>MondayColumn</value>
-  </data>
-  <data name="&gt;&gt;Wednesday2.Name" xml:space="preserve">
-    <value>Wednesday2</value>
-  </data>
-  <data name="Friday3.HeaderText" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;Tuesday2.Name" xml:space="preserve">
     <value>Tuesday2</value>
   </data>
-  <data name="Saturday3.HeaderText" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;Tuesday2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tuesday3.Name" xml:space="preserve">
+    <value>Tuesday3</value>
+  </data>
+  <data name="&gt;&gt;Tuesday3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Wednesday1.Name" xml:space="preserve">
+    <value>Wednesday1</value>
+  </data>
+  <data name="&gt;&gt;Wednesday1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Wednesday2.Name" xml:space="preserve">
+    <value>Wednesday2</value>
+  </data>
+  <data name="&gt;&gt;Wednesday2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Wednesday3.Name" xml:space="preserve">
+    <value>Wednesday3</value>
+  </data>
+  <data name="&gt;&gt;Wednesday3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Thursday1.Name" xml:space="preserve">
+    <value>Thursday1</value>
+  </data>
+  <data name="&gt;&gt;Thursday1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Thursday2.Name" xml:space="preserve">
+    <value>Thursday2</value>
+  </data>
+  <data name="&gt;&gt;Thursday2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Thursday3.Name" xml:space="preserve">
+    <value>Thursday3</value>
+  </data>
+  <data name="&gt;&gt;Thursday3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Friday1.Name" xml:space="preserve">
+    <value>Friday1</value>
+  </data>
+  <data name="&gt;&gt;Friday1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Friday2.Name" xml:space="preserve">
+    <value>Friday2</value>
+  </data>
+  <data name="&gt;&gt;Friday2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Friday3.Name" xml:space="preserve">
+    <value>Friday3</value>
+  </data>
+  <data name="&gt;&gt;Friday3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Saturday1.Name" xml:space="preserve">
+    <value>Saturday1</value>
+  </data>
+  <data name="&gt;&gt;Saturday1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Saturday2.Name" xml:space="preserve">
+    <value>Saturday2</value>
+  </data>
+  <data name="&gt;&gt;Saturday2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Saturday3.Name" xml:space="preserve">
+    <value>Saturday3</value>
+  </data>
+  <data name="&gt;&gt;Saturday3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sunday1.Name" xml:space="preserve">
+    <value>Sunday1</value>
   </data>
   <data name="&gt;&gt;Sunday1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Thursday1.HeaderText" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;Sunday2.Name" xml:space="preserve">
+    <value>Sunday2</value>
   </data>
-  <metadata name="Sunday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Sunday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Tuesday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Monday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Tuesday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Thursday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Sunday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="FromToColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SaturdayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Monday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Friday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Monday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Thursday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="FridayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ThursdayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Wednesday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="WednesdayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Saturday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Friday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MondayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Wednesday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Tuesday3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ItemColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SundayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Saturday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Wednesday2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TuesdayColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Thursday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Friday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Saturday1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="&gt;&gt;Sunday2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sunday3.Name" xml:space="preserve">
+    <value>Sunday3</value>
+  </data>
+  <data name="&gt;&gt;Sunday3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TimeOverview</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BaseForm, SolvisSC2Viewer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c36682b29f44cba7</value>
+  </data>
 </root>

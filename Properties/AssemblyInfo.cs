@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Resources;
@@ -7,11 +7,11 @@ using System.Resources;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("SolvisSC2Viewer")]
-[assembly: AssemblyDescription("Viewer for Solvis Control 2")]
+[assembly: AssemblyDescription("Viewer for SolvisControl 2")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Harbor")]
 [assembly: AssemblyProduct("SolvisSC2Viewer")]
-[assembly: AssemblyCopyright("Copyright © Harbor 2012, 2013")]
+[assembly: AssemblyCopyright("Copyright © Harbor 2012, 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,5 +34,5 @@ using System.Resources;
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.3.0.0")]
+[assembly: AssemblyFileVersion("2.0.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
