@@ -48,11 +48,18 @@ namespace SolvisSC2Viewer {
                     control = options[j++ - limit2];
                     datas = manager.OptionConfigValues;
                 }
+                String namePlusUnit = String.Empty;
+                if (RowValues.Infos != null && i < RowValues.Infos.NamesAndUnits.Length) {
+                    string tmp = RowValues.Infos.NamesAndUnits[i];
+                    if (tmp != null) {
+                        namePlusUnit = "[" + tmp + "] ";
+                    }
+                }
                 CheckBoxTag tag = control.Tag as CheckBoxTag;
                 if (tag != null) {
-                    toolTipText = datas[tag.ConfigKey].ToolTipText;
+                    toolTipText = namePlusUnit + datas[tag.ConfigKey].ToolTipText;
                 } else {
-                    toolTipText = control.Text;
+                    toolTipText = namePlusUnit + control.Text;
                 }
                 tips[i++].SetToolTip(control, toolTipText);
             }
@@ -84,6 +91,12 @@ namespace SolvisSC2Viewer {
             sensors.Add(s22Check);
             sensors.Add(s23Check);
             sensors.Add(s24Check);
+            sensors.Add(s25Check);
+            sensors.Add(s26Check);
+            sensors.Add(s27Check);
+            sensors.Add(s28Check);
+            sensors.Add(s29Check);
+            sensors.Add(s30Check);
         }
 
         private void MakeActorsList() {

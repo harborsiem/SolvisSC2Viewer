@@ -76,6 +76,14 @@
 			<param name="Local" value="description.html#LogFormat">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Solvis Logdaten Format, Dateityp so*.txt">
+			<param name="Local" value="description.html#LogFormatSo">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Solvis Logdaten Format, Dateityp mi*.txt">
+			<param name="Local" value="description.html#LogFormatMi">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Freie Formeln für Chartanzeige">
 			<param name="Local" value="description.html#Formulas">
 			</OBJECT>

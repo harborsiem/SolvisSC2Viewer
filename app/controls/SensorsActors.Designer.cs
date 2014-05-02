@@ -49,6 +49,12 @@ namespace SolvisSC2Viewer {
             this.s22Check = new System.Windows.Forms.CheckBox();
             this.s23Check = new System.Windows.Forms.CheckBox();
             this.s24Check = new System.Windows.Forms.CheckBox();
+            this.s25Check = new System.Windows.Forms.CheckBox();
+            this.s26Check = new System.Windows.Forms.CheckBox();
+            this.s27Check = new System.Windows.Forms.CheckBox();
+            this.s28Check = new System.Windows.Forms.CheckBox();
+            this.s29Check = new System.Windows.Forms.CheckBox();
+            this.s30Check = new System.Windows.Forms.CheckBox();
             this.sensorsGroup = new System.Windows.Forms.GroupBox();
             this.actorsGroupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.a1Check = new System.Windows.Forms.CheckBox();
@@ -73,7 +79,6 @@ namespace SolvisSC2Viewer {
             this.a20Check = new System.Windows.Forms.CheckBox();
             this.actorsGroup = new System.Windows.Forms.GroupBox();
             this.optionsGroupLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.p10Check = new System.Windows.Forms.CheckBox();
             this.p01Check = new System.Windows.Forms.CheckBox();
             this.p02Check = new System.Windows.Forms.CheckBox();
             this.p03Check = new System.Windows.Forms.CheckBox();
@@ -83,6 +88,7 @@ namespace SolvisSC2Viewer {
             this.p07Check = new System.Windows.Forms.CheckBox();
             this.p08Check = new System.Windows.Forms.CheckBox();
             this.p09Check = new System.Windows.Forms.CheckBox();
+            this.p10Check = new System.Windows.Forms.CheckBox();
             this.optionsGroup = new System.Windows.Forms.GroupBox();
             this.controlLayout = new System.Windows.Forms.TableLayoutPanel();
             this.sensorsGroupLayout.SuspendLayout();
@@ -121,6 +127,12 @@ namespace SolvisSC2Viewer {
             this.sensorsGroupLayout.Controls.Add(this.s22Check, 0, 21);
             this.sensorsGroupLayout.Controls.Add(this.s23Check, 0, 22);
             this.sensorsGroupLayout.Controls.Add(this.s24Check, 0, 23);
+            this.sensorsGroupLayout.Controls.Add(this.s25Check, 0, 24);
+            this.sensorsGroupLayout.Controls.Add(this.s26Check, 0, 25);
+            this.sensorsGroupLayout.Controls.Add(this.s27Check, 0, 26);
+            this.sensorsGroupLayout.Controls.Add(this.s28Check, 0, 27);
+            this.sensorsGroupLayout.Controls.Add(this.s29Check, 0, 28);
+            this.sensorsGroupLayout.Controls.Add(this.s30Check, 0, 29);
             this.sensorsGroupLayout.Name = "sensorsGroupLayout";
             // 
             // s1Check
@@ -290,6 +302,48 @@ namespace SolvisSC2Viewer {
             this.s24Check.Name = "s24Check";
             this.s24Check.UseVisualStyleBackColor = true;
             this.s24Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
+            // 
+            // s25Check
+            // 
+            resources.ApplyResources(this.s25Check, "s25Check");
+            this.s25Check.Name = "s25Check";
+            this.s25Check.UseVisualStyleBackColor = true;
+            this.s25Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
+            // 
+            // s26Check
+            // 
+            resources.ApplyResources(this.s26Check, "s26Check");
+            this.s26Check.Name = "s26Check";
+            this.s26Check.UseVisualStyleBackColor = true;
+            this.s26Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
+            // 
+            // s27Check
+            // 
+            resources.ApplyResources(this.s27Check, "s27Check");
+            this.s27Check.Name = "s27Check";
+            this.s27Check.UseVisualStyleBackColor = true;
+            this.s27Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
+            // 
+            // s28Check
+            // 
+            resources.ApplyResources(this.s28Check, "s28Check");
+            this.s28Check.Name = "s28Check";
+            this.s28Check.UseVisualStyleBackColor = true;
+            this.s28Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
+            // 
+            // s29Check
+            // 
+            resources.ApplyResources(this.s29Check, "s29Check");
+            this.s29Check.Name = "s29Check";
+            this.s29Check.UseVisualStyleBackColor = true;
+            this.s29Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
+            // 
+            // s30Check
+            // 
+            resources.ApplyResources(this.s30Check, "s30Check");
+            this.s30Check.Name = "s30Check";
+            this.s30Check.UseVisualStyleBackColor = true;
+            this.s30Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
             // 
             // sensorsGroup
             // 
@@ -473,7 +527,6 @@ namespace SolvisSC2Viewer {
             // optionsGroupLayout
             // 
             resources.ApplyResources(this.optionsGroupLayout, "optionsGroupLayout");
-            this.optionsGroupLayout.Controls.Add(this.p10Check, 0, 9);
             this.optionsGroupLayout.Controls.Add(this.p01Check, 0, 0);
             this.optionsGroupLayout.Controls.Add(this.p02Check, 0, 1);
             this.optionsGroupLayout.Controls.Add(this.p03Check, 0, 2);
@@ -483,13 +536,8 @@ namespace SolvisSC2Viewer {
             this.optionsGroupLayout.Controls.Add(this.p07Check, 0, 6);
             this.optionsGroupLayout.Controls.Add(this.p08Check, 0, 7);
             this.optionsGroupLayout.Controls.Add(this.p09Check, 0, 8);
+            this.optionsGroupLayout.Controls.Add(this.p10Check, 0, 9);
             this.optionsGroupLayout.Name = "optionsGroupLayout";
-            // 
-            // p10Check
-            // 
-            resources.ApplyResources(this.p10Check, "p10Check");
-            this.p10Check.Name = "p10Check";
-            this.p10Check.UseVisualStyleBackColor = true;
             // 
             // p01Check
             // 
@@ -549,6 +597,12 @@ namespace SolvisSC2Viewer {
             resources.ApplyResources(this.p09Check, "p09Check");
             this.p09Check.Name = "p09Check";
             this.p09Check.UseVisualStyleBackColor = true;
+            // 
+            // p10Check
+            // 
+            resources.ApplyResources(this.p10Check, "p10Check");
+            this.p10Check.Name = "p10Check";
+            this.p10Check.UseVisualStyleBackColor = true;
             // 
             // optionsGroup
             // 
@@ -621,6 +675,12 @@ namespace SolvisSC2Viewer {
         private System.Windows.Forms.CheckBox s22Check;
         private System.Windows.Forms.CheckBox s23Check;
         private System.Windows.Forms.CheckBox s24Check;
+        private System.Windows.Forms.CheckBox s25Check;
+        private System.Windows.Forms.CheckBox s26Check;
+        private System.Windows.Forms.CheckBox s27Check;
+        private System.Windows.Forms.CheckBox s28Check;
+        private System.Windows.Forms.CheckBox s29Check;
+        private System.Windows.Forms.CheckBox s30Check;
         private System.Windows.Forms.GroupBox actorsGroup;
         private System.Windows.Forms.TableLayoutPanel actorsGroupLayout;
         private System.Windows.Forms.CheckBox a1Check;
@@ -653,7 +713,7 @@ namespace SolvisSC2Viewer {
         private System.Windows.Forms.CheckBox p06Check;
         private System.Windows.Forms.CheckBox p07Check;
         private System.Windows.Forms.CheckBox p08Check;
-        private System.Windows.Forms.CheckBox p10Check;
         private System.Windows.Forms.CheckBox p09Check;
+        private System.Windows.Forms.CheckBox p10Check;
     }
 }

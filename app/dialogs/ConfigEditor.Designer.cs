@@ -141,34 +141,8 @@
             // 
             this.sensorsListBox.FormattingEnabled = true;
             resources.ApplyResources(this.sensorsListBox, "sensorsListBox");
-            this.sensorsListBox.Items.AddRange(new object[] {
-            resources.GetString("sensorsListBox.Items"),
-            resources.GetString("sensorsListBox.Items1"),
-            resources.GetString("sensorsListBox.Items2"),
-            resources.GetString("sensorsListBox.Items3"),
-            resources.GetString("sensorsListBox.Items4"),
-            resources.GetString("sensorsListBox.Items5"),
-            resources.GetString("sensorsListBox.Items6"),
-            resources.GetString("sensorsListBox.Items7"),
-            resources.GetString("sensorsListBox.Items8"),
-            resources.GetString("sensorsListBox.Items9"),
-            resources.GetString("sensorsListBox.Items10"),
-            resources.GetString("sensorsListBox.Items11"),
-            resources.GetString("sensorsListBox.Items12"),
-            resources.GetString("sensorsListBox.Items13"),
-            resources.GetString("sensorsListBox.Items14"),
-            resources.GetString("sensorsListBox.Items15"),
-            resources.GetString("sensorsListBox.Items16"),
-            resources.GetString("sensorsListBox.Items17"),
-            resources.GetString("sensorsListBox.Items18"),
-            resources.GetString("sensorsListBox.Items19"),
-            resources.GetString("sensorsListBox.Items20"),
-            resources.GetString("sensorsListBox.Items21"),
-            resources.GetString("sensorsListBox.Items22"),
-            resources.GetString("sensorsListBox.Items23")});
             this.sensorsListBox.Name = "sensorsListBox";
             this.sensorsTabLayout.SetRowSpan(this.sensorsListBox, 6);
-            this.sensorsListBox.SelectedIndexChanged += new System.EventHandler(this.sensorsListBox_SelectedIndexChanged);
             // 
             // sensorsTextLabel
             // 
@@ -253,30 +227,8 @@
             // 
             this.actorsListBox.FormattingEnabled = true;
             resources.ApplyResources(this.actorsListBox, "actorsListBox");
-            this.actorsListBox.Items.AddRange(new object[] {
-            resources.GetString("actorsListBox.Items"),
-            resources.GetString("actorsListBox.Items1"),
-            resources.GetString("actorsListBox.Items2"),
-            resources.GetString("actorsListBox.Items3"),
-            resources.GetString("actorsListBox.Items4"),
-            resources.GetString("actorsListBox.Items5"),
-            resources.GetString("actorsListBox.Items6"),
-            resources.GetString("actorsListBox.Items7"),
-            resources.GetString("actorsListBox.Items8"),
-            resources.GetString("actorsListBox.Items9"),
-            resources.GetString("actorsListBox.Items10"),
-            resources.GetString("actorsListBox.Items11"),
-            resources.GetString("actorsListBox.Items12"),
-            resources.GetString("actorsListBox.Items13"),
-            resources.GetString("actorsListBox.Items14"),
-            resources.GetString("actorsListBox.Items15"),
-            resources.GetString("actorsListBox.Items16"),
-            resources.GetString("actorsListBox.Items17"),
-            resources.GetString("actorsListBox.Items18"),
-            resources.GetString("actorsListBox.Items19")});
             this.actorsListBox.Name = "actorsListBox";
             this.actorsTabLayout.SetRowSpan(this.actorsListBox, 5);
-            this.actorsListBox.SelectedIndexChanged += new System.EventHandler(this.actorsListBox_SelectedIndexChanged);
             // 
             // actorsTextLabel
             // 
@@ -351,20 +303,8 @@
             // 
             this.optionsListBox.FormattingEnabled = true;
             resources.ApplyResources(this.optionsListBox, "optionsListBox");
-            this.optionsListBox.Items.AddRange(new object[] {
-            resources.GetString("optionsListBox.Items"),
-            resources.GetString("optionsListBox.Items1"),
-            resources.GetString("optionsListBox.Items2"),
-            resources.GetString("optionsListBox.Items3"),
-            resources.GetString("optionsListBox.Items4"),
-            resources.GetString("optionsListBox.Items5"),
-            resources.GetString("optionsListBox.Items6"),
-            resources.GetString("optionsListBox.Items7"),
-            resources.GetString("optionsListBox.Items8"),
-            resources.GetString("optionsListBox.Items9")});
             this.optionsListBox.Name = "optionsListBox";
             this.optionsTabLayout.SetRowSpan(this.optionsListBox, 6);
-            this.optionsListBox.SelectedIndexChanged += new System.EventHandler(this.optionsListBox_SelectedIndexChanged);
             // 
             // optionsTextLabel
             // 

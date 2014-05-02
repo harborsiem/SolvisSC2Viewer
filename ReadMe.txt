@@ -1,5 +1,5 @@
 erforderliche Installationen:
-Visual Studio 2010 Express C# (oder höhere Version des Visual Studio)
+Visual Studio 2010 Express C# (oder hÃ¶here Version des Visual Studio)
 
 Optionale Installationen:
 WiX Toolset, Version 3.5
@@ -12,11 +12,11 @@ WinRar als Zipper
 
 
 
-Für die korrekte Projektstruktur müssen die Verzeichnisse
+FÃ¼r die korrekte Projektstruktur mÃ¼ssen die Verzeichnisse
 app, files, help und Properties
 in das Verzeichnis SolvisSC2Viewer verschoben werden.
 
-Weiterhin müssen die Dateien
+Weiterhin mÃ¼ssen die Dateien
 MainForm.cs, MainForm.Designer.cs, MainForm.resx, Program.cs und SolvisSC2Viewer.csproj
 in das Verzeichnis SolvisSC2Viewer verschoben werden.
 
@@ -32,14 +32,14 @@ Ab Zeile 60 in der Datei SolvisSC2Viewer.csproj sind die folgenden Anweisungen
 zu entfernen, da der Assembly Strongname Keyfile nicht mitgeliefert wird.
 
 
-Hinweis nur für Benutzer, die die freien Formeln über Visual Studio programmieren wollen:
+Hinweis nur fÃ¼r Benutzer, die die freien Formeln Ã¼ber Visual Studio programmieren wollen:
 
-Für eine erfolgreiche Compilation des Projekts "Formula" ist die installierte SolvisSC2Viewer.exe 
+FÃ¼r eine erfolgreiche Compilation des Projekts "Formula" ist die installierte SolvisSC2Viewer.exe 
 ("Program Files\Solvis\SolvisSC2\SolvisSC2Viewer.exe")
 in das ProjektVerzeichnis SolvisSC2Viewer\bin\Release zu kopieren.
 
-In der Datei Formula\Formulas.cs müssen die Methoden Formula1 bis Formula5
-und FormulaSolarVSG und FormulakW mit selbstgeschriebenen ProgrammCode ergänzt werden.
+In der Datei Formula\Formulas.cs mÃ¼ssen die Methoden Formula1 bis Formula5
+und FormulaSolarVSG und FormulakW mit selbstgeschriebenen ProgrammCode ergÃ¤nzt werden.
 Der Tag <HasFormulaDll> in der User.config Datei muss auf den Wert true gesetzt werden.
 
 Die erzeugte Datei Formula.dll ist nach "Program Files\Solvis\SolvisSC2\" zu kopieren.

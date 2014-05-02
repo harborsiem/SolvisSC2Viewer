@@ -30,16 +30,19 @@ namespace SolvisSC2Viewer {
                 ConfigData value = pair.Value;
                 sensorDatas.Add(pair.Key, value.Clone());
             }
+            this.sensorsListBox.Items.AddRange(sensorDatas.Keys.ToArray<Object>());
             actorDatas = new Dictionary<String, ConfigData>();
             foreach (KeyValuePair<String, ConfigData> pair in AppManager.ConfigManager.ActorConfigValues) {
                 ConfigData value = pair.Value;
                 actorDatas.Add(pair.Key, value.Clone());
             }
+            this.actorsListBox.Items.AddRange(actorDatas.Keys.ToArray<Object>());
             optionDatas = new Dictionary<String, ConfigData>();
             foreach (KeyValuePair<String, ConfigData> pair in AppManager.ConfigManager.OptionConfigValues) {
                 ConfigData value = pair.Value;
                 optionDatas.Add(pair.Key, value.Clone());
             }
+            this.optionsListBox.Items.AddRange(optionDatas.Keys.ToArray<Object>());
             temperature = ConfigManager.Temperature;
             temperatureUpDown.Maximum = HeatCurve.SetTemperatureMaximum;
             temperatureUpDown.Minimum = HeatCurve.SetTemperatureMinimum;
@@ -70,6 +73,9 @@ namespace SolvisSC2Viewer {
             sensorsListBox.SelectedIndex = 0;
             actorsListBox.SelectedIndex = 0;
             optionsListBox.SelectedIndex = 0;
+            this.sensorsListBox.SelectedIndexChanged += new System.EventHandler(this.sensorsListBox_SelectedIndexChanged);
+            this.actorsListBox.SelectedIndexChanged += new System.EventHandler(this.actorsListBox_SelectedIndexChanged);
+            this.optionsListBox.SelectedIndexChanged += new System.EventHandler(this.optionsListBox_SelectedIndexChanged);
         }
 
         private void buttonDefault_Click(object sender, EventArgs e) {

@@ -44,11 +44,15 @@ namespace SolvisSC2Viewer {
                 AppManager.MainForm.SetStatusLabel(string.Empty);
                 RowValues.mean.Reset();
                 SolvisList.Clear();
-                StreamReader reader = File.OpenText(fileName);
+                StreamReader reader = new StreamReader(fileName, Encoding.Default);
                 try {
+                    int lineNumber = 1;
                     while (!reader.EndOfStream) {
-                        RowValues item = new RowValues(reader.ReadLine());
-                        SolvisList.Add(item);
+                        RowValues item = new RowValues(reader.ReadLine(), lineNumber);
+                        lineNumber++;
+                        if (item.HasValues) {
+                            SolvisList.Add(item);
+                        }
                     }
                     DateTime min = (SolvisList[0].DateAndTime);
                     DateTime max = (SolvisList[SolvisList.Count - 1].DateAndTime);
@@ -202,7 +206,7 @@ namespace SolvisSC2Viewer {
                     if (tag.Ident == GroupIdent.Sensor) {
                         points.AddXY(values.DateAndTime, values.GetSensorValue(tag.Index));
                     } else if (tag.Ident == GroupIdent.Actor) {
-                        points.AddXY(values.DateAndTime, values.GetActors()[tag.Index]);
+                        points.AddXY(values.DateAndTime, values.GetActorValue(tag.Index));
                     } else { //GroupIdent.Option
                         SeriesState state = SeriesState.Inner;
                         if (i == fromIndex) {
@@ -265,7 +269,7 @@ namespace SolvisSC2Viewer {
                         points.SuspendUpdates();
                         for (int i = fromIndex; i <= toIndex; i++) {
                             RowValues values = SolvisList[i];
-                            points.AddXY(values.DateAndTime, values.GetActors()[seriesIndex]);
+                            points.AddXY(values.DateAndTime, values.GetActorValue(seriesIndex));
                         }
                         points.ResumeUpdates();
                         if (!chartMain.Series.Contains(series)) {
