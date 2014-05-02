@@ -17,6 +17,7 @@ namespace SolvisSC2Viewer {
         private const int S10Index = 9;
         private const double HeatCapacityTemperature = 20.0;
         private const double HeatCapacityAccelerationPerKelvin = 0.004;
+        private const int MaxMiNumColumns = 48; //2 date + time, 24 + 5 inputs, 17 outputs
         private const int MaxNumColumns = 46; //2 date + time, 24 sensors, 20 actors
         private const int MinNumColumns = 36; //maybe 39 columns; 2 date + time, 18 sensors ?, 19 actors ?
         private static readonly CultureInfo locale = new CultureInfo("de");
@@ -50,8 +51,50 @@ namespace SolvisSC2Viewer {
         public double S22 { get { return sensors[21]; } } //S22
         public double S23 { get { return sensors[22]; } } //S23
         public double S24 { get { return sensors[23]; } } //S24
+        public double S25 {
+            get {
+                if (sensors.Length > 24) {
+                    return sensors[24];
+                } else return 0.0;
+            }
+        } //S25
+        public double S26 {
+            get {
+                if (sensors.Length > 24) {
+                    return sensors[25];
+                } else return 0.0;
+            }
+        } //S26
+        public double S27 {
+            get {
+                if (sensors.Length > 24) {
+                    return sensors[26];
+                } else return 0.0;
+            }
+        } //S27
+        public double S28 {
+            get {
+                if (sensors.Length > 24) {
+                    return sensors[27];
+                } else return 0.0;
+            }
+        } //S28
+        public double S29 {
+            get {
+                if (sensors.Length > 24) {
+                    return sensors[28];
+                } else return 0.0;
+            }
+        } //S29
+        public double S30 {
+            get {
+                if (sensors.Length > 24) {
+                    return sensors[29];
+                } else return 0.0;
+            }
+        } //S30
         public double A01 { get { return actors[0]; } } //Solarpumpe %
-        public double A02 { get { return actors[1]; } } //Pumpe WW l/h
+        public double A02 { get { return actors[1]; } } //Pumpe WW %
         public double A03 { get { return actors[2]; } } //Pumpe HK1 %
         public double A04 { get { return actors[3]; } } //Pumpe HK2
         public double A05 { get { return actors[4]; } } //Pumpe Zirkulation
@@ -84,23 +127,48 @@ namespace SolvisSC2Viewer {
         internal static MeanTemperature mean = new MeanTemperature(30);
         public double S10Raw { get; private set; }
         public double S10MeanValue { get; private set; }
+        public bool HasValues { get; private set; }
+        internal static LogInfos Infos { get; private set; }
 
-        public RowValues() {
-            sensors = new double[24];
-            actors = new double[20];
+        private RowValues() {
         }
 
-        public RowValues(string row)
-            : this() {
+        public RowValues(string row, int lineNumber) {
+            if (SelectedSolvisControlVersion < 132) {
+                if (lineNumber == 1) {
+                    Infos = new LogInfos();
+                }
+                sensors = new double[24];
+                actors = new double[20];
+                HasValues = true;
+                ConvertSoFile(row);
+            } else {
+                switch (lineNumber) {
+                    case 1:
+                        Infos = new LogInfos(row);
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        Infos.SetNextLogInfo(row, lineNumber);
+                        break;
+                    default:
+                        HasValues = true;
+                        sensors = new double[30];
+                        actors = new double[20];
+                        ConvertMiFile(row);
+                        break;
+                }
+            }
+        }
+
+        private void ConvertSoFile(string row) {
             string[] values = row.Split(new char[] { '\t' }, StringSplitOptions.None);
             if (values.Length > MaxNumColumns || values.Length < MinNumColumns) {
                 throw new ArgumentException("Wrong count of values", "row");
             }
             try {
-                double multiplier = 1.0;
-                if (SelectedSolvisControlVersion >= 132) {
-                    multiplier = 0.1;
-                }
                 DateTime date = Convert.ToDateTime(values[0], locale);
                 DateTime time = Convert.ToDateTime(values[1], locale);
                 DateAndTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Local);
@@ -122,11 +190,11 @@ namespace SolvisSC2Viewer {
                 sensors[j++] = (double)Convert.ToInt32(values[k++]) / 10.0D;
                 int i = 20;
                 if (values.Length == MaxNumColumns) {
-                    sensors[18] = (double)Convert.ToInt32(values[i]) * multiplier;
+                    sensors[18] = (double)Convert.ToInt32(values[i]);
                     i++;
-                    sensors[19] = (double)Convert.ToInt32(values[i]) * multiplier;
+                    sensors[19] = (double)Convert.ToInt32(values[i]);
                     i++;
-                    sensors[20] = (double)Convert.ToInt32(values[i]) * multiplier;
+                    sensors[20] = (double)Convert.ToInt32(values[i]);
                     i++;
                     sensors[21] = (double)Convert.ToInt32(values[i]);
                     i++;
@@ -145,6 +213,95 @@ namespace SolvisSC2Viewer {
             }
         }
 
+        private void ConvertMiFile(string row) {
+            string[] values = row.Split(new char[] { '\t' }, StringSplitOptions.None);
+            if (values.Length > MaxMiNumColumns) {
+                throw new ArgumentException("Wrong count of values", "row");
+            }
+            try {
+                HasValues = true;
+                DateTime date = Convert.ToDateTime(values[0], locale);
+                DateTime time = Convert.ToDateTime(values[1], locale);
+                DateAndTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Local);
+                MiConvert(values);
+                
+                //double multiplier = 0.1;
+                //int k, j;
+                //for (k = 2, j = 0; j < 16; k++, j++) {
+                //    int tmp = Convert.ToInt32(values[k]);
+                //    if (j == S10Index) { //Aussen Temperatur
+                //        S10Raw = (double)tmp / 10.0D;
+                //        int last = mean.GetLastValue(tmp);
+                //        if (Math.Abs(last - tmp) > 40) { //4 Grad Abweichung zulässig
+                //            tmp = last;
+                //        }
+                //        mean.Write(tmp);
+                //    }
+                //    sensors[j] = (double)tmp / 10.0D;
+                //}
+                //int s17Raw = Convert.ToInt32(values[k++]);
+                //sensors[j++] = (double)s17Raw;
+                //sensors[j++] = (double)Convert.ToInt32(values[k++]) / 10.0D;
+                //int i = 20;
+                //sensors[18] = (double)Convert.ToInt32(values[i]) * multiplier;
+                //i++;
+                //sensors[19] = (double)Convert.ToInt32(values[i]) * multiplier;
+                //i++;
+                //sensors[20] = (double)Convert.ToInt32(values[i]) * multiplier;
+                //i++;
+                //sensors[21] = (double)Convert.ToInt32(values[i]) * multiplier;
+                //i++;
+                //sensors[22] = (double)Convert.ToInt32(values[i]) * multiplier;
+                //i++;
+                //sensors[23] = (double)Convert.ToInt32(values[i]) * multiplier;
+                //i++;
+                //for (k = i, j = 0; k < (2 + 24 + 17); k++, j++) {
+                //    actors[j] = (double)Convert.ToInt32(values[k]);
+                //    if (j == 1) {
+                //        actors[j] *= 0.25;
+                //    }
+                //}
+                //i = k;
+                //sensors[24] = (double)Convert.ToInt32(values[i]);
+                //i++;
+                //sensors[25] = (double)Convert.ToInt32(values[i]);
+                //i++;
+                //sensors[26] = (double)Convert.ToInt32(values[i]);
+                //i++;
+                //sensors[27] = (double)Convert.ToInt32(values[i]);
+                //i++;
+                //sensors[28] = (double)Convert.ToInt32(values[i]);
+                S10MeanValue = mean.GetMeanTemperature();
+            }
+            catch (FormatException e) {
+                throw new ArgumentException("Wrong value", "row", e);
+            }
+        }
+
+        private void MiConvert(string[] values) {
+            int actualSensorIndex = 0;
+            int actualActorIndex = 0;
+            int k, j;
+            for (k = 2, j = 0; k < values.Length; k++, j++) {
+                int tmp = Convert.ToInt32(values[k]);
+                if (j == S10Index) { //Aussen Temperatur
+                    S10Raw = (double)tmp / 10.0D;
+                    int last = mean.GetLastValue(tmp);
+                    if (Math.Abs(last - tmp) > 40) { //4 Grad Abweichung zulässig
+                        tmp = last;
+                    }
+                    mean.Write(tmp);
+                }
+                IOAttribute iOAttrib = Infos.Attribs[j];
+                if (iOAttrib.Ident == GroupIdent.Sensor && actualSensorIndex < Infos.CountSensorCheckBoxes) {
+                    sensors[actualSensorIndex++] = (double)tmp * iOAttrib.Multiplier;
+                }
+                if (iOAttrib.Ident == GroupIdent.Actor && actualActorIndex < Infos.CountActorCheckBoxes) {
+                    actors[actualActorIndex++] = (double)tmp * iOAttrib.Multiplier;
+                }
+            }
+        }
+
         public double[] GetSensors() {
             return sensors;
         }
@@ -156,7 +313,11 @@ namespace SolvisSC2Viewer {
         public double FormulaBurner {
             get {
                 if (A12 > 0) {
-                    return BurnerMinPower + (A16 * (BurnerMaxPower - BurnerMinPower) / 100D);
+                    if (SelectedSolvisControlVersion >= 132) {
+                        return BurnerMinPower + (A15 * (BurnerMaxPower - BurnerMinPower) / 10D);
+                    } else {
+                        return BurnerMinPower + (A16 * (BurnerMaxPower - BurnerMinPower) / 100D);
+                    }
                 } else {
                     return 0.0D;
                 }
@@ -174,11 +335,21 @@ namespace SolvisSC2Viewer {
         }
 
         public double GetSensorValue(int index) {
-            if (index != SolarVSGIndex) {
-                return sensors[index];
-            } else {
-                return FormulaSolarVSG;
+            if (index < sensors.Length) {
+                if (index != SolarVSGIndex) {
+                    return sensors[index];
+                } else {
+                    return FormulaSolarVSG;
+                }
             }
+            return 0.0;
+        }
+
+        public double GetActorValue(int index) {
+            if (index < actors.Length) {
+                return actors[index];
+            }
+            return 0.0;
         }
 
         private double FormulaSolarVSG {
@@ -260,6 +431,112 @@ namespace SolvisSC2Viewer {
                     }
                 }
                 return 0D;
+            }
+        }
+
+        internal class LogInfos {
+            public static int LogFormat { get; private set; }
+            public static String Softwareversion { get; private set; }
+            public static String SolvisSystem { get; private set; }
+
+            private List<IOAttribute> attribs = new List<IOAttribute>();
+            public int CountSensorCheckBoxes { get; private set; }
+            public int CountActorCheckBoxes { get; private set; }
+            public string[] NamesAndUnits;
+
+            public LogInfos() {
+                CountSensorCheckBoxes = AppManager.MainForm.SensorsCheckBoxes.Count;
+                CountActorCheckBoxes = AppManager.MainForm.ActorsCheckBoxes.Count;
+                NamesAndUnits = new string[0];
+                Softwareversion = String.Empty;
+                SolvisSystem = String.Empty;
+                AppManager.MainForm.UpdateToolTips();
+            }
+
+            public LogInfos(String row) {
+                int intValue;
+                CountSensorCheckBoxes = AppManager.MainForm.SensorsCheckBoxes.Count;
+                CountActorCheckBoxes = AppManager.MainForm.ActorsCheckBoxes.Count;
+                NamesAndUnits = new string[CountSensorCheckBoxes + CountActorCheckBoxes];
+                string[] logFormat = row.Split(new char[] { '\t' }, StringSplitOptions.None);
+                if (logFormat.Length == 2 && Int32.TryParse(logFormat[1].Trim(), out intValue)) {
+                    LogFormat = intValue;
+                }
+            }
+
+            public IList<IOAttribute> Attribs {
+                get { return attribs; }
+            }
+
+            public void SetNextLogInfo(String row, int lineNumber) {
+                switch (lineNumber) {
+                    case 2:
+                        string[] version = row.Split(new char[] { '\t' }, StringSplitOptions.None);
+                        if (version.Length == 2) {
+                            Softwareversion = version[1].Trim();
+                        }
+                        break;
+                    case 3:
+                        string[] system = row.Split(new char[] { '\t' }, StringSplitOptions.None);
+                        if (system.Length == 2) {
+                            SolvisSystem = system[1].Trim();
+                        }
+                        break;
+                    case 4:
+                        String[] names = row.Split(new char[] { '\t' }, StringSplitOptions.None);
+                        if (names.Length > 2) {
+                            for (int i = 2; i < names.Length; i++) {
+                                attribs.Add(new IOAttribute(names[i]));
+                            }
+                        }
+                        break;
+                    case 5:
+                        string[] formats = row.Split(new char[] { '\t' }, StringSplitOptions.None);
+                        if (formats.Length > 2 && attribs.Count == formats.Length - 2) {
+                            for (int i = 2; i < formats.Length; i++) {
+                                attribs[i - 2].SetValues(formats[i]);
+                            }
+                        }
+                        int actualSensorIndex = 0;
+                        int actualActorIndex = CountSensorCheckBoxes;
+                        for (int i = 0; i < attribs.Count; i++) {
+                            IOAttribute iOAttrib = attribs[i];
+                            if (iOAttrib.Ident == GroupIdent.Sensor && actualSensorIndex < CountSensorCheckBoxes) {
+                                NamesAndUnits[actualSensorIndex++] = iOAttrib.IOName + ", " + iOAttrib.Unit;
+                            }
+                            if (iOAttrib.Ident == GroupIdent.Actor && actualSensorIndex < (CountSensorCheckBoxes + CountActorCheckBoxes)) {
+                                NamesAndUnits[actualActorIndex++] = iOAttrib.IOName + ", " + iOAttrib.Unit;
+                            }
+
+                        }
+                        AppManager.MainForm.UpdateToolTips();
+                        break;
+                    default: break;
+                }
+            }
+        }
+
+        internal class IOAttribute {
+            public String IOName { get; private set; }
+            public String Unit { get; private set; }
+            public double Multiplier { get; private set; }
+            public GroupIdent Ident { get; private set; }
+
+            public IOAttribute(String ioName) {
+                IOName = ioName;
+            }
+
+            public void SetValues(String values) {
+                string[] additionals = values.Split(new char[] { '#' }, StringSplitOptions.None);
+                if (additionals.Length == 3) {
+                    Unit = additionals[0];
+                    Multiplier = Double.Parse(additionals[1], CultureInfo.InvariantCulture);
+                    if (additionals[2] == "I") {
+                        Ident = GroupIdent.Sensor;
+                    } else {
+                        Ident = GroupIdent.Actor;
+                    }
+                }
             }
         }
     }

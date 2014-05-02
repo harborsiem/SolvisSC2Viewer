@@ -49,6 +49,7 @@ namespace SolvisSC2Viewer {
 
         private static Color[] _colorsBrightPastel = new Color[] { Color.FromArgb(0x41, 140, 240), Color.FromArgb(0xfc, 180, 0x41), Color.FromArgb(0xe0, 0x40, 10), Color.FromArgb(5, 100, 0x92), Color.FromArgb(0xbf, 0xbf, 0xbf), Color.FromArgb(0x1a, 0x3b, 0x69), Color.FromArgb(0xff, 0xe3, 130), Color.FromArgb(0x12, 0x9c, 0xdd), Color.FromArgb(0xca, 0x6b, 0x4b), Color.FromArgb(0, 0x5c, 0xdb), Color.FromArgb(0xf3, 210, 0x88), Color.FromArgb(80, 0x63, 0x81), Color.FromArgb(0xf1, 0xb9, 0xa8), Color.FromArgb(0xe0, 0x83, 10), Color.FromArgb(120, 0x93, 190) };
         private static Color[] _colorsFire = new Color[] { Color.Gold, Color.Red, Color.DeepPink, Color.Crimson, Color.DarkOrange, Color.Magenta, Color.Yellow, Color.OrangeRed, Color.MediumVioletRed, Color.FromArgb(0xdd, 0xe2, 0x21) };
+        private static Color[] _colorsSeaGreen = new Color[] { Color.SeaGreen, Color.MediumAquamarine, Color.SteelBlue, Color.DarkCyan, Color.CadetBlue, Color.MediumSeaGreen, Color.MediumTurquoise, Color.LightSteelBlue, Color.DarkSeaGreen, Color.SkyBlue };
         private static Color[] _colorsExcel = new Color[] { Color.FromArgb(0x99, 0x99, 0xff), Color.FromArgb(0x99, 0x33, 0x66), Color.FromArgb(0xff, 0xff, 0xcc), Color.FromArgb(0xcc, 0xff, 0xff), Color.FromArgb(0x66, 0, 0x66), Color.FromArgb(0xff, 0x80, 0x80), Color.FromArgb(0, 0x66, 0xcc), Color.FromArgb(0xcc, 0xcc, 0xff), Color.FromArgb(0, 0, 0x80), Color.FromArgb(0xff, 0, 0xff), Color.FromArgb(0xff, 0xff, 0), Color.FromArgb(0, 0xff, 0xff), Color.FromArgb(0x80, 0, 0x80), Color.FromArgb(0x80, 0, 0), Color.FromArgb(0, 0x80, 0x80), Color.FromArgb(0, 0, 0xff) };
         public string Version { get; set; }
         public string Formula1 { get; set; }
@@ -203,9 +204,12 @@ namespace SolvisSC2Viewer {
                 if (index < _colorsBrightPastel.Length) {
                     colorTab = _colorsBrightPastel;
                     i = index;
-                } else {
+                } else if (index < _colorsBrightPastel.Length + _colorsFire.Length) {
                     colorTab = _colorsFire;
                     i = index - _colorsBrightPastel.Length;
+                } else {
+                    colorTab = _colorsSeaGreen;
+                    i = index - _colorsBrightPastel.Length - _colorsFire.Length;
                 }
             }
             return colorTab[i];
@@ -289,8 +293,26 @@ namespace SolvisSC2Viewer {
             if (ActorConfigValues.Count == 0) {
                 ActorConfigValues = GetDefault(ActorConfigDefault);
             }
+            if (ActorConfigValues.Count != ActorConfigDefault.Count) {
+                foreach (KeyValuePair<String, ConfigData> pair in ActorConfigDefault) {
+                    if (!ActorConfigValues.ContainsKey(pair.Key)) {
+                        ConfigData value = pair.Value;
+                        ActorConfigValues.Add(pair.Key, value.Clone());
+                        AppConfigChanged = true;
+                    }
+                }
+            }
             if (SensorConfigValues.Count == 0) {
                 SensorConfigValues = GetDefault(SensorConfigDefault);
+            }
+            if (SensorConfigValues.Count != SensorConfigDefault.Count) {
+                foreach (KeyValuePair<String, ConfigData> pair in SensorConfigDefault) {
+                    if (!SensorConfigValues.ContainsKey(pair.Key)) {
+                        ConfigData value = pair.Value;
+                        SensorConfigValues.Add(pair.Key, value.Clone());
+                        AppConfigChanged = true;
+                    }
+                }
             }
             if (OptionConfigValues.Count == 0) {
                 OptionConfigValues = GetDefault(OptionConfigDefault);
