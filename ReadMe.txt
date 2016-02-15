@@ -1,24 +1,16 @@
 erforderliche Installationen:
-Visual Studio 2010 Express C# (oder höhere Version des Visual Studio)
+Visual Studio 2013 Express C# (oder höhere Version des Visual Studio)
 
 Optionale Installationen:
 WiX Toolset, Version 3.5
 WixEdit, Version 0.7.5
 Libre Office (Writer) zum Editieren von HTML-Files
 HTML Help Workshop, Version 4.74.8702
-TortoiseSVN Version 1.7.x oder 1.8.x zur Versionsverwaltung
-WinRar als Zipper
+TortoiseSVN Version 1.8.x oder 1.9.x zur Versionsverwaltung
+7-Zip als Zipper
 
 
 
-
-Für die korrekte Projektstruktur müssen die Verzeichnisse
-app, files, help und Properties
-in das Verzeichnis SolvisSC2Viewer verschoben werden.
-
-Weiterhin müssen die Dateien
-MainForm.cs, MainForm.Designer.cs, MainForm.resx, Program.cs und SolvisSC2Viewer.csproj
-in das Verzeichnis SolvisSC2Viewer verschoben werden.
 
 Ab Zeile 60 in der Datei SolvisSC2Viewer.csproj sind die folgenden Anweisungen
 
