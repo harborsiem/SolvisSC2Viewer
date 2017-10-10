@@ -8,13 +8,16 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace SolvisSC2Viewer {
-    public partial class VLParameters : BaseForm {
-        public VLParameters() {
+    public partial class FlowParameters : Form {
+        public FlowParameters() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             temperatureUpDown.Maximum = HeatCurve.SetTemperatureMaximum;
             temperatureUpDown.Minimum = HeatCurve.SetTemperatureMinimum;
             temperatureUpDown.Value = (decimal)RowValues.Temperature;
-            niveauUpDown.Value = (decimal)RowValues.Niveau;
+            levelUpDown.Value = (decimal)RowValues.Level;
             gradientUpDown.Increment = HeatCurve.GradientIncrement;
             gradientUpDown.Maximum = HeatCurve.GradientMaximum;
             gradientUpDown.Value = (decimal)RowValues.Gradient;
@@ -28,7 +31,7 @@ namespace SolvisSC2Viewer {
                 AppManager.ConfigManager.AppConfigChanged = true;
             }
             RowValues.Temperature = (double)temperatureUpDown.Value;
-            RowValues.Niveau = (double)niveauUpDown.Value;
+            RowValues.Level = (double)levelUpDown.Value;
             RowValues.Gradient = (double)gradientUpDown.Value;
             Close();
         }

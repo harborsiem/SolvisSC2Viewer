@@ -9,11 +9,14 @@ using System.Windows.Forms;
 using System.Globalization;
 
 namespace SolvisSC2Viewer {
-    public partial class S17Dialog : BaseForm {
+    public partial class S17Dialog : Form {
         public S17Dialog() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             pulseUpDown.Value = (decimal)RowValues.SolarPulse;
-            heatCapacityText.Text = RowValues.HeatCapacity20.ToString();
+            heatCapacityText.Text = RowValues.HeatCapacity20.ToString(CultureInfo.CurrentCulture);
         }
 
         private void buttonOK_Click(object sender, EventArgs e) {
@@ -23,7 +26,7 @@ namespace SolvisSC2Viewer {
                 AppManager.ConfigManager.AppConfigChanged = true;
             }
             RowValues.SolarPulse = (int)pulseUpDown.Value;
-            RowValues.HeatCapacity20 = double.Parse(heatCapacityText.Text);
+            RowValues.HeatCapacity20 = double.Parse(heatCapacityText.Text, CultureInfo.CurrentCulture);
             Close();
         }
 
@@ -35,8 +38,8 @@ namespace SolvisSC2Viewer {
 
         private void heatCapacityText_TextChanged(object sender, EventArgs e) {
             double result;
-            if (!double.TryParse(heatCapacityText.Text, NumberStyles.AllowDecimalPoint, null, out result)) {
-                heatCapacityText.Text = RowValues.HeatCapacity20.ToString();
+            if (!double.TryParse(heatCapacityText.Text, NumberStyles.AllowDecimalPoint, CultureInfo.CurrentCulture, out result)) {
+                heatCapacityText.Text = RowValues.HeatCapacity20.ToString(CultureInfo.CurrentCulture);
             }
         }
     }

@@ -16,7 +16,7 @@ namespace SolvisSC2Viewer {
             try {
                 HeatCurve dialog = HeatCurve.Instance;
                 if (dialog.WindowState == FormWindowState.Minimized) {
-                    dialog.WindowState = dialog.LastWindowState;
+                    dialog.WindowState = HeatCurveHelper.LastWindowState;
                 }
                 if (!dialog.Visible) {
                     dialog.Show(AppManager.MainForm);

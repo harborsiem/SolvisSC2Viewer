@@ -54,7 +54,6 @@
             // minPowerLabel
             // 
             resources.ApplyResources(this.minPowerLabel, "minPowerLabel");
-            this.minPowerLabel.MinimumSize = new System.Drawing.Size(100, 0);
             this.minPowerLabel.Name = "minPowerLabel";
             // 
             // minUpDown
@@ -65,7 +64,6 @@
             // maxPowerLabel
             // 
             resources.ApplyResources(this.maxPowerLabel, "maxPowerLabel");
-            this.maxPowerLabel.MinimumSize = new System.Drawing.Size(100, 0);
             this.maxPowerLabel.Name = "maxPowerLabel";
             // 
             // maxUpDown
@@ -90,7 +88,6 @@
             // buttonOK
             // 
             resources.ApplyResources(this.buttonOK, "buttonOK");
-            this.buttonOK.MinimumSize = new System.Drawing.Size(75, 23);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -99,7 +96,6 @@
             // 
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.MinimumSize = new System.Drawing.Size(75, 23);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 

@@ -9,21 +9,24 @@ using System.Windows.Forms;
 using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
-    public partial class ConfigEditor : BaseForm {
+    public partial class ConfigEditor : Form {
         public static readonly string FolderDescription = Resources.ConfigEditorSearch; //@Language Resource
         private ColorDialog colorDialog = new ColorDialog();
         private IDictionary<String, ConfigData> sensorDatas;
         private IDictionary<String, ConfigData> actorDatas;
         private IDictionary<String, ConfigData> optionDatas;
         private int temperature;
-        private int niveau;
+        private int level;
         private double gradient;
         private int sDCardSuppressMask;
-        private bool timePlanBitmap;
+        private bool timeTableBitmap;
 
         public bool Changed { get; set; }
 
         public ConfigEditor() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             sensorDatas = new Dictionary<String, ConfigData>();
             foreach (KeyValuePair<String, ConfigData> pair in AppManager.ConfigManager.SensorConfigValues) {
@@ -47,23 +50,23 @@ namespace SolvisSC2Viewer {
             temperatureUpDown.Maximum = HeatCurve.SetTemperatureMaximum;
             temperatureUpDown.Minimum = HeatCurve.SetTemperatureMinimum;
             temperatureUpDown.Value = ConfigManager.Temperature;
-            niveau = ConfigManager.Niveau;
-            niveauUpDown.Value = ConfigManager.Niveau;
+            level = ConfigManager.Level;
+            levelUpDown.Value = ConfigManager.Level;
             gradient = ConfigManager.Gradient;
             gradientUpDown.Increment = HeatCurve.GradientIncrement;
             gradientUpDown.Value = (decimal)ConfigManager.Gradient;
             gradientUpDown.Maximum = HeatCurve.GradientMaximum;
             gradientUpDown.Minimum = HeatCurve.GradientMinimum;
             sDCardSuppressMask = AppManager.ConfigManager.SDCardSuppressMask;
-            timePlanBitmap = AppManager.ConfigManager.TimePlanBitmap;
-            savePictureCheckBox.Checked = timePlanBitmap;
+            timeTableBitmap = AppManager.ConfigManager.TimeTableBitmap;
+            savePictureCheckBox.Checked = timeTableBitmap;
             hk2CheckBox.Checked = (sDCardSuppressMask & (int)SuppressMask.HK2) == 0;
             hk3CheckBox.Checked = (sDCardSuppressMask & (int)SuppressMask.HK3) == 0;
             ecoCheckBox.Checked = (sDCardSuppressMask & (int)SuppressMask.Eco) == 0;
             prototype.Checked = AppManager.ConfigManager.Prototype;
             controlVersionUpDown.Value = RowValues.SolvisControlVersion;
             this.temperatureUpDown.ValueChanged += new System.EventHandler(this.temperatureUpDown_ValueChanged);
-            this.niveauUpDown.ValueChanged += new System.EventHandler(this.niveauUpDown_ValueChanged);
+            this.levelUpDown.ValueChanged += new System.EventHandler(this.levelUpDown_ValueChanged);
             this.gradientUpDown.ValueChanged += new System.EventHandler(this.gradientUpDown_ValueChanged);
             this.hk2CheckBox.CheckedChanged += new System.EventHandler(this.hk2CheckBox_CheckedChanged);
             this.hk3CheckBox.CheckedChanged += new System.EventHandler(this.hk3CheckBox_CheckedChanged);
@@ -120,10 +123,10 @@ namespace SolvisSC2Viewer {
                 }
 
                 ConfigManager.Temperature = temperature;
-                ConfigManager.Niveau = niveau;
+                ConfigManager.Level = level;
                 ConfigManager.Gradient = gradient;
                 manager.SDCardSuppressMask = sDCardSuppressMask;
-                manager.TimePlanBitmap = timePlanBitmap;
+                manager.TimeTableBitmap = timeTableBitmap;
                 manager.Prototype = prototype.Checked;
                 RowValues.SolvisControlVersion = (int)controlVersionUpDown.Value;
 
@@ -271,8 +274,8 @@ namespace SolvisSC2Viewer {
             Changed = true;
         }
 
-        private void niveauUpDown_ValueChanged(object sender, EventArgs e) {
-            niveau = (int)niveauUpDown.Value;
+        private void levelUpDown_ValueChanged(object sender, EventArgs e) {
+            level = (int)levelUpDown.Value;
             Changed = true;
         }
 
@@ -305,7 +308,7 @@ namespace SolvisSC2Viewer {
                         dialog.ShowDialog(this);
                         break;
                     case "P04":
-                        dialog = new VLParameters();
+                        dialog = new FlowParameters();
                         dialog.ShowDialog(this);
                         break;
                     //case "S17":
@@ -366,7 +369,7 @@ namespace SolvisSC2Viewer {
         }
 
         private void savePictureCheckBox_CheckedChanged(object sender, EventArgs e) {
-            timePlanBitmap = savePictureCheckBox.Checked;
+            timeTableBitmap = savePictureCheckBox.Checked;
             Changed = true;
         }
 

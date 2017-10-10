@@ -13,14 +13,14 @@ namespace SolvisSC2Viewer {
         public WaterSettings(IList<int> list) {
             Title = HeatingSettings.Titlevalue;
             WaterPumpMode = (Mode)list[44]; //?
-            WaterTargetTemperature = list[45].ToString() + Unit.DegreeCelsius;
-            WaterBufferTmin = list[53].ToString() + Unit.DegreeCelsius; //oder index = 61 ?
-            WaterAuxHeatingStart = list[54].ToString() + Unit.Kelvin;
-            WaterAuxHeatingSperrzeit = list[55].ToString() + Unit.Minute;
-            WaterAuxHeatingRuntime = list[56].ToString() + Unit.Second;
-            WaterAuxHeatingPower = list[58].ToString() + Unit.Percent;
-            WaterDTStart = list[59].ToString() + Unit.Kelvin;
-            WaterDTEnd = list[60].ToString() + Unit.Kelvin;
+            WaterTargetTemperature = list[45].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            WaterBufferTmin = list[53].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius; //oder index = 61 ?
+            WaterAuxHeatingStart = list[54].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            WaterAuxHeatingSperrzeit = list[55].ToString(CultureInfo.CurrentCulture) + Unit.Minute;
+            WaterAuxHeatingRuntime = list[56].ToString(CultureInfo.CurrentCulture) + Unit.Second;
+            WaterAuxHeatingPower = list[58].ToString(CultureInfo.CurrentCulture) + Unit.Percent;
+            WaterDTStart = list[59].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            WaterDTEnd = list[60].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
         }
 
         [DisplayName("Wasser Parameter")]

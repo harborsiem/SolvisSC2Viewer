@@ -55,8 +55,8 @@ namespace SolvisSC2Viewer {
                             case ConfigXml.TemperatureTag:
                                 ConfigManager.Temperature = XmlConvert.ToInt32(node1.InnerText);
                                 break;
-                            case ConfigXml.NiveauTag:
-                                ConfigManager.Niveau = XmlConvert.ToInt32(node1.InnerText);
+                            case ConfigXml.LevelTag:
+                                ConfigManager.Level = XmlConvert.ToInt32(node1.InnerText);
                                 break;
                             case ConfigXml.GradientTag:
                                 ConfigManager.Gradient = XmlConvert.ToDouble(node1.InnerText);
@@ -64,8 +64,8 @@ namespace SolvisSC2Viewer {
                             case ConfigXml.TemperatureVLTag:
                                 RowValues.Temperature = XmlConvert.ToDouble(node1.InnerText);
                                 break;
-                            case ConfigXml.NiveauVLTag:
-                                RowValues.Niveau = XmlConvert.ToDouble(node1.InnerText);
+                            case ConfigXml.LevelFlowTag:
+                                RowValues.Level = XmlConvert.ToDouble(node1.InnerText);
                                 break;
                             case ConfigXml.GradientVLTag:
                                 RowValues.Gradient = XmlConvert.ToDouble(node1.InnerText);
@@ -112,14 +112,14 @@ namespace SolvisSC2Viewer {
                             case ConfigXml.SdCardDirTag:
                                 manager.SdCardDir = node1.InnerText;
                                 break;
-                            case ConfigXml.TimePlanSuppressMaskTag: //Compatibility Tag
+                            case ConfigXml.TimeTableSuppressMaskTag: //Compatibility Tag
                                 manager.SDCardSuppressMask = XmlConvert.ToInt32(node1.InnerText);
                                 break;
                             case ConfigXml.SDCardSuppressMaskTag:
                                 manager.SDCardSuppressMask = XmlConvert.ToInt32(node1.InnerText);
                                 break;
-                            case ConfigXml.TimePlanBitmapTag:
-                                manager.TimePlanBitmap = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
+                            case ConfigXml.TimeTableBitmapTag:
+                                manager.TimeTableBitmap = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());
                                 break;
                             case ConfigXml.OneDayModeTag:
                                 manager.OneDayMode = XmlConvert.ToBoolean(node1.InnerText.ToLowerInvariant());

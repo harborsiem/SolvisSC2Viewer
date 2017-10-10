@@ -12,7 +12,7 @@ using System.IO;
 using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
-    public partial class TimeOverview : BaseForm {
+    public partial class TimeOverview : Form {
         private const int Gap = 42;
         private const int DayOffset = 6;
         private static readonly string TimeRaster = Resources.TimeOverviewTimeRaster; //@Language Resource
@@ -26,9 +26,12 @@ namespace SolvisSC2Viewer {
                                                      Resources.TimeOverviewCirc, "WW", "Eco" }; //@Language Resource
         private static readonly string[] FromTo = { Resources.TimeOverviewFrom,
                                                       Resources.TimeOverviewTo }; //@Language Resource
-        private FileToInt32List timePlan;
+        private FileToInt32List timeTable;
 
         public TimeOverview() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             float factor = CreateGraphics().DpiX / 96;
             this.dataGridViewTop.RowHeadersWidth = (int)(this.dataGridViewTop.RowHeadersWidth * factor);
@@ -46,15 +49,15 @@ namespace SolvisSC2Viewer {
             set;
         }
 
-        public FileToInt32List TimePlan {
-            get { return timePlan; }
-            set { timePlan = value; }
+        public FileToInt32List TimeTable {
+            get { return timeTable; }
+            set { timeTable = value; }
         }
 
         protected override void OnLoad(EventArgs e) {
             FillTimeValues();
-            if (timePlan != null) {
-                this.Text = Title + " -- " + timePlan.FileInfo.LastWriteTime.ToString();
+            if (timeTable != null) {
+                this.Text = Title + " -- " + timeTable.FileInfo.LastWriteTime.ToString();
             } else {
                 this.Text = Title;
             }
@@ -86,8 +89,8 @@ namespace SolvisSC2Viewer {
 
         private void FillTimeValues() {
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBottom)).BeginInit();
-            if (timePlan != null && !timePlan.Empty) {
-                IList<int> list = timePlan.ParamList;
+            if (timeTable != null && !timeTable.Empty) {
+                IList<int> list = timeTable.ParamList;
                 for (int i = 0; i < TimeItems; i++) {
                     if (((1 << i) & (int)SuppressMask) != 0) { //evtl. HK2, HK3, Eco ausblenden
                         continue;

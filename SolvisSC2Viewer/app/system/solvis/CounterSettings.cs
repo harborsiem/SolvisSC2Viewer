@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace SolvisSC2Viewer {
-    public class CountingSettings {
+    public class CounterSettings {
 
-        public const string CategoryCount = "Counting";
+        public const string CategoryCounter = "Counter";
 
-        public CountingSettings(IList<int> list) {
-            SolarPumpSpan = list[0].ToString() + Unit.Hours;
-            BurnerSpan = list[1].ToString() + Unit.Hours;
+        public CounterSettings(IList<int> list) {
+            SolarPumpSpan = list[0].ToString(CultureInfo.CurrentCulture) + Unit.Hours;
+            BurnerSpan = list[1].ToString(CultureInfo.CurrentCulture) + Unit.Hours;
             BurnerStarts = list[2];
             //@Todo: 3 weitere Werte: Bedeutung ?
             Value4 = list[3];
@@ -20,32 +21,32 @@ namespace SolvisSC2Viewer {
         }
 
         [DisplayName("Laufzeit Solarpumpe")]
-        [Category(CategoryCount)]
+        [Category(CategoryCounter)]
         [ReadOnly(true)]
         public string SolarPumpSpan { get; set; }
 
         [DisplayName("Laufzeit Brenner")]
-        [Category(CategoryCount)]
+        [Category(CategoryCounter)]
         [ReadOnly(true)]
         public string BurnerSpan { get; set; }
 
         [DisplayName("Starts Brenner")]
-        [Category(CategoryCount)]
+        [Category(CategoryCounter)]
         [ReadOnly(true)]
         public int BurnerStarts { get; set; }
 
         [DisplayName("Wert 4")]
-        [Category(CategoryCount)]
+        [Category(CategoryCounter)]
         [ReadOnly(true)]
         public int Value4 { get; set; }
 
         [DisplayName("Wert 5")]
-        [Category(CategoryCount)]
+        [Category(CategoryCounter)]
         [ReadOnly(true)]
         public int Value5 { get; set; }
 
         [DisplayName("Wert 6")]
-        [Category(CategoryCount)]
+        [Category(CategoryCounter)]
         [ReadOnly(true)]
         public int Value6 { get; set; }
     }

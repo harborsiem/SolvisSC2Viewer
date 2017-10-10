@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
+using System.Globalization;
 using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
@@ -26,7 +27,7 @@ namespace SolvisSC2Viewer {
                     try {
                         while (!reader.EndOfStream) {
                             string line = reader.ReadLine().Trim();
-                            int value = int.Parse(line);
+                            int value = int.Parse(line, CultureInfo.InvariantCulture);
                             ParamList.Add(value);
                         }
                         Empty = false;
@@ -50,7 +51,7 @@ namespace SolvisSC2Viewer {
         }
 
         private static void Error(string fileName) {
-            MessageBox.Show(Resources.AllClassesFile + ": " + fileName, Resources.FileToInt32ListError, MessageBoxButtons.OK, MessageBoxIcon.Error); //@Language Resource
+            MessageBox.Show(Resources.AllClassesFile + ": " + fileName, Resources.FileToInt32ListError, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading); //@Language Resource
         }
     }
 }

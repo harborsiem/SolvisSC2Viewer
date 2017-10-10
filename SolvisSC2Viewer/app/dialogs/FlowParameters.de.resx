@@ -117,15 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
   <data name="temperatureLabel.Text" xml:space="preserve">
     <value>Temperatur</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="niveauLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="levelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
+  </data>
+  <data name="levelLabel.Text" xml:space="preserve">
+    <value>Niveau</value>
   </data>
   <data name="gradientLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 13</value>
@@ -136,8 +136,8 @@
   <data name="group.Text" xml:space="preserve">
     <value>Heizung Parameter</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Abbrechen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Heizungs Parameter</value>

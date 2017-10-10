@@ -24,8 +24,8 @@ namespace SolvisSC2Viewer {
             AddAction(new HeatCurveAction());
             AddAction(new SensorsCheckAction());
             AddAction(new ConfigEditorAction());
-            AddAction(new TimePlanAction());
-            AddAction(new CountingListAction());
+            AddAction(new TimeTableAction());
+            AddAction(new CounterListAction());
             AddAction(new ParameterListAction());
 
             //help actions

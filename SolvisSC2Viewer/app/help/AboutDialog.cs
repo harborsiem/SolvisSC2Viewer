@@ -10,17 +10,19 @@ using System.Globalization;
 using System.Reflection;
 
 namespace SolvisSC2Viewer {
-    internal partial class AboutDialog : BaseForm {
+    internal partial class AboutDialog : Form {
         private readonly String ReleaseName;
 
         private const int ImageWidth = 100;
         private const int ImageHeight = 100;
 
         private Image image;
-        private AboutContentReader docReader;
         private string signatureKey = String.Empty;
 
         public AboutDialog() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             FileVersionInfo fi = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
             string productVersion = fi.ProductVersion;
@@ -28,11 +30,11 @@ namespace SolvisSC2Viewer {
             signatureKey = GetSignature();
         }
 
-        private string GetSignature() {
+        private static string GetSignature() {
             byte[] keyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken();
             StringBuilder keyTokenString = new StringBuilder();
             for (int i = 0; i < keyToken.Length; i++) {
-                keyTokenString.Append(keyToken[i].ToString("X2"));
+                keyTokenString.Append(keyToken[i].ToString("X2", CultureInfo.InvariantCulture));
             }
             return keyTokenString.ToString();
         }
@@ -57,7 +59,6 @@ namespace SolvisSC2Viewer {
             if (info.TwoLetterISOLanguageName == "de") {
                 language = "." + "de";
             }
-            docReader = new AboutContentReader();
 
             MakeTabItem(AboutContentReader.Description, language, textDescription);
             if (!String.IsNullOrEmpty(signatureKey)) {
@@ -87,8 +88,8 @@ namespace SolvisSC2Viewer {
             buttonClose.Select();
         }
 
-        private void MakeTabItem(String itemName, string language, TextBox text) {
-            text.Lines = docReader.Read(itemName.ToLowerInvariant(), language);
+        private static void MakeTabItem(String itemName, string language, TextBox text) {
+            text.Lines = AboutContentReader.Read(itemName.ToLowerInvariant(), language);
         }
     }
 }

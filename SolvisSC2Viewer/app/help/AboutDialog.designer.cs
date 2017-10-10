@@ -129,7 +129,6 @@ namespace SolvisSC2Viewer {
             // buttonClose
             // 
             resources.ApplyResources(this.buttonClose, "buttonClose");
-            this.buttonClose.MinimumSize = new System.Drawing.Size(80, 25);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.UseVisualStyleBackColor = true;
             // 

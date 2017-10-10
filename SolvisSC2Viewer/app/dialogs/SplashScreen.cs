@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Reflection;
 
 namespace SolvisSC2Viewer {
-    public partial class SplashScreen : BaseForm {
+    public partial class SplashScreen : Form {
         private String fullName = "SolvisSC2Viewer.files.Solvis_splash1.jpg";
         private static SplashScreen _instance;
 
@@ -31,7 +31,7 @@ namespace SolvisSC2Viewer {
         public void Finish() {
             if (this != null && !this.IsDisposed) {
                 this.Close();
-                this.Dispose();
+                //this.Dispose();
             }
             _instance = null;
         }

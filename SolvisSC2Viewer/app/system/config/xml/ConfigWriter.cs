@@ -39,10 +39,10 @@ namespace SolvisSC2Viewer {
             SetSimpleNodeValue(ConfigXml.LatitudeTag, XmlConvert.ToString(RowValues.Latitude));
             SetSimpleNodeValue(ConfigXml.LongitudeTag, XmlConvert.ToString(RowValues.Longitude));
             SetSimpleNodeValue(ConfigXml.TemperatureTag, XmlConvert.ToString(ConfigManager.Temperature));
-            SetSimpleNodeValue(ConfigXml.NiveauTag, XmlConvert.ToString(ConfigManager.Niveau));
+            SetSimpleNodeValue(ConfigXml.LevelTag, XmlConvert.ToString(ConfigManager.Level));
             SetSimpleNodeValue(ConfigXml.GradientTag, XmlConvert.ToString(ConfigManager.Gradient));
             SetSimpleNodeValue(ConfigXml.TemperatureVLTag, XmlConvert.ToString(RowValues.Temperature));
-            SetSimpleNodeValue(ConfigXml.NiveauVLTag, XmlConvert.ToString(RowValues.Niveau));
+            SetSimpleNodeValue(ConfigXml.LevelFlowTag, XmlConvert.ToString(RowValues.Level));
             SetSimpleNodeValue(ConfigXml.GradientVLTag, XmlConvert.ToString(RowValues.Gradient));
             SetSimpleNodeValue(ConfigXml.VersionTag, manager.Version);
             SetSimpleNodeValue(ConfigXml.Formula1Tag, manager.Formula1);
@@ -66,7 +66,7 @@ namespace SolvisSC2Viewer {
             SetSimpleNodeValue(ConfigXml.HeatCapacityTag, XmlConvert.ToString(RowValues.HeatCapacity20));
             SetSimpleNodeValue(ConfigXml.SdCardDirTag, manager.SdCardDir);
             SetSimpleNodeValue(ConfigXml.SDCardSuppressMaskTag, XmlConvert.ToString(manager.SDCardSuppressMask));
-            SetSimpleNodeValue(ConfigXml.TimePlanBitmapTag, XmlConvert.ToString(manager.TimePlanBitmap));
+            SetSimpleNodeValue(ConfigXml.TimeTableBitmapTag, XmlConvert.ToString(manager.TimeTableBitmap));
             SetSimpleNodeValue(ConfigXml.OneDayModeTag, XmlConvert.ToString(manager.OneDayMode));
             SetSimpleNodeValue(ConfigXml.PrototypeTag, XmlConvert.ToString(manager.Prototype));
             if (manager.SuperUser) {

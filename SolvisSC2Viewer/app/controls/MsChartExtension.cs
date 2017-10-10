@@ -4,7 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace SolvisSC2Viewer {
+namespace System.Windows.Forms.DataVisualization.Charting {
+    //This extension-methods are necessary to speed up the Clear() operation of most Chart collections
+    //The performance bug is in the abstract class ChartElementCollection, function ClearItems()
+    //The call of RemoveItem(0) should have corrected to RemoveItem(base.Count - 1)
+    //For speed you have to call ClearFast.
+    
     public static class MsChartExtension {
         /// <summary>
         /// Speed up MSChart data points clear operations.

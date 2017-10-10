@@ -5,10 +5,10 @@ using System.Threading;
 using System.Windows.Forms;
 
 namespace SolvisSC2Viewer {
-    internal class TimePlanAction : Action {
-        public const string Name = "action.extras.timeplan";
+    internal class TimeTableAction : Action {
+        public const string Name = "action.extras.timetable";
 
-        public TimePlanAction()
+        public TimeTableAction()
             : base(Name, AutoLock | AutoUnlock | AutoUpdate) {
         }
 
@@ -26,11 +26,11 @@ namespace SolvisSC2Viewer {
                     }
                 }
                 AppManager.MainForm.Cursor = Cursors.WaitCursor;
-                FileToInt32List timePlan = new FileToInt32List(manager.SdCardDir, "zeitplan.txt");
-                if (!timePlan.Empty) {
+                FileToInt32List timeTable = new FileToInt32List(manager.SdCardDir, "zeitplan.txt");
+                if (!timeTable.Empty) {
                     TimeOverview dialog = new TimeOverview();
-                    dialog.TimePlan = timePlan;
-                    dialog.SaveFormBitmap = manager.TimePlanBitmap;
+                    dialog.TimeTable = timeTable;
+                    dialog.SaveFormBitmap = manager.TimeTableBitmap;
                     dialog.SuppressMask = (SuppressMask)manager.SDCardSuppressMask;
                     dialog.ShowDialog(AppManager.MainForm);
                 }

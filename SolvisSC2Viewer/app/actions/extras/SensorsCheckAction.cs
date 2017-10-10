@@ -29,10 +29,10 @@ namespace SolvisSC2Viewer {
         private static void CheckS01S04() {
             switch (AppManager.DataManager.CheckS01S04()) {
                 case S01S04State.S01S04Ok:
-                    MessageBox.Show(sensorsOk, info, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show(sensorsOk, info, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
                     break;
                 case S01S04State.S01S04InterChanged:
-                    MessageBox.Show(sensorsNotOk, info, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show(sensorsNotOk, info, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
                     break;
                 default:
                     break;

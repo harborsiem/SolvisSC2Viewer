@@ -64,19 +64,19 @@
             this.groupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.temperatureLabel = new System.Windows.Forms.Label();
             this.temperatureUpDown = new System.Windows.Forms.NumericUpDown();
-            this.niveauLabel = new System.Windows.Forms.Label();
-            this.niveauUpDown = new System.Windows.Forms.NumericUpDown();
+            this.levelLabel = new System.Windows.Forms.Label();
+            this.levelUpDown = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel = new System.Windows.Forms.Label();
             this.gradientUpDown = new System.Windows.Forms.NumericUpDown();
-            this.heatCurveGroup = new System.Windows.Forms.GroupBox();
-            this.heatCurveTabPage = new System.Windows.Forms.TabPage();
+            this.heatingCurveGroup = new System.Windows.Forms.GroupBox();
+            this.heatingCurveTabPage = new System.Windows.Forms.TabPage();
             this.directoryButton = new System.Windows.Forms.Button();
-            this.timePlanGroupLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.timeTableGroupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.hk2CheckBox = new System.Windows.Forms.CheckBox();
             this.hk3CheckBox = new System.Windows.Forms.CheckBox();
             this.ecoCheckBox = new System.Windows.Forms.CheckBox();
             this.savePictureCheckBox = new System.Windows.Forms.CheckBox();
-            this.timePlanGroup = new System.Windows.Forms.GroupBox();
+            this.timeTableGroup = new System.Windows.Forms.GroupBox();
             this.prototype = new System.Windows.Forms.CheckBox();
             this.sdCardLayout = new System.Windows.Forms.TableLayoutPanel();
             this.SdCardTabPage = new System.Windows.Forms.TabPage();
@@ -98,12 +98,12 @@
             this.optionsTabLayout.SuspendLayout();
             this.groupLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown)).BeginInit();
-            this.heatCurveGroup.SuspendLayout();
-            this.heatCurveTabPage.SuspendLayout();
-            this.timePlanGroupLayout.SuspendLayout();
-            this.timePlanGroup.SuspendLayout();
+            this.heatingCurveGroup.SuspendLayout();
+            this.heatingCurveTabPage.SuspendLayout();
+            this.timeTableGroupLayout.SuspendLayout();
+            this.timeTableGroup.SuspendLayout();
             this.sdCardLayout.SuspendLayout();
             this.SdCardTabPage.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -116,8 +116,8 @@
             // 
             // sensorsTabPage
             // 
-            this.sensorsTabPage.Controls.Add(this.sensorsTabLayout);
             resources.ApplyResources(this.sensorsTabPage, "sensorsTabPage");
+            this.sensorsTabPage.Controls.Add(this.sensorsTabLayout);
             this.sensorsTabPage.Name = "sensorsTabPage";
             this.sensorsTabPage.UseVisualStyleBackColor = true;
             // 
@@ -139,8 +139,8 @@
             // 
             // sensorsListBox
             // 
-            this.sensorsListBox.FormattingEnabled = true;
             resources.ApplyResources(this.sensorsListBox, "sensorsListBox");
+            this.sensorsListBox.FormattingEnabled = true;
             this.sensorsListBox.Name = "sensorsListBox";
             this.sensorsTabLayout.SetRowSpan(this.sensorsListBox, 6);
             // 
@@ -204,8 +204,8 @@
             // 
             // actorsTabPage
             // 
-            this.actorsTabPage.Controls.Add(this.actorsTabLayout);
             resources.ApplyResources(this.actorsTabPage, "actorsTabPage");
+            this.actorsTabPage.Controls.Add(this.actorsTabLayout);
             this.actorsTabPage.Name = "actorsTabPage";
             this.actorsTabPage.UseVisualStyleBackColor = true;
             // 
@@ -225,8 +225,8 @@
             // 
             // actorsListBox
             // 
-            this.actorsListBox.FormattingEnabled = true;
             resources.ApplyResources(this.actorsListBox, "actorsListBox");
+            this.actorsListBox.FormattingEnabled = true;
             this.actorsListBox.Name = "actorsListBox";
             this.actorsTabLayout.SetRowSpan(this.actorsListBox, 5);
             // 
@@ -278,8 +278,8 @@
             // 
             // optionsTabPage
             // 
-            this.optionsTabPage.Controls.Add(this.optionsTabLayout);
             resources.ApplyResources(this.optionsTabPage, "optionsTabPage");
+            this.optionsTabPage.Controls.Add(this.optionsTabLayout);
             this.optionsTabPage.Name = "optionsTabPage";
             this.optionsTabPage.UseVisualStyleBackColor = true;
             // 
@@ -301,8 +301,8 @@
             // 
             // optionsListBox
             // 
-            this.optionsListBox.FormattingEnabled = true;
             resources.ApplyResources(this.optionsListBox, "optionsListBox");
+            this.optionsListBox.FormattingEnabled = true;
             this.optionsListBox.Name = "optionsListBox";
             this.optionsTabLayout.SetRowSpan(this.optionsListBox, 6);
             // 
@@ -369,8 +369,8 @@
             resources.ApplyResources(this.groupLayout, "groupLayout");
             this.groupLayout.Controls.Add(this.temperatureLabel, 0, 0);
             this.groupLayout.Controls.Add(this.temperatureUpDown, 1, 0);
-            this.groupLayout.Controls.Add(this.niveauLabel, 0, 1);
-            this.groupLayout.Controls.Add(this.niveauUpDown, 1, 1);
+            this.groupLayout.Controls.Add(this.levelLabel, 0, 1);
+            this.groupLayout.Controls.Add(this.levelUpDown, 1, 1);
             this.groupLayout.Controls.Add(this.gradientLabel, 0, 2);
             this.groupLayout.Controls.Add(this.gradientUpDown, 1, 2);
             this.groupLayout.Name = "groupLayout";
@@ -378,7 +378,6 @@
             // temperatureLabel
             // 
             resources.ApplyResources(this.temperatureLabel, "temperatureLabel");
-            this.temperatureLabel.MinimumSize = new System.Drawing.Size(69, 0);
             this.temperatureLabel.Name = "temperatureLabel";
             // 
             // temperatureUpDown
@@ -391,25 +390,25 @@
             0,
             0});
             // 
-            // niveauLabel
+            // levelLabel
             // 
-            resources.ApplyResources(this.niveauLabel, "niveauLabel");
-            this.niveauLabel.Name = "niveauLabel";
+            resources.ApplyResources(this.levelLabel, "levelLabel");
+            this.levelLabel.Name = "levelLabel";
             // 
-            // niveauUpDown
+            // levelUpDown
             // 
-            resources.ApplyResources(this.niveauUpDown, "niveauUpDown");
-            this.niveauUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.levelUpDown, "levelUpDown");
+            this.levelUpDown.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.niveauUpDown.Minimum = new decimal(new int[] {
+            this.levelUpDown.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             -2147483648});
-            this.niveauUpDown.Name = "niveauUpDown";
+            this.levelUpDown.Name = "levelUpDown";
             // 
             // gradientLabel
             // 
@@ -422,19 +421,19 @@
             this.gradientUpDown.DecimalPlaces = 2;
             this.gradientUpDown.Name = "gradientUpDown";
             // 
-            // heatCurveGroup
+            // heatingCurveGroup
             // 
-            resources.ApplyResources(this.heatCurveGroup, "heatCurveGroup");
-            this.heatCurveGroup.Controls.Add(this.groupLayout);
-            this.heatCurveGroup.Name = "heatCurveGroup";
-            this.heatCurveGroup.TabStop = false;
+            resources.ApplyResources(this.heatingCurveGroup, "heatingCurveGroup");
+            this.heatingCurveGroup.Controls.Add(this.groupLayout);
+            this.heatingCurveGroup.Name = "heatingCurveGroup";
+            this.heatingCurveGroup.TabStop = false;
             // 
-            // heatCurveTabPage
+            // heatingCurveTabPage
             // 
-            this.heatCurveTabPage.Controls.Add(this.heatCurveGroup);
-            resources.ApplyResources(this.heatCurveTabPage, "heatCurveTabPage");
-            this.heatCurveTabPage.Name = "heatCurveTabPage";
-            this.heatCurveTabPage.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.heatingCurveTabPage, "heatingCurveTabPage");
+            this.heatingCurveTabPage.Controls.Add(this.heatingCurveGroup);
+            this.heatingCurveTabPage.Name = "heatingCurveTabPage";
+            this.heatingCurveTabPage.UseVisualStyleBackColor = true;
             // 
             // directoryButton
             // 
@@ -443,14 +442,14 @@
             this.directoryButton.UseVisualStyleBackColor = true;
             this.directoryButton.Click += new System.EventHandler(this.directoryButton_Click);
             // 
-            // timePlanGroupLayout
+            // timeTableGroupLayout
             // 
-            resources.ApplyResources(this.timePlanGroupLayout, "timePlanGroupLayout");
-            this.timePlanGroupLayout.Controls.Add(this.hk2CheckBox, 0, 0);
-            this.timePlanGroupLayout.Controls.Add(this.hk3CheckBox, 0, 1);
-            this.timePlanGroupLayout.Controls.Add(this.ecoCheckBox, 0, 2);
-            this.timePlanGroupLayout.Controls.Add(this.savePictureCheckBox, 0, 3);
-            this.timePlanGroupLayout.Name = "timePlanGroupLayout";
+            resources.ApplyResources(this.timeTableGroupLayout, "timeTableGroupLayout");
+            this.timeTableGroupLayout.Controls.Add(this.hk2CheckBox, 0, 0);
+            this.timeTableGroupLayout.Controls.Add(this.hk3CheckBox, 0, 1);
+            this.timeTableGroupLayout.Controls.Add(this.ecoCheckBox, 0, 2);
+            this.timeTableGroupLayout.Controls.Add(this.savePictureCheckBox, 0, 3);
+            this.timeTableGroupLayout.Name = "timeTableGroupLayout";
             // 
             // hk2CheckBox
             // 
@@ -476,12 +475,12 @@
             this.savePictureCheckBox.Name = "savePictureCheckBox";
             this.savePictureCheckBox.UseVisualStyleBackColor = true;
             // 
-            // timePlanGroup
+            // timeTableGroup
             // 
-            resources.ApplyResources(this.timePlanGroup, "timePlanGroup");
-            this.timePlanGroup.Controls.Add(this.timePlanGroupLayout);
-            this.timePlanGroup.Name = "timePlanGroup";
-            this.timePlanGroup.TabStop = false;
+            resources.ApplyResources(this.timeTableGroup, "timeTableGroup");
+            this.timeTableGroup.Controls.Add(this.timeTableGroupLayout);
+            this.timeTableGroup.Name = "timeTableGroup";
+            this.timeTableGroup.TabStop = false;
             // 
             // prototype
             // 
@@ -495,14 +494,14 @@
             // 
             resources.ApplyResources(this.sdCardLayout, "sdCardLayout");
             this.sdCardLayout.Controls.Add(this.directoryButton, 0, 0);
-            this.sdCardLayout.Controls.Add(this.timePlanGroup, 0, 1);
+            this.sdCardLayout.Controls.Add(this.timeTableGroup, 0, 1);
             this.sdCardLayout.Controls.Add(this.prototype, 0, 2);
             this.sdCardLayout.Name = "sdCardLayout";
             // 
             // SdCardTabPage
             // 
-            this.SdCardTabPage.Controls.Add(this.sdCardLayout);
             resources.ApplyResources(this.SdCardTabPage, "SdCardTabPage");
+            this.SdCardTabPage.Controls.Add(this.sdCardLayout);
             this.SdCardTabPage.Name = "SdCardTabPage";
             this.SdCardTabPage.UseVisualStyleBackColor = true;
             // 
@@ -512,7 +511,7 @@
             this.tabControl.Controls.Add(this.sensorsTabPage);
             this.tabControl.Controls.Add(this.actorsTabPage);
             this.tabControl.Controls.Add(this.optionsTabPage);
-            this.tabControl.Controls.Add(this.heatCurveTabPage);
+            this.tabControl.Controls.Add(this.heatingCurveTabPage);
             this.tabControl.Controls.Add(this.SdCardTabPage);
             this.tabControl.Controls.Add(this.othersTabPage);
             this.tabControl.Name = "tabControl";
@@ -520,8 +519,8 @@
             // 
             // othersTabPage
             // 
-            this.othersTabPage.Controls.Add(this.miscLayout);
             resources.ApplyResources(this.othersTabPage, "othersTabPage");
+            this.othersTabPage.Controls.Add(this.miscLayout);
             this.othersTabPage.Name = "othersTabPage";
             this.othersTabPage.UseVisualStyleBackColor = true;
             // 
@@ -568,7 +567,6 @@
             // buttonDefault
             // 
             resources.ApplyResources(this.buttonDefault, "buttonDefault");
-            this.buttonDefault.MinimumSize = new System.Drawing.Size(75, 23);
             this.buttonDefault.Name = "buttonDefault";
             this.buttonDefault.UseVisualStyleBackColor = true;
             this.buttonDefault.Click += new System.EventHandler(this.buttonDefault_Click);
@@ -576,7 +574,6 @@
             // buttonOK
             // 
             resources.ApplyResources(this.buttonOK, "buttonOK");
-            this.buttonOK.MinimumSize = new System.Drawing.Size(75, 23);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -585,7 +582,6 @@
             // 
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.MinimumSize = new System.Drawing.Size(75, 23);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
@@ -599,8 +595,8 @@
             // ConfigEditor
             // 
             this.AcceptButton = this.buttonOK;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.CancelButton = this.buttonCancel;
             this.Controls.Add(this.dialogLayout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -623,16 +619,16 @@
             this.groupLayout.ResumeLayout(false);
             this.groupLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown)).EndInit();
-            this.heatCurveGroup.ResumeLayout(false);
-            this.heatCurveGroup.PerformLayout();
-            this.heatCurveTabPage.ResumeLayout(false);
-            this.heatCurveTabPage.PerformLayout();
-            this.timePlanGroupLayout.ResumeLayout(false);
-            this.timePlanGroupLayout.PerformLayout();
-            this.timePlanGroup.ResumeLayout(false);
-            this.timePlanGroup.PerformLayout();
+            this.heatingCurveGroup.ResumeLayout(false);
+            this.heatingCurveGroup.PerformLayout();
+            this.heatingCurveTabPage.ResumeLayout(false);
+            this.heatingCurveTabPage.PerformLayout();
+            this.timeTableGroupLayout.ResumeLayout(false);
+            this.timeTableGroupLayout.PerformLayout();
+            this.timeTableGroup.ResumeLayout(false);
+            this.timeTableGroup.PerformLayout();
             this.sdCardLayout.ResumeLayout(false);
             this.sdCardLayout.PerformLayout();
             this.SdCardTabPage.ResumeLayout(false);
@@ -688,13 +684,13 @@
         private System.Windows.Forms.TextBox optionsToolTipTextBox;
         private System.Windows.Forms.Button optionsColorButton;
         private System.Windows.Forms.CheckBox optionsVisibleCheckBox;
-        private System.Windows.Forms.TabPage heatCurveTabPage;
-        private System.Windows.Forms.GroupBox heatCurveGroup;
+        private System.Windows.Forms.TabPage heatingCurveTabPage;
+        private System.Windows.Forms.GroupBox heatingCurveGroup;
         private System.Windows.Forms.TableLayoutPanel groupLayout;
         private System.Windows.Forms.Label temperatureLabel;
         private System.Windows.Forms.NumericUpDown temperatureUpDown;
-        private System.Windows.Forms.Label niveauLabel;
-        private System.Windows.Forms.NumericUpDown niveauUpDown;
+        private System.Windows.Forms.Label levelLabel;
+        private System.Windows.Forms.NumericUpDown levelUpDown;
         private System.Windows.Forms.Label gradientLabel;
         private System.Windows.Forms.NumericUpDown gradientUpDown;
         private System.Windows.Forms.TableLayoutPanel buttons;
@@ -706,8 +702,8 @@
         private System.Windows.Forms.TabPage SdCardTabPage;
         private System.Windows.Forms.TableLayoutPanel sdCardLayout;
         private System.Windows.Forms.Button directoryButton;
-        private System.Windows.Forms.GroupBox timePlanGroup;
-        private System.Windows.Forms.TableLayoutPanel timePlanGroupLayout;
+        private System.Windows.Forms.GroupBox timeTableGroup;
+        private System.Windows.Forms.TableLayoutPanel timeTableGroupLayout;
         private System.Windows.Forms.CheckBox savePictureCheckBox;
         private System.Windows.Forms.CheckBox ecoCheckBox;
         private System.Windows.Forms.CheckBox hk2CheckBox;

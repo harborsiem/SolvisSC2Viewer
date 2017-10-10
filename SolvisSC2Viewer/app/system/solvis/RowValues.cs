@@ -118,7 +118,8 @@ namespace SolvisSC2Viewer {
         public static double Latitude { get; set; }
         public static double Longitude { get; set; }
         public static double Temperature { get; set; }
-        public static double Niveau { get; set; }
+        public static double Level { get; set; }
+        public static double Niveau { get { return Level; } set { Level = value;} } //compatibility for Formulas
         public static double Gradient { get; set; }
         public static int SolvisControlVersion { get; set; }
         public static int SelectedSolvisControlVersion { get; set; }
@@ -174,7 +175,7 @@ namespace SolvisSC2Viewer {
                 DateAndTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Local);
                 int k, j;
                 for (k = 2, j = 0; j < 16; k++, j++) {
-                    int tmp = Convert.ToInt32(values[k]);
+                    int tmp = Convert.ToInt32(values[k], CultureInfo.InvariantCulture);
                     if (j == S10Index) { //Aussen Temperatur
                         S10Raw = (double)tmp / 10.0D;
                         int last = mean.GetLastValue(tmp);
@@ -185,26 +186,26 @@ namespace SolvisSC2Viewer {
                     }
                     sensors[j] = (double)tmp / 10.0D;
                 }
-                int s17Raw = Convert.ToInt32(values[k++]);
+                int s17Raw = Convert.ToInt32(values[k++], CultureInfo.InvariantCulture);
                 sensors[j++] = (double)s17Raw;
-                sensors[j++] = (double)Convert.ToInt32(values[k++]) / 10.0D;
+                sensors[j++] = (double)Convert.ToInt32(values[k++], CultureInfo.InvariantCulture) / 10.0D;
                 int i = 20;
                 if (values.Length == MaxNumColumns) {
-                    sensors[18] = (double)Convert.ToInt32(values[i]);
+                    sensors[18] = (double)Convert.ToInt32(values[i], CultureInfo.InvariantCulture);
                     i++;
-                    sensors[19] = (double)Convert.ToInt32(values[i]);
+                    sensors[19] = (double)Convert.ToInt32(values[i], CultureInfo.InvariantCulture);
                     i++;
-                    sensors[20] = (double)Convert.ToInt32(values[i]);
+                    sensors[20] = (double)Convert.ToInt32(values[i], CultureInfo.InvariantCulture);
                     i++;
-                    sensors[21] = (double)Convert.ToInt32(values[i]);
+                    sensors[21] = (double)Convert.ToInt32(values[i], CultureInfo.InvariantCulture);
                     i++;
-                    sensors[22] = (double)Convert.ToInt32(values[i]);
+                    sensors[22] = (double)Convert.ToInt32(values[i], CultureInfo.InvariantCulture);
                     i++;
-                    sensors[23] = (double)Convert.ToInt32(values[i]);
+                    sensors[23] = (double)Convert.ToInt32(values[i], CultureInfo.InvariantCulture);
                     i++;
                 }
                 for (k = i, j = 0; k < values.Length; k++, j++) {
-                    actors[j] = (double)Convert.ToInt32(values[k]);
+                    actors[j] = (double)Convert.ToInt32(values[k], CultureInfo.InvariantCulture);
                 }
                 S10MeanValue = mean.GetMeanTemperature();
             }
@@ -283,7 +284,7 @@ namespace SolvisSC2Viewer {
             int actualActorIndex = 0;
             int k, j;
             for (k = 2, j = 0; k < values.Length; k++, j++) {
-                int tmp = Convert.ToInt32(values[k]);
+                int tmp = Convert.ToInt32(values[k], CultureInfo.InvariantCulture);
                 if (j == S10Index) { //Aussen Temperatur
                     S10Raw = (double)tmp / 10.0D;
                     int last = mean.GetLastValue(tmp);
@@ -409,7 +410,7 @@ namespace SolvisSC2Viewer {
         public double FormulaIst_Soll1 {
             get {
                 if (S10 <= 20) {
-                    double result = S12 - HeatCurve.SolvisCurve(Temperature, Niveau, Gradient, S10);
+                    double result = S12 - HeatCurve.SolvisCurve(Temperature, Level, Gradient, S10);
                     if (result > -5D) {
                         return result;
                     } else {
@@ -423,7 +424,7 @@ namespace SolvisSC2Viewer {
         public double FormulaIst_Soll2 {
             get {
                 if (S10MeanValue <= 20) {
-                    double result = S12 - (int)HeatCurve.SolvisCurve(Temperature, Niveau, Gradient, (int)(S10MeanValue));
+                    double result = S12 - (int)HeatCurve.SolvisCurve(Temperature, Level, Gradient, (int)(S10MeanValue));
                     if (result > -5D) {
                         return result;
                     } else {

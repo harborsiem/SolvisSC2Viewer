@@ -14,11 +14,9 @@ namespace SolvisSC2Viewer {
         public const String Authors = "Authors";
         public const String License = "License";
         private const String exeNamespace = "SolvisSC2Viewer";
-        private static Assembly exeAssembly;
+        private static Assembly exeAssembly = Assembly.GetExecutingAssembly();
 
-        public AboutContentReader()
-            : base() {
-            exeAssembly = Assembly.GetExecutingAssembly();
+        private AboutContentReader() {
         }
 
         public static Stream GetResourceStream(String fileName) {
@@ -32,7 +30,7 @@ namespace SolvisSC2Viewer {
             return stream;
         }
 
-        public String[] Read(String doc, string language) {
+        public static String[] Read(String doc, string language) {
             String ressourceFileName;
             Stream stream = null;
             if (string.IsNullOrEmpty(language)) {

@@ -133,16 +133,16 @@
   <data name="sensorsCheck.Text" xml:space="preserve">
     <value>Sensoren prüfen</value>
   </data>
-  <data name="timePlan.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="timeTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 22</value>
   </data>
-  <data name="timePlan.Text" xml:space="preserve">
+  <data name="timeTable.Text" xml:space="preserve">
     <value>Zeitplan</value>
   </data>
-  <data name="countingList.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="counterList.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 22</value>
   </data>
-  <data name="countingList.Text" xml:space="preserve">
+  <data name="counterList.Text" xml:space="preserve">
     <value>Zählstand</value>
   </data>
   <data name="parameterList.Size" type="System.Drawing.Size, System.Drawing">

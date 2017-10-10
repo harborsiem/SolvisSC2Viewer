@@ -12,12 +12,12 @@ namespace SolvisSC2Viewer {
 
         public CirculationSettings(IList<int> list) {
             Title = HeatingSettings.Titlevalue;
-            CircOffTime = list[326].ToString() + Unit.Minute;
+            CircOffTime = list[326].ToString(CultureInfo.CurrentCulture) + Unit.Minute;
             CircPump = (Mode)list[327];
-            CircCommandTemperature = list[328].ToString() + Unit.DegreeCelsius;
+            CircCommandTemperature = list[328].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
             CircMode = (CircMode)list[329];
-            CircDeltaForOn = list[330].ToString() + Unit.Kelvin;
-            CircMinRuntime = list[332].ToString() + Unit.Second;
+            CircDeltaForOn = list[330].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            CircMinRuntime = list[332].ToString(CultureInfo.CurrentCulture) + Unit.Second;
         }
 
         [DisplayName("Zirkulation Parameter")]

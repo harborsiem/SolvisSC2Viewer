@@ -117,1003 +117,1012 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="chartMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="chartMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="chartMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>760, 406</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="chartMain.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="chartMain.Text" xml:space="preserve">
-    <value>chartMain</value>
-  </data>
-  <data name="&gt;&gt;chartMain.Name" xml:space="preserve">
-    <value>chartMain</value>
-  </data>
-  <data name="&gt;&gt;chartMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
-  </data>
-  <data name="&gt;&gt;chartMain.Parent" xml:space="preserve">
-    <value>dialogLayout</value>
-  </data>
-  <data name="&gt;&gt;chartMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="group1Layout.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="group1Layout.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="temperatureLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="temperatureLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="temperatureLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
-  </data>
-  <data name="temperatureLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="temperatureLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="temperatureLabel1.Text" xml:space="preserve">
-    <value>Temperature</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel1.Name" xml:space="preserve">
-    <value>temperatureLabel1</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel1.Parent" xml:space="preserve">
-    <value>group1Layout</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="temperatureUpDown1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="temperatureUpDown1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 3</value>
-  </data>
-  <data name="temperatureUpDown1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="temperatureUpDown1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown1.Name" xml:space="preserve">
-    <value>temperatureUpDown1</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown1.Parent" xml:space="preserve">
-    <value>group1Layout</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="niveauLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="niveauLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="niveauLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
-  </data>
-  <data name="niveauLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="niveauLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="niveauLabel1.Text" xml:space="preserve">
-    <value>Niveau</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel1.Name" xml:space="preserve">
-    <value>niveauLabel1</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel1.Parent" xml:space="preserve">
-    <value>group1Layout</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="niveauUpDown1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="niveauUpDown1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 29</value>
-  </data>
-  <data name="niveauUpDown1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="niveauUpDown1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown1.Name" xml:space="preserve">
-    <value>niveauUpDown1</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown1.Parent" xml:space="preserve">
-    <value>group1Layout</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="gradientLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="gradientLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gradientLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 58</value>
-  </data>
-  <data name="gradientLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="gradientLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="gradientLabel1.Text" xml:space="preserve">
-    <value>Gradient</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel1.Name" xml:space="preserve">
-    <value>gradientLabel1</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel1.Parent" xml:space="preserve">
-    <value>group1Layout</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="gradientUpDown1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="gradientUpDown1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 55</value>
-  </data>
-  <data name="gradientUpDown1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="gradientUpDown1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown1.Name" xml:space="preserve">
-    <value>gradientUpDown1</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown1.Parent" xml:space="preserve">
-    <value>group1Layout</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="group1Layout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 19</value>
-  </data>
-  <data name="group1Layout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 3, 0, 0</value>
-  </data>
-  <data name="group1Layout.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="group1Layout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 78</value>
-  </data>
-  <data name="group1Layout.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;group1Layout.Name" xml:space="preserve">
-    <value>group1Layout</value>
-  </data>
-  <data name="&gt;&gt;group1Layout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;group1Layout.Parent" xml:space="preserve">
-    <value>groupCurve1</value>
-  </data>
-  <data name="&gt;&gt;group1Layout.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="group1Layout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="temperatureLabel1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="temperatureUpDown1" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="niveauLabel1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="niveauUpDown1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="gradientLabel1" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gradientUpDown1" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="groupCurve1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="groupCurve1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="groupCurve1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="groupCurve1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 113</value>
-  </data>
-  <data name="groupCurve1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupCurve1.Text" xml:space="preserve">
-    <value>Solvis Curve 1</value>
-  </data>
-  <data name="&gt;&gt;groupCurve1.Name" xml:space="preserve">
-    <value>groupCurve1</value>
-  </data>
-  <data name="&gt;&gt;groupCurve1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupCurve1.Parent" xml:space="preserve">
-    <value>bottomLayout</value>
-  </data>
-  <data name="&gt;&gt;groupCurve1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="group2Layout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="group2Layout.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="group2Layout.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="temperatureLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="temperatureLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="temperatureLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
-  </data>
-  <data name="temperatureLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="temperatureLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="temperatureLabel2.Text" xml:space="preserve">
-    <value>Temperature</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel2.Name" xml:space="preserve">
-    <value>temperatureLabel2</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel2.Parent" xml:space="preserve">
-    <value>group2Layout</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="temperatureUpDown2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="temperatureUpDown2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 3</value>
-  </data>
-  <data name="temperatureUpDown2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
   </data>
   <data name="temperatureUpDown2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;temperatureUpDown2.Name" xml:space="preserve">
-    <value>temperatureUpDown2</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown2.Parent" xml:space="preserve">
-    <value>group2Layout</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="niveauLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="niveauLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="niveauLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
-  </data>
-  <data name="niveauLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="niveauLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="niveauLabel2.Text" xml:space="preserve">
-    <value>Niveau</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel2.Name" xml:space="preserve">
-    <value>niveauLabel2</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel2.Parent" xml:space="preserve">
-    <value>group2Layout</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="niveauUpDown2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="niveauUpDown2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 29</value>
-  </data>
-  <data name="niveauUpDown2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="niveauUpDown2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown2.Name" xml:space="preserve">
-    <value>niveauUpDown2</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown2.Parent" xml:space="preserve">
-    <value>group2Layout</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="gradientLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="gradientLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gradientLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 58</value>
-  </data>
-  <data name="gradientLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="gradientLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="gradientLabel2.Text" xml:space="preserve">
-    <value>Gradient</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel2.Name" xml:space="preserve">
-    <value>gradientLabel2</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel2.Parent" xml:space="preserve">
-    <value>group2Layout</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="gradientUpDown2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="gradientUpDown2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 55</value>
-  </data>
-  <data name="gradientUpDown2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="gradientUpDown2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown2.Name" xml:space="preserve">
-    <value>gradientUpDown2</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown2.Parent" xml:space="preserve">
-    <value>group2Layout</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="group2Layout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 19</value>
-  </data>
-  <data name="group2Layout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 3, 0, 0</value>
-  </data>
-  <data name="group2Layout.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="group2Layout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 78</value>
-  </data>
-  <data name="group2Layout.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;group2Layout.Name" xml:space="preserve">
-    <value>group2Layout</value>
-  </data>
-  <data name="&gt;&gt;group2Layout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;group2Layout.Parent" xml:space="preserve">
-    <value>groupCurve2</value>
-  </data>
-  <data name="&gt;&gt;group2Layout.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="group2Layout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="temperatureLabel2" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="temperatureUpDown2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="niveauLabel2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="niveauUpDown2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="gradientLabel2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gradientUpDown2" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="groupCurve2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="groupCurve2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="groupCurve2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 3</value>
-  </data>
-  <data name="groupCurve2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 113</value>
-  </data>
-  <data name="groupCurve2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupCurve2.Text" xml:space="preserve">
-    <value>Solvis Curve 2</value>
-  </data>
-  <data name="&gt;&gt;groupCurve2.Name" xml:space="preserve">
-    <value>groupCurve2</value>
-  </data>
-  <data name="&gt;&gt;groupCurve2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupCurve2.Parent" xml:space="preserve">
-    <value>bottomLayout</value>
-  </data>
-  <data name="&gt;&gt;groupCurve2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="group3Layout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="group3Layout.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="group3Layout.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="temperatureLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="temperatureLabel3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="temperatureLabel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 6</value>
   </data>
-  <data name="temperatureLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="temperatureLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="temperatureLabel3.Text" xml:space="preserve">
-    <value>Temperature</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel3.Name" xml:space="preserve">
-    <value>temperatureLabel3</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel3.Parent" xml:space="preserve">
-    <value>group3Layout</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="temperatureUpDown3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="temperatureUpDown3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 3</value>
-  </data>
-  <data name="temperatureUpDown3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="temperatureUpDown3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown3.Name" xml:space="preserve">
-    <value>temperatureUpDown3</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown3.Parent" xml:space="preserve">
-    <value>group3Layout</value>
-  </data>
-  <data name="&gt;&gt;temperatureUpDown3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="niveauLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="niveauLabel3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="niveauLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
-  </data>
-  <data name="niveauLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="niveauLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="niveauLabel3.Text" xml:space="preserve">
-    <value>Niveau</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel3.Name" xml:space="preserve">
-    <value>niveauLabel3</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel3.Parent" xml:space="preserve">
-    <value>group3Layout</value>
-  </data>
-  <data name="&gt;&gt;niveauLabel3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="niveauUpDown3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="niveauUpDown3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 29</value>
-  </data>
-  <data name="niveauUpDown3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="niveauUpDown3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown3.Name" xml:space="preserve">
-    <value>niveauUpDown3</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown3.Parent" xml:space="preserve">
-    <value>group3Layout</value>
-  </data>
-  <data name="&gt;&gt;niveauUpDown3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="gradientLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="gradientLabel3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gradientLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 58</value>
-  </data>
-  <data name="gradientLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="gradientLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="gradientLabel3.Text" xml:space="preserve">
-    <value>Gradient</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel3.Name" xml:space="preserve">
-    <value>gradientLabel3</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel3.Parent" xml:space="preserve">
-    <value>group3Layout</value>
-  </data>
-  <data name="&gt;&gt;gradientLabel3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="gradientUpDown3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="gradientUpDown3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 55</value>
-  </data>
-  <data name="gradientUpDown3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="gradientUpDown3.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown3.Name" xml:space="preserve">
-    <value>gradientUpDown3</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown3.Parent" xml:space="preserve">
-    <value>group3Layout</value>
-  </data>
-  <data name="&gt;&gt;gradientUpDown3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="group3Layout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 19</value>
-  </data>
-  <data name="group3Layout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 3, 0, 0</value>
-  </data>
-  <data name="group3Layout.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="group3Layout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 78</value>
-  </data>
-  <data name="group3Layout.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;group3Layout.Name" xml:space="preserve">
-    <value>group3Layout</value>
-  </data>
-  <data name="&gt;&gt;group3Layout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;group3Layout.Parent" xml:space="preserve">
-    <value>groupCurve3</value>
-  </data>
-  <data name="&gt;&gt;group3Layout.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="group3Layout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="temperatureLabel3" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="temperatureUpDown3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="niveauLabel3" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="niveauUpDown3" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="gradientLabel3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gradientUpDown3" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="groupCurve3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupCurve1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="groupCurve3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="chartMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="groupCurve3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 3</value>
-  </data>
-  <data name="groupCurve3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 113</value>
-  </data>
-  <data name="groupCurve3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="groupCurve3.Text" xml:space="preserve">
-    <value>Ideal Curve</value>
-  </data>
-  <data name="&gt;&gt;groupCurve3.Name" xml:space="preserve">
-    <value>groupCurve3</value>
-  </data>
-  <data name="&gt;&gt;groupCurve3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupCurve3.Parent" xml:space="preserve">
-    <value>bottomLayout</value>
-  </data>
-  <data name="&gt;&gt;groupCurve3.ZOrder" xml:space="preserve">
+  <data name="group2Layout.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="closeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="levelLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
   </data>
-  <data name="closeButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>688, 93</value>
-  </data>
-  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="closeButton.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
-    <value>closeButton</value>
-  </data>
-  <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
-    <value>bottomLayout</value>
-  </data>
-  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="bottomLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="bottomLayout.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bottomLayout.ColumnCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="bottomLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 412</value>
-  </data>
-  <data name="bottomLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="bottomLayout.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="bottomLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 119</value>
-  </data>
-  <data name="bottomLayout.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;bottomLayout.Name" xml:space="preserve">
-    <value>bottomLayout</value>
-  </data>
-  <data name="&gt;&gt;bottomLayout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bottomLayout.Parent" xml:space="preserve">
-    <value>dialogLayout</value>
-  </data>
-  <data name="&gt;&gt;bottomLayout.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="bottomLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupCurve1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupCurve2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupCurve3" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="closeButton" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="printPreviewItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 22</value>
-  </data>
-  <data name="printPreviewItem.Text" xml:space="preserve">
-    <value>Print Preview</value>
-  </data>
-  <data name="printItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 22</value>
-  </data>
-  <data name="printItem.Text" xml:space="preserve">
-    <value>Print</value>
-  </data>
-  <data name="printHeadItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+  <data name="&gt;&gt;group1Layout.Name" xml:space="preserve">
+    <value>group1Layout</value>
   </data>
   <data name="printHeadItem.Text" xml:space="preserve">
     <value>Print</value>
   </data>
-  <data name="curve1FloorItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
+  <data name="temperatureUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
   </data>
-  <data name="curve1FloorItem.Text" xml:space="preserve">
-    <value>Curve1 floor</value>
+  <data name="temperatureLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="curve1RoundItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
+  <data name="group1Layout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 78</value>
   </data>
-  <data name="curve1RoundItem.Text" xml:space="preserve">
-    <value>Curve1 round</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 564</value>
   </data>
-  <data name="curve1NotRoundItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
+  <data name="temperatureLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
-  <data name="curve1NotRoundItem.Text" xml:space="preserve">
-    <value>Curve1 not round</value>
+  <data name="&gt;&gt;levelLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="seperator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 6</value>
+  <data name="&gt;&gt;configurationHeadItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="curve2FloorItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
+  <data name="&gt;&gt;temperatureUpDown3.Name" xml:space="preserve">
+    <value>temperatureUpDown3</value>
   </data>
-  <data name="curve2FloorItem.Text" xml:space="preserve">
-    <value>Curve2 floor</value>
+  <data name="&gt;&gt;levelLabel2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="curve2RoundItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
+  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="curve2RoundItem.Text" xml:space="preserve">
-    <value>Curve2 round</value>
+  <data name="gradientUpDown2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
   </data>
-  <data name="curve2NotRoundItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
+  <data name="groupCurve3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="curve2NotRoundItem.Text" xml:space="preserve">
-    <value>Curve2 not round</value>
+  <data name="group2Layout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="configurationHeadItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 20</value>
+  <data name="&gt;&gt;groupCurve3.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="configurationHeadItem.Text" xml:space="preserve">
-    <value>Configuration</value>
+  <data name="gradientLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="gradientUpDown1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="temperatureLabel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>69, 0</value>
+  </data>
+  <data name="temperatureLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="gradientUpDown3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="group3Layout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="temperatureLabel3" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="temperatureUpDown3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="levelLabel3" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="levelUpDown3" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="gradientLabel3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gradientUpDown3" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="gradientUpDown2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;curve2NotRoundItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gradientUpDown3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="group1Layout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 0</value>
+  </data>
+  <data name="levelUpDown2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;groupCurve3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gradientLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;levelLabel3.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 24</value>
+  <data name="groupCurve1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;curve1FloorItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>main</value>
+  <data name="&gt;&gt;temperatureUpDown3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
-    <value>menuStrip</value>
+  <data name="levelLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="groupCurve1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 113</value>
   </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="dialogLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="dialogLayout.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="dialogLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 24</value>
-  </data>
-  <data name="dialogLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="dialogLayout.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="dialogLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 531</value>
+  <data name="levelUpDown1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="dialogLayout.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;dialogLayout.Name" xml:space="preserve">
-    <value>dialogLayout</value>
+  <data name="&gt;&gt;gradientUpDown1.Parent" xml:space="preserve">
+    <value>group1Layout</value>
+  </data>
+  <data name="&gt;&gt;curve2FloorItem.Name" xml:space="preserve">
+    <value>curve2FloorItem</value>
+  </data>
+  <data name="groupCurve2.Text" xml:space="preserve">
+    <value>Solvis Curve 2</value>
+  </data>
+  <data name="&gt;&gt;group2Layout.Name" xml:space="preserve">
+    <value>group2Layout</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="group1Layout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="group3Layout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;printHeadItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Heat Curve</value>
+  </data>
+  <data name="gradientUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 55</value>
+  </data>
+  <data name="chartMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="temperatureUpDown1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gradientLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gradientLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="levelLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="group2Layout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="temperatureLabel2" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="temperatureUpDown2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="levelLabel2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="levelUpDown2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="gradientLabel2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gradientUpDown2" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="levelLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="levelUpDown3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printItem.Name" xml:space="preserve">
+    <value>printItem</value>
+  </data>
+  <data name="group3Layout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="gradientLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="groupCurve3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;chartMain.Name" xml:space="preserve">
+    <value>chartMain</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel3.Parent" xml:space="preserve">
+    <value>group3Layout</value>
+  </data>
+  <data name="groupCurve1.Text" xml:space="preserve">
+    <value>Solvis Curve 1</value>
+  </data>
+  <data name="configurationHeadItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 20</value>
   </data>
   <data name="&gt;&gt;dialogLayout.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dialogLayout.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;dialogLayout.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
+    <value>closeButton</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown1.Name" xml:space="preserve">
+    <value>temperatureUpDown1</value>
+  </data>
+  <data name="gradientUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="&gt;&gt;group3Layout.Name" xml:space="preserve">
+    <value>group3Layout</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="&gt;&gt;chartMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="curve2NotRoundItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="group1Layout.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>688, 93</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupCurve3.Text" xml:space="preserve">
+    <value>Ideal Curve</value>
+  </data>
+  <data name="levelLabel1.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="bottomLayout.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="dialogLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="chartMain" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="bottomLayout" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="Percent,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 564</value>
+  <data name="gradientLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 600</value>
+  <data name="&gt;&gt;dialogLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Heat Curve</value>
+  <data name="gradientLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="&gt;&gt;printHeadItem.Name" xml:space="preserve">
-    <value>printHeadItem</value>
+  <data name="&gt;&gt;levelLabel3.Parent" xml:space="preserve">
+    <value>group3Layout</value>
   </data>
-  <data name="&gt;&gt;printHeadItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;printPreviewItem.Name" xml:space="preserve">
-    <value>printPreviewItem</value>
-  </data>
-  <data name="&gt;&gt;printPreviewItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;printItem.Name" xml:space="preserve">
-    <value>printItem</value>
-  </data>
-  <data name="&gt;&gt;printItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;configurationHeadItem.Name" xml:space="preserve">
-    <value>configurationHeadItem</value>
-  </data>
-  <data name="&gt;&gt;configurationHeadItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;curve1FloorItem.Name" xml:space="preserve">
-    <value>curve1FloorItem</value>
-  </data>
-  <data name="&gt;&gt;curve1FloorItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;curve1RoundItem.Name" xml:space="preserve">
-    <value>curve1RoundItem</value>
-  </data>
-  <data name="&gt;&gt;curve1RoundItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;curve1NotRoundItem.Name" xml:space="preserve">
-    <value>curve1NotRoundItem</value>
-  </data>
-  <data name="&gt;&gt;curve1NotRoundItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;seperator1.Name" xml:space="preserve">
-    <value>seperator1</value>
-  </data>
-  <data name="&gt;&gt;seperator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;curve2FloorItem.Name" xml:space="preserve">
-    <value>curve2FloorItem</value>
-  </data>
-  <data name="&gt;&gt;curve2FloorItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;curve2RoundItem.Name" xml:space="preserve">
-    <value>curve2RoundItem</value>
+  <data name="&gt;&gt;levelUpDown3.Parent" xml:space="preserve">
+    <value>group3Layout</value>
   </data>
   <data name="&gt;&gt;curve2RoundItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;gradientLabel1.Name" xml:space="preserve">
+    <value>gradientLabel1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="curve2RoundItem.Text" xml:space="preserve">
+    <value>Curve2 round</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel2.Name" xml:space="preserve">
+    <value>gradientLabel2</value>
+  </data>
+  <data name="chartMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 406</value>
+  </data>
+  <data name="&gt;&gt;bottomLayout.Name" xml:space="preserve">
+    <value>bottomLayout</value>
+  </data>
+  <data name="gradientUpDown1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="gradientLabel1.Text" xml:space="preserve">
+    <value>Gradient</value>
+  </data>
+  <data name="groupCurve2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;group1Layout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupCurve3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>429, 3</value>
+  </data>
+  <data name="&gt;&gt;bottomLayout.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;groupCurve1.Name" xml:space="preserve">
+    <value>groupCurve1</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;levelLabel2.Name" xml:space="preserve">
+    <value>levelLabel2</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="curve2FloorItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="levelLabel3.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="&gt;&gt;group3Layout.Parent" xml:space="preserve">
+    <value>groupCurve3</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown3.Parent" xml:space="preserve">
+    <value>group3Layout</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chartMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;groupCurve2.Parent" xml:space="preserve">
+    <value>bottomLayout</value>
+  </data>
+  <data name="&gt;&gt;curve1RoundItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="temperatureLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gradientLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="curve1FloorItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel1.Parent" xml:space="preserve">
+    <value>group1Layout</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 600</value>
+  </data>
+  <data name="&gt;&gt;chartMain.Parent" xml:space="preserve">
+    <value>dialogLayout</value>
+  </data>
+  <data name="group3Layout.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="configurationHeadItem.Text" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="&gt;&gt;groupCurve1.Parent" xml:space="preserve">
+    <value>bottomLayout</value>
+  </data>
+  <data name="levelUpDown3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 29</value>
+  </data>
+  <data name="dialogLayout.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="levelLabel2.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="levelUpDown3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="dialogLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupCurve3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="printHeadItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="temperatureLabel1.Text" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="groupCurve2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="temperatureLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel2.Parent" xml:space="preserve">
+    <value>group2Layout</value>
+  </data>
+  <data name="curve1NotRoundItem.Text" xml:space="preserve">
+    <value>Curve1 not round</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown2.Parent" xml:space="preserve">
+    <value>group2Layout</value>
+  </data>
+  <data name="gradientLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="temperatureUpDown2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;levelLabel3.Name" xml:space="preserve">
+    <value>levelLabel3</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown1.Parent" xml:space="preserve">
+    <value>group1Layout</value>
+  </data>
+  <data name="&gt;&gt;printPreviewItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel3.Name" xml:space="preserve">
+    <value>gradientLabel3</value>
+  </data>
+  <data name="bottomLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chartMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="group2Layout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="temperatureLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="temperatureLabel3.Text" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="levelLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="dialogLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>766, 531</value>
+  </data>
+  <data name="group3Layout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;levelLabel2.Parent" xml:space="preserve">
+    <value>group2Layout</value>
+  </data>
+  <data name="levelLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupCurve1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="curve2RoundItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="group1Layout.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;curve2NotRoundItem.Name" xml:space="preserve">
     <value>curve2NotRoundItem</value>
   </data>
-  <data name="&gt;&gt;curve2NotRoundItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="levelLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="gradientLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown2.Name" xml:space="preserve">
+    <value>levelUpDown2</value>
+  </data>
+  <data name="printPreviewItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 22</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dialogLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="temperatureLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;group1Layout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;group3Layout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chartMain.Text" xml:space="preserve">
+    <value>chartMain</value>
+  </data>
+  <data name="&gt;&gt;levelLabel1.Parent" xml:space="preserve">
+    <value>group1Layout</value>
+  </data>
+  <data name="temperatureUpDown1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 24</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
+    <value>bottomLayout</value>
+  </data>
+  <data name="levelLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="&gt;&gt;curve1FloorItem.Name" xml:space="preserve">
+    <value>curve1FloorItem</value>
+  </data>
+  <data name="levelUpDown1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;groupCurve3.Parent" xml:space="preserve">
+    <value>bottomLayout</value>
+  </data>
+  <data name="groupCurve1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="group3Layout.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown3.Name" xml:space="preserve">
+    <value>gradientUpDown3</value>
+  </data>
+  <data name="dialogLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="levelLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="group1Layout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="gradientLabel2.Text" xml:space="preserve">
+    <value>Gradient</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown3.Name" xml:space="preserve">
+    <value>levelUpDown3</value>
+  </data>
+  <data name="&gt;&gt;groupCurve2.Name" xml:space="preserve">
+    <value>groupCurve2</value>
+  </data>
+  <data name="printPreviewItem.Text" xml:space="preserve">
+    <value>Print Preview</value>
+  </data>
+  <data name="group2Layout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 78</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="levelLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="&gt;&gt;levelLabel1.Name" xml:space="preserve">
+    <value>levelLabel1</value>
+  </data>
+  <data name="levelLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="gradientUpDown2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;group2Layout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="levelUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="gradientLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="temperatureUpDown3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="group2Layout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 0</value>
+  </data>
+  <data name="levelLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel3.Parent" xml:space="preserve">
+    <value>group3Layout</value>
+  </data>
+  <data name="groupCurve2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="temperatureLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;curve1RoundItem.Name" xml:space="preserve">
+    <value>curve1RoundItem</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel1.Name" xml:space="preserve">
+    <value>temperatureLabel1</value>
+  </data>
+  <data name="dialogLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 24</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>HeatCurve</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BaseForm, SolvisSC2Viewer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c36682b29f44cba7</value>
+  <data name="&gt;&gt;curve2FloorItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="gradientLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="printItem.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel1.Parent" xml:space="preserve">
+    <value>group1Layout</value>
+  </data>
+  <data name="curve1RoundItem.Text" xml:space="preserve">
+    <value>Curve1 round</value>
+  </data>
+  <data name="groupCurve2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 3</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel2.Parent" xml:space="preserve">
+    <value>group2Layout</value>
+  </data>
+  <data name="temperatureLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="curve1FloorItem.Text" xml:space="preserve">
+    <value>Curve1 floor</value>
+  </data>
+  <data name="bottomLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 412</value>
+  </data>
+  <data name="levelUpDown2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 29</value>
+  </data>
+  <data name="curve2FloorItem.Text" xml:space="preserve">
+    <value>Curve2 floor</value>
+  </data>
+  <data name="&gt;&gt;seperator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="group2Layout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="temperatureLabel2.Text" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="levelLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="temperatureUpDown2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="levelLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="group3Layout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown1.Parent" xml:space="preserve">
+    <value>group1Layout</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown2.Name" xml:space="preserve">
+    <value>gradientUpDown2</value>
+  </data>
+  <data name="&gt;&gt;curve1NotRoundItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupCurve3.Name" xml:space="preserve">
+    <value>groupCurve3</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown1.Name" xml:space="preserve">
+    <value>levelUpDown1</value>
+  </data>
+  <data name="&gt;&gt;printItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="group3Layout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="temperatureUpDown3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown2.Parent" xml:space="preserve">
+    <value>group2Layout</value>
+  </data>
+  <data name="levelUpDown2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="gradientLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel3.Name" xml:space="preserve">
+    <value>temperatureLabel3</value>
+  </data>
+  <data name="temperatureUpDown3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 3</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="bottomLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupCurve1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupCurve2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupCurve3" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="closeButton" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;printPreviewItem.Name" xml:space="preserve">
+    <value>printPreviewItem</value>
+  </data>
+  <data name="group2Layout.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="group2Layout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="gradientUpDown2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 55</value>
+  </data>
+  <data name="groupCurve3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 113</value>
+  </data>
+  <data name="printItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 22</value>
+  </data>
+  <data name="gradientUpDown3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 55</value>
+  </data>
+  <data name="curve2NotRoundItem.Text" xml:space="preserve">
+    <value>Curve2 not round</value>
+  </data>
+  <data name="curve1RoundItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="bottomLayout.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="closeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="curve1NotRoundItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;groupCurve2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="levelLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="temperatureUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 3</value>
+  </data>
+  <data name="&gt;&gt;curve1NotRoundItem.Name" xml:space="preserve">
+    <value>curve1NotRoundItem</value>
+  </data>
+  <data name="&gt;&gt;levelLabel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;group1Layout.Parent" xml:space="preserve">
+    <value>groupCurve1</value>
+  </data>
+  <data name="temperatureLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;printHeadItem.Name" xml:space="preserve">
+    <value>printHeadItem</value>
+  </data>
+  <data name="&gt;&gt;group2Layout.Parent" xml:space="preserve">
+    <value>groupCurve2</value>
+  </data>
+  <data name="&gt;&gt;groupCurve2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupCurve2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 113</value>
+  </data>
+  <data name="&gt;&gt;groupCurve1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="closeButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="temperatureUpDown3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gradientLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;seperator1.Name" xml:space="preserve">
+    <value>seperator1</value>
+  </data>
+  <data name="temperatureUpDown2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 3</value>
+  </data>
+  <data name="&gt;&gt;group2Layout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="temperatureLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="group1Layout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="temperatureLabel1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="temperatureUpDown1" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="levelLabel1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="levelUpDown1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="gradientLabel1" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gradientUpDown1" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="gradientLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="bottomLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;groupCurve1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="temperatureLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;configurationHeadItem.Name" xml:space="preserve">
+    <value>configurationHeadItem</value>
+  </data>
+  <data name="temperatureLabel3.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>69, 0</value>
+  </data>
+  <data name="&gt;&gt;curve2RoundItem.Name" xml:space="preserve">
+    <value>curve2RoundItem</value>
+  </data>
+  <data name="&gt;&gt;levelLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;levelLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="temperatureLabel2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>69, 0</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="levelUpDown2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown2.Parent" xml:space="preserve">
+    <value>group2Layout</value>
+  </data>
+  <data name="gradientUpDown3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown1.Name" xml:space="preserve">
+    <value>gradientUpDown1</value>
+  </data>
+  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;temperatureLabel2.Name" xml:space="preserve">
+    <value>temperatureLabel2</value>
+  </data>
+  <data name="temperatureLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="bottomLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown2.Name" xml:space="preserve">
+    <value>temperatureUpDown2</value>
+  </data>
+  <data name="gradientLabel3.Text" xml:space="preserve">
+    <value>Gradient</value>
+  </data>
+  <data name="&gt;&gt;group3Layout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dialogLayout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown3.Parent" xml:space="preserve">
+    <value>group3Layout</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dialogLayout.Name" xml:space="preserve">
+    <value>dialogLayout</value>
+  </data>
+  <data name="&gt;&gt;bottomLayout.Parent" xml:space="preserve">
+    <value>dialogLayout</value>
+  </data>
+  <data name="seperator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 6</value>
+  </data>
+  <data name="levelUpDown3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="levelUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 29</value>
+  </data>
+  <data name="bottomLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="group3Layout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 78</value>
+  </data>
+  <data name="bottomLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>766, 119</value>
+  </data>
+  <data name="temperatureLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="&gt;&gt;bottomLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

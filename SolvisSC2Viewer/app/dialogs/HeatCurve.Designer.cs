@@ -23,8 +23,8 @@
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeatCurve));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -34,24 +34,24 @@
             this.group1Layout = new System.Windows.Forms.TableLayoutPanel();
             this.temperatureLabel1 = new System.Windows.Forms.Label();
             this.temperatureUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.niveauLabel1 = new System.Windows.Forms.Label();
-            this.niveauUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.levelLabel1 = new System.Windows.Forms.Label();
+            this.levelUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel1 = new System.Windows.Forms.Label();
             this.gradientUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupCurve1 = new System.Windows.Forms.GroupBox();
             this.group2Layout = new System.Windows.Forms.TableLayoutPanel();
             this.temperatureLabel2 = new System.Windows.Forms.Label();
             this.temperatureUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.niveauLabel2 = new System.Windows.Forms.Label();
-            this.niveauUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.levelLabel2 = new System.Windows.Forms.Label();
+            this.levelUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel2 = new System.Windows.Forms.Label();
             this.gradientUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.groupCurve2 = new System.Windows.Forms.GroupBox();
             this.group3Layout = new System.Windows.Forms.TableLayoutPanel();
             this.temperatureLabel3 = new System.Windows.Forms.Label();
             this.temperatureUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.niveauLabel3 = new System.Windows.Forms.Label();
-            this.niveauUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.levelLabel3 = new System.Windows.Forms.Label();
+            this.levelUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.gradientLabel3 = new System.Windows.Forms.Label();
             this.gradientUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.groupCurve3 = new System.Windows.Forms.GroupBox();
@@ -73,17 +73,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartMain)).BeginInit();
             this.group1Layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown1)).BeginInit();
             this.groupCurve1.SuspendLayout();
             this.group2Layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown2)).BeginInit();
             this.groupCurve2.SuspendLayout();
             this.group3Layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown3)).BeginInit();
             this.groupCurve3.SuspendLayout();
             this.bottomLayout.SuspendLayout();
@@ -93,6 +93,7 @@
             // 
             // chartMain
             // 
+            resources.ApplyResources(this.chartMain, "chartMain");
             chartArea1.AxisX.Interval = 2D;
             chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.AxisX.IsLabelAutoFit = false;
@@ -121,7 +122,6 @@
             chartArea1.AxisY2.TitleAlignment = System.Drawing.StringAlignment.Far;
             chartArea1.Name = "ChartArea1";
             this.chartMain.ChartAreas.Add(chartArea1);
-            resources.ApplyResources(this.chartMain, "chartMain");
             legend1.Name = "Legend1";
             this.chartMain.Legends.Add(legend1);
             this.chartMain.Name = "chartMain";
@@ -154,8 +154,8 @@
             resources.ApplyResources(this.group1Layout, "group1Layout");
             this.group1Layout.Controls.Add(this.temperatureLabel1, 0, 0);
             this.group1Layout.Controls.Add(this.temperatureUpDown1, 1, 0);
-            this.group1Layout.Controls.Add(this.niveauLabel1, 0, 1);
-            this.group1Layout.Controls.Add(this.niveauUpDown1, 1, 1);
+            this.group1Layout.Controls.Add(this.levelLabel1, 0, 1);
+            this.group1Layout.Controls.Add(this.levelUpDown1, 1, 1);
             this.group1Layout.Controls.Add(this.gradientLabel1, 0, 2);
             this.group1Layout.Controls.Add(this.gradientUpDown1, 1, 2);
             this.group1Layout.Name = "group1Layout";
@@ -163,38 +163,22 @@
             // temperatureLabel1
             // 
             resources.ApplyResources(this.temperatureLabel1, "temperatureLabel1");
-            this.temperatureLabel1.MinimumSize = new System.Drawing.Size(69, 0);
             this.temperatureLabel1.Name = "temperatureLabel1";
             // 
             // temperatureUpDown1
             // 
             resources.ApplyResources(this.temperatureUpDown1, "temperatureUpDown1");
             this.temperatureUpDown1.Name = "temperatureUpDown1";
-            this.temperatureUpDown1.Value = new decimal(new int[] {
-            21,
-            0,
-            0,
-            0});
             // 
-            // niveauLabel1
+            // levelLabel1
             // 
-            resources.ApplyResources(this.niveauLabel1, "niveauLabel1");
-            this.niveauLabel1.Name = "niveauLabel1";
+            resources.ApplyResources(this.levelLabel1, "levelLabel1");
+            this.levelLabel1.Name = "levelLabel1";
             // 
-            // niveauUpDown1
+            // levelUpDown1
             // 
-            resources.ApplyResources(this.niveauUpDown1, "niveauUpDown1");
-            this.niveauUpDown1.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.niveauUpDown1.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            -2147483648});
-            this.niveauUpDown1.Name = "niveauUpDown1";
+            resources.ApplyResources(this.levelUpDown1, "levelUpDown1");
+            this.levelUpDown1.Name = "levelUpDown1";
             // 
             // gradientLabel1
             // 
@@ -219,8 +203,8 @@
             resources.ApplyResources(this.group2Layout, "group2Layout");
             this.group2Layout.Controls.Add(this.temperatureLabel2, 0, 0);
             this.group2Layout.Controls.Add(this.temperatureUpDown2, 1, 0);
-            this.group2Layout.Controls.Add(this.niveauLabel2, 0, 1);
-            this.group2Layout.Controls.Add(this.niveauUpDown2, 1, 1);
+            this.group2Layout.Controls.Add(this.levelLabel2, 0, 1);
+            this.group2Layout.Controls.Add(this.levelUpDown2, 1, 1);
             this.group2Layout.Controls.Add(this.gradientLabel2, 0, 2);
             this.group2Layout.Controls.Add(this.gradientUpDown2, 1, 2);
             this.group2Layout.Name = "group2Layout";
@@ -228,38 +212,22 @@
             // temperatureLabel2
             // 
             resources.ApplyResources(this.temperatureLabel2, "temperatureLabel2");
-            this.temperatureLabel2.MinimumSize = new System.Drawing.Size(69, 0);
             this.temperatureLabel2.Name = "temperatureLabel2";
             // 
             // temperatureUpDown2
             // 
             resources.ApplyResources(this.temperatureUpDown2, "temperatureUpDown2");
             this.temperatureUpDown2.Name = "temperatureUpDown2";
-            this.temperatureUpDown2.Value = new decimal(new int[] {
-            21,
-            0,
-            0,
-            0});
             // 
-            // niveauLabel2
+            // levelLabel2
             // 
-            resources.ApplyResources(this.niveauLabel2, "niveauLabel2");
-            this.niveauLabel2.Name = "niveauLabel2";
+            resources.ApplyResources(this.levelLabel2, "levelLabel2");
+            this.levelLabel2.Name = "levelLabel2";
             // 
-            // niveauUpDown2
+            // levelUpDown2
             // 
-            resources.ApplyResources(this.niveauUpDown2, "niveauUpDown2");
-            this.niveauUpDown2.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.niveauUpDown2.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            -2147483648});
-            this.niveauUpDown2.Name = "niveauUpDown2";
+            resources.ApplyResources(this.levelUpDown2, "levelUpDown2");
+            this.levelUpDown2.Name = "levelUpDown2";
             // 
             // gradientLabel2
             // 
@@ -284,8 +252,8 @@
             resources.ApplyResources(this.group3Layout, "group3Layout");
             this.group3Layout.Controls.Add(this.temperatureLabel3, 0, 0);
             this.group3Layout.Controls.Add(this.temperatureUpDown3, 1, 0);
-            this.group3Layout.Controls.Add(this.niveauLabel3, 0, 1);
-            this.group3Layout.Controls.Add(this.niveauUpDown3, 1, 1);
+            this.group3Layout.Controls.Add(this.levelLabel3, 0, 1);
+            this.group3Layout.Controls.Add(this.levelUpDown3, 1, 1);
             this.group3Layout.Controls.Add(this.gradientLabel3, 0, 2);
             this.group3Layout.Controls.Add(this.gradientUpDown3, 1, 2);
             this.group3Layout.Name = "group3Layout";
@@ -293,38 +261,22 @@
             // temperatureLabel3
             // 
             resources.ApplyResources(this.temperatureLabel3, "temperatureLabel3");
-            this.temperatureLabel3.MinimumSize = new System.Drawing.Size(69, 0);
             this.temperatureLabel3.Name = "temperatureLabel3";
             // 
             // temperatureUpDown3
             // 
             resources.ApplyResources(this.temperatureUpDown3, "temperatureUpDown3");
             this.temperatureUpDown3.Name = "temperatureUpDown3";
-            this.temperatureUpDown3.Value = new decimal(new int[] {
-            21,
-            0,
-            0,
-            0});
             // 
-            // niveauLabel3
+            // levelLabel3
             // 
-            resources.ApplyResources(this.niveauLabel3, "niveauLabel3");
-            this.niveauLabel3.Name = "niveauLabel3";
+            resources.ApplyResources(this.levelLabel3, "levelLabel3");
+            this.levelLabel3.Name = "levelLabel3";
             // 
-            // niveauUpDown3
+            // levelUpDown3
             // 
-            resources.ApplyResources(this.niveauUpDown3, "niveauUpDown3");
-            this.niveauUpDown3.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.niveauUpDown3.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            -2147483648});
-            this.niveauUpDown3.Name = "niveauUpDown3";
+            resources.ApplyResources(this.levelUpDown3, "levelUpDown3");
+            this.levelUpDown3.Name = "levelUpDown3";
             // 
             // gradientLabel3
             // 
@@ -362,35 +314,36 @@
             // 
             // menuStrip
             // 
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.printHeadItem,
             this.configurationHeadItem});
-            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.TabStop = true;
             // 
             // printHeadItem
             // 
+            resources.ApplyResources(this.printHeadItem, "printHeadItem");
             this.printHeadItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.printPreviewItem,
             this.printItem});
             this.printHeadItem.Name = "printHeadItem";
-            resources.ApplyResources(this.printHeadItem, "printHeadItem");
             // 
             // printPreviewItem
             // 
-            this.printPreviewItem.Name = "printPreviewItem";
             resources.ApplyResources(this.printPreviewItem, "printPreviewItem");
+            this.printPreviewItem.Name = "printPreviewItem";
             this.printPreviewItem.Click += new System.EventHandler(this.printPreviewItem_Click);
             // 
             // printItem
             // 
-            this.printItem.Name = "printItem";
             resources.ApplyResources(this.printItem, "printItem");
+            this.printItem.Name = "printItem";
             this.printItem.Click += new System.EventHandler(this.printItem_Click);
             // 
             // configurationHeadItem
             // 
+            resources.ApplyResources(this.configurationHeadItem, "configurationHeadItem");
             this.configurationHeadItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.curve1FloorItem,
             this.curve1RoundItem,
@@ -400,47 +353,46 @@
             this.curve2RoundItem,
             this.curve2NotRoundItem});
             this.configurationHeadItem.Name = "configurationHeadItem";
-            resources.ApplyResources(this.configurationHeadItem, "configurationHeadItem");
             // 
             // curve1FloorItem
             // 
-            this.curve1FloorItem.Name = "curve1FloorItem";
             resources.ApplyResources(this.curve1FloorItem, "curve1FloorItem");
-            this.curve1FloorItem.Click += new System.EventHandler(this.curve1RoundItem_Click);
+            this.curve1FloorItem.Name = "curve1FloorItem";
+            this.curve1FloorItem.Click += new System.EventHandler(this.curve1FloorItem_Click);
             // 
             // curve1RoundItem
             // 
-            this.curve1RoundItem.Name = "curve1RoundItem";
             resources.ApplyResources(this.curve1RoundItem, "curve1RoundItem");
-            this.curve1RoundItem.Click += new System.EventHandler(this.curve1FloorItem_Click);
+            this.curve1RoundItem.Name = "curve1RoundItem";
+            this.curve1RoundItem.Click += new System.EventHandler(this.curve1RoundItem_Click);
             // 
             // curve1NotRoundItem
             // 
-            this.curve1NotRoundItem.Name = "curve1NotRoundItem";
             resources.ApplyResources(this.curve1NotRoundItem, "curve1NotRoundItem");
+            this.curve1NotRoundItem.Name = "curve1NotRoundItem";
             this.curve1NotRoundItem.Click += new System.EventHandler(this.curve1NotRoundItem_Click);
             // 
             // seperator1
             // 
-            this.seperator1.Name = "seperator1";
             resources.ApplyResources(this.seperator1, "seperator1");
+            this.seperator1.Name = "seperator1";
             // 
             // curve2FloorItem
             // 
-            this.curve2FloorItem.Name = "curve2FloorItem";
             resources.ApplyResources(this.curve2FloorItem, "curve2FloorItem");
-            this.curve2FloorItem.Click += new System.EventHandler(this.curve2RoundItem_Click);
+            this.curve2FloorItem.Name = "curve2FloorItem";
+            this.curve2FloorItem.Click += new System.EventHandler(this.curve2FloorItem_Click);
             // 
             // curve2RoundItem
             // 
-            this.curve2RoundItem.Name = "curve2RoundItem";
             resources.ApplyResources(this.curve2RoundItem, "curve2RoundItem");
-            this.curve2RoundItem.Click += new System.EventHandler(this.curve2FloorItem_Click);
+            this.curve2RoundItem.Name = "curve2RoundItem";
+            this.curve2RoundItem.Click += new System.EventHandler(this.curve2RoundItem_Click);
             // 
             // curve2NotRoundItem
             // 
-            this.curve2NotRoundItem.Name = "curve2NotRoundItem";
             resources.ApplyResources(this.curve2NotRoundItem, "curve2NotRoundItem");
+            this.curve2NotRoundItem.Name = "curve2NotRoundItem";
             this.curve2NotRoundItem.Click += new System.EventHandler(this.curve2NotRoundItem_Click);
             // 
             // dialogLayout
@@ -452,8 +404,8 @@
             // 
             // HeatCurve
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.dialogLayout);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
@@ -462,21 +414,21 @@
             this.group1Layout.ResumeLayout(false);
             this.group1Layout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown1)).EndInit();
             this.groupCurve1.ResumeLayout(false);
             this.groupCurve1.PerformLayout();
             this.group2Layout.ResumeLayout(false);
             this.group2Layout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown2)).EndInit();
             this.groupCurve2.ResumeLayout(false);
             this.groupCurve2.PerformLayout();
             this.group3Layout.ResumeLayout(false);
             this.group3Layout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperatureUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.niveauUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradientUpDown3)).EndInit();
             this.groupCurve3.ResumeLayout(false);
             this.groupCurve3.PerformLayout();
@@ -500,24 +452,24 @@
         private System.Windows.Forms.TableLayoutPanel group1Layout;
         private System.Windows.Forms.Label temperatureLabel1;
         private System.Windows.Forms.NumericUpDown temperatureUpDown1;
-        private System.Windows.Forms.Label niveauLabel1;
-        private System.Windows.Forms.NumericUpDown niveauUpDown1;
+        private System.Windows.Forms.Label levelLabel1;
+        private System.Windows.Forms.NumericUpDown levelUpDown1;
         private System.Windows.Forms.Label gradientLabel1;
         private System.Windows.Forms.NumericUpDown gradientUpDown1;
         private System.Windows.Forms.GroupBox groupCurve2;
         private System.Windows.Forms.TableLayoutPanel group2Layout;
         private System.Windows.Forms.Label temperatureLabel2;
         private System.Windows.Forms.NumericUpDown temperatureUpDown2;
-        private System.Windows.Forms.Label niveauLabel2;
-        private System.Windows.Forms.NumericUpDown niveauUpDown2;
+        private System.Windows.Forms.Label levelLabel2;
+        private System.Windows.Forms.NumericUpDown levelUpDown2;
         private System.Windows.Forms.Label gradientLabel2;
         private System.Windows.Forms.NumericUpDown gradientUpDown2;
         private System.Windows.Forms.GroupBox groupCurve3;
         private System.Windows.Forms.TableLayoutPanel group3Layout;
         private System.Windows.Forms.Label temperatureLabel3;
         private System.Windows.Forms.NumericUpDown temperatureUpDown3;
-        private System.Windows.Forms.Label niveauLabel3;
-        private System.Windows.Forms.NumericUpDown niveauUpDown3;
+        private System.Windows.Forms.Label levelLabel3;
+        private System.Windows.Forms.NumericUpDown levelUpDown3;
         private System.Windows.Forms.Label gradientLabel3;
         private System.Windows.Forms.NumericUpDown gradientUpDown3;
         private System.Windows.Forms.Button closeButton;

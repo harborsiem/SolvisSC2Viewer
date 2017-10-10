@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 using System.Reflection;
 
 namespace SolvisSC2Viewer {
-    public partial class PropertiesForm : BaseForm {
+    public partial class PropertiesForm : Form {
         private Control propertyGridView;
         private MethodInfo MoveSplitterTo;
         private PropertyInfo InternalLabelWidth;
@@ -20,6 +20,9 @@ namespace SolvisSC2Viewer {
         private FileInfo fileInfo;
 
         public PropertiesForm() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             GetPropertyGridViewInfos();
 

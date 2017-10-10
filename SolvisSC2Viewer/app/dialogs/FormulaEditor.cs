@@ -8,8 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace SolvisSC2Viewer {
-    public partial class FormulaEditor : BaseForm {
+    public partial class FormulaEditor : Form {
         public FormulaEditor() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             this.hintLabel.Visible = false;
         }

@@ -119,13 +119,13 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="heatCapacityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 13</value>
+    <value>144, 13</value>
   </data>
   <data name="heatCapacityLabel.Text" xml:space="preserve">
     <value>spez. Wärmekapazität [20°C]</value>
   </data>
   <data name="editLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 13</value>
+    <value>68, 13</value>
   </data>
   <data name="editLabel.Text" xml:space="preserve">
     <value>Formel Editor</value>

@@ -13,7 +13,7 @@ namespace SolvisSC2Viewer {
 
     [AttributeUsage(AttributeTargets.All)]
     public sealed class HeatingUserAttribute : Attribute {
-        public static HeatingUserAttribute Default = new HeatingUserAttribute();
+        private static readonly HeatingUserAttribute Default = new HeatingUserAttribute();
         private HeatingUser heatingUser;
 
         public HeatingUserAttribute()

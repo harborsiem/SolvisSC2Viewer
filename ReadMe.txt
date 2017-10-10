@@ -2,13 +2,12 @@ erforderliche Installationen:
 Visual Studio 2013 Express C# (oder höhere Version des Visual Studio)
 
 Optionale Installationen:
-WiX Toolset, Version 3.5
+WiX Toolset, Version 3.11
 WixEdit, Version 0.7.5
 Libre Office (Writer) zum Editieren von HTML-Files
 HTML Help Workshop, Version 4.74.8702
 TortoiseSVN Version 1.8.x oder 1.9.x zur Versionsverwaltung
 7-Zip als Zipper
-
 
 
 

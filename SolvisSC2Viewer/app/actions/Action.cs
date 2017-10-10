@@ -31,7 +31,7 @@ namespace SolvisSC2Viewer {
 
         private void Process(ActionData data) {
             lock (m_lock) {
-                if (!ActionLock.IsLocked && !AppManager.MainForm.IsLocked) {
+                if (!ActionLock.IsLocked && !MainForm.IsLocked) {
                     int flags = Flags;
 
                     if ((flags & AutoLock) != 0) {

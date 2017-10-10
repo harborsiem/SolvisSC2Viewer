@@ -9,11 +9,14 @@ using System.Windows.Forms;
 using System.Globalization;
 
 namespace SolvisSC2Viewer {
-    public partial class EarthPosition : BaseForm {
+    public partial class EarthPosition : Form {
         public EarthPosition() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
-            longitudeTextBox.Text = RowValues.Longitude.ToString();
-            latitudeTextBox.Text = RowValues.Latitude.ToString();
+            longitudeTextBox.Text = RowValues.Longitude.ToString(CultureInfo.CurrentCulture);
+            latitudeTextBox.Text = RowValues.Latitude.ToString(CultureInfo.CurrentCulture);
         }
 
         private void buttonOK_Click(object sender, EventArgs e) {
@@ -29,8 +32,8 @@ namespace SolvisSC2Viewer {
                 RowValues.Latitude = latitude;
                 Close();
             } else {
-                longitudeTextBox.Text = RowValues.Longitude.ToString();
-                latitudeTextBox.Text = RowValues.Latitude.ToString();
+                longitudeTextBox.Text = RowValues.Longitude.ToString(CultureInfo.CurrentCulture);
+                latitudeTextBox.Text = RowValues.Latitude.ToString(CultureInfo.CurrentCulture);
             }
         }
     }

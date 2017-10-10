@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded, Good, Noise" NewOnly="False" />
+   <Report Status="Active, Good, Noise" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="de-DE" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/SolvisSC2Viewer/bin/Debug/SolvisSC2Viewer.exe" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Targets>
+   <Target Name="$(ProjectDir)/SolvisSC2Viewer/bin/Debug/SolvisSC2Viewer.exe">
+    <Modules>
+     <Module Name="solvissc2viewer.exe">
+      <Namespaces>
+       <Namespace Name="SolvisSC2Viewer">
+        <Types>
+         <Type Name="AboutAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'AboutAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CalculatorProxy">
+          <Members>
+           <Member Name="#Formula1(SolvisSC2Viewer.RowValues,SolvisSC2Viewer.SeriesState)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'CalculatorProxy.Formula1(RowValues, SeriesState)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Formula2(SolvisSC2Viewer.RowValues,SolvisSC2Viewer.SeriesState)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'CalculatorProxy.Formula2(RowValues, SeriesState)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Formula3(SolvisSC2Viewer.RowValues,SolvisSC2Viewer.SeriesState)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'CalculatorProxy.Formula3(RowValues, SeriesState)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Formula4(SolvisSC2Viewer.RowValues,SolvisSC2Viewer.SeriesState)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'CalculatorProxy.Formula4(RowValues, SeriesState)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Formula5(SolvisSC2Viewer.RowValues,SolvisSC2Viewer.SeriesState)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'CalculatorProxy.Formula5(RowValues, SeriesState)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FormulaSolarKW(SolvisSC2Viewer.RowValues)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'CalculatorProxy.FormulaSolarKW(RowValues)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FormulaSolarVSG(SolvisSC2Viewer.RowValues)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'CalculatorProxy.FormulaSolarVSG(RowValues)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CodeBuilder">
+          <Members>
+           <Member Name="#RunCode(System.CodeDom.Compiler.CompilerResults)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'CodeBuilder.RunCode(CompilerResults)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ConfigEditorAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'ConfigEditorAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ConfigReader">
+          <Members>
+           <Member Name="#Parse(System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'ConfigReader.Parse(string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CounterListAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 15:55:16Z">
+              <Issue>
+               <Item>'CounterListAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DisposeAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'DisposeAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DocAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'DocAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ExitAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'ExitAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ExternCode">
+          <Members>
+           <Member Name="#MakeProxy()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'ExternCode.MakeProxy()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="HeatCurveAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'HeatCurveAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ParameterListAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'ParameterListAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PrintAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'PrintAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PrintPreviewAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'PrintPreviewAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SensorsCheckAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'SensorsCheckAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TimeTableAction">
+          <Members>
+           <Member Name="#Execute(SolvisSC2Viewer.ActionData)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2014-12-06 10:22:22Z">
+              <Issue>
+               <Item>'TimeTableAction.Execute(ActionData)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

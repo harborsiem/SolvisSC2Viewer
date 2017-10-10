@@ -8,8 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace SolvisSC2Viewer {
-    public partial class BurnerPower : BaseForm {
+    public partial class BurnerPower : Form {
         public BurnerPower() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             minUpDown.Value = (decimal)RowValues.BurnerMinPower;
             maxUpDown.Value = (decimal)RowValues.BurnerMaxPower;

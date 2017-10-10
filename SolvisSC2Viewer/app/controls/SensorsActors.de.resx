@@ -126,4 +126,184 @@
   <data name="optionsGroup.Text" xml:space="preserve">
     <value>Optionen</value>
   </data>
+  <data name="a10Check.Text" xml:space="preserve">
+    <value>HK2 Mischer auf</value>
+  </data>
+  <data name="a11Check.Text" xml:space="preserve">
+    <value>HK2 Mischer zu</value>
+  </data>
+  <data name="a12Check.Text" xml:space="preserve">
+    <value>Brenner Anf</value>
+  </data>
+  <data name="a13Check.Text" xml:space="preserve">
+    <value>Brenner Stufe2</value>
+  </data>
+  <data name="a14Check.Text" xml:space="preserve">
+    <value>A14</value>
+  </data>
+  <data name="a15Check.Text" xml:space="preserve">
+    <value>A15</value>
+  </data>
+  <data name="a16Check.Text" xml:space="preserve">
+    <value>A16</value>
+  </data>
+  <data name="a17Check.Text" xml:space="preserve">
+    <value>A17</value>
+  </data>
+  <data name="a18Check.Text" xml:space="preserve">
+    <value>A18</value>
+  </data>
+  <data name="a19Check.Text" xml:space="preserve">
+    <value>A19</value>
+  </data>
+  <data name="a1Check.Text" xml:space="preserve">
+    <value>Solar Pumpe</value>
+  </data>
+  <data name="a20Check.Text" xml:space="preserve">
+    <value>A20</value>
+  </data>
+  <data name="a2Check.Text" xml:space="preserve">
+    <value>Pumpe WW</value>
+  </data>
+  <data name="a3Check.Text" xml:space="preserve">
+    <value>Pumpe HK1</value>
+  </data>
+  <data name="a4Check.Text" xml:space="preserve">
+    <value>Pumpe HK2</value>
+  </data>
+  <data name="a5Check.Text" xml:space="preserve">
+    <value>Pumpe Zirk</value>
+  </data>
+  <data name="a6Check.Text" xml:space="preserve">
+    <value>Pumpe HK3</value>
+  </data>
+  <data name="a7Check.Text" xml:space="preserve">
+    <value>A07</value>
+  </data>
+  <data name="a8Check.Text" xml:space="preserve">
+    <value>HC1 Mischer auf</value>
+  </data>
+  <data name="a9Check.Text" xml:space="preserve">
+    <value>HK1 Mischer zu</value>
+  </data>
+  <data name="p01Check.Text" xml:space="preserve">
+    <value>Brenner kW</value>
+  </data>
+  <data name="p02Check.Text" xml:space="preserve">
+    <value>Solar kW</value>
+  </data>
+  <data name="p03Check.Text" xml:space="preserve">
+    <value>Sonnenstand</value>
+  </data>
+  <data name="p04Check.Text" xml:space="preserve">
+    <value>VL (Ist - Soll)_1</value>
+  </data>
+  <data name="p05Check.Text" xml:space="preserve">
+    <value>VL (Ist - Soll)_2</value>
+  </data>
+  <data name="p06Check.Text" xml:space="preserve">
+    <value>Formel 1</value>
+  </data>
+  <data name="p07Check.Text" xml:space="preserve">
+    <value>Formel 2</value>
+  </data>
+  <data name="p08Check.Text" xml:space="preserve">
+    <value>Formel 3</value>
+  </data>
+  <data name="p09Check.Text" xml:space="preserve">
+    <value>Formel 4</value>
+  </data>
+  <data name="p10Check.Text" xml:space="preserve">
+    <value>Formel 5</value>
+  </data>
+  <data name="s10Check.Text" xml:space="preserve">
+    <value>Außen Temp</value>
+  </data>
+  <data name="s11Check.Text" xml:space="preserve">
+    <value>Zirk. Temp</value>
+  </data>
+  <data name="s12Check.Text" xml:space="preserve">
+    <value>VL HK1</value>
+  </data>
+  <data name="s13Check.Text" xml:space="preserve">
+    <value>VL HK2</value>
+  </data>
+  <data name="s14Check.Text" xml:space="preserve">
+    <value>VL HK3</value>
+  </data>
+  <data name="s15Check.Text" xml:space="preserve">
+    <value>Solar VL1</value>
+  </data>
+  <data name="s16Check.Text" xml:space="preserve">
+    <value>Kollektor 2</value>
+  </data>
+  <data name="s17Check.Text" xml:space="preserve">
+    <value>VSG Solar</value>
+  </data>
+  <data name="s18Check.Text" xml:space="preserve">
+    <value>VSG Warmwasser</value>
+  </data>
+  <data name="s19Check.Text" xml:space="preserve">
+    <value>Raumfühler1</value>
+  </data>
+  <data name="s1Check.Text" xml:space="preserve">
+    <value>Speicher oben</value>
+  </data>
+  <data name="s20Check.Text" xml:space="preserve">
+    <value>Raumfühler2</value>
+  </data>
+  <data name="s21Check.Text" xml:space="preserve">
+    <value>Raumfühler3</value>
+  </data>
+  <data name="s22Check.Text" xml:space="preserve">
+    <value>S22</value>
+  </data>
+  <data name="s23Check.Text" xml:space="preserve">
+    <value>S23</value>
+  </data>
+  <data name="s24Check.Text" xml:space="preserve">
+    <value>S24</value>
+  </data>
+  <data name="s25Check.Text" xml:space="preserve">
+    <value>Vorlauf Anf. HK1</value>
+  </data>
+  <data name="s26Check.Text" xml:space="preserve">
+    <value>Vorlauf Anf. HK2</value>
+  </data>
+  <data name="s27Check.Text" xml:space="preserve">
+    <value>Vorlauf Anf. HK3</value>
+  </data>
+  <data name="s28Check.Text" xml:space="preserve">
+    <value>ZSol1</value>
+  </data>
+  <data name="s29Check.Text" xml:space="preserve">
+    <value>ZSol2</value>
+  </data>
+  <data name="s2Check.Text" xml:space="preserve">
+    <value>Warmwasser</value>
+  </data>
+  <data name="s30Check.Text" xml:space="preserve">
+    <value>S30</value>
+  </data>
+  <data name="s3Check.Text" xml:space="preserve">
+    <value>Speicher Ref</value>
+  </data>
+  <data name="s4Check.Text" xml:space="preserve">
+    <value>H.Puffer oben</value>
+  </data>
+  <data name="s5Check.Text" xml:space="preserve">
+    <value>Solar VL2</value>
+  </data>
+  <data name="s6Check.Text" xml:space="preserve">
+    <value>Solar RL2</value>
+  </data>
+  <data name="s7Check.Text" xml:space="preserve">
+    <value>Solar Druck</value>
+  </data>
+  <data name="s8Check.Text" xml:space="preserve">
+    <value>Kollektor Temp</value>
+  </data>
+  <data name="s9Check.Text" xml:space="preserve">
+    <value>H.Puffer unten</value>
+  </data>
 </root>

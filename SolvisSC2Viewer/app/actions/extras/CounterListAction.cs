@@ -6,10 +6,10 @@ using System.Windows.Forms;
 using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
-    internal class CountingListAction : Action {
-        public const string Name = "action.extras.countinglist";
+    internal class CounterListAction : Action {
+        public const string Name = "action.extras.counterlist";
 
-        public CountingListAction()
+        public CounterListAction()
             : base(Name, AutoLock | AutoUnlock | AutoUpdate) {
         }
 
@@ -17,14 +17,14 @@ namespace SolvisSC2Viewer {
             try {
                 ConfigManager manager = AppManager.ConfigManager;
                 FileToInt32List zaehlstand = new FileToInt32List(manager.SdCardDir, "zaehlst.txt");
-                CountingSettings countingSettings = null;
+                CounterSettings counterSettings = null;
                 if (!zaehlstand.Empty) {
                     AppManager.MainForm.Cursor = Cursors.WaitCursor;
-                    countingSettings = new CountingSettings(zaehlstand.ParamList);
+                    counterSettings = new CounterSettings(zaehlstand.ParamList);
                     PropertiesForm dialog = new PropertiesForm();
-                    dialog.Description = Resources.CountingListActionCountings; //@Language Resource
+                    dialog.Description = Resources.CounterListActionCounter; //@Language Resource
                     dialog.FileInfo = zaehlstand.FileInfo;
-                    BasicPropertyBag bag = new BasicPropertyBag(new object[] { countingSettings });
+                    BasicPropertyBag bag = new BasicPropertyBag(new object[] { counterSettings });
                     dialog.SelectedObject = bag;
                     dialog.PrintProperties = PrintProperty.GetPrintProperties(bag);
                     dialog.ShowDialog(AppManager.MainForm);

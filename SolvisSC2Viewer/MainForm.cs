@@ -9,15 +9,18 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SolvisSC2Viewer {
-    public partial class MainForm : BaseForm {
+    public partial class MainForm : Form {
 
         public MainForm() {
+            if (!DesignMode) {
+                this.Font = SystemFonts.MessageBoxFont;
+            }
             InitializeComponent();
             this.Text = AppManager.ApplicationText;
             AppManager.Init(this);
         }
 
-        public bool IsLocked {
+        public static bool IsLocked {
             get { return false; }
         }
 

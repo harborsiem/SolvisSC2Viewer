@@ -25,7 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
+    <ApplicationVersion>2.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -38,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -77,11 +78,11 @@
     <Compile Include="app\actions\ActionLock.cs" />
     <Compile Include="app\actions\ActionManager.cs" />
     <Compile Include="app\actions\extras\ConfigEditorAction.cs" />
-    <Compile Include="app\actions\extras\CountingListAction.cs" />
+    <Compile Include="app\actions\extras\CounterListAction.cs" />
     <Compile Include="app\actions\extras\HeatCurveAction.cs" />
     <Compile Include="app\actions\extras\ParameterListAction.cs" />
     <Compile Include="app\actions\extras\SensorsCheckAction.cs" />
-    <Compile Include="app\actions\extras\TimePlanAction.cs" />
+    <Compile Include="app\actions\extras\TimeTableAction.cs" />
     <Compile Include="app\actions\file\ExitAction.cs" />
     <Compile Include="app\actions\file\Open1DayModeAction.cs" />
     <Compile Include="app\actions\file\OpenFileAction.cs" />
@@ -160,12 +161,13 @@
     <Compile Include="app\dialogs\TimeOverview.designer.cs">
       <DependentUpon>TimeOverview.cs</DependentUpon>
     </Compile>
-    <Compile Include="app\dialogs\VLParameters.cs">
+    <Compile Include="app\dialogs\FlowParameters.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app\dialogs\VLParameters.Designer.cs">
-      <DependentUpon>VLParameters.cs</DependentUpon>
+    <Compile Include="app\dialogs\FlowParameters.Designer.cs">
+      <DependentUpon>FlowParameters.cs</DependentUpon>
     </Compile>
+    <Compile Include="app\FxCopSuppressor.cs" />
     <Compile Include="app\help\AboutContentReader.cs" />
     <Compile Include="app\help\AboutDialog.cs">
       <SubType>Form</SubType>
@@ -206,9 +208,7 @@
     <Compile Include="app\items\tool\MainToolItems.designer.cs">
       <DependentUpon>MainToolItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="app\items\tool\ToolStripDateTimePicker.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="app\items\tool\ToolStripDateTimePicker.cs" />
     <Compile Include="app\printer\PrintManager.cs" />
     <Compile Include="app\printer\PrintProperty.cs" />
     <Compile Include="app\system\config\ConfigData.cs" />
@@ -221,7 +221,7 @@
     <Compile Include="app\system\icons\IconManager.cs" />
     <Compile Include="app\system\SolvisFileManager.cs" />
     <Compile Include="app\system\solvis\CirculationSettings.cs" />
-    <Compile Include="app\system\solvis\CountingSettings.cs" />
+    <Compile Include="app\system\solvis\CounterSettings.cs" />
     <Compile Include="app\system\solvis\Enums.cs" />
     <Compile Include="app\system\solvis\FileToInt32List.cs" />
     <Compile Include="app\system\solvis\HeatCircuitSettings.cs" />
@@ -240,6 +240,7 @@
     <Compile Include="app\util\DateEventArgs.cs" />
     <Compile Include="app\util\ExternCode.cs" />
     <Compile Include="app\util\FreeFormulas.cs" />
+    <Compile Include="app\util\HeatCurveHelper.cs" />
     <Compile Include="app\util\MeanTemperature.cs" />
     <Compile Include="app\util\MetaProp.cs" />
     <Compile Include="app\util\SeriesState.cs" />
@@ -312,11 +313,11 @@
     <EmbeddedResource Include="app\dialogs\TimeOverview.resx">
       <DependentUpon>TimeOverview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app\dialogs\VLParameters.de.resx">
-      <DependentUpon>VLParameters.cs</DependentUpon>
+    <EmbeddedResource Include="app\dialogs\FlowParameters.de.resx">
+      <DependentUpon>FlowParameters.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app\dialogs\VLParameters.resx">
-      <DependentUpon>VLParameters.cs</DependentUpon>
+    <EmbeddedResource Include="app\dialogs\FlowParameters.resx">
+      <DependentUpon>FlowParameters.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app\help\AboutDialog.de.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>

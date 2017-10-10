@@ -34,49 +34,49 @@ namespace SolvisSC2Viewer {
             WaterPriority = (WaterMode)list[index++];
             ModeHeatingCircuit = (HeatingCircuitMode)list[index++];
             ModeFlowTemperature = (FlowTemperatureMode)list[index++];
-            FixFlowDay = list[index++].ToString() + Unit.DegreeCelsius;
-            FixFlowLowering = list[index++].ToString() + Unit.DegreeCelsius;
-            Temperature1 = list[index++].ToString() + Unit.DegreeCelsius;
-            Temperature2 = list[index++].ToString() + Unit.DegreeCelsius;
-            Temperature3 = list[index++].ToString() + Unit.DegreeCelsius;
-            LoweringTemperature = list[index++].ToString() + Unit.DegreeCelsius;
+            FixFlowDay = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            FixFlowLowering = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            Temperature1 = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            Temperature2 = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            Temperature3 = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            LoweringTemperature = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
             Gradient = list[index++] / 100.0;
-            RoomInfluence = list[index++].ToString() + Unit.Percent; // ? Raumeinfluss
-            RaisingSetpoint = list[index++].ToString() + Unit.Percent; // ? Einschaltüberhöhung
-            HoldTime = list[index++].ToString() + Unit.Minute;
-            FlowTemperatureMax = list[index++].ToString() + Unit.DegreeCelsius;
-            FlowTemperatureMin = list[index++].ToString() + Unit.DegreeCelsius;
-            Offset = list[index++].ToString() + Unit.Kelvin;
-            Niveau = list[index++].ToString() + Unit.Kelvin;
-            S10MeanTime = list[index++].ToString() + Unit.Minute;
+            RoomInfluence = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Percent; // ? Raumeinfluss
+            RaisingSetpoint = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Percent; // ? Einschaltüberhöhung
+            HoldTime = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Minute;
+            FlowTemperatureMax = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            FlowTemperatureMin = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            Offset = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            Level = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            S10MeanTime = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Minute;
             RoomShutDown = (OnOffSwitch)list[index++];
-            RoomHysterese = list[index++].ToString() + Unit.Kelvin;
+            RoomHysterese = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
             OutsideDayShutDown = (OnOffSwitch)list[index++];
-            OutsideDayTemperature = list[index++].ToString() + Unit.DegreeCelsius;
-            OutsideDayHysterese = list[index++].ToString() + Unit.Kelvin;
+            OutsideDayTemperature = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            OutsideDayHysterese = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
             OutsideLoweringShutDown = (OnOffSwitch)list[index++];
-            OutsideLoweringTemperature = list[index++].ToString() + Unit.DegreeCelsius;
-            OutsideLoweringHysterese = list[index++].ToString() + Unit.Kelvin;
+            OutsideLoweringTemperature = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            OutsideLoweringHysterese = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
 
             index += 2; //@Todo: index = 211, 212
             //? HeatPumpMode, BurnerMode ?
 
-            FreezeTemperature = "<" + list[index++].ToString() + Unit.DegreeCelsius;
-            FreezeRoomTemperature = "<" + list[index++].ToString() + Unit.DegreeCelsius;
-            MixerTime = list[index++].ToString() + Unit.Second;
-            MixerInterval = list[index++].ToString() + Unit.Second;
-            MixerFactor = (list[index++] / 10.0).ToString("f1") + Unit.SecondsPerKelvin;
-            DayModeTemperature = list[index++].ToString() + Unit.DegreeCelsius;
-            DayModeHours = list[index++].ToString() + Unit.Hours;
-            LoweringModeTemperature = list[index++].ToString() + Unit.DegreeCelsius;
-            LoweringModeHours = list[index++].ToString() + Unit.Hours;
-            LeaveHomeTemperature = list[index++].ToString() + Unit.DegreeCelsius;
-            LeaveHomeDuration = list[index++].ToString() + Unit.Days;
+            FreezeTemperature = "<" + list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            FreezeRoomTemperature = "<" + list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            MixerTime = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Second;
+            MixerInterval = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Second;
+            MixerFactor = (list[index++] / 10.0).ToString("f1", CultureInfo.CurrentCulture) + Unit.SecondsPerKelvin;
+            DayModeTemperature = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            DayModeHours = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Hours;
+            LoweringModeTemperature = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            LoweringModeHours = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Hours;
+            LeaveHomeTemperature = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            LeaveHomeDuration = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.Days;
             string tmpTime = new DateTime((long)list[index++] * 15 * 60 * 10000000).ToString("HH:mm", CultureInfo.InvariantCulture);
             LeaveHomeTimeFrom = tmpTime;
             tmpTime = new DateTime((long)list[index++] * 15 * 60 * 10000000).ToString("HH:mm", CultureInfo.InvariantCulture);
             LeaveHomeTimeTo = tmpTime;
-            LeaveAwayTemperature = list[index++].ToString() + Unit.DegreeCelsius;
+            LeaveAwayTemperature = list[index++].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
             int day = list[index++];
             int month = list[index++];
             int year = list[index++];
@@ -96,7 +96,7 @@ namespace SolvisSC2Viewer {
         [Category(CategoryHC)]
         [HeatingUser(HeatingUser.FachNutzer)]
         [ReadOnly(true)]
-        public string Niveau { get; set; }
+        public string Level { get; set; }
 
         [DisplayName("Warmwasser-Vorrang")]
         [Description(HeatingSettings.Installateur)]

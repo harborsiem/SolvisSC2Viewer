@@ -11,47 +11,47 @@ namespace SolvisSC2Viewer {
 
         public SolarSettings(IList<int> list) {
             Title = HeatingSettings.Titlevalue;
-            Temp1 = list[3].ToString() + Unit.DegreeCelsius;
-            Temp2 = list[4].ToString() + Unit.Kelvin;
-            Temp3 = list[5].ToString() + Unit.DegreeCelsius;
-            Temp4 = list[6].ToString() + Unit.Kelvin;
-            Temp5 = list[7].ToString() + Unit.DegreeCelsius;
-            Temp6 = list[8].ToString() + Unit.Kelvin;
-            Temp9 = list[9].ToString() + Unit.Kelvin;
-            Temp10 = list[10].ToString() + Unit.Kelvin;
-            //Temp7 = list[?].ToString() + Unit.Kelvin;
-            //Temp8 = list[?].ToString() + Unit.Kelvin;
-            //Temp11 = list[?].ToString() + Unit.Kelvin;
-            //Temp12 = list[?].ToString() + Unit.Kelvin;
+            Temp1 = list[3].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            Temp2 = list[4].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            Temp3 = list[5].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            Temp4 = list[6].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            Temp5 = list[7].ToString(CultureInfo.CurrentCulture) + Unit.DegreeCelsius;
+            Temp6 = list[8].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            Temp9 = list[9].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            Temp10 = list[10].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            //Temp7 = list[?].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            //Temp8 = list[?].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            //Temp11 = list[?].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            //Temp12 = list[?].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
 
 
-            DrehPriReg1 = list[15].ToString() + Unit.Percent;
-            DrehPriReg2 = list[16].ToString() + Unit.Percent;
-            DrehPriReg4 = list[17].ToString() + Unit.Kelvin;
-            DrehPriReg5 = list[20].ToString() + Unit.Second;
-            DrehPriReg6 = list[21].ToString() + Unit.Second;
+            DrehPriReg1 = list[15].ToString(CultureInfo.CurrentCulture) + Unit.Percent;
+            DrehPriReg2 = list[16].ToString(CultureInfo.CurrentCulture) + Unit.Percent;
+            DrehPriReg4 = list[17].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            DrehPriReg5 = list[20].ToString(CultureInfo.CurrentCulture) + Unit.Second;
+            DrehPriReg6 = list[21].ToString(CultureInfo.CurrentCulture) + Unit.Second;
             DrehPriReg3 = (SolarMode)list[14]; //?
-            //DrehPriReg7 = list[?].ToString() + Unit.Kelvin;
-            //DrehPriReg8 = list[?].ToString() + Unit.Kelvin;
+            //DrehPriReg7 = list[?].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            //DrehPriReg8 = list[?].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
 
-            DrehSekReg1 = list[28].ToString() + Unit.Percent;
-            DrehSekReg2 = list[29].ToString() + Unit.Percent;
-            DrehSekReg4 = list[30].ToString() + Unit.Kelvin;
-            DrehSekReg5 = list[33].ToString() + Unit.Second;
-            DrehSekReg6 = list[34].ToString() + Unit.Second;
+            DrehSekReg1 = list[28].ToString(CultureInfo.CurrentCulture) + Unit.Percent;
+            DrehSekReg2 = list[29].ToString(CultureInfo.CurrentCulture) + Unit.Percent;
+            DrehSekReg4 = list[30].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            DrehSekReg5 = list[33].ToString(CultureInfo.CurrentCulture) + Unit.Second;
+            DrehSekReg6 = list[34].ToString(CultureInfo.CurrentCulture) + Unit.Second;
             DrehSekReg3 = (SolarMode)list[27]; //?
-            //DrehSekReg7 = list[?].ToString() + Unit.Kelvin;
-            //DrehSekReg8 = list[?].ToString() + Unit.Kelvin;
+            //DrehSekReg7 = list[?].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
+            //DrehSekReg8 = list[?].ToString(CultureInfo.CurrentCulture) + Unit.Kelvin;
             string tmpTime;
             tmpTime = new DateTime((long)list[35] * 60 * 10000000).ToString("HH:mm", CultureInfo.InvariantCulture);
             KollStart1 = tmpTime;
             tmpTime = new DateTime((long)list[36] * 60 * 10000000).ToString("HH:mm", CultureInfo.InvariantCulture);
             KollStart2 = tmpTime;
-            KollStart3 = list[37].ToString() + Unit.Second;
-            KollStart4 = list[38].ToString() + Unit.Minute;
+            KollStart3 = list[37].ToString(CultureInfo.CurrentCulture) + Unit.Second;
+            KollStart4 = list[38].ToString(CultureInfo.CurrentCulture) + Unit.Minute;
 
-            AntifreezePercentage = list[42].ToString() + Unit.Percent;
-            SolarPulse = list[43].ToString() + Unit.PulsePerLitre;
+            AntifreezePercentage = list[42].ToString(CultureInfo.CurrentCulture) + Unit.Percent;
+            SolarPulse = list[43].ToString(CultureInfo.CurrentCulture) + Unit.PulsePerLitre;
         }
 
         [DisplayName("Solar Parameter")]

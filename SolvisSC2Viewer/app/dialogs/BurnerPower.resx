@@ -138,6 +138,9 @@
   <data name="minPowerLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 6</value>
   </data>
+  <data name="minPowerLabel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>100, 0</value>
+  </data>
   <data name="minPowerLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 13</value>
   </data>
@@ -194,6 +197,9 @@
   </data>
   <data name="maxPowerLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 32</value>
+  </data>
+  <data name="maxPowerLabel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>100, 0</value>
   </data>
   <data name="maxPowerLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 13</value>
@@ -324,6 +330,9 @@
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
+  <data name="buttonOK.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
   <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
@@ -356,6 +365,9 @@
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 3</value>
+  </data>
+  <data name="buttonCancel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -466,6 +478,6 @@
     <value>BurnerPower</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BaseForm, SolvisSC2Viewer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c36682b29f44cba7</value>
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

@@ -142,13 +142,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s1Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 17</value>
+    <value>83, 17</value>
   </data>
   <data name="s1Check.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="s1Check.Text" xml:space="preserve">
-    <value>Speicher oben</value>
+    <value>Store upper</value>
   </data>
   <data name="&gt;&gt;s1Check.Name" xml:space="preserve">
     <value>s1Check</value>
@@ -172,13 +172,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s2Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
+    <value>74, 17</value>
   </data>
   <data name="s2Check.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="s2Check.Text" xml:space="preserve">
-    <value>Warmwasser</value>
+    <value>Hot water</value>
   </data>
   <data name="&gt;&gt;s2Check.Name" xml:space="preserve">
     <value>s2Check</value>
@@ -202,13 +202,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s3Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="s3Check.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="s3Check.Text" xml:space="preserve">
-    <value>Speicher Ref</value>
+    <value>Store ref.</value>
   </data>
   <data name="&gt;&gt;s3Check.Name" xml:space="preserve">
     <value>s3Check</value>
@@ -232,13 +232,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s4Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 17</value>
+    <value>89, 17</value>
   </data>
   <data name="s4Check.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="s4Check.Text" xml:space="preserve">
-    <value>H.Puffer oben</value>
+    <value>H. buffer top</value>
   </data>
   <data name="&gt;&gt;s4Check.Name" xml:space="preserve">
     <value>s4Check</value>
@@ -262,13 +262,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s5Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 17</value>
+    <value>79, 17</value>
   </data>
   <data name="s5Check.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="s5Check.Text" xml:space="preserve">
-    <value>Solar VL2</value>
+    <value>Solar flow2</value>
   </data>
   <data name="&gt;&gt;s5Check.Name" xml:space="preserve">
     <value>s5Check</value>
@@ -292,13 +292,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s6Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 17</value>
+    <value>92, 17</value>
   </data>
   <data name="s6Check.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="s6Check.Text" xml:space="preserve">
-    <value>Solar RL2</value>
+    <value>Solar return 2</value>
   </data>
   <data name="&gt;&gt;s6Check.Name" xml:space="preserve">
     <value>s6Check</value>
@@ -322,13 +322,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s7Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
+    <value>83, 17</value>
   </data>
   <data name="s7Check.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="s7Check.Text" xml:space="preserve">
-    <value>Solar Druck</value>
+    <value>Solar press.</value>
   </data>
   <data name="&gt;&gt;s7Check.Name" xml:space="preserve">
     <value>s7Check</value>
@@ -352,13 +352,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s8Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 17</value>
+    <value>95, 17</value>
   </data>
   <data name="s8Check.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="s8Check.Text" xml:space="preserve">
-    <value>Kollektor Temp</value>
+    <value>Collector temp</value>
   </data>
   <data name="&gt;&gt;s8Check.Name" xml:space="preserve">
     <value>s8Check</value>
@@ -382,13 +382,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s9Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 17</value>
+    <value>107, 17</value>
   </data>
   <data name="s9Check.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="s9Check.Text" xml:space="preserve">
-    <value>H.Puffer unten</value>
+    <value>H. buffer bottom</value>
   </data>
   <data name="&gt;&gt;s9Check.Name" xml:space="preserve">
     <value>s9Check</value>
@@ -412,13 +412,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s10Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
+    <value>93, 17</value>
   </data>
   <data name="s10Check.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="s10Check.Text" xml:space="preserve">
-    <value>Außen Temp</value>
+    <value>Outdoor temp</value>
   </data>
   <data name="&gt;&gt;s10Check.Name" xml:space="preserve">
     <value>s10Check</value>
@@ -442,13 +442,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s11Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 17</value>
+    <value>75, 17</value>
   </data>
   <data name="s11Check.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="s11Check.Text" xml:space="preserve">
-    <value>Zirk. Temp</value>
+    <value>Circ. temp</value>
   </data>
   <data name="&gt;&gt;s11Check.Name" xml:space="preserve">
     <value>s11Check</value>
@@ -472,13 +472,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s12Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>69, 17</value>
   </data>
   <data name="s12Check.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="s12Check.Text" xml:space="preserve">
-    <value>Vorlauf HK1</value>
+    <value>HC1 flow</value>
   </data>
   <data name="&gt;&gt;s12Check.Name" xml:space="preserve">
     <value>s12Check</value>
@@ -502,13 +502,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s13Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>69, 17</value>
   </data>
   <data name="s13Check.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="s13Check.Text" xml:space="preserve">
-    <value>Vorlauf HK2</value>
+    <value>HC2 flow</value>
   </data>
   <data name="s13Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -535,13 +535,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s14Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>69, 17</value>
   </data>
   <data name="s14Check.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
   <data name="s14Check.Text" xml:space="preserve">
-    <value>Vorlauf HK3</value>
+    <value>HC3 flow</value>
   </data>
   <data name="s14Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -568,13 +568,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s15Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 17</value>
+    <value>79, 17</value>
   </data>
   <data name="s15Check.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
   <data name="s15Check.Text" xml:space="preserve">
-    <value>Solar VL1</value>
+    <value>Solar flow1</value>
   </data>
   <data name="s15Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -601,13 +601,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s16Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 17</value>
+    <value>77, 17</value>
   </data>
   <data name="s16Check.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
   <data name="s16Check.Text" xml:space="preserve">
-    <value>Kollektor 2</value>
+    <value>Collector 2</value>
   </data>
   <data name="s16Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -664,13 +664,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s18Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 17</value>
+    <value>78, 17</value>
   </data>
   <data name="s18Check.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="s18Check.Text" xml:space="preserve">
-    <value>VSG Warmwasser</value>
+    <value>VSG Water</value>
   </data>
   <data name="&gt;&gt;s18Check.Name" xml:space="preserve">
     <value>s18Check</value>
@@ -694,13 +694,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s19Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 17</value>
+    <value>97, 17</value>
   </data>
   <data name="s19Check.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="s19Check.Text" xml:space="preserve">
-    <value>Raumfühler1</value>
+    <value>Room sensor 1</value>
   </data>
   <data name="&gt;&gt;s19Check.Name" xml:space="preserve">
     <value>s19Check</value>
@@ -724,13 +724,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s20Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 17</value>
+    <value>97, 17</value>
   </data>
   <data name="s20Check.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="s20Check.Text" xml:space="preserve">
-    <value>Raumfühler2</value>
+    <value>Room sensor 2</value>
   </data>
   <data name="s20Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -757,13 +757,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s21Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 17</value>
+    <value>97, 17</value>
   </data>
   <data name="s21Check.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
   <data name="s21Check.Text" xml:space="preserve">
-    <value>Raumfühler3</value>
+    <value>Room sensor 3</value>
   </data>
   <data name="s21Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -886,13 +886,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s25Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
+    <value>97, 17</value>
   </data>
   <data name="s25Check.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
   <data name="s25Check.Text" xml:space="preserve">
-    <value>Vorlauf Anf. HK1</value>
+    <value>Flow cmd. HC1</value>
   </data>
   <data name="s25Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -922,13 +922,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s26Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
+    <value>97, 17</value>
   </data>
   <data name="s26Check.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
   <data name="s26Check.Text" xml:space="preserve">
-    <value>Vorlauf Anf. HK2</value>
+    <value>Flow cmd. HC2</value>
   </data>
   <data name="s26Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -958,13 +958,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s27Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
+    <value>97, 17</value>
   </data>
   <data name="s27Check.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
   <data name="s27Check.Text" xml:space="preserve">
-    <value>Vorlauf Anf. HK3</value>
+    <value>Flow cmd. HC3</value>
   </data>
   <data name="s27Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1174,13 +1174,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a1Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>79, 17</value>
   </data>
   <data name="a1Check.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="a1Check.Text" xml:space="preserve">
-    <value>Solarpumpe</value>
+    <value>Solar pump</value>
   </data>
   <data name="&gt;&gt;a1Check.Name" xml:space="preserve">
     <value>a1Check</value>
@@ -1204,13 +1204,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a2Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 17</value>
+    <value>75, 17</value>
   </data>
   <data name="a2Check.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="a2Check.Text" xml:space="preserve">
-    <value>Pumpe WW</value>
+    <value>Pump WW</value>
   </data>
   <data name="&gt;&gt;a2Check.Name" xml:space="preserve">
     <value>a2Check</value>
@@ -1234,13 +1234,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a3Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
+    <value>75, 17</value>
   </data>
   <data name="a3Check.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="a3Check.Text" xml:space="preserve">
-    <value>Pumpe HK1</value>
+    <value>Pump HC1</value>
   </data>
   <data name="&gt;&gt;a3Check.Name" xml:space="preserve">
     <value>a3Check</value>
@@ -1264,13 +1264,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a4Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
+    <value>75, 17</value>
   </data>
   <data name="a4Check.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="a4Check.Text" xml:space="preserve">
-    <value>Pumpe HK2</value>
+    <value>Pump HC2</value>
   </data>
   <data name="a4Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1297,13 +1297,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a5Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="a5Check.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="a5Check.Text" xml:space="preserve">
-    <value>Pumpe Zirk</value>
+    <value>Pump Circ</value>
   </data>
   <data name="&gt;&gt;a5Check.Name" xml:space="preserve">
     <value>a5Check</value>
@@ -1327,13 +1327,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a6Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
+    <value>75, 17</value>
   </data>
   <data name="a6Check.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="a6Check.Text" xml:space="preserve">
-    <value>Pumpe HK3</value>
+    <value>Pump HC3</value>
   </data>
   <data name="a6Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1390,13 +1390,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a8Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 17</value>
+    <value>102, 17</value>
   </data>
   <data name="a8Check.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="a8Check.Text" xml:space="preserve">
-    <value>HK1 Mischer auf</value>
+    <value>HC1 Mixer open</value>
   </data>
   <data name="&gt;&gt;a8Check.Name" xml:space="preserve">
     <value>a8Check</value>
@@ -1420,13 +1420,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a9Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 17</value>
+    <value>102, 17</value>
   </data>
   <data name="a9Check.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="a9Check.Text" xml:space="preserve">
-    <value>HK1 Mischer zu</value>
+    <value>HC1 Mixer close</value>
   </data>
   <data name="&gt;&gt;a9Check.Name" xml:space="preserve">
     <value>a9Check</value>
@@ -1450,13 +1450,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a10Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 17</value>
+    <value>102, 17</value>
   </data>
   <data name="a10Check.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="a10Check.Text" xml:space="preserve">
-    <value>HK2 Mischer auf</value>
+    <value>HC2 Mixer open</value>
   </data>
   <data name="a10Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1483,13 +1483,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a11Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 17</value>
+    <value>102, 17</value>
   </data>
   <data name="a11Check.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
   <data name="a11Check.Text" xml:space="preserve">
-    <value>HK2 Mischer zu</value>
+    <value>HC2 Mixer close</value>
   </data>
   <data name="a11Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1516,13 +1516,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a12Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+    <value>99, 17</value>
   </data>
   <data name="a12Check.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="a12Check.Text" xml:space="preserve">
-    <value>Brenner Anf</value>
+    <value>Burner on cmd.</value>
   </data>
   <data name="&gt;&gt;a12Check.Name" xml:space="preserve">
     <value>a12Check</value>
@@ -1546,13 +1546,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a13Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="a13Check.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="a13Check.Text" xml:space="preserve">
-    <value>Brenner Stufe2</value>
+    <value>Burner S2</value>
   </data>
   <data name="a13Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1876,13 +1876,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p01Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>76, 17</value>
   </data>
   <data name="p01Check.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="p01Check.Text" xml:space="preserve">
-    <value>Brenner kW</value>
+    <value>Burner kW</value>
   </data>
   <data name="&gt;&gt;p01Check.Name" xml:space="preserve">
     <value>p01Check</value>
@@ -1936,13 +1936,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p03Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 17</value>
+    <value>115, 17</value>
   </data>
   <data name="p03Check.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="p03Check.Text" xml:space="preserve">
-    <value>Sonnenstand</value>
+    <value>Position of the sun</value>
   </data>
   <data name="&gt;&gt;p03Check.Name" xml:space="preserve">
     <value>p03Check</value>
@@ -1966,13 +1966,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p04Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
+    <value>110, 17</value>
   </data>
   <data name="p04Check.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="p04Check.Text" xml:space="preserve">
-    <value>VL (Ist - Soll)_1</value>
+    <value>Flow (Ist - Soll)_1</value>
   </data>
   <data name="p04Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1999,13 +1999,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p05Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
+    <value>110, 17</value>
   </data>
   <data name="p05Check.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="p05Check.Text" xml:space="preserve">
-    <value>VL (Ist - Soll)_2</value>
+    <value>Flow (Ist - Soll)_2</value>
   </data>
   <data name="p05Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2035,13 +2035,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p06Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="p06Check.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="p06Check.Text" xml:space="preserve">
-    <value>Formel 1</value>
+    <value>Formula 1</value>
   </data>
   <data name="p06Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2071,13 +2071,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p07Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="p07Check.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="p07Check.Text" xml:space="preserve">
-    <value>Formel 2</value>
+    <value>Formula 2</value>
   </data>
   <data name="p07Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2107,13 +2107,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p08Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="p08Check.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="p08Check.Text" xml:space="preserve">
-    <value>Formel 3</value>
+    <value>Formula 3</value>
   </data>
   <data name="p08Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2143,13 +2143,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p09Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="p09Check.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="p09Check.Text" xml:space="preserve">
-    <value>Formel 4</value>
+    <value>Formula 4</value>
   </data>
   <data name="p09Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2179,13 +2179,13 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p10Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="p10Check.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="p10Check.Text" xml:space="preserve">
-    <value>Formel 5</value>
+    <value>Formula 5</value>
   </data>
   <data name="p10Check.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2310,9 +2310,6 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8pt</value>
-  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 1143</value>
   </data>

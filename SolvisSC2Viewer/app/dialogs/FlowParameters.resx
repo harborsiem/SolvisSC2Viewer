@@ -117,107 +117,104 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;heatCapacityText.Name" xml:space="preserve">
-    <value>heatCapacityText</value>
+  <data name="&gt;&gt;temperatureUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="editButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 55</value>
+  <data name="&gt;&gt;temperatureLabel.Parent" xml:space="preserve">
+    <value>groupLayout</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttons.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="buttonOK" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="buttonCancel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="heatCapacityLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;buttons.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;groupLayout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="temperatureLabel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>69, 0</value>
   </data>
-  <data name="&gt;&gt;buttons.Name" xml:space="preserve">
-    <value>buttons</value>
+  <data name="&gt;&gt;gradientUpDown.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="pulseLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;groupLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;heatCapacityText.Parent" xml:space="preserve">
+  <data name="&gt;&gt;levelUpDown.Parent" xml:space="preserve">
     <value>groupLayout</value>
   </data>
-  <data name="group.Text" xml:space="preserve">
-    <value>Solar parameter</value>
+  <data name="temperatureUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 20</value>
   </data>
+  <data name="group.Text" xml:space="preserve">
+    <value>Heating parameters</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonCancel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;editLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;levelLabel.Name" xml:space="preserve">
+    <value>levelLabel</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 3</value>
   </data>
-  <data name="pulseLabel.Text" xml:space="preserve">
-    <value>VSG [Pulse / Liter]</value>
+  <data name="temperatureUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="editButton.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="heatCapacityText.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="heatCapacityText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;editButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
   <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;groupLayout.Name" xml:space="preserve">
+  <data name="&gt;&gt;gradientLabel.Parent" xml:space="preserve">
     <value>groupLayout</value>
   </data>
-  <data name="&gt;&gt;pulseLabel.Name" xml:space="preserve">
-    <value>pulseLabel</value>
+  <data name="levelLabel.Text" xml:space="preserve">
+    <value>Level</value>
   </data>
-  <data name="&gt;&gt;pulseUpDown.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="dialogLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="group" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="buttons" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="&gt;&gt;dialogLayout.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;heatCapacityText.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="levelLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="temperatureUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="gradientLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="groupLayout.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 19</value>
   </data>
-  <data name="heatCapacityText.Text" xml:space="preserve">
-    <value>3.65</value>
-  </data>
-  <data name="&gt;&gt;editLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="levelLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
   </data>
   <data name="buttons.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="pulseUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 20</value>
-  </data>
   <data name="group.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="heatCapacityLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+  <data name="levelUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 29</value>
   </data>
-  <data name="group.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="gradientLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
   </data>
   <data name="buttonOK.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -225,14 +222,17 @@
   <data name="&gt;&gt;dialogLayout.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pulseLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="buttons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 119</value>
   </data>
-  <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="&gt;&gt;gradientLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="groupLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 3, 0, 0</value>
+  </data>
+  <data name="dialogLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 148</value>
   </data>
   <data name="buttons.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 29</value>
@@ -240,8 +240,8 @@
   <data name="groupLayout.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="pulseUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 3</value>
+  <data name="temperatureUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 3</value>
   </data>
   <data name="buttonCancel.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -249,38 +249,53 @@
   <data name="dialogLayout.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="editLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="gradientUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="gradientLabel.Text" xml:space="preserve">
+    <value>Gradient</value>
+  </data>
+  <data name="levelUpDown.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="dialogLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 9</value>
-  </data>
-  <data name="&gt;&gt;editLabel.Name" xml:space="preserve">
-    <value>editLabel</value>
-  </data>
-  <data name="dialogLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
-    <value>buttonCancel</value>
-  </data>
-  <data name="heatCapacityLabel.Text" xml:space="preserve">
-    <value>Heat Capacity [20°C]</value>
-  </data>
-  <data name="&gt;&gt;heatCapacityLabel.Name" xml:space="preserve">
-    <value>heatCapacityLabel</value>
+  <data name="levelUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 20</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="heatCapacityLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;levelUpDown.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;group.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="&gt;&gt;temperatureLabel.Name" xml:space="preserve">
+    <value>temperatureLabel</value>
+  </data>
+  <data name="buttons.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
+    <value>buttonCancel</value>
+  </data>
+  <data name="levelLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;levelUpDown.Name" xml:space="preserve">
+    <value>levelUpDown</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown.Name" xml:space="preserve">
+    <value>gradientUpDown</value>
+  </data>
+  <data name="temperatureLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="&gt;&gt;temperatureUpDown.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gradientUpDown.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;groupLayout.Parent" xml:space="preserve">
     <value>group</value>
@@ -300,29 +315,26 @@
   <data name="&gt;&gt;buttons.Parent" xml:space="preserve">
     <value>dialogLayout</value>
   </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="dialogLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
   </data>
-  <data name="&gt;&gt;editButton.Parent" xml:space="preserve">
-    <value>groupLayout</value>
-  </data>
-  <data name="&gt;&gt;buttons.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="buttons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
-  <data name="editButton.Text" xml:space="preserve">
-    <value>Edit</value>
+  <data name="group.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="buttonOK.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="group.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 116</value>
+    <value>209, 113</value>
   </data>
-  <data name="editLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 60</value>
+  <data name="&gt;&gt;temperatureUpDown.Name" xml:space="preserve">
+    <value>temperatureUpDown</value>
   </data>
   <data name="buttons.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -330,122 +342,107 @@
   <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dialogLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 151</value>
+  <data name="&gt;&gt;groupLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pulseUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="editButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 23</value>
-  </data>
-  <data name="buttons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 122</value>
+  <data name="&gt;&gt;levelLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>S17Dialog</value>
+    <value>FlowParameters</value>
   </data>
-  <data name="&gt;&gt;heatCapacityLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;temperatureLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="pulseUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;heatCapacityLabel.Parent" xml:space="preserve">
-    <value>groupLayout</value>
+  <data name="&gt;&gt;gradientLabel.Name" xml:space="preserve">
+    <value>gradientLabel</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
     <value>buttons</value>
   </data>
-  <data name="editButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="levelLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="pulseUpDown.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="editLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pulseUpDown.Parent" xml:space="preserve">
-    <value>groupLayout</value>
-  </data>
-  <data name="buttonOK.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="editLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
-  </data>
-  <data name="heatCapacityLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="buttons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;editButton.Name" xml:space="preserve">
-    <value>editButton</value>
+  <data name="temperatureLabel.Text" xml:space="preserve">
+    <value>Temperature</value>
   </data>
   <data name="&gt;&gt;buttonOK.Parent" xml:space="preserve">
     <value>buttons</value>
   </data>
-  <data name="groupLayout.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="gradientUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 20</value>
   </data>
-  <data name="&gt;&gt;editButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="temperatureLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="heatCapacityText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 29</value>
+  <data name="buttonOK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="pulseUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="&gt;&gt;temperatureUpDown.Parent" xml:space="preserve">
+    <value>groupLayout</value>
   </data>
-  <data name="&gt;&gt;heatCapacityText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="temperatureLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="gradientUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 55</value>
+  </data>
+  <data name="&gt;&gt;groupLayout.Name" xml:space="preserve">
+    <value>groupLayout</value>
+  </data>
+  <data name="gradientLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="buttonCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="heatCapacityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 13</value>
+  <data name="groupLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="dialogLayout.RowCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;heatCapacityLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonOK.Name" xml:space="preserve">
+    <value>buttonOK</value>
   </data>
-  <data name="editLabel.Text" xml:space="preserve">
-    <value>Formula Editor</value>
+  <data name="gradientUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;pulseUpDown.Name" xml:space="preserve">
-    <value>pulseUpDown</value>
+  <data name="&gt;&gt;levelLabel.Parent" xml:space="preserve">
+    <value>groupLayout</value>
   </data>
-  <data name="buttons.ColumnCount" type="System.Int32, mscorlib">
+  <data name="dialogLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="temperatureLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="temperatureLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;levelLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="editLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="pulseLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
-  </data>
-  <data name="pulseLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="groupLayout.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="groupLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 81</value>
+    <value>203, 78</value>
+  </data>
+  <data name="temperatureUpDown.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;dialogLayout.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pulseLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="gradientLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="groupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="heatCapacityText" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="pulseLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="pulseUpDown" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="heatCapacityLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="editLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="editButton" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="temperatureLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="temperatureUpDown" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="levelLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="levelUpDown" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="gradientLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gradientUpDown" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="group.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -453,59 +450,59 @@
   <data name="buttons.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="heatCapacityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
+  <data name="levelUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;groupLayout.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dialogLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="group" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="buttons" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="&gt;&gt;group.Name" xml:space="preserve">
-    <value>group</value>
-  </data>
-  <data name="&gt;&gt;pulseLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;temperatureLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pulseLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="heatCapacityText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 20</value>
-  </data>
-  <data name="editButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonOK.Name" xml:space="preserve">
-    <value>buttonOK</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Solar Parameter (VSG, kW)</value>
-  </data>
-  <data name="groupLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
   </data>
   <data name="&gt;&gt;buttons.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="levelLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;group.Name" xml:space="preserve">
+    <value>group</value>
+  </data>
+  <data name="&gt;&gt;gradientLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gradientLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;gradientUpDown.Parent" xml:space="preserve">
+    <value>groupLayout</value>
+  </data>
+  <data name="temperatureLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="levelLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Flow Parameters</value>
+  </data>
+  <data name="groupLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="groupLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;group.Parent" xml:space="preserve">
     <value>dialogLayout</value>
   </data>
-  <data name="&gt;&gt;editLabel.Parent" xml:space="preserve">
-    <value>groupLayout</value>
+  <data name="gradientLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pulseLabel.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>69, 0</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>364, 169</value>
+    <value>233, 166</value>
   </data>
   <data name="dialogLayout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -519,20 +516,23 @@
   <data name="group.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="groupLayout.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;buttons.Name" xml:space="preserve">
+    <value>buttons</value>
   </data>
   <data name="&gt;&gt;dialogLayout.Name" xml:space="preserve">
     <value>dialogLayout</value>
   </data>
+  <data name="levelUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="buttonOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;pulseLabel.Parent" xml:space="preserve">
-    <value>groupLayout</value>
+  <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="pulseLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
+  <data name="groupLayout.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="buttonOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

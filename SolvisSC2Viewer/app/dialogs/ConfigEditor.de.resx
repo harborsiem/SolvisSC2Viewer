@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="sensorsColorlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
+    <value>37, 13</value>
   </data>
   <data name="sensorsColorlabel.Text" xml:space="preserve">
     <value>Farbe:</value>
@@ -140,7 +140,7 @@
     <value>Sensoren</value>
   </data>
   <data name="actorsColorlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
+    <value>37, 13</value>
   </data>
   <data name="actorsColorlabel.Text" xml:space="preserve">
     <value>Farbe:</value>
@@ -158,7 +158,7 @@
     <value>Aktoren</value>
   </data>
   <data name="optionsColorlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
+    <value>37, 13</value>
   </data>
   <data name="optionsColorlabel.Text" xml:space="preserve">
     <value>Farbe:</value>
@@ -181,16 +181,22 @@
   <data name="temperatureLabel.Text" xml:space="preserve">
     <value>Temperatur</value>
   </data>
+  <data name="levelLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="levelLabel.Text" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
   <data name="gradientLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
+    <value>44, 13</value>
   </data>
   <data name="gradientLabel.Text" xml:space="preserve">
     <value>Steilheit</value>
   </data>
-  <data name="heatCurveGroup.Text" xml:space="preserve">
+  <data name="heatingCurveGroup.Text" xml:space="preserve">
     <value>Voreinstellung für Heizkurve</value>
   </data>
-  <data name="heatCurveTabPage.Text" xml:space="preserve">
+  <data name="heatingCurveTabPage.Text" xml:space="preserve">
     <value>Heizkurve</value>
   </data>
   <data name="directoryButton.Size" type="System.Drawing.Size, System.Drawing">
@@ -200,46 +206,46 @@
     <value>Dateiverzeichnis wählen</value>
   </data>
   <data name="hk2CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
+    <value>88, 17</value>
   </data>
   <data name="hk2CheckBox.Text" xml:space="preserve">
     <value>Anzeige HK2</value>
   </data>
   <data name="hk3CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
+    <value>88, 17</value>
   </data>
   <data name="hk3CheckBox.Text" xml:space="preserve">
     <value>Anzeige HK3</value>
   </data>
   <data name="ecoCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+    <value>86, 17</value>
   </data>
   <data name="ecoCheckBox.Text" xml:space="preserve">
     <value>Anzeige Eco</value>
   </data>
   <data name="savePictureCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 17</value>
+    <value>109, 17</value>
   </data>
   <data name="savePictureCheckBox.Text" xml:space="preserve">
     <value>Als Bild speichern</value>
   </data>
-  <data name="timePlanGroupLayout.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="timeTableGroupLayout.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 92</value>
   </data>
-  <data name="timePlanGroup.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="timeTableGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 127</value>
   </data>
-  <data name="timePlanGroup.Text" xml:space="preserve">
+  <data name="timeTableGroup.Text" xml:space="preserve">
     <value>Einstellungen Zeitplan</value>
   </data>
   <data name="prototype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 17</value>
+    <value>168, 17</value>
   </data>
   <data name="prototype.Text" xml:space="preserve">
     <value>Anzeige Parameter, Zählstand</value>
   </data>
   <data name="controlVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 13</value>
+    <value>148, 13</value>
   </data>
   <data name="controlVersionLabel.Text" xml:space="preserve">
     <value>SolvisControl Version (Z-Wert)</value>

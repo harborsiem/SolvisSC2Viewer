@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Diagnostics;
+using System.Globalization;
 using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
@@ -38,13 +39,13 @@ namespace SolvisSC2Viewer {
         public string OpenDir { get; set; }
         public string SdCardDir { get; set; }
         public int SDCardSuppressMask { get; set; }
-        public bool TimePlanBitmap { get; set; }
+        public bool TimeTableBitmap { get; set; }
         public bool SuperUser { get; set; }
         public bool Prototype { get; set; }
         public bool OneDayMode { get; set; }
         //HeatCurve parameter
         public static int Temperature { get; set; }
-        public static int Niveau { get; set; }
+        public static int Level { get; set; }
         public static double Gradient { get; set; }
 
         private static Color[] _colorsBrightPastel = new Color[] { Color.FromArgb(0x41, 140, 240), Color.FromArgb(0xfc, 180, 0x41), Color.FromArgb(0xe0, 0x40, 10), Color.FromArgb(5, 100, 0x92), Color.FromArgb(0xbf, 0xbf, 0xbf), Color.FromArgb(0x1a, 0x3b, 0x69), Color.FromArgb(0xff, 0xe3, 130), Color.FromArgb(0x12, 0x9c, 0xdd), Color.FromArgb(0xca, 0x6b, 0x4b), Color.FromArgb(0, 0x5c, 0xdb), Color.FromArgb(0xf3, 210, 0x88), Color.FromArgb(80, 0x63, 0x81), Color.FromArgb(0xf1, 0xb9, 0xa8), Color.FromArgb(0xe0, 0x83, 10), Color.FromArgb(120, 0x93, 190) };
@@ -95,8 +96,7 @@ namespace SolvisSC2Viewer {
             SuperUser = true;
 #endif
             CreateFormulas();
-            bool newVersionDetected = Application.ProductVersion.CompareTo(Version) == 1;
-            //bool newVersionDetected = string.Compare(Application.ProductVersion, Version, StringComparison.OrdinalIgnoreCase) == 1;
+            bool newVersionDetected = String.Compare(Application.ProductVersion, Version, StringComparison.OrdinalIgnoreCase) == 1;
             if (newVersionDetected) {
                 ParameterUpdateForNewVersion();
             }
@@ -149,15 +149,15 @@ namespace SolvisSC2Viewer {
             DefaultParameters[ConfigXml.LatitudeTag] = 52.3175;
             DefaultParameters[ConfigXml.LongitudeTag] = 10.4905; //Position Solvis Braunschweig
             DefaultParameters[ConfigXml.TemperatureTag] = 21;
-            DefaultParameters[ConfigXml.NiveauTag] = 2;
+            DefaultParameters[ConfigXml.LevelTag] = 2;
             DefaultParameters[ConfigXml.GradientTag] = 1.2;
             DefaultParameters[ConfigXml.TemperatureVLTag] = 21;
-            DefaultParameters[ConfigXml.NiveauVLTag] = 3;
+            DefaultParameters[ConfigXml.LevelFlowTag] = 3;
             DefaultParameters[ConfigXml.GradientVLTag] = 1.15;
             DefaultParameters[ConfigXml.BurnerMinPowerTag] = 5.0;
             DefaultParameters[ConfigXml.BurnerMaxPowerTag] = 20.0;
             DefaultParameters[ConfigXml.SDCardSuppressMaskTag] = 38;
-            DefaultParameters[ConfigXml.TimePlanBitmapTag] = false;
+            DefaultParameters[ConfigXml.TimeTableBitmapTag] = false;
             DefaultParameters[ConfigXml.PrototypeTag] = false;
             DefaultParameters[ConfigXml.OneDayModeTag] = false;
             DefaultParameters[ConfigXml.HasFormulaDllTag] = false;
@@ -222,12 +222,12 @@ namespace SolvisSC2Viewer {
             RowValues.BurnerMaxPower = (double)DefaultParameters[ConfigXml.BurnerMaxPowerTag];
 
             RowValues.Temperature = (int)DefaultParameters[ConfigXml.TemperatureVLTag];
-            RowValues.Niveau = (int)DefaultParameters[ConfigXml.NiveauVLTag];
+            RowValues.Level = (int)DefaultParameters[ConfigXml.LevelFlowTag];
             RowValues.Gradient = (double)DefaultParameters[ConfigXml.GradientVLTag];
             SDCardSuppressMask = (int)DefaultParameters[ConfigXml.SDCardSuppressMaskTag];
-            TimePlanBitmap = (bool)DefaultParameters[ConfigXml.TimePlanBitmapTag];
+            TimeTableBitmap = (bool)DefaultParameters[ConfigXml.TimeTableBitmapTag];
             Temperature = (int)DefaultParameters[ConfigXml.TemperatureTag];
-            Niveau = (int)DefaultParameters[ConfigXml.NiveauTag];
+            Level = (int)DefaultParameters[ConfigXml.LevelTag];
             Gradient = (double)DefaultParameters[ConfigXml.GradientTag];
             Prototype = (bool)DefaultParameters[ConfigXml.PrototypeTag];
             HasFormulaDll = (bool)DefaultParameters[ConfigXml.HasFormulaDllTag];
@@ -239,7 +239,7 @@ namespace SolvisSC2Viewer {
         private void SetDefaults() {
             IList<CheckBox> list = AppManager.MainForm.SensorsCheckBoxes;
             for (int i = 0; i < list.Count; i++) {
-                string key = "S" + (i + 1).ToString("00");
+                string key = "S" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 ConfigData data = new ConfigData();
                 data.Text = checkBox.Text;
@@ -252,7 +252,7 @@ namespace SolvisSC2Viewer {
             }
             list = AppManager.MainForm.ActorsCheckBoxes;
             for (int i = 0; i < list.Count; i++) {
-                string key = "A" + (i + 1).ToString("00");
+                string key = "A" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 ConfigData data = new ConfigData();
                 data.Text = checkBox.Text;
@@ -265,7 +265,7 @@ namespace SolvisSC2Viewer {
             }
             list = AppManager.MainForm.OptionsCheckBoxes;
             for (int i = 0; i < list.Count; i++) {
-                string key = "P" + (i + 1).ToString("00");
+                string key = "P" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 ConfigData data = new ConfigData();
                 data.Text = checkBox.Text;
@@ -347,7 +347,7 @@ namespace SolvisSC2Viewer {
                 parent.SuspendLayout();
             }
             for (int i = 0; i < list.Count; i++) {
-                string key = "A" + (i + 1).ToString("00");
+                string key = "A" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 ConfigData data = null;
                 if (config.ContainsKey(key)) {
@@ -374,7 +374,7 @@ namespace SolvisSC2Viewer {
                 parent.SuspendLayout();
             }
             for (int i = 0; i < list.Count; i++) {
-                string key = "S" + (i + 1).ToString("00");
+                string key = "S" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 ConfigData data = null;
                 if (config.ContainsKey(key)) {
@@ -401,7 +401,7 @@ namespace SolvisSC2Viewer {
                 parent.SuspendLayout();
             }
             for (int i = 0; i < list.Count; i++) {
-                string key = "P" + (i + 1).ToString("00");
+                string key = "P" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 ConfigData data = null;
                 if (config.ContainsKey(key)) {
@@ -436,9 +436,9 @@ namespace SolvisSC2Viewer {
             string[] values = colorRGB.Trim().Split(',');
             if (values != null && values.Length == 3) {
                 try {
-                    int red = (byte)Int32.Parse(values[0].Trim());
-                    int green = (byte)Int32.Parse(values[1].Trim());
-                    int blue = (byte)Int32.Parse(values[2].Trim());
+                    int red = (byte)Int32.Parse(values[0].Trim(), CultureInfo.InvariantCulture);
+                    int green = (byte)Int32.Parse(values[1].Trim(), CultureInfo.InvariantCulture);
+                    int blue = (byte)Int32.Parse(values[2].Trim(), CultureInfo.InvariantCulture);
                     return Color.FromArgb(red, green, blue);
                 }
                 catch (FormatException e) {

@@ -277,7 +277,7 @@ namespace SolvisSC2Viewer {
                 foreach (CompilerError error in results.Errors) {
                     WriteLine(Resources.CodeBuilderCompileError + error.ErrorText); //@Language Resource
                 }
-                MessageBox.Show(txtCompile, Resources.CodeBuilderFreeFormulas, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1); //@Language Resource
+                MessageBox.Show(txtCompile, Resources.CodeBuilderFreeFormulas, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading); //@Language Resource
                 return null;
             }
             return results;
@@ -289,7 +289,7 @@ namespace SolvisSC2Viewer {
         /// <param name="txt"></param>
         /// <param name="args"></param>
         private void WriteLine(string txt, params object[] args) {
-            txtCompile += string.Format(txt, args) + Environment.NewLine;
+            txtCompile += string.Format(CultureInfo.InvariantCulture, txt, args) + Environment.NewLine;
         }
 
         private void WriteLine(string txt) {

@@ -65,11 +65,11 @@ namespace SolvisSC2Viewer {
             // 
             // dataGridViewTop
             // 
+            resources.ApplyResources(this.dataGridViewTop, "dataGridViewTop");
             this.dataGridViewTop.AllowUserToAddRows = false;
             this.dataGridViewTop.AllowUserToDeleteRows = false;
             this.dataGridViewTop.AllowUserToResizeColumns = false;
             this.dataGridViewTop.AllowUserToResizeRows = false;
-            resources.ApplyResources(this.dataGridViewTop, "dataGridViewTop");
             this.dataGridViewTop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTop.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewTop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -130,13 +130,13 @@ namespace SolvisSC2Viewer {
             // 
             // dataGridViewBottom
             // 
+            resources.ApplyResources(this.dataGridViewBottom, "dataGridViewBottom");
             this.dataGridViewBottom.AllowUserToAddRows = false;
             this.dataGridViewBottom.AllowUserToDeleteRows = false;
             this.dataGridViewBottom.AllowUserToResizeColumns = false;
             this.dataGridViewBottom.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewBottom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            resources.ApplyResources(this.dataGridViewBottom, "dataGridViewBottom");
             this.dataGridViewBottom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBottom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBottom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -11,7 +11,7 @@ namespace SolvisSC2Viewer {
         Water,
         Circulation,
         Heating1,
-        Counting,
+        Counter,
         Solar
     }
 
@@ -72,8 +72,8 @@ namespace SolvisSC2Viewer {
                 case HeatingSettings.CategoryModulation:
                     PrintCategory = PrintCategory.Heating1;
                     break;
-                case CountingSettings.CategoryCount:
-                    PrintCategory = PrintCategory.Counting;
+                case CounterSettings.CategoryCounter:
+                    PrintCategory = PrintCategory.Counter;
                     break;
                 default:
                     PrintCategory = PrintCategory.None;
@@ -86,9 +86,11 @@ namespace SolvisSC2Viewer {
                 ValueString = "Unknown";
                 return;
             }
-            if (value is string) {
-                ValueString = (string)value;
-            } else if (value is DateTime) {
+            ValueString = value as string;
+            if (ValueString != null) {
+                return;
+            }
+            if (value is DateTime) {
                 ValueString = ((DateTime)value).ToShortDateString();
             } else {
                 ValueString = value.ToString();

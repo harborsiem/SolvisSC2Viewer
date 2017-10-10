@@ -10,6 +10,7 @@ using Microsoft.Win32;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Globalization;
 using SolvisSC2Viewer.Properties;
 
 namespace SolvisSC2Viewer {
@@ -143,7 +144,7 @@ namespace SolvisSC2Viewer {
 
         public void InitSensorsSeries(IList<CheckBox> list) {
             for (int i = 0; i < list.Count; i++) {
-                string key = "S" + (i + 1).ToString("00");
+                string key = "S" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 Series series = new Series(key);
                 series.ChartType = SeriesChartType.FastLine;
@@ -159,7 +160,7 @@ namespace SolvisSC2Viewer {
 
         public void InitActorsSeries(IList<CheckBox> list) {
             for (int i = 0; i < list.Count; i++) {
-                string key = "A" + (i + 1).ToString("00");
+                string key = "A" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 Series series = new Series(key);
                 series.ChartType = SeriesChartType.FastLine;
@@ -175,7 +176,7 @@ namespace SolvisSC2Viewer {
 
         public void InitOptionsSeries(IList<CheckBox> list) {
             for (int i = 0; i < list.Count; i++) {
-                string key = "P" + (i + 1).ToString("00");
+                string key = "P" + (i + 1).ToString("00", CultureInfo.InvariantCulture);
                 CheckBox checkBox = list[i];
                 Series series = new Series(key);
                 series.ChartType = SeriesChartType.FastLine;

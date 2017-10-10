@@ -19,10 +19,10 @@ namespace SolvisSC2Viewer {
         public const string LongitudeTag = "Longitude";
         public const string SuperUserTag = "SuperUser";
         public const string TemperatureTag = "Temperature";
-        public const string NiveauTag = "Niveau";
+        public const string LevelTag = "Niveau";
         public const string GradientTag = "Gradient";
         public const string TemperatureVLTag = "TemperatureVL";
-        public const string NiveauVLTag = "NiveauVL";
+        public const string LevelFlowTag = "NiveauVL";
         public const string GradientVLTag = "GradientVL";
         public const string VersionTag = "Version";
         public const string Formula1Tag = "Formula1";
@@ -35,8 +35,8 @@ namespace SolvisSC2Viewer {
         public const string SolarKWTag = "SolarKW";
         public const string SdCardDirTag = "SdCardDir";
         public const string SDCardSuppressMaskTag = "SdCardSuppressMask";
-        public const string TimePlanSuppressMaskTag = "TimePlanSuppressMask";
-        public const string TimePlanBitmapTag = "TimePlanBitmap";
+        public const string TimeTableSuppressMaskTag = "TimePlanSuppressMask";
+        public const string TimeTableBitmapTag = "TimePlanBitmap";
         public const string PrototypeTag = "Prototype";
         public const string OneDayModeTag = "OneDayMode";
         public const string SolvisControlVersionTag = "SolvisControlVersion";
