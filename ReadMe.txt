@@ -1,12 +1,12 @@
 erforderliche Installationen:
-Visual Studio 2013 Express C# (oder höhere Version des Visual Studio)
+Visual Studio 2017 Community mit C# (oder höhere Version des Visual Studio)
 
 Optionale Installationen:
 WiX Toolset, Version 3.11
 WixEdit, Version 0.7.5
 Libre Office (Writer) zum Editieren von HTML-Files
 HTML Help Workshop, Version 4.74.8702
-TortoiseSVN Version 1.8.x oder 1.9.x zur Versionsverwaltung
+Git und TortoiseGit zur Versionsverwaltung
 7-Zip als Zipper
 
 
@@ -34,3 +34,6 @@ und FormulaSolarVSG und FormulakW mit selbstgeschriebenen ProgrammCode ergänzt 
 Der Tag <HasFormulaDll> in der User.config Datei muss auf den Wert true gesetzt werden.
 
 Die erzeugte Datei Formula.dll ist nach "Program Files\Solvis\SolvisSC2\" zu kopieren.
+
+Achtung:
+Bei einem 64Bit Windows heißt der Ordner ("Program Files (x86)\Solvis\SolvisSC2\") 

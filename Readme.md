@@ -1,4 +1,4 @@
-﻿# SolvisSC2Viewer
+# SolvisSC2Viewer
 #
 
 ## Beschreibung
@@ -49,7 +49,7 @@ Das Programm ist mit der kostenlosen Entwicklungsumgebung Microsoft Visual Studi
 ## aktuelles Setup
 #### (in Zipdatei gepacktes MSI Setup)
 
-[SolvisSC2.msi](https://github.com/harborsiem/SolvisSC2Viewer/files/1371292/SolvisSC2_V2.1.zip)
+in "releases" im "<> Code" tab ist der gezippte MSI-file.
 
 
 ## Bilder vom SolvisSC2Viewer
