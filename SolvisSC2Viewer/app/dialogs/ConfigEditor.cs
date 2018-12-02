@@ -73,12 +73,12 @@ namespace SolvisSC2Viewer {
             this.ecoCheckBox.CheckedChanged += new System.EventHandler(this.ecoCheckBox_CheckedChanged);
             this.savePictureCheckBox.CheckedChanged += new System.EventHandler(this.savePictureCheckBox_CheckedChanged);
 
-            sensorsListBox.SelectedIndex = 0;
-            actorsListBox.SelectedIndex = 0;
-            optionsListBox.SelectedIndex = 0;
             this.sensorsListBox.SelectedIndexChanged += new System.EventHandler(this.sensorsListBox_SelectedIndexChanged);
             this.actorsListBox.SelectedIndexChanged += new System.EventHandler(this.actorsListBox_SelectedIndexChanged);
             this.optionsListBox.SelectedIndexChanged += new System.EventHandler(this.optionsListBox_SelectedIndexChanged);
+            sensorsListBox.SelectedIndex = 0;
+            actorsListBox.SelectedIndex = 0;
+            optionsListBox.SelectedIndex = 0;
         }
 
         private void buttonDefault_Click(object sender, EventArgs e) {

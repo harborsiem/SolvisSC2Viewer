@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-    <Product Id="C7EBCB29-ABA8-455A-A1A0-B0BA3C539A4D" Name="SolvisSC2Viewer" Language="1033" Version="2.1.1.0" Manufacturer="Home" UpgradeCode="085A4473-815E-4282-BBD6-9D71425340EC">
+    <Product Id="D2BC7F50-20DE-4441-B00D-EC954B2969BE" Name="SolvisSC2Viewer" Language="1033" Version="2.1.2.0" Manufacturer="Home" UpgradeCode="085A4473-815E-4282-BBD6-9D71425340EC">
         <Package Description="SolvisSC2Viewer" Comments="SolvisSC2Viewer Installation" InstallerVersion="301" Compressed="yes" Platform="x86" InstallScope="perMachine" />
         <Media Id="1" Cabinet="product.cab" EmbedCab="yes" />
         <MajorUpgrade DowngradeErrorMessage="A later version of [ProductName] is already installed." Schedule="afterInstallValidate" />

@@ -1,5 +1,5 @@
 erforderliche Installationen:
-Visual Studio 2017 Community mit C# (oder höhere Version des Visual Studio)
+Visual Studio 2017 Community mit C#, Sprache auf deutsch einstellen (oder höhere Version des Visual Studio)
 
 Optionale Installationen:
 WiX Toolset, Version 3.11
