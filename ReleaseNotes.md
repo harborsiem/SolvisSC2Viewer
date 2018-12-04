@@ -1,7 +1,12 @@
 # Release Notes
 
-## Version 2.1
+## Version 2.1.2
+- Bug im Konfigurationsmenu
 
+## Version 2.1.1
+- bessere Dialog Schrift
+
+## Version 2.1
 
 - Hilfe ergänzt mit Dateibeschreibung für so*.txt und mi*.txt
 - Sensoren S25 bis S30 ergänzt (Bedeutung in der Hilfe für mi*.txt Dateien)
