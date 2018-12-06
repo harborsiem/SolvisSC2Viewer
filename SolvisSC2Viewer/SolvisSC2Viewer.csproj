@@ -333,6 +333,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app\items\menu\FileMenuItem.de.resx">
       <DependentUpon>FileMenuItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="app\items\menu\FileMenuItem.resx">
       <DependentUpon>FileMenuItem.cs</DependentUpon>

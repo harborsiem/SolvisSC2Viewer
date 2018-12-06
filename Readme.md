@@ -58,3 +58,7 @@ in "releases" im "<> Code" tab ist der gezippte MSI-file.
 ![](./Home_Viewer1.jpg)
 
 ![](./Home_Viewer2.jpg)
+
+
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/dimitry-miroliubov" title="Dimitry Miroliubov">Dimitry Miroliubov</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

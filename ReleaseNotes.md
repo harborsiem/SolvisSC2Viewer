@@ -2,6 +2,7 @@
 
 ## Version 2.1.2
 - Bug im Konfigurationsmenu
+- besseres App Icon
 
 ## Version 2.1.1
 - bessere Dialog Schrift

@@ -63,7 +63,7 @@ namespace SolvisSC2Viewer {
             try {
                 Stream stream = GetResourceStream(name);
                 if (stream != null) {
-                    icon = new Icon(stream, 16, 16);
+                    icon = new Icon(stream);
                 }
             }
             catch (ArgumentException ex) {
