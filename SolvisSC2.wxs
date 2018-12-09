@@ -39,7 +39,7 @@
         </DirectoryRef>
         <DirectoryRef Id="ApplicationMenuFolder">
             <Component Id="ApplicationShortcut" Guid="5B01A7E4-7E35-4477-B735-85FACA772240">
-                <Shortcut Id="ApplicationStartMenuShortcut" Name="SolvisSC2Viewer" Target="[APPLICATIONROOTDIRECTORY]SolvisSC2Viewer.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY" Icon="SolvisIcon.exe" IconIndex="0" />
+                <Shortcut Id="ApplicationStartMenuShortcut" Name="SolvisSC2Viewer" Target="[APPLICATIONROOTDIRECTORY]SolvisSC2Viewer.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY" Icon="MainIcon.ico" IconIndex="0" />
                 <Shortcut Id="UninstallProduct" Name="Uninstall SolvisSC2Viewer" Description="Uninstalls the application" Arguments="/x [ProductCode]" Target="[SystemFolder]msiexec.exe" />
                 <RemoveFolder Id="ApplicationMenuFolder" On="uninstall" />
                 <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
@@ -53,7 +53,8 @@
         <PropertyRef Id="NETFRAMEWORK40FULL" />
         <Condition Message="This application requires .NET Framework 4.0.">Installed OR NETFRAMEWORK40FULL</Condition>
         <UIRef Id="WixUI_ErrorProgressText" />
-        <Icon Id="SolvisIcon.exe" SourceFile="SolvisSC2Viewer\files\Lupe.ico" />
+        <Icon Id="MainIcon.ico" SourceFile="SolvisSC2Viewer\files\Lupe.ico" />
+        <Property Id="ARPPRODUCTICON" Value="MainIcon.ico" />
         <UI />
     </Product>
 </Wix>

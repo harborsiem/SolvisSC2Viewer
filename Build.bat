@@ -25,6 +25,6 @@ cd SolvisSC2Viewer\help
 copy /Y /B SolvisViewer.chm ..\bin\Release\SolvisViewer.chm
 copy /Y /B SolvisViewer.chm ..\bin\Debug\SolvisViewer.chm
 cd ..\..
-"%Wix3xPath%\candle.exe" -nologo %AppName%.wxs -out %AppName%.wixobj -ext WixUtilExtension -ext WixUIExtension -ext WixNetFxExtension
+"%Wix3xPath%\candle.exe" -nologo %AppName%.wxs -out %AppName%.wixobj
 "%Wix3xPath%\light.exe" -nologo %AppName%.wixobj -out %AppName%.msi -ext WixUtilExtension -ext WixUIExtension -ext WixNetFxExtension
 pause
