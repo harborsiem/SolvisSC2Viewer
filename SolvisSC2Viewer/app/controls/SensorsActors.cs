@@ -121,6 +121,8 @@ namespace SolvisSC2Viewer {
             actors.Add(a18Check);
             actors.Add(a19Check);
             actors.Add(a20Check);
+            actors.Add(a21Check);
+            actors.Add(a22Check);
         }
 
         private void MakeOptionsList() {

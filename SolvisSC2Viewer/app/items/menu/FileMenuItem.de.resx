@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="open.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Strg+O</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="open.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 22</value>
@@ -140,9 +137,6 @@
   <data name="print.Text" xml:space="preserve">
     <value>Drucken</value>
   </data>
-  <data name="exit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+F4</value>
-  </data>
   <data name="exit.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 22</value>
   </data>
@@ -157,9 +151,6 @@
   </data>
   <data name="separator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 6</value>
-  </data>
-  <data name="open1DayMode.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Strg+1</value>
   </data>
   <data name="open1DayMode.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 22</value>

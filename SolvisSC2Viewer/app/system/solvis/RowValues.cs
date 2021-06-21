@@ -17,7 +17,7 @@ namespace SolvisSC2Viewer {
         private const int S10Index = 9;
         private const double HeatCapacityTemperature = 20.0;
         private const double HeatCapacityAccelerationPerKelvin = 0.004;
-        private const int MaxMiNumColumns = 48; //2 date + time, 24 + 5 inputs, 17 outputs
+        private const int MaxMiNumColumns = 52; //48; //2 date + time, 24 + 5 inputs, 17 outputs
         private const int MaxNumColumns = 46; //2 date + time, 24 sensors, 20 actors
         private const int MinNumColumns = 36; //maybe 39 columns; 2 date + time, 18 sensors ?, 19 actors ?
         private static readonly CultureInfo locale = new CultureInfo("de");
@@ -113,6 +113,8 @@ namespace SolvisSC2Viewer {
         public double A18 { get { return actors[17]; } } //A18 ?
         public double A19 { get { return actors[18]; } } //A19
         public double A20 { get { return actors[19]; } } //A20
+        public double A21 { get { return actors[20]; } } //A21
+        public double A22 { get { return actors[21]; } } //A22
         public static double BurnerMinPower { get; set; }
         public static double BurnerMaxPower { get; set; }
         public static double Latitude { get; set; }
@@ -157,7 +159,7 @@ namespace SolvisSC2Viewer {
                     default:
                         HasValues = true;
                         sensors = new double[30];
-                        actors = new double[20];
+                        actors = new double[22];
                         ConvertMiFile(row);
                         break;
                 }
@@ -505,7 +507,7 @@ namespace SolvisSC2Viewer {
                             if (iOAttrib.Ident == GroupIdent.Sensor && actualSensorIndex < CountSensorCheckBoxes) {
                                 NamesAndUnits[actualSensorIndex++] = iOAttrib.IOName + ", " + iOAttrib.Unit;
                             }
-                            if (iOAttrib.Ident == GroupIdent.Actor && actualSensorIndex < (CountSensorCheckBoxes + CountActorCheckBoxes)) {
+                            if (iOAttrib.Ident == GroupIdent.Actor && actualActorIndex < (CountSensorCheckBoxes + CountActorCheckBoxes)) {
                                 NamesAndUnits[actualActorIndex++] = iOAttrib.IOName + ", " + iOAttrib.Unit;
                             }
 

@@ -3,6 +3,7 @@
 ## Version 2.1.2
 - Bug im Konfigurationsmenu
 - besseres App Icon
+- Aktoren A21 und A22 ergänzt (SolvisControl Version ZR2.05.06/NB30000/ZP-)
 
 ## Version 2.1.1
 - bessere Dialog Schrift

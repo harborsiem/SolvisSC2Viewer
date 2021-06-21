@@ -142,7 +142,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s1Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 17</value>
+    <value>81, 17</value>
   </data>
   <data name="s1Check.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -172,7 +172,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s2Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 17</value>
+    <value>72, 17</value>
   </data>
   <data name="s2Check.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -202,7 +202,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s3Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>69, 17</value>
   </data>
   <data name="s3Check.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -232,7 +232,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s4Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 17</value>
+    <value>85, 17</value>
   </data>
   <data name="s4Check.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -262,7 +262,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s5Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
+    <value>78, 17</value>
   </data>
   <data name="s5Check.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -292,7 +292,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s6Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
+    <value>89, 17</value>
   </data>
   <data name="s6Check.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -322,7 +322,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s7Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 17</value>
+    <value>81, 17</value>
   </data>
   <data name="s7Check.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -352,7 +352,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s8Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 17</value>
+    <value>93, 17</value>
   </data>
   <data name="s8Check.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -382,7 +382,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s9Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 17</value>
+    <value>102, 17</value>
   </data>
   <data name="s9Check.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -412,7 +412,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s10Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 17</value>
+    <value>90, 17</value>
   </data>
   <data name="s10Check.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -442,7 +442,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s11Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="s11Check.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -568,7 +568,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s15Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
+    <value>78, 17</value>
   </data>
   <data name="s15Check.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -601,7 +601,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s16Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 17</value>
+    <value>76, 17</value>
   </data>
   <data name="s16Check.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -634,7 +634,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s17Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
+    <value>75, 17</value>
   </data>
   <data name="s17Check.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -664,7 +664,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s18Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 17</value>
+    <value>80, 17</value>
   </data>
   <data name="s18Check.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -790,7 +790,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s22Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
+    <value>45, 17</value>
   </data>
   <data name="s22Check.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -820,7 +820,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s23Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
+    <value>45, 17</value>
   </data>
   <data name="s23Check.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -850,7 +850,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s24Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
+    <value>45, 17</value>
   </data>
   <data name="s24Check.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -886,7 +886,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s25Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
+    <value>98, 17</value>
   </data>
   <data name="s25Check.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -922,7 +922,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s26Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
+    <value>98, 17</value>
   </data>
   <data name="s26Check.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -958,7 +958,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s27Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
+    <value>98, 17</value>
   </data>
   <data name="s27Check.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -994,7 +994,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s28Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 17</value>
+    <value>54, 17</value>
   </data>
   <data name="s28Check.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -1030,7 +1030,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s29Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 17</value>
+    <value>54, 17</value>
   </data>
   <data name="s29Check.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -1066,7 +1066,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="s30Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
+    <value>45, 17</value>
   </data>
   <data name="s30Check.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -1204,7 +1204,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a2Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+    <value>78, 17</value>
   </data>
   <data name="a2Check.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1234,7 +1234,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a3Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+    <value>77, 17</value>
   </data>
   <data name="a3Check.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1264,7 +1264,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a4Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+    <value>77, 17</value>
   </data>
   <data name="a4Check.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1297,7 +1297,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a5Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>74, 17</value>
   </data>
   <data name="a5Check.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1327,7 +1327,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a6Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+    <value>77, 17</value>
   </data>
   <data name="a6Check.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1420,7 +1420,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a9Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 17</value>
+    <value>103, 17</value>
   </data>
   <data name="a9Check.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1483,7 +1483,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a11Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 17</value>
+    <value>103, 17</value>
   </data>
   <data name="a11Check.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1516,7 +1516,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="a12Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
+    <value>98, 17</value>
   </data>
   <data name="a12Check.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1791,6 +1791,66 @@
   <data name="&gt;&gt;a20Check.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
+  <data name="a21Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a21Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 340</value>
+  </data>
+  <data name="a21Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a21Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a21Check.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="a21Check.Text" xml:space="preserve">
+    <value>A21</value>
+  </data>
+  <data name="&gt;&gt;a21Check.Name" xml:space="preserve">
+    <value>a21Check</value>
+  </data>
+  <data name="&gt;&gt;a21Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a21Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a21Check.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="a22Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="a22Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 357</value>
+  </data>
+  <data name="a22Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="a22Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="a22Check.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="a22Check.Text" xml:space="preserve">
+    <value>A22</value>
+  </data>
+  <data name="&gt;&gt;a22Check.Name" xml:space="preserve">
+    <value>a22Check</value>
+  </data>
+  <data name="&gt;&gt;a22Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;a22Check.Parent" xml:space="preserve">
+    <value>actorsGroupLayout</value>
+  </data>
+  <data name="&gt;&gt;a22Check.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
   <data name="actorsGroupLayout.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 19</value>
   </data>
@@ -1798,10 +1858,10 @@
     <value>0, 3, 0, 0</value>
   </data>
   <data name="actorsGroupLayout.RowCount" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="actorsGroupLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 340</value>
+    <value>138, 374</value>
   </data>
   <data name="actorsGroupLayout.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1819,7 +1879,7 @@
     <value>0</value>
   </data>
   <data name="actorsGroupLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="a1Check" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a2Check" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a3Check" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a4Check" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a5Check" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a6Check" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a7Check" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a8Check" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a9Check" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a10Check" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a11Check" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a12Check" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a13Check" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a14Check" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a15Check" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a16Check" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a17Check" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a18Check" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a19Check" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a20Check" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="a1Check" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a2Check" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a3Check" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a4Check" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a5Check" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a6Check" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a7Check" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a8Check" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a9Check" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a10Check" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a11Check" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a12Check" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a13Check" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a14Check" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a15Check" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a16Check" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a17Check" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a18Check" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a19Check" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a20Check" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a21Check" Row="20" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="a22Check" Row="21" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="actorsGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1834,7 +1894,7 @@
     <value>3, 554</value>
   </data>
   <data name="actorsGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 375</value>
+    <value>144, 409</value>
   </data>
   <data name="actorsGroup.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1876,7 +1936,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p01Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 17</value>
+    <value>77, 17</value>
   </data>
   <data name="p01Check.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1906,7 +1966,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p02Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 17</value>
+    <value>70, 17</value>
   </data>
   <data name="p02Check.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1936,7 +1996,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p03Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 17</value>
+    <value>113, 17</value>
   </data>
   <data name="p03Check.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1966,7 +2026,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p04Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 17</value>
+    <value>106, 17</value>
   </data>
   <data name="p04Check.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1999,7 +2059,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p05Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 17</value>
+    <value>106, 17</value>
   </data>
   <data name="p05Check.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2035,7 +2095,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p06Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>72, 17</value>
   </data>
   <data name="p06Check.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2071,7 +2131,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p07Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>72, 17</value>
   </data>
   <data name="p07Check.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2107,7 +2167,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p08Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>72, 17</value>
   </data>
   <data name="p08Check.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -2143,7 +2203,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p09Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>72, 17</value>
   </data>
   <data name="p09Check.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2179,7 +2239,7 @@
     <value>3, 0, 3, 0</value>
   </data>
   <data name="p10Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>72, 17</value>
   </data>
   <data name="p10Check.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2242,7 +2302,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="optionsGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 935</value>
+    <value>3, 969</value>
   </data>
   <data name="optionsGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 205</value>
@@ -2287,7 +2347,7 @@
     <value>3</value>
   </data>
   <data name="controlLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 1143</value>
+    <value>150, 1177</value>
   </data>
   <data name="controlLayout.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

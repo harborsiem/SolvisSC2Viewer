@@ -77,6 +77,8 @@ namespace SolvisSC2Viewer {
             this.a18Check = new System.Windows.Forms.CheckBox();
             this.a19Check = new System.Windows.Forms.CheckBox();
             this.a20Check = new System.Windows.Forms.CheckBox();
+            this.a21Check = new System.Windows.Forms.CheckBox();
+            this.a22Check = new System.Windows.Forms.CheckBox();
             this.actorsGroup = new System.Windows.Forms.GroupBox();
             this.optionsGroupLayout = new System.Windows.Forms.TableLayoutPanel();
             this.p01Check = new System.Windows.Forms.CheckBox();
@@ -375,6 +377,8 @@ namespace SolvisSC2Viewer {
             this.actorsGroupLayout.Controls.Add(this.a18Check, 0, 17);
             this.actorsGroupLayout.Controls.Add(this.a19Check, 0, 18);
             this.actorsGroupLayout.Controls.Add(this.a20Check, 0, 19);
+            this.actorsGroupLayout.Controls.Add(this.a21Check, 0, 20);
+            this.actorsGroupLayout.Controls.Add(this.a22Check, 0, 21);
             this.actorsGroupLayout.Name = "actorsGroupLayout";
             // 
             // a1Check
@@ -517,6 +521,20 @@ namespace SolvisSC2Viewer {
             this.a20Check.UseVisualStyleBackColor = true;
             this.a20Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
             // 
+            // a21Check
+            // 
+            resources.ApplyResources(this.a21Check, "a21Check");
+            this.a21Check.Name = "a21Check";
+            this.a21Check.UseVisualStyleBackColor = true;
+            this.a21Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
+            // 
+            // a22Check
+            // 
+            resources.ApplyResources(this.a22Check, "a22Check");
+            this.a22Check.Name = "a22Check";
+            this.a22Check.UseVisualStyleBackColor = true;
+            this.a22Check.VisibleChanged += new System.EventHandler(this.Check_VisibleChanged);
+            // 
             // actorsGroup
             // 
             resources.ApplyResources(this.actorsGroup, "actorsGroup");
@@ -624,8 +642,8 @@ namespace SolvisSC2Viewer {
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.controlLayout);
-            resources.ApplyResources(this, "$this");
             this.Name = "SensorsActors";
+            resources.ApplyResources(this, "$this");
             this.Load += new System.EventHandler(this.SensorsActors_Load);
             this.sensorsGroupLayout.ResumeLayout(false);
             this.sensorsGroupLayout.PerformLayout();
@@ -703,6 +721,8 @@ namespace SolvisSC2Viewer {
         private System.Windows.Forms.CheckBox a18Check;
         private System.Windows.Forms.CheckBox a19Check;
         private System.Windows.Forms.CheckBox a20Check;
+        private System.Windows.Forms.CheckBox a21Check;
+        private System.Windows.Forms.CheckBox a22Check;
         private System.Windows.Forms.GroupBox optionsGroup;
         private System.Windows.Forms.TableLayoutPanel optionsGroupLayout;
         private System.Windows.Forms.CheckBox p01Check;

@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Harbor")]
 [assembly: AssemblyProduct("SolvisSC2Viewer")]
-[assembly: AssemblyCopyright("Copyright © Harbor 2012, 2018")]
+[assembly: AssemblyCopyright("Copyright © Harbor 2012, 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
