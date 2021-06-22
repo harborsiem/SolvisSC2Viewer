@@ -65,6 +65,7 @@ namespace SolvisSC2Viewer {
             ecoCheckBox.Checked = (sDCardSuppressMask & (int)SuppressMask.Eco) == 0;
             prototype.Checked = AppManager.ConfigManager.Prototype;
             controlVersionUpDown.Value = RowValues.SolvisControlVersion;
+            controlVersionUpDown.ValueChanged += ControlVersionUpDown_ValueChanged;
             this.temperatureUpDown.ValueChanged += new System.EventHandler(this.temperatureUpDown_ValueChanged);
             this.levelUpDown.ValueChanged += new System.EventHandler(this.levelUpDown_ValueChanged);
             this.gradientUpDown.ValueChanged += new System.EventHandler(this.gradientUpDown_ValueChanged);
@@ -79,6 +80,11 @@ namespace SolvisSC2Viewer {
             sensorsListBox.SelectedIndex = 0;
             actorsListBox.SelectedIndex = 0;
             optionsListBox.SelectedIndex = 0;
+        }
+
+        private void ControlVersionUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            Changed = true;
         }
 
         private void buttonDefault_Click(object sender, EventArgs e) {
